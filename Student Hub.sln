@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student Hub", "Student Hub\Student Hub.csproj", "{98C99C9A-6E25-4A5C-915C-DF384FD4A1AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98C99C9A-6E25-4A5C-915C-DF384FD4A1AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C99C9A-6E25-4A5C-915C-DF384FD4A1AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C99C9A-6E25-4A5C-915C-DF384FD4A1AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C99C9A-6E25-4A5C-915C-DF384FD4A1AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DC61187-A60F-4CA3-A192-D7C6A35ABDA2}
+	EndGlobalSection
+EndGlobal
