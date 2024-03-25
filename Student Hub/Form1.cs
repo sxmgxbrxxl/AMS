@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,9 +37,54 @@ namespace Student_Hub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmDashboard form3 = new frmDashboard();
-            form3.Show();
-            this.Hide();
+            
+                try
+                {
+                    string constring = "server=localhost;uid=root;password=0123456789;database=student_hub";
+                    using (MySqlConnection conn = new MySqlConnection(constring))
+                    {
+                        conn.Open();
+
+                        string query = "SELECT COUNT(*) FROM student_hub.stdhub_table WHERE student_number = @student_number AND stud_pass = @stud_pass";
+                        MySqlCommand cmd = new MySqlCommand(query, conn);
+                        cmd.Parameters.AddWithValue("@student_number", txtStudentNumber.Text);
+                        cmd.Parameters.AddWithValue("@stud_pass", txtPassword.Text); // Assuming password is stored in txtPassword TextBox
+
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Login successful!");
+
+                            // Optionally, navigate to another form after successful login
+                            frmDashboard form3 = new frmDashboard();
+                            form3.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid student number or password. Please check your credentials.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+        
+
+        private void chkShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPass.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
         }
     }
 }
