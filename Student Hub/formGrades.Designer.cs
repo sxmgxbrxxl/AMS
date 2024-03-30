@@ -28,26 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblGrades = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblGrades
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(312, 318);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 56);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "GRADES";
+            this.lblGrades.AutoSize = true;
+            this.lblGrades.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrades.Font = new System.Drawing.Font("Bookman Old Style", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrades.Location = new System.Drawing.Point(30, 30);
+            this.lblGrades.Name = "lblGrades";
+            this.lblGrades.Size = new System.Drawing.Size(197, 47);
+            this.lblGrades.TabIndex = 0;
+            this.lblGrades.Text = "GRADES";
             // 
             // formGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(900, 650);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = global::Student_Hub.Properties.Resources.Background1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(945, 695);
+            this.Controls.Add(this.lblGrades);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formGrades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -59,6 +63,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblGrades;
     }
 }

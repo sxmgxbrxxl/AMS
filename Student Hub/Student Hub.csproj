@@ -246,5 +246,23 @@
   <ItemGroup>
     <None Include="Resources\Log Out.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Advento.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sapitanan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sapitanan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Profile Placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backdrop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

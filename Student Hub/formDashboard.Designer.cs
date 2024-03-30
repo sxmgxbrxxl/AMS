@@ -28,26 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDashboard = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblDashboard
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Book Antiqua", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(294, 326);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 56);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DASHBOARD";
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.BackColor = System.Drawing.Color.Transparent;
+            this.lblDashboard.Font = new System.Drawing.Font("Bookman Old Style", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.Location = new System.Drawing.Point(30, 30);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(291, 47);
+            this.lblDashboard.TabIndex = 0;
+            this.lblDashboard.Text = "DASHBOARD";
             // 
             // formDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(900, 650);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = global::Student_Hub.Properties.Resources.Background1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(945, 695);
+            this.Controls.Add(this.lblDashboard);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -59,6 +63,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDashboard;
     }
 }

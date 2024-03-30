@@ -32,25 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.flwMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pnlBorder = new Guna.UI2.WinForms.Guna2Panel();
             this.lblLogo = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.flwStudent = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlStudent = new System.Windows.Forms.Panel();
-            this.pnlProfile = new System.Windows.Forms.Panel();
-            this.pnlGrades = new System.Windows.Forms.Panel();
-            this.pnlCalculator = new System.Windows.Forms.Panel();
-            this.pnlAbout = new System.Windows.Forms.Panel();
-            this.pnlLogOut = new System.Windows.Forms.Panel();
-            this.studentTransition = new System.Windows.Forms.Timer(this.components);
-            this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnStudent = new System.Windows.Forms.Button();
+            this.pnlProfile = new System.Windows.Forms.Panel();
             this.btnProfile = new System.Windows.Forms.Button();
+            this.pnlGrades = new System.Windows.Forms.Panel();
             this.btnGrades = new System.Windows.Forms.Button();
+            this.pnlCalculator = new System.Windows.Forms.Panel();
             this.btnCalculator = new System.Windows.Forms.Button();
+            this.pnlAbout = new System.Windows.Forms.Panel();
             this.btnAbout = new System.Windows.Forms.Button();
+            this.pnlLogOut = new System.Windows.Forms.Panel();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.pnlBorder = new Guna.UI2.WinForms.Guna2Panel();
+            this.studentTransition = new System.Windows.Forms.Timer(this.components);
             this.flwMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
+            this.pnlBorder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.flwStudent.SuspendLayout();
             this.pnlStudent.SuspendLayout();
             this.pnlProfile.SuspendLayout();
@@ -58,8 +60,6 @@
             this.pnlCalculator.SuspendLayout();
             this.pnlAbout.SuspendLayout();
             this.pnlLogOut.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            this.pnlBorder.SuspendLayout();
             this.SuspendLayout();
             // 
             // flwMenu
@@ -87,6 +87,21 @@
             this.pnlLogo.Size = new System.Drawing.Size(350, 200);
             this.pnlLogo.TabIndex = 12;
             // 
+            // pnlBorder
+            // 
+            this.pnlBorder.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBorder.BorderColor = System.Drawing.Color.Black;
+            this.pnlBorder.BorderRadius = 50;
+            this.pnlBorder.BorderThickness = 3;
+            this.pnlBorder.Controls.Add(this.lblLogo);
+            this.pnlBorder.Controls.Add(this.picLogo);
+            this.pnlBorder.FillColor = System.Drawing.Color.AntiqueWhite;
+            this.pnlBorder.Location = new System.Drawing.Point(25, 25);
+            this.pnlBorder.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlBorder.Name = "pnlBorder";
+            this.pnlBorder.Size = new System.Drawing.Size(300, 150);
+            this.pnlBorder.TabIndex = 0;
+            // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
@@ -98,6 +113,17 @@
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "ACADEMIC\r\n  MASTERY";
             this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
+            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picLogo.Location = new System.Drawing.Point(7, 22);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(130, 110);
+            this.picLogo.TabIndex = 1;
+            this.picLogo.TabStop = false;
+            this.picLogo.Click += new System.EventHandler(this.picLogo_Click_1);
             // 
             // flwStudent
             // 
@@ -119,65 +145,6 @@
             this.pnlStudent.Size = new System.Drawing.Size(350, 80);
             this.pnlStudent.TabIndex = 9;
             // 
-            // pnlProfile
-            // 
-            this.pnlProfile.Controls.Add(this.btnProfile);
-            this.pnlProfile.Location = new System.Drawing.Point(3, 89);
-            this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(350, 80);
-            this.pnlProfile.TabIndex = 11;
-            // 
-            // pnlGrades
-            // 
-            this.pnlGrades.Controls.Add(this.btnGrades);
-            this.pnlGrades.Location = new System.Drawing.Point(3, 175);
-            this.pnlGrades.Name = "pnlGrades";
-            this.pnlGrades.Size = new System.Drawing.Size(350, 80);
-            this.pnlGrades.TabIndex = 12;
-            // 
-            // pnlCalculator
-            // 
-            this.pnlCalculator.Controls.Add(this.btnCalculator);
-            this.pnlCalculator.Location = new System.Drawing.Point(0, 290);
-            this.pnlCalculator.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlCalculator.Name = "pnlCalculator";
-            this.pnlCalculator.Size = new System.Drawing.Size(350, 80);
-            this.pnlCalculator.TabIndex = 9;
-            // 
-            // pnlAbout
-            // 
-            this.pnlAbout.Controls.Add(this.btnAbout);
-            this.pnlAbout.Location = new System.Drawing.Point(0, 370);
-            this.pnlAbout.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAbout.Name = "pnlAbout";
-            this.pnlAbout.Size = new System.Drawing.Size(350, 80);
-            this.pnlAbout.TabIndex = 11;
-            // 
-            // pnlLogOut
-            // 
-            this.pnlLogOut.Controls.Add(this.btnLogOut);
-            this.pnlLogOut.Location = new System.Drawing.Point(0, 450);
-            this.pnlLogOut.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlLogOut.Name = "pnlLogOut";
-            this.pnlLogOut.Size = new System.Drawing.Size(350, 80);
-            this.pnlLogOut.TabIndex = 11;
-            // 
-            // studentTransition
-            // 
-            this.studentTransition.Interval = 10;
-            this.studentTransition.Tick += new System.EventHandler(this.studentTransition_Tick);
-            // 
-            // picLogo
-            // 
-            this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
-            this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picLogo.Location = new System.Drawing.Point(7, 22);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(130, 110);
-            this.picLogo.TabIndex = 1;
-            this.picLogo.TabStop = false;
-            this.picLogo.Click += new System.EventHandler(this.picLogo_Click_1);
-            // 
             // btnStudent
             // 
             this.btnStudent.BackColor = System.Drawing.Color.Tan;
@@ -193,6 +160,14 @@
             this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStudent.UseVisualStyleBackColor = false;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
+            // 
+            // pnlProfile
+            // 
+            this.pnlProfile.Controls.Add(this.btnProfile);
+            this.pnlProfile.Location = new System.Drawing.Point(3, 89);
+            this.pnlProfile.Name = "pnlProfile";
+            this.pnlProfile.Size = new System.Drawing.Size(350, 80);
+            this.pnlProfile.TabIndex = 11;
             // 
             // btnProfile
             // 
@@ -211,6 +186,14 @@
             this.btnProfile.UseVisualStyleBackColor = false;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
+            // pnlGrades
+            // 
+            this.pnlGrades.Controls.Add(this.btnGrades);
+            this.pnlGrades.Location = new System.Drawing.Point(3, 175);
+            this.pnlGrades.Name = "pnlGrades";
+            this.pnlGrades.Size = new System.Drawing.Size(350, 80);
+            this.pnlGrades.TabIndex = 12;
+            // 
             // btnGrades
             // 
             this.btnGrades.BackColor = System.Drawing.Color.Tan;
@@ -227,6 +210,15 @@
             this.btnGrades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrades.UseVisualStyleBackColor = false;
             this.btnGrades.Click += new System.EventHandler(this.btnGrades_Click);
+            // 
+            // pnlCalculator
+            // 
+            this.pnlCalculator.Controls.Add(this.btnCalculator);
+            this.pnlCalculator.Location = new System.Drawing.Point(0, 290);
+            this.pnlCalculator.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlCalculator.Name = "pnlCalculator";
+            this.pnlCalculator.Size = new System.Drawing.Size(350, 80);
+            this.pnlCalculator.TabIndex = 9;
             // 
             // btnCalculator
             // 
@@ -245,6 +237,15 @@
             this.btnCalculator.UseVisualStyleBackColor = false;
             this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
             // 
+            // pnlAbout
+            // 
+            this.pnlAbout.Controls.Add(this.btnAbout);
+            this.pnlAbout.Location = new System.Drawing.Point(0, 370);
+            this.pnlAbout.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlAbout.Name = "pnlAbout";
+            this.pnlAbout.Size = new System.Drawing.Size(350, 80);
+            this.pnlAbout.TabIndex = 11;
+            // 
             // btnAbout
             // 
             this.btnAbout.BackColor = System.Drawing.Color.Tan;
@@ -261,6 +262,15 @@
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.UseVisualStyleBackColor = false;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
+            // pnlLogOut
+            // 
+            this.pnlLogOut.Controls.Add(this.btnLogOut);
+            this.pnlLogOut.Location = new System.Drawing.Point(0, 450);
+            this.pnlLogOut.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlLogOut.Name = "pnlLogOut";
+            this.pnlLogOut.Size = new System.Drawing.Size(350, 80);
+            this.pnlLogOut.TabIndex = 11;
             // 
             // btnLogOut
             // 
@@ -279,20 +289,10 @@
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // pnlBorder
+            // studentTransition
             // 
-            this.pnlBorder.BackColor = System.Drawing.Color.Transparent;
-            this.pnlBorder.BorderColor = System.Drawing.Color.Black;
-            this.pnlBorder.BorderRadius = 50;
-            this.pnlBorder.BorderThickness = 3;
-            this.pnlBorder.Controls.Add(this.lblLogo);
-            this.pnlBorder.Controls.Add(this.picLogo);
-            this.pnlBorder.FillColor = System.Drawing.Color.AntiqueWhite;
-            this.pnlBorder.Location = new System.Drawing.Point(25, 25);
-            this.pnlBorder.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlBorder.Name = "pnlBorder";
-            this.pnlBorder.Size = new System.Drawing.Size(300, 150);
-            this.pnlBorder.TabIndex = 0;
+            this.studentTransition.Interval = 10;
+            this.studentTransition.Tick += new System.EventHandler(this.studentTransition_Tick);
             // 
             // frmDashboard
             // 
@@ -310,6 +310,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.flwMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
+            this.pnlBorder.ResumeLayout(false);
+            this.pnlBorder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.flwStudent.ResumeLayout(false);
             this.pnlStudent.ResumeLayout(false);
             this.pnlProfile.ResumeLayout(false);
@@ -317,9 +320,6 @@
             this.pnlCalculator.ResumeLayout(false);
             this.pnlAbout.ResumeLayout(false);
             this.pnlLogOut.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            this.pnlBorder.ResumeLayout(false);
-            this.pnlBorder.PerformLayout();
             this.ResumeLayout(false);
 
         }
