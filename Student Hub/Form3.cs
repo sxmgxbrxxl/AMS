@@ -29,7 +29,7 @@ namespace Student_Hub
             if (menuExpand == false)
             {
                 flwStudent.Height += 10;
-                if (flwStudent.Height >= 200)
+                if (flwStudent.Height >= 260)
                 {
                     studentTransition.Stop();
                     menuExpand = true;

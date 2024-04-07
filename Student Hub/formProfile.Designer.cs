@@ -179,7 +179,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(945, 695);
+            this.ClientSize = new System.Drawing.Size(1150, 875);
             this.Controls.Add(this.lblProfile);
             this.Controls.Add(this.pnlEducationalBackground);
             this.Controls.Add(this.picProfile);

@@ -33,14 +33,14 @@
             this.picAdvento = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.picSapitanan = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnlAdvento = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblAProgram = new System.Windows.Forms.Label();
+            this.lblATProgram = new System.Windows.Forms.Label();
+            this.lblAAddress = new System.Windows.Forms.Label();
+            this.lblATAddress = new System.Windows.Forms.Label();
+            this.lblAAge = new System.Windows.Forms.Label();
+            this.lblATAge = new System.Windows.Forms.Label();
             this.lblAName = new System.Windows.Forms.Label();
             this.lblATName = new System.Windows.Forms.Label();
-            this.lblATAge = new System.Windows.Forms.Label();
-            this.lblAAge = new System.Windows.Forms.Label();
-            this.lblATAddress = new System.Windows.Forms.Label();
-            this.lblAAddress = new System.Windows.Forms.Label();
-            this.lblATProgram = new System.Windows.Forms.Label();
-            this.lblAProgram = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -72,11 +72,11 @@
             this.picAdvento.BackColor = System.Drawing.Color.Transparent;
             this.picAdvento.Image = global::Student_Hub.Properties.Resources.Advento;
             this.picAdvento.ImageRotate = 0F;
-            this.picAdvento.Location = new System.Drawing.Point(40, 135);
+            this.picAdvento.Location = new System.Drawing.Point(40, 109);
             this.picAdvento.Margin = new System.Windows.Forms.Padding(0);
             this.picAdvento.Name = "picAdvento";
             this.picAdvento.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picAdvento.Size = new System.Drawing.Size(200, 200);
+            this.picAdvento.Size = new System.Drawing.Size(300, 300);
             this.picAdvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAdvento.TabIndex = 1;
             this.picAdvento.TabStop = false;
@@ -87,11 +87,11 @@
             this.picSapitanan.BackColor = System.Drawing.Color.Transparent;
             this.picSapitanan.Image = ((System.Drawing.Image)(resources.GetObject("picSapitanan.Image")));
             this.picSapitanan.ImageRotate = 0F;
-            this.picSapitanan.Location = new System.Drawing.Point(40, 385);
+            this.picSapitanan.Location = new System.Drawing.Point(40, 455);
             this.picSapitanan.Margin = new System.Windows.Forms.Padding(0);
             this.picSapitanan.Name = "picSapitanan";
             this.picSapitanan.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picSapitanan.Size = new System.Drawing.Size(200, 200);
+            this.picSapitanan.Size = new System.Drawing.Size(300, 300);
             this.picSapitanan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSapitanan.TabIndex = 2;
             this.picSapitanan.TabStop = false;
@@ -112,10 +112,73 @@
             this.pnlAdvento.Controls.Add(this.lblAName);
             this.pnlAdvento.Controls.Add(this.lblATName);
             this.pnlAdvento.FillColor = System.Drawing.Color.White;
-            this.pnlAdvento.Location = new System.Drawing.Point(273, 135);
+            this.pnlAdvento.Location = new System.Drawing.Point(412, 166);
             this.pnlAdvento.Name = "pnlAdvento";
             this.pnlAdvento.Size = new System.Drawing.Size(619, 200);
             this.pnlAdvento.TabIndex = 3;
+            // 
+            // lblAProgram
+            // 
+            this.lblAProgram.AutoSize = true;
+            this.lblAProgram.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAProgram.Location = new System.Drawing.Point(145, 130);
+            this.lblAProgram.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAProgram.Name = "lblAProgram";
+            this.lblAProgram.Size = new System.Drawing.Size(321, 21);
+            this.lblAProgram.TabIndex = 7;
+            this.lblAProgram.Text = "BS Computer Science - Data Science";
+            // 
+            // lblATProgram
+            // 
+            this.lblATProgram.AutoSize = true;
+            this.lblATProgram.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblATProgram.Location = new System.Drawing.Point(30, 130);
+            this.lblATProgram.Name = "lblATProgram";
+            this.lblATProgram.Size = new System.Drawing.Size(108, 20);
+            this.lblATProgram.TabIndex = 6;
+            this.lblATProgram.Text = "PROGRAM:";
+            // 
+            // lblAAddress
+            // 
+            this.lblAAddress.AutoSize = true;
+            this.lblAAddress.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAAddress.Location = new System.Drawing.Point(135, 100);
+            this.lblAAddress.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAAddress.Name = "lblAAddress";
+            this.lblAAddress.Size = new System.Drawing.Size(361, 21);
+            this.lblAAddress.TabIndex = 5;
+            this.lblAAddress.Text = "Brgy. Santisima Cruz, Santa Cruz, Laguna";
+            // 
+            // lblATAddress
+            // 
+            this.lblATAddress.AutoSize = true;
+            this.lblATAddress.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblATAddress.Location = new System.Drawing.Point(30, 100);
+            this.lblATAddress.Name = "lblATAddress";
+            this.lblATAddress.Size = new System.Drawing.Size(100, 20);
+            this.lblATAddress.TabIndex = 4;
+            this.lblATAddress.Text = "ADDRESS:";
+            // 
+            // lblAAge
+            // 
+            this.lblAAge.AutoSize = true;
+            this.lblAAge.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAAge.Location = new System.Drawing.Point(80, 70);
+            this.lblAAge.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAAge.Name = "lblAAge";
+            this.lblAAge.Size = new System.Drawing.Size(112, 21);
+            this.lblAAge.TabIndex = 3;
+            this.lblAAge.Text = "20 years old";
+            // 
+            // lblATAge
+            // 
+            this.lblATAge.AutoSize = true;
+            this.lblATAge.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblATAge.Location = new System.Drawing.Point(30, 70);
+            this.lblATAge.Name = "lblATAge";
+            this.lblATAge.Size = new System.Drawing.Size(52, 20);
+            this.lblATAge.TabIndex = 2;
+            this.lblATAge.Text = "AGE:";
             // 
             // lblAName
             // 
@@ -138,69 +201,6 @@
             this.lblATName.TabIndex = 0;
             this.lblATName.Text = "NAME:";
             // 
-            // lblATAge
-            // 
-            this.lblATAge.AutoSize = true;
-            this.lblATAge.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATAge.Location = new System.Drawing.Point(30, 70);
-            this.lblATAge.Name = "lblATAge";
-            this.lblATAge.Size = new System.Drawing.Size(52, 20);
-            this.lblATAge.TabIndex = 2;
-            this.lblATAge.Text = "AGE:";
-            // 
-            // lblAAge
-            // 
-            this.lblAAge.AutoSize = true;
-            this.lblAAge.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAAge.Location = new System.Drawing.Point(80, 70);
-            this.lblAAge.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAAge.Name = "lblAAge";
-            this.lblAAge.Size = new System.Drawing.Size(112, 21);
-            this.lblAAge.TabIndex = 3;
-            this.lblAAge.Text = "20 years old";
-            // 
-            // lblATAddress
-            // 
-            this.lblATAddress.AutoSize = true;
-            this.lblATAddress.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATAddress.Location = new System.Drawing.Point(30, 100);
-            this.lblATAddress.Name = "lblATAddress";
-            this.lblATAddress.Size = new System.Drawing.Size(100, 20);
-            this.lblATAddress.TabIndex = 4;
-            this.lblATAddress.Text = "ADDRESS:";
-            // 
-            // lblAAddress
-            // 
-            this.lblAAddress.AutoSize = true;
-            this.lblAAddress.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAAddress.Location = new System.Drawing.Point(135, 100);
-            this.lblAAddress.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAAddress.Name = "lblAAddress";
-            this.lblAAddress.Size = new System.Drawing.Size(361, 21);
-            this.lblAAddress.TabIndex = 5;
-            this.lblAAddress.Text = "Brgy. Santisima Cruz, Santa Cruz, Laguna";
-            // 
-            // lblATProgram
-            // 
-            this.lblATProgram.AutoSize = true;
-            this.lblATProgram.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATProgram.Location = new System.Drawing.Point(30, 130);
-            this.lblATProgram.Name = "lblATProgram";
-            this.lblATProgram.Size = new System.Drawing.Size(108, 20);
-            this.lblATProgram.TabIndex = 6;
-            this.lblATProgram.Text = "PROGRAM:";
-            // 
-            // lblAProgram
-            // 
-            this.lblAProgram.AutoSize = true;
-            this.lblAProgram.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAProgram.Location = new System.Drawing.Point(145, 130);
-            this.lblAProgram.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAProgram.Name = "lblAProgram";
-            this.lblAProgram.Size = new System.Drawing.Size(321, 21);
-            this.lblAProgram.TabIndex = 7;
-            this.lblAProgram.Text = "BS Computer Science - Data Science";
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
@@ -216,7 +216,7 @@
             this.guna2Panel1.Controls.Add(this.lblSName);
             this.guna2Panel1.Controls.Add(this.lblSTName);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(273, 385);
+            this.guna2Panel1.Location = new System.Drawing.Point(412, 506);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(619, 200);
             this.guna2Panel1.TabIndex = 8;
@@ -311,7 +311,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Background1;
-            this.ClientSize = new System.Drawing.Size(945, 695);
+            this.ClientSize = new System.Drawing.Size(1150, 875);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlAdvento);
             this.Controls.Add(this.picSapitanan);
