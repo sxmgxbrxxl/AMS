@@ -20,6 +20,7 @@ namespace Student_Hub
         public formCalculator()
         {
             InitializeComponent();
+
         }
 
         private void btnNumber_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace Student_Hub
                 txtResult.Clear();
 
             isOperationPerformed = false;
-            Button button = (Button) sender;
+            Button button = (Button)sender;
 
             if (button.Text == ".")
             {
@@ -49,7 +50,7 @@ namespace Student_Hub
             firstvalue = double.Parse(txtResult.Text);
             lblPreview.Text = firstvalue + " " + operationPerformed;
             isOperationPerformed = true;
-            
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -97,5 +98,45 @@ namespace Student_Hub
             lblPreview.Text = firstvalue + " " + operationPerformed + " " + secondvalue + " =";
         }
 
+        private void btnSaveRecit_Click(object sender, EventArgs e)
+        {
+
+            if (btnSaveRecit.Enabled)
+            {
+                txtRecitation.Text = (" " + txtResult.Text);
+            }
+        }
+
+        private void btnSaveTasks_Click(object sender, EventArgs e)
+        {
+            if (btnSaveTask.Enabled)
+            {
+                txtTask.Text = (" " + txtResult.Text);
+            }
+        }
+
+        private void btnSaveQuiz_Click(object sender, EventArgs e)
+        {
+            if (btnSaveQuiz.Enabled)
+            {
+                txtQuizes.Text = (" " + txtResult.Text);
+            }
+        }
+
+        private void formCalculator_Load(object sender, EventArgs e)
+        {
+            if(chkPrelims.Checked)
+            {
+
+            }
+            else if(chkMidterms.Checked)
+            {
+
+            }
+            else if (chkFinal.Checked)
+            {
+
+            }
+        }
     }
 }

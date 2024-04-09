@@ -74,7 +74,7 @@
             this.flwMenu.Location = new System.Drawing.Point(0, 0);
             this.flwMenu.Margin = new System.Windows.Forms.Padding(0);
             this.flwMenu.Name = "flwMenu";
-            this.flwMenu.Size = new System.Drawing.Size(400, 1100);
+            this.flwMenu.Size = new System.Drawing.Size(300, 640);
             this.flwMenu.TabIndex = 7;
             // 
             // pnlLogo
@@ -84,7 +84,7 @@
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(400, 200);
+            this.pnlLogo.Size = new System.Drawing.Size(300, 162);
             this.pnlLogo.TabIndex = 12;
             // 
             // pnlBorder
@@ -96,20 +96,20 @@
             this.pnlBorder.Controls.Add(this.lblLogo);
             this.pnlBorder.Controls.Add(this.picLogo);
             this.pnlBorder.FillColor = System.Drawing.Color.AntiqueWhite;
-            this.pnlBorder.Location = new System.Drawing.Point(25, 25);
+            this.pnlBorder.Location = new System.Drawing.Point(19, 20);
             this.pnlBorder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBorder.Name = "pnlBorder";
-            this.pnlBorder.Size = new System.Drawing.Size(345, 150);
+            this.pnlBorder.Size = new System.Drawing.Size(259, 122);
             this.pnlBorder.TabIndex = 0;
             // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
             this.lblLogo.Font = new System.Drawing.Font("Book Antiqua", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogo.Location = new System.Drawing.Point(130, 43);
+            this.lblLogo.Location = new System.Drawing.Point(98, 35);
             this.lblLogo.Margin = new System.Windows.Forms.Padding(0);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(190, 70);
+            this.lblLogo.Size = new System.Drawing.Size(152, 56);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "ACADEMIC\r\n  MASTERY";
             this.lblLogo.Click += new System.EventHandler(this.lblLogo_Click);
@@ -118,9 +118,10 @@
             // 
             this.picLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picLogo.BackgroundImage")));
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picLogo.Location = new System.Drawing.Point(7, 22);
+            this.picLogo.Location = new System.Drawing.Point(5, 18);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(130, 110);
+            this.picLogo.Size = new System.Drawing.Size(98, 89);
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
             this.picLogo.Click += new System.EventHandler(this.picLogo_Click_1);
@@ -131,18 +132,19 @@
             this.flwStudent.Controls.Add(this.pnlStudent);
             this.flwStudent.Controls.Add(this.pnlProfile);
             this.flwStudent.Controls.Add(this.pnlGrades);
-            this.flwStudent.Location = new System.Drawing.Point(0, 200);
+            this.flwStudent.Location = new System.Drawing.Point(0, 162);
             this.flwStudent.Margin = new System.Windows.Forms.Padding(0);
             this.flwStudent.Name = "flwStudent";
-            this.flwStudent.Size = new System.Drawing.Size(400, 100);
+            this.flwStudent.Size = new System.Drawing.Size(300, 81);
             this.flwStudent.TabIndex = 8;
             // 
             // pnlStudent
             // 
             this.pnlStudent.Controls.Add(this.btnStudent);
-            this.pnlStudent.Location = new System.Drawing.Point(3, 3);
+            this.pnlStudent.Location = new System.Drawing.Point(2, 2);
+            this.pnlStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlStudent.Name = "pnlStudent";
-            this.pnlStudent.Size = new System.Drawing.Size(400, 100);
+            this.pnlStudent.Size = new System.Drawing.Size(300, 81);
             this.pnlStudent.TabIndex = 9;
             // 
             // btnStudent
@@ -151,11 +153,11 @@
             this.btnStudent.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudent.Image = global::Student_Hub.Properties.Resources.Student;
             this.btnStudent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudent.Location = new System.Drawing.Point(-5, -5);
+            this.btnStudent.Location = new System.Drawing.Point(-4, -4);
             this.btnStudent.Margin = new System.Windows.Forms.Padding(0);
             this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnStudent.Size = new System.Drawing.Size(410, 110);
+            this.btnStudent.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnStudent.Size = new System.Drawing.Size(308, 89);
             this.btnStudent.TabIndex = 10;
             this.btnStudent.Text = "          STUDENT\r\n";
             this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,9 +167,10 @@
             // pnlProfile
             // 
             this.pnlProfile.Controls.Add(this.btnProfile);
-            this.pnlProfile.Location = new System.Drawing.Point(3, 109);
+            this.pnlProfile.Location = new System.Drawing.Point(2, 87);
+            this.pnlProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlProfile.Name = "pnlProfile";
-            this.pnlProfile.Size = new System.Drawing.Size(400, 100);
+            this.pnlProfile.Size = new System.Drawing.Size(300, 81);
             this.pnlProfile.TabIndex = 11;
             // 
             // btnProfile
@@ -176,11 +179,11 @@
             this.btnProfile.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.Image = global::Student_Hub.Properties.Resources.Profile;
             this.btnProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.Location = new System.Drawing.Point(-5, -5);
+            this.btnProfile.Location = new System.Drawing.Point(-4, -4);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(0);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnProfile.Size = new System.Drawing.Size(410, 110);
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnProfile.Size = new System.Drawing.Size(308, 89);
             this.btnProfile.TabIndex = 10;
             this.btnProfile.Text = "          PROFILE";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,9 +193,10 @@
             // pnlGrades
             // 
             this.pnlGrades.Controls.Add(this.btnGrades);
-            this.pnlGrades.Location = new System.Drawing.Point(3, 215);
+            this.pnlGrades.Location = new System.Drawing.Point(2, 172);
+            this.pnlGrades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlGrades.Name = "pnlGrades";
-            this.pnlGrades.Size = new System.Drawing.Size(400, 100);
+            this.pnlGrades.Size = new System.Drawing.Size(300, 81);
             this.pnlGrades.TabIndex = 12;
             // 
             // btnGrades
@@ -201,11 +205,11 @@
             this.btnGrades.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrades.Image = global::Student_Hub.Properties.Resources.Grades;
             this.btnGrades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrades.Location = new System.Drawing.Point(-5, -5);
+            this.btnGrades.Location = new System.Drawing.Point(-4, -4);
             this.btnGrades.Margin = new System.Windows.Forms.Padding(0);
             this.btnGrades.Name = "btnGrades";
-            this.btnGrades.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnGrades.Size = new System.Drawing.Size(410, 110);
+            this.btnGrades.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnGrades.Size = new System.Drawing.Size(308, 89);
             this.btnGrades.TabIndex = 10;
             this.btnGrades.Text = "          GRADES";
             this.btnGrades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -215,10 +219,10 @@
             // pnlCalculator
             // 
             this.pnlCalculator.Controls.Add(this.btnCalculator);
-            this.pnlCalculator.Location = new System.Drawing.Point(0, 300);
+            this.pnlCalculator.Location = new System.Drawing.Point(0, 243);
             this.pnlCalculator.Margin = new System.Windows.Forms.Padding(0);
             this.pnlCalculator.Name = "pnlCalculator";
-            this.pnlCalculator.Size = new System.Drawing.Size(400, 100);
+            this.pnlCalculator.Size = new System.Drawing.Size(300, 81);
             this.pnlCalculator.TabIndex = 9;
             // 
             // btnCalculator
@@ -227,11 +231,11 @@
             this.btnCalculator.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalculator.Image = global::Student_Hub.Properties.Resources.Calculator;
             this.btnCalculator.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculator.Location = new System.Drawing.Point(-5, -5);
+            this.btnCalculator.Location = new System.Drawing.Point(-4, -4);
             this.btnCalculator.Margin = new System.Windows.Forms.Padding(0);
             this.btnCalculator.Name = "btnCalculator";
-            this.btnCalculator.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnCalculator.Size = new System.Drawing.Size(410, 110);
+            this.btnCalculator.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnCalculator.Size = new System.Drawing.Size(308, 89);
             this.btnCalculator.TabIndex = 10;
             this.btnCalculator.Text = "          CALCULATOR";
             this.btnCalculator.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -241,10 +245,10 @@
             // pnlAbout
             // 
             this.pnlAbout.Controls.Add(this.btnAbout);
-            this.pnlAbout.Location = new System.Drawing.Point(0, 400);
+            this.pnlAbout.Location = new System.Drawing.Point(0, 324);
             this.pnlAbout.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAbout.Name = "pnlAbout";
-            this.pnlAbout.Size = new System.Drawing.Size(400, 100);
+            this.pnlAbout.Size = new System.Drawing.Size(300, 81);
             this.pnlAbout.TabIndex = 11;
             // 
             // btnAbout
@@ -253,11 +257,11 @@
             this.btnAbout.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.Image = global::Student_Hub.Properties.Resources.About;
             this.btnAbout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.Location = new System.Drawing.Point(-5, -5);
+            this.btnAbout.Location = new System.Drawing.Point(-4, -4);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.btnAbout.Size = new System.Drawing.Size(410, 110);
+            this.btnAbout.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnAbout.Size = new System.Drawing.Size(308, 89);
             this.btnAbout.TabIndex = 10;
             this.btnAbout.Text = "          ABOUT";
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -267,10 +271,10 @@
             // pnlLogOut
             // 
             this.pnlLogOut.Controls.Add(this.btnLogOut);
-            this.pnlLogOut.Location = new System.Drawing.Point(0, 500);
+            this.pnlLogOut.Location = new System.Drawing.Point(0, 405);
             this.pnlLogOut.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogOut.Name = "pnlLogOut";
-            this.pnlLogOut.Size = new System.Drawing.Size(400, 100);
+            this.pnlLogOut.Size = new System.Drawing.Size(300, 81);
             this.pnlLogOut.TabIndex = 11;
             // 
             // btnLogOut
@@ -279,11 +283,11 @@
             this.btnLogOut.Font = new System.Drawing.Font("Book Antiqua", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.Image = global::Student_Hub.Properties.Resources.Log_Out;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(-5, -5);
+            this.btnLogOut.Location = new System.Drawing.Point(-4, -4);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(63, 0, 0, 0);
-            this.btnLogOut.Size = new System.Drawing.Size(410, 110);
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.btnLogOut.Size = new System.Drawing.Size(308, 89);
             this.btnLogOut.TabIndex = 10;
             this.btnLogOut.Text = "          LOG OUT";
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -297,16 +301,17 @@
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1900, 1100);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.flwMenu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.flwMenu.ResumeLayout(false);
