@@ -12,44 +12,56 @@ namespace Student_Hub
 {
     public partial class frmDashboard : Form
     {
-        formDashboard dashboard;
+        formHome home;
         formProfile profile;
         formGrades grades;
         formCalculator calculator;
         formAbout about;
+        formRecords records;
         
         public frmDashboard()
         {
             InitializeComponent();
+
+            home = new formHome();
+            home.MdiParent = this;
+            home.Show();
+            btnHome.Checked = true;
         }
 
-        bool menuExpand = false;
-        private void studentTransition_Tick(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            if (menuExpand == false)
-            {
-                flwStudent.Height += 10;
-                if (flwStudent.Height >= 260)
-                {
-                    studentTransition.Stop();
-                    menuExpand = true;
-                }
-            }
-            else
-            {
-                flwStudent.Height -= 10;
-                if (flwStudent.Height <= 80)
-                {
-                    studentTransition.Stop();
-                    menuExpand = false;
-
-                }
-            }
+            home = new formHome();
+            home.MdiParent = this;
+            home.Show();
         }
 
-        private void btnStudent_Click(object sender, EventArgs e)
+        private void btnProfile_Click(object sender, EventArgs e)
         {
-            studentTransition.Start();
+            profile = new formProfile();
+            profile.MdiParent = this;
+            profile.Show();
+        }
+
+        private void btnGrades_Click(object sender, EventArgs e)
+        {
+            grades = new formGrades();
+            grades.MdiParent = this;
+            grades.Show();
+        }
+
+        private void btnRecords_Click(object sender, EventArgs e)
+        {
+            records = new formRecords();
+            records.MdiParent = this;
+            records.Show();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            about = new formAbout();
+            about.MdiParent = this;
+            about.Show();
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -59,46 +71,39 @@ namespace Student_Hub
             this.Close();
         }
 
-        private void picLogo_Click_1(object sender, EventArgs e)
+        bool menuExpand = false;
+        private void studentTransition_Tick(object sender, EventArgs e)
         {
-            if (dashboard == null)
+            if (menuExpand == false)
             {
-                dashboard = new formDashboard();
-                dashboard.MdiParent = this;
-                dashboard.Show();
+                flwStudent.Height += 10;
+                if (flwStudent.Height >= 190)
+                {
+                    studentTransition.Stop();
+                    menuExpand = true;
+                    btnStudent.Checked = true;
+                }
             }
             else
             {
-                dashboard.Activate();
+                flwStudent.Height -= 10;
+                if (flwStudent.Height <= 70)
+                {
+                    studentTransition.Stop();
+                    menuExpand = false;
+                    btnStudent.Checked = false;
+                }
             }
         }
-
-        private void btnProfile_Click(object sender, EventArgs e)
+        private void btnStudent_Click(object sender, EventArgs e)
         {
-            if (profile == null)
-            {
-                profile = new formProfile();
-                profile.MdiParent = this;
-                profile.Show();
-            }
-            else
-            {
-                profile.Activate();
-            }
-        }
-
-        private void btnGrades_Click(object sender, EventArgs e)
-        {
-            if (grades == null)
-            {
-                grades = new formGrades();
-                grades.MdiParent = this;
-                grades.Show();
-            }
-            else
-            {
-                grades.Activate();
-            }
+            studentTransition.Start();
+            btnHome.Checked = false;
+            btnRecords.Checked = false;
+            btnAbout.Checked = false;
+            btnLogOut.Checked = false;
+            btnProfile.Checked = false;
+            btnGrades.Checked = false;
         }
 
         private void btnCalculator_Click(object sender, EventArgs e)
@@ -115,32 +120,9 @@ namespace Student_Hub
             }
         }
 
-        private void btnAbout_Click(object sender, EventArgs e)
+        private void ctrClose_Click(object sender, EventArgs e)
         {
-            if (about == null)
-            {
-                about = new formAbout();
-                about.MdiParent = this;
-                about.Show();
-            }
-            else
-            {
-                about.Activate();
-            }
-        }
-
-        private void lblLogo_Click(object sender, EventArgs e)
-        {
-            if (dashboard == null)
-            {
-                dashboard = new formDashboard();
-                dashboard.MdiParent = this;
-                dashboard.Show();
-            }
-            else
-            {
-                dashboard.Activate();
-            }
+            Application.Exit();
         }
     }
 }

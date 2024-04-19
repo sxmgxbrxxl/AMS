@@ -59,7 +59,6 @@ namespace Student_Hub
 
             // Create a new textbox
             Guna2TextBox newTextBox = new Guna2TextBox();
-            Border3DStyle border = Border3DStyle.SunkenOuter;
             newTextBox.Location = new Point(171, 124 + labelCounter * 30); // Adjust the position based on counter
             newTextBox.Size = new System.Drawing.Size(150, 32);
             newTextBox.BorderRadius = 10;

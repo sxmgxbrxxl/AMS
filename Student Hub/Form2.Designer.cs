@@ -48,9 +48,9 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.lblSubHead = new System.Windows.Forms.Label();
             this.lblSignUp = new System.Windows.Forms.Label();
-            this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -362,18 +362,18 @@
             this.lblSignUp.TabIndex = 0;
             this.lblSignUp.Text = "Sign Up";
             // 
-            // ctrClose
+            // ctrMinimize
             // 
-            this.ctrClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrClose.BackColor = System.Drawing.Color.Transparent;
-            this.ctrClose.FillColor = System.Drawing.Color.Transparent;
-            this.ctrClose.IconColor = System.Drawing.Color.Black;
-            this.ctrClose.Location = new System.Drawing.Point(940, 1);
-            this.ctrClose.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrClose.Name = "ctrClose";
-            this.ctrClose.Size = new System.Drawing.Size(60, 36);
-            this.ctrClose.TabIndex = 1;
-            this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
+            this.ctrMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.ctrMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.ctrMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.ctrMinimize.IconColor = System.Drawing.Color.Black;
+            this.ctrMinimize.Location = new System.Drawing.Point(835, 0);
+            this.ctrMinimize.Margin = new System.Windows.Forms.Padding(0);
+            this.ctrMinimize.Name = "ctrMinimize";
+            this.ctrMinimize.Size = new System.Drawing.Size(55, 46);
+            this.ctrMinimize.TabIndex = 18;
             // 
             // ctrMaximize
             // 
@@ -382,24 +382,23 @@
             this.ctrMaximize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.ctrMaximize.FillColor = System.Drawing.Color.Transparent;
             this.ctrMaximize.IconColor = System.Drawing.Color.Black;
-            this.ctrMaximize.Location = new System.Drawing.Point(889, 1);
-            this.ctrMaximize.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrMaximize.Location = new System.Drawing.Point(890, 0);
+            this.ctrMaximize.Margin = new System.Windows.Forms.Padding(0);
             this.ctrMaximize.Name = "ctrMaximize";
-            this.ctrMaximize.Size = new System.Drawing.Size(60, 36);
-            this.ctrMaximize.TabIndex = 2;
+            this.ctrMaximize.Size = new System.Drawing.Size(55, 46);
+            this.ctrMaximize.TabIndex = 17;
             // 
-            // ctrMinimize
+            // ctrClose
             // 
-            this.ctrMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.ctrMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.ctrMinimize.FillColor = System.Drawing.Color.Transparent;
-            this.ctrMinimize.IconColor = System.Drawing.Color.Black;
-            this.ctrMinimize.Location = new System.Drawing.Point(839, 5);
-            this.ctrMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrMinimize.Name = "ctrMinimize";
-            this.ctrMinimize.Size = new System.Drawing.Size(60, 36);
-            this.ctrMinimize.TabIndex = 3;
+            this.ctrClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ctrClose.BackColor = System.Drawing.Color.Transparent;
+            this.ctrClose.FillColor = System.Drawing.Color.Transparent;
+            this.ctrClose.IconColor = System.Drawing.Color.Black;
+            this.ctrClose.Location = new System.Drawing.Point(945, 0);
+            this.ctrClose.Margin = new System.Windows.Forms.Padding(0);
+            this.ctrClose.Name = "ctrClose";
+            this.ctrClose.Size = new System.Drawing.Size(55, 46);
+            this.ctrClose.TabIndex = 16;
             // 
             // frmSignUp
             // 
@@ -407,11 +406,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1000, 601);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.ctrMinimize);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.ctrMaximize);
             this.Controls.Add(this.ctrClose);
-            this.Controls.Add(this.guna2Panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -428,9 +427,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2ControlBox ctrClose;
-        private Guna.UI2.WinForms.Guna2ControlBox ctrMaximize;
-        private Guna.UI2.WinForms.Guna2ControlBox ctrMinimize;
         private System.Windows.Forms.Label lblSignUp;
         private System.Windows.Forms.Label lblSubHead;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstName;
@@ -449,5 +445,8 @@
         private System.Windows.Forms.Label lblStudentNumber;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
         private System.Windows.Forms.CheckBox chkShowPass2;
+        private Guna.UI2.WinForms.Guna2ControlBox ctrMinimize;
+        private Guna.UI2.WinForms.Guna2ControlBox ctrMaximize;
+        private Guna.UI2.WinForms.Guna2ControlBox ctrClose;
     }
 }

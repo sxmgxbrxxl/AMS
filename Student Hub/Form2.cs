@@ -17,7 +17,7 @@ namespace Student_Hub
         public frmSignUp()
         {
             InitializeComponent();
-            string constring = "server=localhost;uid=root;password=0123456789;database=student_hub";
+            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
             conn = new MySqlConnection(constring);
         }
 

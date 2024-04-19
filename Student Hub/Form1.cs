@@ -18,11 +18,6 @@ namespace Student_Hub
             InitializeComponent();
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void lnkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmSignUp form2 = new frmSignUp();
@@ -39,7 +34,7 @@ namespace Student_Hub
         {
             try
             {
-                string constring = "server=localhost;uid=root;password=0123456789;database=student_hub";
+                string constring = "server=localhost;uid=root;password=1234;database=student_hub";
                 using (MySqlConnection conn = new MySqlConnection(constring))
                 {
                     conn.Open();
@@ -53,16 +48,16 @@ namespace Student_Hub
 
                     if (count > 0)
                     {
-                        MessageBox.Show("Login successful!");
-
-                        // Optionally, navigate to another form after successful login
+                        // Optionally, navigate to another form after successful login//
                         frmDashboard form3 = new frmDashboard();
                         form3.Show();
                         this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Invalid student number or password. Please check your credentials.");
+                        MessageBox.Show("Invalid student number or password. " +
+                                        "Please check your credentials.", "Error!",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
