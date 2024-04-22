@@ -295,7 +295,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Panel pnlWelcome;
         private System.Windows.Forms.Label lblWelcome;
-        private Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
         private System.Windows.Forms.Label lblStudentNumber;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblPassword;
@@ -307,6 +306,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox ctrMinimize;
         private Guna.UI2.WinForms.Guna2ControlBox ctrMaximize;
         private Guna.UI2.WinForms.Guna2ControlBox ctrClose;
+        private Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
     }
 }
 

@@ -43,16 +43,12 @@
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.studentTransition = new System.Windows.Forms.Timer(this.components);
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.form3Transition = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.form3Drag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.flwMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.flwStudent.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // flwMenu
@@ -316,54 +312,12 @@
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.Tan;
-            this.pnlHeader.Controls.Add(this.ctrMinimize);
-            this.pnlHeader.Controls.Add(this.ctrMaximize);
-            this.pnlHeader.Controls.Add(this.ctrClose);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(300, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1100, 50);
             this.pnlHeader.TabIndex = 10;
-            // 
-            // ctrMinimize
-            // 
-            this.ctrMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.ctrMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.ctrMinimize.FillColor = System.Drawing.Color.Transparent;
-            this.ctrMinimize.IconColor = System.Drawing.Color.Black;
-            this.ctrMinimize.Location = new System.Drawing.Point(935, 0);
-            this.ctrMinimize.Margin = new System.Windows.Forms.Padding(0);
-            this.ctrMinimize.Name = "ctrMinimize";
-            this.ctrMinimize.Size = new System.Drawing.Size(55, 46);
-            this.ctrMinimize.TabIndex = 6;
-            // 
-            // ctrMaximize
-            // 
-            this.ctrMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.ctrMaximize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.ctrMaximize.FillColor = System.Drawing.Color.Transparent;
-            this.ctrMaximize.IconColor = System.Drawing.Color.Black;
-            this.ctrMaximize.Location = new System.Drawing.Point(990, 0);
-            this.ctrMaximize.Margin = new System.Windows.Forms.Padding(0);
-            this.ctrMaximize.Name = "ctrMaximize";
-            this.ctrMaximize.Size = new System.Drawing.Size(55, 46);
-            this.ctrMaximize.TabIndex = 5;
-            // 
-            // ctrClose
-            // 
-            this.ctrClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ctrClose.BackColor = System.Drawing.Color.Transparent;
-            this.ctrClose.FillColor = System.Drawing.Color.Transparent;
-            this.ctrClose.IconColor = System.Drawing.Color.Black;
-            this.ctrClose.Location = new System.Drawing.Point(1045, 0);
-            this.ctrClose.Margin = new System.Windows.Forms.Padding(0);
-            this.ctrClose.Name = "ctrClose";
-            this.ctrClose.Size = new System.Drawing.Size(55, 46);
-            this.ctrClose.TabIndex = 4;
-            this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
             // 
             // form3Transition
             // 
@@ -396,11 +350,11 @@
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "d";
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.flwMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.flwStudent.ResumeLayout(false);
-            this.pnlHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -412,9 +366,6 @@
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.Panel pnlLogo;
         private System.Windows.Forms.Panel pnlHeader;
-        private Guna.UI2.WinForms.Guna2ControlBox ctrClose;
-        private Guna.UI2.WinForms.Guna2ControlBox ctrMinimize;
-        private Guna.UI2.WinForms.Guna2ControlBox ctrMaximize;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnStudent;
         private Guna.UI2.WinForms.Guna2Button btnProfile;

@@ -13,7 +13,9 @@ namespace Student_Hub
 {
     public partial class frmSignUp : Form
     {
+        public static string StudentNumber { get; set; }
         private MySqlConnection conn;
+
         public frmSignUp()
         {
             InitializeComponent();
@@ -48,8 +50,9 @@ namespace Student_Hub
                 cmd.Parameters.AddWithValue("stud_email", txtEmail.Text);
                 cmd.Parameters.AddWithValue("stud_pass", txtPassword.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("User created successfully!");
+                MessageBox.Show("User created successfully!", "Success");
 
+                StudentNumber = txtStudentNumber.Text;
 
                 frmDashboard form3 = new frmDashboard();
                 form3.Show();

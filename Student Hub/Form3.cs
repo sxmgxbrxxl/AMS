@@ -124,5 +124,10 @@ namespace Student_Hub
         {
             Application.Exit();
         }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

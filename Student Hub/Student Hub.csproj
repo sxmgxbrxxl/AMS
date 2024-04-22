@@ -246,5 +246,11 @@
   <ItemGroup>
     <None Include="Resources\DropDown.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User Fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
