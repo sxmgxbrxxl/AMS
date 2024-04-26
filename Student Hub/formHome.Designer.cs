@@ -32,34 +32,35 @@
             this.lblNavigation = new System.Windows.Forms.Label();
             this.lblNamePlaceholder = new System.Windows.Forms.Label();
             this.pnlWelcome = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlProgress = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlNews = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlSuggestions = new Guna.UI2.WinForms.Guna2Panel();
             this.lblStudentNumberPlaceholder = new System.Windows.Forms.Label();
+            this.pnlStats = new Guna.UI2.WinForms.Guna2Panel();
             this.SuspendLayout();
             // 
             // lblGreetings
             // 
             this.lblGreetings.AutoSize = true;
             this.lblGreetings.BackColor = System.Drawing.Color.Transparent;
-            this.lblGreetings.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreetings.Location = new System.Drawing.Point(25, 50);
+            this.lblGreetings.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreetings.Location = new System.Drawing.Point(20, 50);
             this.lblGreetings.Margin = new System.Windows.Forms.Padding(0);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(244, 37);
+            this.lblGreetings.Size = new System.Drawing.Size(373, 53);
             this.lblGreetings.TabIndex = 0;
-            this.lblGreetings.Text = "Welcome Back,";
+            this.lblGreetings.Text = "Welcome back,";
             // 
             // lblNavigation
             // 
             this.lblNavigation.AutoSize = true;
             this.lblNavigation.BackColor = System.Drawing.Color.Transparent;
-            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNavigation.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNavigation.Location = new System.Drawing.Point(25, 20);
+            this.lblNavigation.Location = new System.Drawing.Point(30, 20);
             this.lblNavigation.Margin = new System.Windows.Forms.Padding(0);
             this.lblNavigation.Name = "lblNavigation";
-            this.lblNavigation.Size = new System.Drawing.Size(59, 19);
+            this.lblNavigation.Size = new System.Drawing.Size(65, 23);
             this.lblNavigation.TabIndex = 1;
             this.lblNavigation.Text = "Home";
             // 
@@ -67,11 +68,11 @@
             // 
             this.lblNamePlaceholder.AutoSize = true;
             this.lblNamePlaceholder.BackColor = System.Drawing.Color.Transparent;
-            this.lblNamePlaceholder.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamePlaceholder.Location = new System.Drawing.Point(25, 85);
+            this.lblNamePlaceholder.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNamePlaceholder.Location = new System.Drawing.Point(20, 100);
             this.lblNamePlaceholder.Margin = new System.Windows.Forms.Padding(0);
             this.lblNamePlaceholder.Name = "lblNamePlaceholder";
-            this.lblNamePlaceholder.Size = new System.Drawing.Size(0, 49);
+            this.lblNamePlaceholder.Size = new System.Drawing.Size(0, 56);
             this.lblNamePlaceholder.TabIndex = 0;
             // 
             // pnlWelcome
@@ -80,90 +81,107 @@
             this.pnlWelcome.BorderColor = System.Drawing.Color.Black;
             this.pnlWelcome.BorderRadius = 10;
             this.pnlWelcome.FillColor = System.Drawing.Color.White;
-            this.pnlWelcome.Location = new System.Drawing.Point(30, 150);
+            this.pnlWelcome.Location = new System.Drawing.Point(30, 180);
             this.pnlWelcome.Margin = new System.Windows.Forms.Padding(0);
             this.pnlWelcome.Name = "pnlWelcome";
             this.pnlWelcome.ShadowDecoration.BorderRadius = 15;
             this.pnlWelcome.ShadowDecoration.Depth = 15;
             this.pnlWelcome.ShadowDecoration.Enabled = true;
-            this.pnlWelcome.Size = new System.Drawing.Size(630, 250);
+            this.pnlWelcome.Size = new System.Drawing.Size(580, 250);
             this.pnlWelcome.TabIndex = 16;
             // 
-            // guna2Panel1
+            // pnlProgress
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(30, 426);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.BorderRadius = 15;
-            this.guna2Panel1.ShadowDecoration.Depth = 15;
-            this.guna2Panel1.ShadowDecoration.Enabled = true;
-            this.guna2Panel1.Size = new System.Drawing.Size(300, 250);
-            this.guna2Panel1.TabIndex = 17;
+            this.pnlProgress.BackColor = System.Drawing.Color.Transparent;
+            this.pnlProgress.BorderColor = System.Drawing.Color.Black;
+            this.pnlProgress.BorderRadius = 10;
+            this.pnlProgress.FillColor = System.Drawing.Color.White;
+            this.pnlProgress.Location = new System.Drawing.Point(30, 460);
+            this.pnlProgress.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlProgress.Name = "pnlProgress";
+            this.pnlProgress.ShadowDecoration.BorderRadius = 15;
+            this.pnlProgress.ShadowDecoration.Depth = 15;
+            this.pnlProgress.ShadowDecoration.Enabled = true;
+            this.pnlProgress.Size = new System.Drawing.Size(275, 350);
+            this.pnlProgress.TabIndex = 17;
             // 
-            // guna2Panel2
+            // pnlNews
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(360, 426);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.BorderRadius = 15;
-            this.guna2Panel2.ShadowDecoration.Depth = 15;
-            this.guna2Panel2.ShadowDecoration.Enabled = true;
-            this.guna2Panel2.Size = new System.Drawing.Size(300, 250);
-            this.guna2Panel2.TabIndex = 18;
+            this.pnlNews.BackColor = System.Drawing.Color.Transparent;
+            this.pnlNews.BorderColor = System.Drawing.Color.Black;
+            this.pnlNews.BorderRadius = 10;
+            this.pnlNews.FillColor = System.Drawing.Color.White;
+            this.pnlNews.Location = new System.Drawing.Point(335, 460);
+            this.pnlNews.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlNews.Name = "pnlNews";
+            this.pnlNews.ShadowDecoration.BorderRadius = 15;
+            this.pnlNews.ShadowDecoration.Depth = 15;
+            this.pnlNews.ShadowDecoration.Enabled = true;
+            this.pnlNews.Size = new System.Drawing.Size(275, 350);
+            this.pnlNews.TabIndex = 18;
             // 
-            // guna2Panel3
+            // pnlSuggestions
             // 
-            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel3.BorderRadius = 10;
-            this.guna2Panel3.FillColor = System.Drawing.Color.White;
-            this.guna2Panel3.Location = new System.Drawing.Point(685, 150);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.ShadowDecoration.BorderRadius = 15;
-            this.guna2Panel3.ShadowDecoration.Depth = 15;
-            this.guna2Panel3.ShadowDecoration.Enabled = true;
-            this.guna2Panel3.Size = new System.Drawing.Size(372, 526);
-            this.guna2Panel3.TabIndex = 17;
+            this.pnlSuggestions.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSuggestions.BorderColor = System.Drawing.Color.Black;
+            this.pnlSuggestions.BorderRadius = 10;
+            this.pnlSuggestions.FillColor = System.Drawing.Color.White;
+            this.pnlSuggestions.Location = new System.Drawing.Point(640, 180);
+            this.pnlSuggestions.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlSuggestions.Name = "pnlSuggestions";
+            this.pnlSuggestions.ShadowDecoration.BorderRadius = 15;
+            this.pnlSuggestions.ShadowDecoration.Depth = 15;
+            this.pnlSuggestions.ShadowDecoration.Enabled = true;
+            this.pnlSuggestions.Size = new System.Drawing.Size(600, 370);
+            this.pnlSuggestions.TabIndex = 17;
             // 
             // lblStudentNumberPlaceholder
             // 
             this.lblStudentNumberPlaceholder.AutoSize = true;
             this.lblStudentNumberPlaceholder.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentNumberPlaceholder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentNumberPlaceholder.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudentNumberPlaceholder.ForeColor = System.Drawing.Color.DimGray;
-            this.lblStudentNumberPlaceholder.Location = new System.Drawing.Point(980, 20);
+            this.lblStudentNumberPlaceholder.Location = new System.Drawing.Point(1153, 20);
             this.lblStudentNumberPlaceholder.Margin = new System.Windows.Forms.Padding(0);
             this.lblStudentNumberPlaceholder.Name = "lblStudentNumberPlaceholder";
-            this.lblStudentNumberPlaceholder.Size = new System.Drawing.Size(0, 19);
+            this.lblStudentNumberPlaceholder.Size = new System.Drawing.Size(0, 23);
             this.lblStudentNumberPlaceholder.TabIndex = 19;
+            // 
+            // pnlStats
+            // 
+            this.pnlStats.BackColor = System.Drawing.Color.Transparent;
+            this.pnlStats.BorderColor = System.Drawing.Color.Black;
+            this.pnlStats.BorderRadius = 10;
+            this.pnlStats.FillColor = System.Drawing.Color.White;
+            this.pnlStats.Location = new System.Drawing.Point(640, 580);
+            this.pnlStats.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlStats.Name = "pnlStats";
+            this.pnlStats.ShadowDecoration.BorderRadius = 15;
+            this.pnlStats.ShadowDecoration.Depth = 15;
+            this.pnlStats.ShadowDecoration.Enabled = true;
+            this.pnlStats.Size = new System.Drawing.Size(600, 230);
+            this.pnlStats.TabIndex = 19;
             // 
             // formHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1095, 745);
+            this.ClientSize = new System.Drawing.Size(1270, 845);
+            this.Controls.Add(this.pnlStats);
             this.Controls.Add(this.lblStudentNumberPlaceholder);
-            this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.pnlSuggestions);
+            this.Controls.Add(this.pnlNews);
+            this.Controls.Add(this.pnlProgress);
             this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.lblNamePlaceholder);
             this.Controls.Add(this.lblNavigation);
             this.Controls.Add(this.lblGreetings);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formDashboard";
@@ -178,9 +196,10 @@
         private System.Windows.Forms.Label lblNavigation;
         private System.Windows.Forms.Label lblNamePlaceholder;
         private Guna.UI2.WinForms.Guna2Panel pnlWelcome;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel pnlProgress;
+        private Guna.UI2.WinForms.Guna2Panel pnlNews;
+        private Guna.UI2.WinForms.Guna2Panel pnlSuggestions;
         private System.Windows.Forms.Label lblStudentNumberPlaceholder;
+        private Guna.UI2.WinForms.Guna2Panel pnlStats;
     }
 }

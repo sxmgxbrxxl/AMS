@@ -15,6 +15,16 @@ namespace Student_Hub
         public formRecords()
         {
             InitializeComponent();
+            Category();
+        }
+
+        private void Category()
+        {
+            string[] year = { "1st", "2nd", "3rd", "4th"};
+            string[] sem = { "1st Sem", "2nd Sem" };
+
+            cboYear.Items.AddRange(year);
+            cboSemester.Items.AddRange(sem);
         }
     }
 }

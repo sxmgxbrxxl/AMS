@@ -28,326 +28,226 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblProgramAdvento = new System.Windows.Forms.Label();
+            this.lblProgramA = new System.Windows.Forms.Label();
+            this.lblAddressAdvento = new System.Windows.Forms.Label();
+            this.lblAddressA = new System.Windows.Forms.Label();
+            this.lblAgeAdvento = new System.Windows.Forms.Label();
+            this.lblAgeA = new System.Windows.Forms.Label();
+            this.lblNameAdvento = new System.Windows.Forms.Label();
+            this.lblNameA = new System.Windows.Forms.Label();
             this.pnlAdvento = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblAProgram = new System.Windows.Forms.Label();
-            this.lblATProgram = new System.Windows.Forms.Label();
-            this.lblAAddress = new System.Windows.Forms.Label();
-            this.lblATAddress = new System.Windows.Forms.Label();
-            this.lblAAge = new System.Windows.Forms.Label();
-            this.lblATAge = new System.Windows.Forms.Label();
-            this.lblAName = new System.Windows.Forms.Label();
-            this.lblATName = new System.Windows.Forms.Label();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblSName = new System.Windows.Forms.Label();
-            this.lblSTName = new System.Windows.Forms.Label();
+            this.picAdvento = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblNavigation = new System.Windows.Forms.Label();
-            this.lblGreetings = new System.Windows.Forms.Label();
             this.lblTrueNavigation = new System.Windows.Forms.Label();
+            this.lblProfile = new System.Windows.Forms.Label();
             this.pnlAdvento.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdvento)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblProgramAdvento
+            // 
+            this.lblProgramAdvento.AutoSize = true;
+            this.lblProgramAdvento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgramAdvento.Location = new System.Drawing.Point(25, 510);
+            this.lblProgramAdvento.Margin = new System.Windows.Forms.Padding(0);
+            this.lblProgramAdvento.Name = "lblProgramAdvento";
+            this.lblProgramAdvento.Size = new System.Drawing.Size(296, 21);
+            this.lblProgramAdvento.TabIndex = 7;
+            this.lblProgramAdvento.Text = "BS Computer Science - Data Science";
+            // 
+            // lblProgramA
+            // 
+            this.lblProgramA.AutoSize = true;
+            this.lblProgramA.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgramA.Location = new System.Drawing.Point(120, 480);
+            this.lblProgramA.Margin = new System.Windows.Forms.Padding(0);
+            this.lblProgramA.Name = "lblProgramA";
+            this.lblProgramA.Size = new System.Drawing.Size(106, 23);
+            this.lblProgramA.TabIndex = 6;
+            this.lblProgramA.Text = "PROGRAM";
+            // 
+            // lblAddressAdvento
+            // 
+            this.lblAddressAdvento.AutoSize = true;
+            this.lblAddressAdvento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressAdvento.Location = new System.Drawing.Point(13, 440);
+            this.lblAddressAdvento.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAddressAdvento.Name = "lblAddressAdvento";
+            this.lblAddressAdvento.Size = new System.Drawing.Size(326, 21);
+            this.lblAddressAdvento.TabIndex = 5;
+            this.lblAddressAdvento.Text = "Brgy. Santisima Cruz, Santa Cruz, Laguna";
+            // 
+            // lblAddressA
+            // 
+            this.lblAddressA.AutoSize = true;
+            this.lblAddressA.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressA.Location = new System.Drawing.Point(130, 410);
+            this.lblAddressA.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAddressA.Name = "lblAddressA";
+            this.lblAddressA.Size = new System.Drawing.Size(91, 23);
+            this.lblAddressA.TabIndex = 4;
+            this.lblAddressA.Text = "ADDRESS";
+            // 
+            // lblAgeAdvento
+            // 
+            this.lblAgeAdvento.AutoSize = true;
+            this.lblAgeAdvento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeAdvento.Location = new System.Drawing.Point(125, 370);
+            this.lblAgeAdvento.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAgeAdvento.Name = "lblAgeAdvento";
+            this.lblAgeAdvento.Size = new System.Drawing.Size(100, 21);
+            this.lblAgeAdvento.TabIndex = 3;
+            this.lblAgeAdvento.Text = "20 years old";
+            // 
+            // lblAgeA
+            // 
+            this.lblAgeA.AutoSize = true;
+            this.lblAgeA.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeA.Location = new System.Drawing.Point(150, 340);
+            this.lblAgeA.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAgeA.Name = "lblAgeA";
+            this.lblAgeA.Size = new System.Drawing.Size(50, 23);
+            this.lblAgeA.TabIndex = 2;
+            this.lblAgeA.Text = "AGE";
+            // 
+            // lblNameAdvento
+            // 
+            this.lblNameAdvento.AutoSize = true;
+            this.lblNameAdvento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameAdvento.Location = new System.Drawing.Point(40, 300);
+            this.lblNameAdvento.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNameAdvento.Name = "lblNameAdvento";
+            this.lblNameAdvento.Size = new System.Drawing.Size(269, 21);
+            this.lblNameAdvento.TabIndex = 1;
+            this.lblNameAdvento.Text = "Sam Gabriel Quiambao Advento";
+            // 
+            // lblNameA
+            // 
+            this.lblNameA.AutoSize = true;
+            this.lblNameA.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameA.Location = new System.Drawing.Point(145, 270);
+            this.lblNameA.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNameA.Name = "lblNameA";
+            this.lblNameA.Size = new System.Drawing.Size(65, 23);
+            this.lblNameA.TabIndex = 0;
+            this.lblNameA.Text = "NAME";
             // 
             // pnlAdvento
             // 
             this.pnlAdvento.BackColor = System.Drawing.Color.Transparent;
-            this.pnlAdvento.BorderColor = System.Drawing.Color.Tan;
-            this.pnlAdvento.BorderRadius = 15;
-            this.pnlAdvento.BorderThickness = 10;
-            this.pnlAdvento.Controls.Add(this.lblAProgram);
-            this.pnlAdvento.Controls.Add(this.lblATProgram);
-            this.pnlAdvento.Controls.Add(this.lblAAddress);
-            this.pnlAdvento.Controls.Add(this.lblATAddress);
-            this.pnlAdvento.Controls.Add(this.lblAAge);
-            this.pnlAdvento.Controls.Add(this.lblATAge);
-            this.pnlAdvento.Controls.Add(this.lblAName);
-            this.pnlAdvento.Controls.Add(this.lblATName);
+            this.pnlAdvento.BorderColor = System.Drawing.Color.Black;
+            this.pnlAdvento.BorderRadius = 10;
+            this.pnlAdvento.Controls.Add(this.lblProgramAdvento);
+            this.pnlAdvento.Controls.Add(this.picAdvento);
+            this.pnlAdvento.Controls.Add(this.lblNameA);
+            this.pnlAdvento.Controls.Add(this.lblProgramA);
+            this.pnlAdvento.Controls.Add(this.lblNameAdvento);
+            this.pnlAdvento.Controls.Add(this.lblAgeA);
+            this.pnlAdvento.Controls.Add(this.lblAddressAdvento);
+            this.pnlAdvento.Controls.Add(this.lblAgeAdvento);
+            this.pnlAdvento.Controls.Add(this.lblAddressA);
             this.pnlAdvento.FillColor = System.Drawing.Color.White;
-            this.pnlAdvento.Location = new System.Drawing.Point(412, 166);
-            this.pnlAdvento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAdvento.Location = new System.Drawing.Point(30, 130);
+            this.pnlAdvento.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAdvento.Name = "pnlAdvento";
-            this.pnlAdvento.Size = new System.Drawing.Size(619, 199);
-            this.pnlAdvento.TabIndex = 3;
+            this.pnlAdvento.ShadowDecoration.BorderRadius = 15;
+            this.pnlAdvento.ShadowDecoration.Depth = 15;
+            this.pnlAdvento.ShadowDecoration.Enabled = true;
+            this.pnlAdvento.Size = new System.Drawing.Size(350, 680);
+            this.pnlAdvento.TabIndex = 16;
             // 
-            // lblAProgram
+            // picAdvento
             // 
-            this.lblAProgram.AutoSize = true;
-            this.lblAProgram.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAProgram.Location = new System.Drawing.Point(145, 130);
-            this.lblAProgram.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAProgram.Name = "lblAProgram";
-            this.lblAProgram.Size = new System.Drawing.Size(321, 21);
-            this.lblAProgram.TabIndex = 7;
-            this.lblAProgram.Text = "BS Computer Science - Data Science";
-            // 
-            // lblATProgram
-            // 
-            this.lblATProgram.AutoSize = true;
-            this.lblATProgram.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATProgram.Location = new System.Drawing.Point(29, 130);
-            this.lblATProgram.Name = "lblATProgram";
-            this.lblATProgram.Size = new System.Drawing.Size(108, 20);
-            this.lblATProgram.TabIndex = 6;
-            this.lblATProgram.Text = "PROGRAM:";
-            // 
-            // lblAAddress
-            // 
-            this.lblAAddress.AutoSize = true;
-            this.lblAAddress.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAAddress.Location = new System.Drawing.Point(135, 100);
-            this.lblAAddress.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAAddress.Name = "lblAAddress";
-            this.lblAAddress.Size = new System.Drawing.Size(361, 21);
-            this.lblAAddress.TabIndex = 5;
-            this.lblAAddress.Text = "Brgy. Santisima Cruz, Santa Cruz, Laguna";
-            // 
-            // lblATAddress
-            // 
-            this.lblATAddress.AutoSize = true;
-            this.lblATAddress.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATAddress.Location = new System.Drawing.Point(29, 100);
-            this.lblATAddress.Name = "lblATAddress";
-            this.lblATAddress.Size = new System.Drawing.Size(100, 20);
-            this.lblATAddress.TabIndex = 4;
-            this.lblATAddress.Text = "ADDRESS:";
-            // 
-            // lblAAge
-            // 
-            this.lblAAge.AutoSize = true;
-            this.lblAAge.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAAge.Location = new System.Drawing.Point(80, 70);
-            this.lblAAge.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAAge.Name = "lblAAge";
-            this.lblAAge.Size = new System.Drawing.Size(112, 21);
-            this.lblAAge.TabIndex = 3;
-            this.lblAAge.Text = "20 years old";
-            // 
-            // lblATAge
-            // 
-            this.lblATAge.AutoSize = true;
-            this.lblATAge.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATAge.Location = new System.Drawing.Point(29, 70);
-            this.lblATAge.Name = "lblATAge";
-            this.lblATAge.Size = new System.Drawing.Size(52, 20);
-            this.lblATAge.TabIndex = 2;
-            this.lblATAge.Text = "AGE:";
-            // 
-            // lblAName
-            // 
-            this.lblAName.AutoSize = true;
-            this.lblAName.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAName.Location = new System.Drawing.Point(100, 39);
-            this.lblAName.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAName.Name = "lblAName";
-            this.lblAName.Size = new System.Drawing.Size(281, 21);
-            this.lblAName.TabIndex = 1;
-            this.lblAName.Text = "Sam Gabriel Quiambao Advento";
-            // 
-            // lblATName
-            // 
-            this.lblATName.AutoSize = true;
-            this.lblATName.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATName.Location = new System.Drawing.Point(29, 39);
-            this.lblATName.Name = "lblATName";
-            this.lblATName.Size = new System.Drawing.Size(69, 20);
-            this.lblATName.TabIndex = 0;
-            this.lblATName.Text = "NAME:";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Tan;
-            this.guna2Panel1.BorderRadius = 15;
-            this.guna2Panel1.BorderThickness = 10;
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Controls.Add(this.lblSName);
-            this.guna2Panel1.Controls.Add(this.lblSTName);
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(412, 506);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(619, 199);
-            this.guna2Panel1.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 130);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(321, 21);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "BS Computer Science - Data Science";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(29, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "PROGRAM:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(135, 100);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(279, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Brgy. Gatid, Santa Cruz, Laguna";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "ADDRESS:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(80, 70);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 21);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "19 years old";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(29, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "AGE:";
-            // 
-            // lblSName
-            // 
-            this.lblSName.AutoSize = true;
-            this.lblSName.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSName.Location = new System.Drawing.Point(100, 39);
-            this.lblSName.Margin = new System.Windows.Forms.Padding(0);
-            this.lblSName.Name = "lblSName";
-            this.lblSName.Size = new System.Drawing.Size(263, 21);
-            this.lblSName.TabIndex = 1;
-            this.lblSName.Text = "Krisha Gyle Chavez Sapitanan";
-            // 
-            // lblSTName
-            // 
-            this.lblSTName.AutoSize = true;
-            this.lblSTName.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSTName.Location = new System.Drawing.Point(29, 39);
-            this.lblSTName.Name = "lblSTName";
-            this.lblSTName.Size = new System.Drawing.Size(69, 20);
-            this.lblSTName.TabIndex = 0;
-            this.lblSTName.Text = "NAME:";
+            this.picAdvento.BackColor = System.Drawing.Color.Transparent;
+            this.picAdvento.FillColor = System.Drawing.Color.Transparent;
+            this.picAdvento.Image = global::Student_Hub.Properties.Resources.Advento;
+            this.picAdvento.ImageRotate = 0F;
+            this.picAdvento.Location = new System.Drawing.Point(75, 40);
+            this.picAdvento.Margin = new System.Windows.Forms.Padding(0);
+            this.picAdvento.Name = "picAdvento";
+            this.picAdvento.ShadowDecoration.Enabled = true;
+            this.picAdvento.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picAdvento.Size = new System.Drawing.Size(200, 200);
+            this.picAdvento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAdvento.TabIndex = 0;
+            this.picAdvento.TabStop = false;
             // 
             // lblNavigation
             // 
             this.lblNavigation.AutoSize = true;
             this.lblNavigation.BackColor = System.Drawing.Color.Transparent;
-            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNavigation.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNavigation.Location = new System.Drawing.Point(25, 20);
+            this.lblNavigation.Location = new System.Drawing.Point(30, 20);
             this.lblNavigation.Margin = new System.Windows.Forms.Padding(0);
             this.lblNavigation.Name = "lblNavigation";
-            this.lblNavigation.Size = new System.Drawing.Size(72, 19);
-            this.lblNavigation.TabIndex = 9;
-            this.lblNavigation.Text = "Home /";
-            // 
-            // lblGreetings
-            // 
-            this.lblGreetings.AutoSize = true;
-            this.lblGreetings.BackColor = System.Drawing.Color.Transparent;
-            this.lblGreetings.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreetings.Location = new System.Drawing.Point(25, 50);
-            this.lblGreetings.Margin = new System.Windows.Forms.Padding(0);
-            this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(105, 37);
-            this.lblGreetings.TabIndex = 10;
-            this.lblGreetings.Text = "About";
+            this.lblNavigation.Size = new System.Drawing.Size(84, 23);
+            this.lblNavigation.TabIndex = 3;
+            this.lblNavigation.Text = "Home / ";
             // 
             // lblTrueNavigation
             // 
             this.lblTrueNavigation.AutoSize = true;
             this.lblTrueNavigation.BackColor = System.Drawing.Color.Transparent;
-            this.lblTrueNavigation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrueNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrueNavigation.ForeColor = System.Drawing.Color.Black;
-            this.lblTrueNavigation.Location = new System.Drawing.Point(103, 20);
+            this.lblTrueNavigation.Location = new System.Drawing.Point(105, 20);
             this.lblTrueNavigation.Margin = new System.Windows.Forms.Padding(0);
             this.lblTrueNavigation.Name = "lblTrueNavigation";
-            this.lblTrueNavigation.Size = new System.Drawing.Size(58, 19);
-            this.lblTrueNavigation.TabIndex = 11;
+            this.lblTrueNavigation.Size = new System.Drawing.Size(66, 23);
+            this.lblTrueNavigation.TabIndex = 17;
             this.lblTrueNavigation.Text = "About";
+            // 
+            // lblProfile
+            // 
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.BackColor = System.Drawing.Color.Transparent;
+            this.lblProfile.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.Location = new System.Drawing.Point(20, 50);
+            this.lblProfile.Margin = new System.Windows.Forms.Padding(0);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(166, 56);
+            this.lblProfile.TabIndex = 18;
+            this.lblProfile.Text = "About";
             // 
             // formAbout
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1095, 745);
+            this.ClientSize = new System.Drawing.Size(1270, 845);
+            this.Controls.Add(this.lblProfile);
             this.Controls.Add(this.lblTrueNavigation);
-            this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.lblNavigation);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pnlAdvento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formAbout";
             this.pnlAdvento.ResumeLayout(false);
             this.pnlAdvento.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdvento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+        private System.Windows.Forms.Label lblNameAdvento;
+        private System.Windows.Forms.Label lblNameA;
+        private System.Windows.Forms.Label lblProgramA;
+        private System.Windows.Forms.Label lblAddressAdvento;
+        private System.Windows.Forms.Label lblAddressA;
+        private System.Windows.Forms.Label lblAgeAdvento;
+        private System.Windows.Forms.Label lblAgeA;
+        private System.Windows.Forms.Label lblProgramAdvento;
         private Guna.UI2.WinForms.Guna2Panel pnlAdvento;
-        private System.Windows.Forms.Label lblAName;
-        private System.Windows.Forms.Label lblATName;
-        private System.Windows.Forms.Label lblATProgram;
-        private System.Windows.Forms.Label lblAAddress;
-        private System.Windows.Forms.Label lblATAddress;
-        private System.Windows.Forms.Label lblAAge;
-        private System.Windows.Forms.Label lblATAge;
-        private System.Windows.Forms.Label lblAProgram;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblSName;
-        private System.Windows.Forms.Label lblSTName;
         private System.Windows.Forms.Label lblNavigation;
-        private System.Windows.Forms.Label lblGreetings;
         private System.Windows.Forms.Label lblTrueNavigation;
+        private System.Windows.Forms.Label lblProfile;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picAdvento;
     }
 }

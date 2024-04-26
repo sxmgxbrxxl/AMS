@@ -53,9 +53,10 @@
             this.lblGrades.AutoSize = true;
             this.lblGrades.BackColor = System.Drawing.Color.Transparent;
             this.lblGrades.Font = new System.Drawing.Font("Bookman Old Style", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrades.Location = new System.Drawing.Point(21, 181);
+            this.lblGrades.Location = new System.Drawing.Point(16, 147);
+            this.lblGrades.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGrades.Name = "lblGrades";
-            this.lblGrades.Size = new System.Drawing.Size(197, 47);
+            this.lblGrades.Size = new System.Drawing.Size(159, 38);
             this.lblGrades.TabIndex = 0;
             this.lblGrades.Text = "GRADES";
             // 
@@ -72,10 +73,10 @@
             this.btnTotal.FillColor = System.Drawing.Color.Tan;
             this.btnTotal.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotal.ForeColor = System.Drawing.Color.White;
-            this.btnTotal.Location = new System.Drawing.Point(541, 351);
-            this.btnTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTotal.Location = new System.Drawing.Point(406, 285);
+            this.btnTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTotal.Name = "btnTotal";
-            this.btnTotal.Size = new System.Drawing.Size(228, 46);
+            this.btnTotal.Size = new System.Drawing.Size(171, 37);
             this.btnTotal.TabIndex = 8;
             this.btnTotal.Text = "Reveal the Grade";
             // 
@@ -95,14 +96,14 @@
             this.txtTotalGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalGrade.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTotalGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalGrade.Location = new System.Drawing.Point(797, 351);
-            this.txtTotalGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotalGrade.Location = new System.Drawing.Point(598, 285);
+            this.txtTotalGrade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtTotalGrade.Name = "txtTotalGrade";
             this.txtTotalGrade.PasswordChar = '\0';
             this.txtTotalGrade.PlaceholderText = "";
             this.txtTotalGrade.ReadOnly = true;
             this.txtTotalGrade.SelectedText = "";
-            this.txtTotalGrade.Size = new System.Drawing.Size(200, 39);
+            this.txtTotalGrade.Size = new System.Drawing.Size(150, 32);
             this.txtTotalGrade.TabIndex = 9;
             // 
             // lblFinalsGrade
@@ -113,10 +114,9 @@
             this.lblFinalsGrade.BackColor = System.Drawing.Color.Transparent;
             this.lblFinalsGrade.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFinalsGrade.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblFinalsGrade.Location = new System.Drawing.Point(20, 515);
-            this.lblFinalsGrade.Margin = new System.Windows.Forms.Padding(4);
+            this.lblFinalsGrade.Location = new System.Drawing.Point(15, 418);
             this.lblFinalsGrade.Name = "lblFinalsGrade";
-            this.lblFinalsGrade.Size = new System.Drawing.Size(149, 23);
+            this.lblFinalsGrade.Size = new System.Drawing.Size(118, 21);
             this.lblFinalsGrade.TabIndex = 33;
             this.lblFinalsGrade.Text = "FINALS GRADE";
             this.lblFinalsGrade.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,10 +129,9 @@
             this.lblMidtermGrade.BackColor = System.Drawing.Color.Transparent;
             this.lblMidtermGrade.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMidtermGrade.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblMidtermGrade.Location = new System.Drawing.Point(20, 458);
-            this.lblMidtermGrade.Margin = new System.Windows.Forms.Padding(4);
+            this.lblMidtermGrade.Location = new System.Drawing.Point(15, 372);
             this.lblMidtermGrade.Name = "lblMidtermGrade";
-            this.lblMidtermGrade.Size = new System.Drawing.Size(174, 23);
+            this.lblMidtermGrade.Size = new System.Drawing.Size(136, 21);
             this.lblMidtermGrade.TabIndex = 32;
             this.lblMidtermGrade.Text = "MIDTERM GRADE";
             this.lblMidtermGrade.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -145,10 +144,9 @@
             this.lblPrelimGrade.BackColor = System.Drawing.Color.Transparent;
             this.lblPrelimGrade.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrelimGrade.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblPrelimGrade.Location = new System.Drawing.Point(20, 402);
-            this.lblPrelimGrade.Margin = new System.Windows.Forms.Padding(4);
+            this.lblPrelimGrade.Location = new System.Drawing.Point(15, 327);
             this.lblPrelimGrade.Name = "lblPrelimGrade";
-            this.lblPrelimGrade.Size = new System.Drawing.Size(153, 23);
+            this.lblPrelimGrade.Size = new System.Drawing.Size(120, 21);
             this.lblPrelimGrade.TabIndex = 31;
             this.lblPrelimGrade.Text = "PRELIM GRADE";
             this.lblPrelimGrade.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,14 +167,14 @@
             this.txtFinalGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFinalGrade.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFinalGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFinalGrade.Location = new System.Drawing.Point(260, 510);
-            this.txtFinalGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFinalGrade.Location = new System.Drawing.Point(195, 414);
+            this.txtFinalGrade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFinalGrade.Name = "txtFinalGrade";
             this.txtFinalGrade.PasswordChar = '\0';
             this.txtFinalGrade.PlaceholderText = "";
             this.txtFinalGrade.ReadOnly = true;
             this.txtFinalGrade.SelectedText = "";
-            this.txtFinalGrade.Size = new System.Drawing.Size(200, 39);
+            this.txtFinalGrade.Size = new System.Drawing.Size(150, 32);
             this.txtFinalGrade.TabIndex = 30;
             // 
             // txtMidtermGrade
@@ -195,14 +193,14 @@
             this.txtMidtermGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMidtermGrade.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMidtermGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMidtermGrade.Location = new System.Drawing.Point(260, 453);
-            this.txtMidtermGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMidtermGrade.Location = new System.Drawing.Point(195, 368);
+            this.txtMidtermGrade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMidtermGrade.Name = "txtMidtermGrade";
             this.txtMidtermGrade.PasswordChar = '\0';
             this.txtMidtermGrade.PlaceholderText = "";
             this.txtMidtermGrade.ReadOnly = true;
             this.txtMidtermGrade.SelectedText = "";
-            this.txtMidtermGrade.Size = new System.Drawing.Size(200, 39);
+            this.txtMidtermGrade.Size = new System.Drawing.Size(150, 32);
             this.txtMidtermGrade.TabIndex = 29;
             // 
             // txtPrelimGrade
@@ -221,14 +219,14 @@
             this.txtPrelimGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrelimGrade.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrelimGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrelimGrade.Location = new System.Drawing.Point(260, 397);
-            this.txtPrelimGrade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPrelimGrade.Location = new System.Drawing.Point(195, 323);
+            this.txtPrelimGrade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPrelimGrade.Name = "txtPrelimGrade";
             this.txtPrelimGrade.PasswordChar = '\0';
             this.txtPrelimGrade.PlaceholderText = "";
             this.txtPrelimGrade.ReadOnly = true;
             this.txtPrelimGrade.SelectedText = "";
-            this.txtPrelimGrade.Size = new System.Drawing.Size(200, 39);
+            this.txtPrelimGrade.Size = new System.Drawing.Size(150, 32);
             this.txtPrelimGrade.TabIndex = 28;
             // 
             // txtAverage
@@ -247,14 +245,14 @@
             this.txtAverage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAverage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAverage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAverage.Location = new System.Drawing.Point(797, 432);
-            this.txtAverage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAverage.Location = new System.Drawing.Point(598, 351);
+            this.txtAverage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAverage.Name = "txtAverage";
             this.txtAverage.PasswordChar = '\0';
             this.txtAverage.PlaceholderText = "";
             this.txtAverage.ReadOnly = true;
             this.txtAverage.SelectedText = "";
-            this.txtAverage.Size = new System.Drawing.Size(200, 39);
+            this.txtAverage.Size = new System.Drawing.Size(150, 32);
             this.txtAverage.TabIndex = 35;
             // 
             // btnAverage
@@ -270,10 +268,10 @@
             this.btnAverage.FillColor = System.Drawing.Color.Tan;
             this.btnAverage.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAverage.ForeColor = System.Drawing.Color.White;
-            this.btnAverage.Location = new System.Drawing.Point(541, 432);
-            this.btnAverage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAverage.Location = new System.Drawing.Point(406, 351);
+            this.btnAverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAverage.Name = "btnAverage";
-            this.btnAverage.Size = new System.Drawing.Size(228, 46);
+            this.btnAverage.Size = new System.Drawing.Size(171, 37);
             this.btnAverage.TabIndex = 34;
             this.btnAverage.Text = "Reveal the Average";
             // 
@@ -287,10 +285,9 @@
             this.chkFinals.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkFinals.CheckMarkColor = System.Drawing.Color.SaddleBrown;
             this.chkFinals.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkFinals.Location = new System.Drawing.Point(541, 43);
-            this.chkFinals.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFinals.Location = new System.Drawing.Point(406, 35);
             this.chkFinals.Name = "chkFinals";
-            this.chkFinals.Size = new System.Drawing.Size(103, 26);
+            this.chkFinals.Size = new System.Drawing.Size(83, 22);
             this.chkFinals.TabIndex = 38;
             this.chkFinals.Text = "FINALS";
             this.chkFinals.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -309,10 +306,9 @@
             this.chkMidterm.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkMidterm.CheckMarkColor = System.Drawing.Color.SaddleBrown;
             this.chkMidterm.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMidterm.Location = new System.Drawing.Point(396, 43);
-            this.chkMidterm.Margin = new System.Windows.Forms.Padding(4);
+            this.chkMidterm.Location = new System.Drawing.Point(297, 35);
             this.chkMidterm.Name = "chkMidterm";
-            this.chkMidterm.Size = new System.Drawing.Size(128, 26);
+            this.chkMidterm.Size = new System.Drawing.Size(103, 22);
             this.chkMidterm.TabIndex = 37;
             this.chkMidterm.Text = "MIDTERM";
             this.chkMidterm.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -331,10 +327,9 @@
             this.chkPrelim.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chkPrelim.CheckMarkColor = System.Drawing.Color.SaddleBrown;
             this.chkPrelim.Font = new System.Drawing.Font("Bookman Old Style", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkPrelim.Location = new System.Drawing.Point(273, 43);
-            this.chkPrelim.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPrelim.Location = new System.Drawing.Point(205, 35);
             this.chkPrelim.Name = "chkPrelim";
-            this.chkPrelim.Size = new System.Drawing.Size(107, 26);
+            this.chkPrelim.Size = new System.Drawing.Size(86, 22);
             this.chkPrelim.TabIndex = 36;
             this.chkPrelim.Text = "PRELIM";
             this.chkPrelim.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -356,10 +351,10 @@
             this.btnAddCourses.FillColor = System.Drawing.Color.Tan;
             this.btnAddCourses.Font = new System.Drawing.Font("Bookman Old Style", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCourses.ForeColor = System.Drawing.Color.White;
-            this.btnAddCourses.Location = new System.Drawing.Point(296, 182);
-            this.btnAddCourses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddCourses.Location = new System.Drawing.Point(222, 148);
+            this.btnAddCourses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddCourses.Name = "btnAddCourses";
-            this.btnAddCourses.Size = new System.Drawing.Size(228, 46);
+            this.btnAddCourses.Size = new System.Drawing.Size(171, 37);
             this.btnAddCourses.TabIndex = 39;
             this.btnAddCourses.Text = "Add Courses";
             this.btnAddCourses.Click += new System.EventHandler(this.btnAddCourses_Click);
@@ -370,10 +365,10 @@
             this.lblNavigation.BackColor = System.Drawing.Color.Transparent;
             this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNavigation.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNavigation.Location = new System.Drawing.Point(25, 20);
+            this.lblNavigation.Location = new System.Drawing.Point(19, 16);
             this.lblNavigation.Margin = new System.Windows.Forms.Padding(0);
             this.lblNavigation.Name = "lblNavigation";
-            this.lblNavigation.Size = new System.Drawing.Size(149, 19);
+            this.lblNavigation.Size = new System.Drawing.Size(123, 17);
             this.lblNavigation.TabIndex = 40;
             this.lblNavigation.Text = "Home / Student /";
             // 
@@ -383,10 +378,10 @@
             this.lblTrueNavigation.BackColor = System.Drawing.Color.Transparent;
             this.lblTrueNavigation.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrueNavigation.ForeColor = System.Drawing.Color.Black;
-            this.lblTrueNavigation.Location = new System.Drawing.Point(183, 20);
+            this.lblTrueNavigation.Location = new System.Drawing.Point(137, 16);
             this.lblTrueNavigation.Margin = new System.Windows.Forms.Padding(0);
             this.lblTrueNavigation.Name = "lblTrueNavigation";
-            this.lblTrueNavigation.Size = new System.Drawing.Size(69, 19);
+            this.lblTrueNavigation.Size = new System.Drawing.Size(57, 17);
             this.lblTrueNavigation.TabIndex = 41;
             this.lblTrueNavigation.Text = "Grades";
             // 
@@ -395,20 +390,20 @@
             this.lblGreetings.AutoSize = true;
             this.lblGreetings.BackColor = System.Drawing.Color.Transparent;
             this.lblGreetings.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGreetings.Location = new System.Drawing.Point(25, 50);
+            this.lblGreetings.Location = new System.Drawing.Point(19, 41);
             this.lblGreetings.Margin = new System.Windows.Forms.Padding(0);
             this.lblGreetings.Name = "lblGreetings";
-            this.lblGreetings.Size = new System.Drawing.Size(124, 37);
+            this.lblGreetings.Size = new System.Drawing.Size(98, 28);
             this.lblGreetings.TabIndex = 42;
             this.lblGreetings.Text = "Grades";
             // 
             // formGrades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1095, 745);
+            this.ClientSize = new System.Drawing.Size(1270, 845);
             this.Controls.Add(this.lblGreetings);
             this.Controls.Add(this.lblTrueNavigation);
             this.Controls.Add(this.lblNavigation);
@@ -429,7 +424,7 @@
             this.Controls.Add(this.lblGrades);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formGrades";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formGrades";

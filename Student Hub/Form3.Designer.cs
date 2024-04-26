@@ -64,7 +64,7 @@
             this.flwMenu.Location = new System.Drawing.Point(0, 0);
             this.flwMenu.Margin = new System.Windows.Forms.Padding(0);
             this.flwMenu.Name = "flwMenu";
-            this.flwMenu.Size = new System.Drawing.Size(300, 800);
+            this.flwMenu.Size = new System.Drawing.Size(225, 900);
             this.flwMenu.TabIndex = 7;
             // 
             // pnlLogo
@@ -73,7 +73,7 @@
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(300, 240);
+            this.pnlLogo.Size = new System.Drawing.Size(225, 195);
             this.pnlLogo.TabIndex = 9;
             // 
             // picLogo
@@ -81,10 +81,10 @@
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picLogo.Image = global::Student_Hub.Properties.Resources.Academic_Mastery;
-            this.picLogo.Location = new System.Drawing.Point(20, 30);
+            this.picLogo.Location = new System.Drawing.Point(15, 24);
             this.picLogo.Margin = new System.Windows.Forms.Padding(0);
             this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(255, 190);
+            this.picLogo.Size = new System.Drawing.Size(191, 154);
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 1;
             this.picLogo.TabStop = false;
@@ -94,7 +94,7 @@
             this.btnHome.BackColor = System.Drawing.Color.Transparent;
             this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHome.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnHome.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.CheckedState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -106,12 +106,12 @@
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnHome.Location = new System.Drawing.Point(0, 240);
+            this.btnHome.Location = new System.Drawing.Point(0, 195);
             this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnHome.PressedColor = System.Drawing.Color.PapayaWhip;
-            this.btnHome.Size = new System.Drawing.Size(300, 80);
+            this.btnHome.Size = new System.Drawing.Size(225, 65);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -124,10 +124,10 @@
             this.flwStudent.Controls.Add(this.btnStudent);
             this.flwStudent.Controls.Add(this.btnProfile);
             this.flwStudent.Controls.Add(this.btnGrades);
-            this.flwStudent.Location = new System.Drawing.Point(0, 320);
+            this.flwStudent.Location = new System.Drawing.Point(0, 260);
             this.flwStudent.Margin = new System.Windows.Forms.Padding(0);
             this.flwStudent.Name = "flwStudent";
-            this.flwStudent.Size = new System.Drawing.Size(300, 80);
+            this.flwStudent.Size = new System.Drawing.Size(225, 65);
             this.flwStudent.TabIndex = 8;
             // 
             // btnStudent
@@ -135,7 +135,7 @@
             this.btnStudent.BackColor = System.Drawing.Color.Transparent;
             this.btnStudent.CheckedState.BorderColor = System.Drawing.Color.Transparent;
             this.btnStudent.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnStudent.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudent.CheckedState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnStudent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnStudent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -150,9 +150,9 @@
             this.btnStudent.Location = new System.Drawing.Point(0, 0);
             this.btnStudent.Margin = new System.Windows.Forms.Padding(0);
             this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnStudent.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnStudent.PressedColor = System.Drawing.Color.PapayaWhip;
-            this.btnStudent.Size = new System.Drawing.Size(300, 80);
+            this.btnStudent.Size = new System.Drawing.Size(225, 65);
             this.btnStudent.TabIndex = 0;
             this.btnStudent.Text = "Student";
             this.btnStudent.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -164,7 +164,7 @@
             this.btnProfile.BackColor = System.Drawing.Color.Transparent;
             this.btnProfile.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnProfile.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnProfile.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.CheckedState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnProfile.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnProfile.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -176,12 +176,12 @@
             this.btnProfile.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProfile.ImageOffset = new System.Drawing.Point(55, 0);
             this.btnProfile.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnProfile.Location = new System.Drawing.Point(0, 80);
+            this.btnProfile.Location = new System.Drawing.Point(0, 65);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(0);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnProfile.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
             this.btnProfile.PressedColor = System.Drawing.Color.Transparent;
-            this.btnProfile.Size = new System.Drawing.Size(300, 80);
+            this.btnProfile.Size = new System.Drawing.Size(225, 65);
             this.btnProfile.TabIndex = 18;
             this.btnProfile.Text = "Profile";
             this.btnProfile.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -193,7 +193,7 @@
             this.btnGrades.BackColor = System.Drawing.Color.Transparent;
             this.btnGrades.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnGrades.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnGrades.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrades.CheckedState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrades.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnGrades.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnGrades.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -205,12 +205,12 @@
             this.btnGrades.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGrades.ImageOffset = new System.Drawing.Point(55, 0);
             this.btnGrades.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnGrades.Location = new System.Drawing.Point(0, 160);
+            this.btnGrades.Location = new System.Drawing.Point(0, 130);
             this.btnGrades.Margin = new System.Windows.Forms.Padding(0);
             this.btnGrades.Name = "btnGrades";
-            this.btnGrades.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.btnGrades.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
             this.btnGrades.PressedColor = System.Drawing.Color.Transparent;
-            this.btnGrades.Size = new System.Drawing.Size(300, 80);
+            this.btnGrades.Size = new System.Drawing.Size(225, 65);
             this.btnGrades.TabIndex = 19;
             this.btnGrades.Text = "Grades";
             this.btnGrades.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -222,7 +222,7 @@
             this.btnRecords.BackColor = System.Drawing.Color.Transparent;
             this.btnRecords.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnRecords.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnRecords.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecords.CheckedState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecords.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRecords.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRecords.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -234,12 +234,12 @@
             this.btnRecords.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRecords.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnRecords.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnRecords.Location = new System.Drawing.Point(0, 400);
+            this.btnRecords.Location = new System.Drawing.Point(0, 325);
             this.btnRecords.Margin = new System.Windows.Forms.Padding(0);
             this.btnRecords.Name = "btnRecords";
-            this.btnRecords.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnRecords.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnRecords.PressedColor = System.Drawing.Color.PapayaWhip;
-            this.btnRecords.Size = new System.Drawing.Size(300, 80);
+            this.btnRecords.Size = new System.Drawing.Size(225, 65);
             this.btnRecords.TabIndex = 15;
             this.btnRecords.Text = "Records";
             this.btnRecords.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -251,7 +251,7 @@
             this.btnAbout.BackColor = System.Drawing.Color.Transparent;
             this.btnAbout.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnAbout.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnAbout.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbout.CheckedState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAbout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAbout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -263,12 +263,12 @@
             this.btnAbout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAbout.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnAbout.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAbout.Location = new System.Drawing.Point(0, 480);
+            this.btnAbout.Location = new System.Drawing.Point(0, 390);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnAbout.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnAbout.PressedColor = System.Drawing.Color.PapayaWhip;
-            this.btnAbout.Size = new System.Drawing.Size(300, 80);
+            this.btnAbout.Size = new System.Drawing.Size(225, 65);
             this.btnAbout.TabIndex = 16;
             this.btnAbout.Text = "About";
             this.btnAbout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -280,7 +280,7 @@
             this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
             this.btnLogOut.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnLogOut.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnLogOut.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.CheckedState.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -292,12 +292,12 @@
             this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogOut.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 560);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 455);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.btnLogOut.PressedColor = System.Drawing.Color.PapayaWhip;
-            this.btnLogOut.Size = new System.Drawing.Size(300, 80);
+            this.btnLogOut.Size = new System.Drawing.Size(225, 65);
             this.btnLogOut.TabIndex = 17;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -313,10 +313,10 @@
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.Tan;
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(300, 0);
+            this.pnlHeader.Location = new System.Drawing.Point(225, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1100, 50);
+            this.pnlHeader.Size = new System.Drawing.Size(1275, 50);
             this.pnlHeader.TabIndex = 10;
             // 
             // form3Transition
@@ -335,21 +335,20 @@
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.flwMenu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "d";
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.flwMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
