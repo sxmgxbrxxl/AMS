@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,17 +19,20 @@ namespace Student_Hub
         formCalculator calculator;
         formAbout about;
         formRecords records;
-        
+
         public frmDashboard()
         {
             InitializeComponent();
-
+            ShowHome();
+        }
+        
+        public void ShowHome()
+        {
             home = new formHome();
             home.MdiParent = this;
             home.Show();
             btnHome.Checked = true;
         }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             home = new formHome();
@@ -118,16 +122,6 @@ namespace Student_Hub
             {
                 calculator.Activate();
             }
-        }
-
-        private void ctrClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void frmDashboard_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

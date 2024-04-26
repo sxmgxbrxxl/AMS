@@ -32,7 +32,7 @@ namespace Student_Hub
 
         private void ctrClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.ExitThread();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

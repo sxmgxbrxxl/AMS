@@ -409,6 +409,7 @@
             this.ctrClose.Name = "ctrClose";
             this.ctrClose.Size = new System.Drawing.Size(41, 37);
             this.ctrClose.TabIndex = 16;
+            this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
             // 
             // frmSignUp
             // 

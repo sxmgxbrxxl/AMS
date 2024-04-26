@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace Student_Hub
 {
     public partial class formHome : Form
-    {
+    { 
 
         public formHome()
         {

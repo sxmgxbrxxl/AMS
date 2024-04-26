@@ -41,8 +41,20 @@
             this.lblNavigation = new System.Windows.Forms.Label();
             this.lblTrueNavigation = new System.Windows.Forms.Label();
             this.lblProfile = new System.Windows.Forms.Label();
+            this.pnlSapitanan = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblProgramSapitanan = new System.Windows.Forms.Label();
+            this.picSapitanan = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblNameS = new System.Windows.Forms.Label();
+            this.lblProgramS = new System.Windows.Forms.Label();
+            this.lblNameSapitanan = new System.Windows.Forms.Label();
+            this.lblAgeS = new System.Windows.Forms.Label();
+            this.lblAddressSapitanan = new System.Windows.Forms.Label();
+            this.lblAgeSapitanan = new System.Windows.Forms.Label();
+            this.lblAddressS = new System.Windows.Forms.Label();
             this.pnlAdvento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAdvento)).BeginInit();
+            this.pnlSapitanan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSapitanan)).BeginInit();
             this.SuspendLayout();
             // 
             // lblProgramAdvento
@@ -211,6 +223,134 @@
             this.lblProfile.TabIndex = 18;
             this.lblProfile.Text = "About";
             // 
+            // pnlSapitanan
+            // 
+            this.pnlSapitanan.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSapitanan.BorderColor = System.Drawing.Color.Black;
+            this.pnlSapitanan.BorderRadius = 10;
+            this.pnlSapitanan.Controls.Add(this.lblProgramSapitanan);
+            this.pnlSapitanan.Controls.Add(this.picSapitanan);
+            this.pnlSapitanan.Controls.Add(this.lblNameS);
+            this.pnlSapitanan.Controls.Add(this.lblProgramS);
+            this.pnlSapitanan.Controls.Add(this.lblNameSapitanan);
+            this.pnlSapitanan.Controls.Add(this.lblAgeS);
+            this.pnlSapitanan.Controls.Add(this.lblAddressSapitanan);
+            this.pnlSapitanan.Controls.Add(this.lblAgeSapitanan);
+            this.pnlSapitanan.Controls.Add(this.lblAddressS);
+            this.pnlSapitanan.FillColor = System.Drawing.Color.White;
+            this.pnlSapitanan.Location = new System.Drawing.Point(410, 130);
+            this.pnlSapitanan.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlSapitanan.Name = "pnlSapitanan";
+            this.pnlSapitanan.ShadowDecoration.BorderRadius = 15;
+            this.pnlSapitanan.ShadowDecoration.Depth = 15;
+            this.pnlSapitanan.ShadowDecoration.Enabled = true;
+            this.pnlSapitanan.Size = new System.Drawing.Size(350, 680);
+            this.pnlSapitanan.TabIndex = 17;
+            // 
+            // lblProgramSapitanan
+            // 
+            this.lblProgramSapitanan.AutoSize = true;
+            this.lblProgramSapitanan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgramSapitanan.Location = new System.Drawing.Point(25, 510);
+            this.lblProgramSapitanan.Margin = new System.Windows.Forms.Padding(0);
+            this.lblProgramSapitanan.Name = "lblProgramSapitanan";
+            this.lblProgramSapitanan.Size = new System.Drawing.Size(296, 21);
+            this.lblProgramSapitanan.TabIndex = 7;
+            this.lblProgramSapitanan.Text = "BS Computer Science - Data Science";
+            // 
+            // picSapitanan
+            // 
+            this.picSapitanan.BackColor = System.Drawing.Color.Transparent;
+            this.picSapitanan.FillColor = System.Drawing.Color.Transparent;
+            this.picSapitanan.Image = global::Student_Hub.Properties.Resources.Sapitanan;
+            this.picSapitanan.ImageRotate = 0F;
+            this.picSapitanan.Location = new System.Drawing.Point(75, 40);
+            this.picSapitanan.Margin = new System.Windows.Forms.Padding(0);
+            this.picSapitanan.Name = "picSapitanan";
+            this.picSapitanan.ShadowDecoration.Enabled = true;
+            this.picSapitanan.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picSapitanan.Size = new System.Drawing.Size(200, 200);
+            this.picSapitanan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSapitanan.TabIndex = 0;
+            this.picSapitanan.TabStop = false;
+            // 
+            // lblNameS
+            // 
+            this.lblNameS.AutoSize = true;
+            this.lblNameS.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameS.Location = new System.Drawing.Point(145, 270);
+            this.lblNameS.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNameS.Name = "lblNameS";
+            this.lblNameS.Size = new System.Drawing.Size(65, 23);
+            this.lblNameS.TabIndex = 0;
+            this.lblNameS.Text = "NAME";
+            // 
+            // lblProgramS
+            // 
+            this.lblProgramS.AutoSize = true;
+            this.lblProgramS.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgramS.Location = new System.Drawing.Point(120, 480);
+            this.lblProgramS.Margin = new System.Windows.Forms.Padding(0);
+            this.lblProgramS.Name = "lblProgramS";
+            this.lblProgramS.Size = new System.Drawing.Size(106, 23);
+            this.lblProgramS.TabIndex = 6;
+            this.lblProgramS.Text = "PROGRAM";
+            // 
+            // lblNameSapitanan
+            // 
+            this.lblNameSapitanan.AutoSize = true;
+            this.lblNameSapitanan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameSapitanan.Location = new System.Drawing.Point(50, 300);
+            this.lblNameSapitanan.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNameSapitanan.Name = "lblNameSapitanan";
+            this.lblNameSapitanan.Size = new System.Drawing.Size(244, 21);
+            this.lblNameSapitanan.TabIndex = 1;
+            this.lblNameSapitanan.Text = "Krisha Gyle Chavez Sapitanan";
+            // 
+            // lblAgeS
+            // 
+            this.lblAgeS.AutoSize = true;
+            this.lblAgeS.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeS.Location = new System.Drawing.Point(150, 340);
+            this.lblAgeS.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAgeS.Name = "lblAgeS";
+            this.lblAgeS.Size = new System.Drawing.Size(50, 23);
+            this.lblAgeS.TabIndex = 2;
+            this.lblAgeS.Text = "AGE";
+            // 
+            // lblAddressSapitanan
+            // 
+            this.lblAddressSapitanan.AutoSize = true;
+            this.lblAddressSapitanan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressSapitanan.Location = new System.Drawing.Point(45, 440);
+            this.lblAddressSapitanan.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAddressSapitanan.Name = "lblAddressSapitanan";
+            this.lblAddressSapitanan.Size = new System.Drawing.Size(259, 21);
+            this.lblAddressSapitanan.TabIndex = 5;
+            this.lblAddressSapitanan.Text = "Brgy. Gatid, Santa Cruz, Laguna";
+            // 
+            // lblAgeSapitanan
+            // 
+            this.lblAgeSapitanan.AutoSize = true;
+            this.lblAgeSapitanan.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgeSapitanan.Location = new System.Drawing.Point(125, 370);
+            this.lblAgeSapitanan.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAgeSapitanan.Name = "lblAgeSapitanan";
+            this.lblAgeSapitanan.Size = new System.Drawing.Size(100, 21);
+            this.lblAgeSapitanan.TabIndex = 3;
+            this.lblAgeSapitanan.Text = "19 years old";
+            // 
+            // lblAddressS
+            // 
+            this.lblAddressS.AutoSize = true;
+            this.lblAddressS.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressS.Location = new System.Drawing.Point(130, 410);
+            this.lblAddressS.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAddressS.Name = "lblAddressS";
+            this.lblAddressS.Size = new System.Drawing.Size(91, 23);
+            this.lblAddressS.TabIndex = 4;
+            this.lblAddressS.Text = "ADDRESS";
+            // 
             // formAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +358,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
             this.ClientSize = new System.Drawing.Size(1270, 845);
+            this.Controls.Add(this.pnlSapitanan);
             this.Controls.Add(this.lblProfile);
             this.Controls.Add(this.lblTrueNavigation);
             this.Controls.Add(this.lblNavigation);
@@ -230,6 +371,9 @@
             this.pnlAdvento.ResumeLayout(false);
             this.pnlAdvento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAdvento)).EndInit();
+            this.pnlSapitanan.ResumeLayout(false);
+            this.pnlSapitanan.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picSapitanan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +393,15 @@
         private System.Windows.Forms.Label lblTrueNavigation;
         private System.Windows.Forms.Label lblProfile;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picAdvento;
+        private Guna.UI2.WinForms.Guna2Panel pnlSapitanan;
+        private System.Windows.Forms.Label lblProgramSapitanan;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picSapitanan;
+        private System.Windows.Forms.Label lblNameS;
+        private System.Windows.Forms.Label lblProgramS;
+        private System.Windows.Forms.Label lblNameSapitanan;
+        private System.Windows.Forms.Label lblAgeS;
+        private System.Windows.Forms.Label lblAddressSapitanan;
+        private System.Windows.Forms.Label lblAgeSapitanan;
+        private System.Windows.Forms.Label lblAddressS;
     }
 }

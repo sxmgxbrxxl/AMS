@@ -35,8 +35,8 @@
             this.pnlProgress = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlNews = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlSuggestions = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblStudentNumberPlaceholder = new System.Windows.Forms.Label();
             this.pnlStats = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblStudentNumberPlaceholder = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblGreetings
@@ -135,18 +135,6 @@
             this.pnlSuggestions.Size = new System.Drawing.Size(600, 370);
             this.pnlSuggestions.TabIndex = 17;
             // 
-            // lblStudentNumberPlaceholder
-            // 
-            this.lblStudentNumberPlaceholder.AutoSize = true;
-            this.lblStudentNumberPlaceholder.BackColor = System.Drawing.Color.Transparent;
-            this.lblStudentNumberPlaceholder.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentNumberPlaceholder.ForeColor = System.Drawing.Color.DimGray;
-            this.lblStudentNumberPlaceholder.Location = new System.Drawing.Point(1153, 20);
-            this.lblStudentNumberPlaceholder.Margin = new System.Windows.Forms.Padding(0);
-            this.lblStudentNumberPlaceholder.Name = "lblStudentNumberPlaceholder";
-            this.lblStudentNumberPlaceholder.Size = new System.Drawing.Size(0, 23);
-            this.lblStudentNumberPlaceholder.TabIndex = 19;
-            // 
             // pnlStats
             // 
             this.pnlStats.BackColor = System.Drawing.Color.Transparent;
@@ -162,6 +150,19 @@
             this.pnlStats.Size = new System.Drawing.Size(600, 230);
             this.pnlStats.TabIndex = 19;
             // 
+            // lblStudentNumberPlaceholder
+            // 
+            this.lblStudentNumberPlaceholder.AutoSize = true;
+            this.lblStudentNumberPlaceholder.BackColor = System.Drawing.Color.Transparent;
+            this.lblStudentNumberPlaceholder.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudentNumberPlaceholder.ForeColor = System.Drawing.Color.Black;
+            this.lblStudentNumberPlaceholder.Location = new System.Drawing.Point(1184, 26);
+            this.lblStudentNumberPlaceholder.Margin = new System.Windows.Forms.Padding(0);
+            this.lblStudentNumberPlaceholder.Name = "lblStudentNumberPlaceholder";
+            this.lblStudentNumberPlaceholder.Size = new System.Drawing.Size(56, 16);
+            this.lblStudentNumberPlaceholder.TabIndex = 21;
+            this.lblStudentNumberPlaceholder.Text = "2213001";
+            // 
             // formHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,8 +171,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
             this.ClientSize = new System.Drawing.Size(1270, 845);
-            this.Controls.Add(this.pnlStats);
             this.Controls.Add(this.lblStudentNumberPlaceholder);
+            this.Controls.Add(this.pnlStats);
             this.Controls.Add(this.pnlSuggestions);
             this.Controls.Add(this.pnlNews);
             this.Controls.Add(this.pnlProgress);
@@ -199,7 +200,7 @@
         private Guna.UI2.WinForms.Guna2Panel pnlProgress;
         private Guna.UI2.WinForms.Guna2Panel pnlNews;
         private Guna.UI2.WinForms.Guna2Panel pnlSuggestions;
-        private System.Windows.Forms.Label lblStudentNumberPlaceholder;
         private Guna.UI2.WinForms.Guna2Panel pnlStats;
+        private System.Windows.Forms.Label lblStudentNumberPlaceholder;
     }
 }
