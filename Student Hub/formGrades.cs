@@ -13,35 +13,11 @@ namespace Student_Hub
 {
     public partial class formGrades : Form
     {
-        private int labelCounter = 0;
-        
+        private int labelCounter = 1;
+
         public formGrades()
         {
             InitializeComponent();
-            
-        }
-
-        private void formGrades_Load(object sender, EventArgs e)
-        {
-            if(chkPrelim.Checked)
-            {
-                if (btnTotal.Enabled)
-                {
-                    txtPrelimGrade.Text = (" " + txtTotalGrade.Text);
-                }
-            }else if(chkMidterm.Checked)
-            {
-                if (btnTotal.Enabled)
-                {
-                    txtMidtermGrade.Text = (" " + txtTotalGrade.Text);  
-                }
-            }else if(chkFinals.Checked)
-            {
-                if (btnTotal.Enabled)
-                {
-                    txtFinalGrade.Text = (" " + txtTotalGrade.Text);
-                }
-            }
         }
 
         private void btnAddCourses_Click(object sender, EventArgs e)
@@ -51,11 +27,11 @@ namespace Student_Hub
             Font font = new Font("Bookman Old Style", 15, FontStyle.Regular);
             newLabel.Text = "Course " + labelCounter.ToString();
             newLabel.Size = new System.Drawing.Size(170, 32 * 30);
-            
+
             newLabel.Font = font;
-            newLabel.BackColor = System.Drawing.Color.Transparent;    
+            newLabel.BackColor = System.Drawing.Color.Transparent;
             newLabel.Location = new Point(53, 124 + labelCounter * 30); // Adjust the position based on counter
-            this.Controls.Add(newLabel);
+            pnlCourse.Controls.Add(newLabel);
 
             // Create a new textbox
             Guna2TextBox newTextBox = new Guna2TextBox();
@@ -64,14 +40,12 @@ namespace Student_Hub
             newTextBox.BorderRadius = 10;
             newTextBox.BackColor = System.Drawing.Color.Transparent;
             newTextBox.ForeColor =  System.Drawing.Color.Black;
-            
+
             newTextBox.FillColor = System.Drawing.Color.Tan;
             newTextBox.ReadOnly = true;
-            this.Controls.Add(newTextBox);
+            pnlCourse.Controls.Add(newTextBox);
 
             labelCounter++; // Increment the counter for the next label and textbox
         }
-
-       
     }
 }
