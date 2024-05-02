@@ -123,5 +123,10 @@ namespace Student_Hub
                 calculator.Activate();
             }
         }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

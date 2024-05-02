@@ -64,7 +64,7 @@
             this.flwMenu.Location = new System.Drawing.Point(0, 0);
             this.flwMenu.Margin = new System.Windows.Forms.Padding(0);
             this.flwMenu.Name = "flwMenu";
-            this.flwMenu.Size = new System.Drawing.Size(225, 900);
+            this.flwMenu.Size = new System.Drawing.Size(225, 788);
             this.flwMenu.TabIndex = 7;
             // 
             // pnlLogo
@@ -316,7 +316,7 @@
             this.pnlHeader.Location = new System.Drawing.Point(225, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1275, 50);
+            this.pnlHeader.Size = new System.Drawing.Size(1161, 50);
             this.pnlHeader.TabIndex = 10;
             // 
             // form3Transition
@@ -339,7 +339,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.flwMenu);
             this.DoubleBuffered = true;
@@ -349,6 +349,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.flwMenu.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();

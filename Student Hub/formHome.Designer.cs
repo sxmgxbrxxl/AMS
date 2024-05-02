@@ -170,7 +170,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 845);
+            this.ClientSize = new System.Drawing.Size(1270, 788);
             this.Controls.Add(this.lblStudentNumberPlaceholder);
             this.Controls.Add(this.pnlStats);
             this.Controls.Add(this.pnlSuggestions);
@@ -186,6 +186,7 @@
             this.Name = "formHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formDashboard";
+            this.Load += new System.EventHandler(this.formHome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,6 +16,8 @@ namespace Student_Hub
         double secondvalue = 0;
         string operationPerformed = "";
         bool isOperationPerformed = false;
+        public static string Grade {  get; set; }
+       
 
         public formCalculator()
         {
@@ -125,17 +127,99 @@ namespace Student_Hub
 
         private void formCalculator_Load(object sender, EventArgs e)
         {
-            if(chkPrelims.Checked)
-            {
+          
+        }
 
-            }
-            else if(chkMidterms.Checked)
-            {
+        private void btnEqlRecit_Click(object sender, EventArgs e)
+        {
 
-            }
-            else if (chkFinal.Checked)
-            {
+            double percentRecit = Convert.ToDouble(txtPercentRecit.Text);
+            double pRresult = percentRecit / 100;
 
+
+            double recit = Convert.ToDouble(txtRecitation.Text);
+            double overrecit = Convert.ToDouble(txtOverRecit.Text);
+
+            double recitresult = (recit / overrecit) * 50 + 50;
+
+            double rresult = recitresult * pRresult;
+
+            txtTotalRecit.Text = Convert.ToString(rresult);
+
+        }
+
+        private void btnEqlTask_Click(object sender, EventArgs e)
+        {
+            double percentTask = Convert.ToDouble(txtPercentTask.Text);
+            double pTresult = percentTask / 100;
+
+            double task = Convert.ToDouble(txtTask.Text);
+            double overTask = Convert.ToDouble(txtOverTask.Text);
+
+            double taskresult = (task / overTask) * 50 + 50;
+
+            double tresult = taskresult * pTresult;
+
+            txtTotalTask.Text = Convert.ToString(tresult);
+
+        }
+
+        private void btnEqlQuiz_Click(object sender, EventArgs e)
+        {
+            double percentQuiz = Convert.ToDouble(txtPercentQuiz.Text);
+            double pQresult = percentQuiz / 100;
+
+            double quiz = Convert.ToDouble(txtQuizes.Text);
+            double overQuiz = Convert.ToDouble(txtOverQuiz.Text);
+
+            double quizresult = (quiz / overQuiz) * 50 + 50;
+
+            double qresult = quizresult * pQresult;
+
+            txtTotalQuiz.Text = Convert.ToString(qresult);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double percentExam = Convert.ToDouble(txtPercentExam.Text);
+            double pEresult = percentExam / 100;
+
+            double exam = Convert.ToDouble(txtExam.Text);
+            double overExam = Convert.ToDouble(txtOverExam.Text);
+
+            double examresult = (exam / overExam) * 50 + 50;
+
+            double eresult = examresult * pEresult;
+            double eresult2 = eresult;
+            string finalscore = eresult2.ToString("0.00");
+
+            txtTotalExam.Text = finalscore;
+
+        }
+
+        private void btnCompute_Click(object sender, EventArgs e)
+        {
+            double totalrecit = Convert.ToDouble(txtTotalRecit.Text);
+            double totaltask = Convert.ToDouble(txtTotalTask.Text);
+            double totalquiz = Convert.ToDouble(txtTotalQuiz.Text);
+            double totalexam = Convert.ToDouble(txtTotalExam.Text);
+
+            double grade = totalrecit + totaltask + totalquiz + totalexam;
+
+            double grade2 = grade;
+            string finalresult = grade2.ToString("0.00");
+
+
+            txtGrade.Text = finalresult;
+            Grade = txtGrade.Text;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (button1.Enabled)
+            {
+               
             }
         }
     }

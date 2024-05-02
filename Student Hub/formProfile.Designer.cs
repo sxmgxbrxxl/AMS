@@ -472,7 +472,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 845);
+            this.ClientSize = new System.Drawing.Size(1270, 788);
             this.Controls.Add(this.pnlProfile);
             this.Controls.Add(this.lblTrueNavigation);
             this.Controls.Add(this.lblProfile);
@@ -484,6 +484,7 @@
             this.Name = "formProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formProfile";
+            this.Load += new System.EventHandler(this.formProfile_Load);
             this.pnlPersonalInfo.ResumeLayout(false);
             this.pnlPersonalInfo.PerformLayout();
             this.pnlProfile.ResumeLayout(false);

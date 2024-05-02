@@ -19,7 +19,7 @@ namespace Student_Hub
         public frmSignUp()
         {
             InitializeComponent();
-            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
+            string constring = "server=localhost;uid=root;password=1234567890;database=student_hub";
             conn = new MySqlConnection(constring);
         }
 
@@ -40,15 +40,15 @@ namespace Student_Hub
             try
             {
                 conn.Open();
-                string query = "INSERT INTO student_hub.stdhub_table (student_number, stud_fname, stud_lname, stud_age, stud_email, stud_pass) " +
+                string query = "INSERT INTO student_hub.stdhub_table (clm_stdNumber, clm_stdFname, clm_stdLname, clm_stdAge, clm_stdEmail, clm_stdPass) " +
                                "VALUES ('" + txtStudentNumber.Text + "', '" + txtFirstName.Text + "','" + txtLastName.Text + "', '" + txtAge.Text + "', '" + txtEmail.Text + "', '" + txtPassword.Text + "')";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("student_number", txtStudentNumber.Text);
-                cmd.Parameters.AddWithValue("stud_fname", txtFirstName.Text);
-                cmd.Parameters.AddWithValue("stud_lname", txtLastName.Text);
-                cmd.Parameters.AddWithValue("stud_age", txtAge.Text);
-                cmd.Parameters.AddWithValue("stud_email", txtEmail.Text);
-                cmd.Parameters.AddWithValue("stud_pass", txtPassword.Text);
+                cmd.Parameters.AddWithValue("clm_stdNumber", txtStudentNumber.Text);
+                cmd.Parameters.AddWithValue("clm_stdFname", txtFirstName.Text);
+                cmd.Parameters.AddWithValue("clm_stdLname", txtLastName.Text);
+                cmd.Parameters.AddWithValue("clm_stdAge", txtAge.Text);
+                cmd.Parameters.AddWithValue("clm_stdEmail", txtEmail.Text);
+                cmd.Parameters.AddWithValue("clm_stdPass", txtPassword.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("User created successfully!", "Success");
 
@@ -79,6 +79,11 @@ namespace Student_Hub
             {
                 txtPassword.PasswordChar = '*';
             }
+        }
+
+        private void frmSignUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

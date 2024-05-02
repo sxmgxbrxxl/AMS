@@ -26,5 +26,10 @@ namespace Student_Hub
             cboYear.Items.AddRange(year);
             cboSemester.Items.AddRange(sem);
         }
+
+        private void formRecords_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

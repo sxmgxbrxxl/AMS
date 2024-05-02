@@ -63,6 +63,16 @@ namespace Student_Hub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _438204743_1349087215761955_1918068447954784445_n {
+            get {
+                object obj = ResourceManager.GetObject("438204743_1349087215761955_1918068447954784445_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap About {
             get {
                 object obj = ResourceManager.GetObject("About", resourceCulture);

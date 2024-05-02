@@ -38,26 +38,26 @@ namespace Student_Hub
 
             lblStudentNumberPlaceholder.Text = studentNumber;
 
-            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
+            string constring = "server=localhost;uid=root;password=1234567890;database=student_hub";
             MySqlConnection conn = new MySqlConnection(constring);
 
             try
             {
                 conn.Open();
 
-                string query = "SELECT stud_fname FROM stdhub_table WHERE student_number = @student_number";
+                string query = "SELECT clm_stdFname FROM stdhub_table WHERE clm_stdNumber = @clm_stdNumber";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
 
                 if (studentNumber != null)
                 {
-                    cmd.Parameters.AddWithValue("@student_number", studentNumber);
+                    cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read()) // Check if a record was found
                     {
-                        string studentFName = reader["stud_fname"].ToString();
+                        string studentFName = reader["clm_stdFname"].ToString();
                         lblNamePlaceholder.Text = studentFName; // Display the name in the label
                     }
                 }
@@ -73,6 +73,11 @@ namespace Student_Hub
                     conn.Close();
                 }
             }
+        }
+
+        private void formHome_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

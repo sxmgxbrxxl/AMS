@@ -37,10 +37,10 @@
             this.lblYear = new System.Windows.Forms.Label();
             this.cboYear = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnlRecords = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
-            this.lblPrelim = new System.Windows.Forms.Label();
-            this.lblMidterm = new System.Windows.Forms.Label();
             this.lblFinal = new System.Windows.Forms.Label();
+            this.lblMidterm = new System.Windows.Forms.Label();
+            this.lblPrelim = new System.Windows.Forms.Label();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCategory.SuspendLayout();
             this.pnlRecords.SuspendLayout();
             this.SuspendLayout();
@@ -181,6 +181,42 @@
             this.pnlRecords.Size = new System.Drawing.Size(840, 614);
             this.pnlRecords.TabIndex = 17;
             // 
+            // lblFinal
+            // 
+            this.lblFinal.AutoSize = true;
+            this.lblFinal.BackColor = System.Drawing.Color.Transparent;
+            this.lblFinal.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinal.Location = new System.Drawing.Point(650, 50);
+            this.lblFinal.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFinal.Name = "lblFinal";
+            this.lblFinal.Size = new System.Drawing.Size(87, 32);
+            this.lblFinal.TabIndex = 6;
+            this.lblFinal.Text = "FINAL";
+            // 
+            // lblMidterm
+            // 
+            this.lblMidterm.AutoSize = true;
+            this.lblMidterm.BackColor = System.Drawing.Color.Transparent;
+            this.lblMidterm.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMidterm.Location = new System.Drawing.Point(340, 50);
+            this.lblMidterm.Margin = new System.Windows.Forms.Padding(0);
+            this.lblMidterm.Name = "lblMidterm";
+            this.lblMidterm.Size = new System.Drawing.Size(130, 32);
+            this.lblMidterm.TabIndex = 5;
+            this.lblMidterm.Text = "MIDTERM";
+            // 
+            // lblPrelim
+            // 
+            this.lblPrelim.AutoSize = true;
+            this.lblPrelim.BackColor = System.Drawing.Color.Transparent;
+            this.lblPrelim.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrelim.Location = new System.Drawing.Point(50, 50);
+            this.lblPrelim.Margin = new System.Windows.Forms.Padding(0);
+            this.lblPrelim.Name = "lblPrelim";
+            this.lblPrelim.Size = new System.Drawing.Size(103, 32);
+            this.lblPrelim.TabIndex = 4;
+            this.lblPrelim.Text = "PRELIM";
+            // 
             // btnPrint
             // 
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -202,48 +238,12 @@
             this.btnPrint.TabIndex = 18;
             this.btnPrint.Text = "Print";
             // 
-            // lblPrelim
-            // 
-            this.lblPrelim.AutoSize = true;
-            this.lblPrelim.BackColor = System.Drawing.Color.Transparent;
-            this.lblPrelim.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrelim.Location = new System.Drawing.Point(50, 50);
-            this.lblPrelim.Margin = new System.Windows.Forms.Padding(0);
-            this.lblPrelim.Name = "lblPrelim";
-            this.lblPrelim.Size = new System.Drawing.Size(103, 32);
-            this.lblPrelim.TabIndex = 4;
-            this.lblPrelim.Text = "PRELIM";
-            // 
-            // lblMidterm
-            // 
-            this.lblMidterm.AutoSize = true;
-            this.lblMidterm.BackColor = System.Drawing.Color.Transparent;
-            this.lblMidterm.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMidterm.Location = new System.Drawing.Point(340, 50);
-            this.lblMidterm.Margin = new System.Windows.Forms.Padding(0);
-            this.lblMidterm.Name = "lblMidterm";
-            this.lblMidterm.Size = new System.Drawing.Size(130, 32);
-            this.lblMidterm.TabIndex = 5;
-            this.lblMidterm.Text = "MIDTERM";
-            // 
-            // lblFinal
-            // 
-            this.lblFinal.AutoSize = true;
-            this.lblFinal.BackColor = System.Drawing.Color.Transparent;
-            this.lblFinal.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinal.Location = new System.Drawing.Point(650, 50);
-            this.lblFinal.Margin = new System.Windows.Forms.Padding(0);
-            this.lblFinal.Name = "lblFinal";
-            this.lblFinal.Size = new System.Drawing.Size(87, 32);
-            this.lblFinal.TabIndex = 6;
-            this.lblFinal.Text = "FINAL";
-            // 
             // formRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 845);
+            this.ClientSize = new System.Drawing.Size(1270, 788);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlCategory);
@@ -255,6 +255,7 @@
             this.Name = "formRecords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "formRecords";
+            this.Load += new System.EventHandler(this.formRecords_Load);
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlRecords.ResumeLayout(false);

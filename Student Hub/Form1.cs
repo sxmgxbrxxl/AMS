@@ -19,7 +19,7 @@ namespace Student_Hub
         public frmMain()
         {
             InitializeComponent();
-            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
+            string constring = "server=localhost;uid=root;password=1234567890;database=student_hub";
             conn = new MySqlConnection(constring);
         }
 
@@ -42,10 +42,10 @@ namespace Student_Hub
             {
                 conn.Open();
 
-                string query = "SELECT COUNT(*) FROM student_hub.stdhub_table WHERE student_number = @student_number AND stud_pass = @stud_pass";
+                string query = "SELECT COUNT(*) FROM student_hub.stdhub_table WHERE clm_stdNumber = @clm_stdNumber AND clm_stdPass = @clm_stdPass";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@student_number", txtStudentNumber.Text);
-                cmd.Parameters.AddWithValue("@stud_pass", txtPassword.Text); // Assuming password is stored in txtPassword TextBox
+                cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
+                cmd.Parameters.AddWithValue("@clm_stdPass", txtPassword.Text); // Assuming password is stored in txtPassword TextBox
 
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -89,6 +89,11 @@ namespace Student_Hub
             {
                 txtPassword.PasswordChar = '*';
             }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
