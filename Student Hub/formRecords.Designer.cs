@@ -243,7 +243,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 788);
+            this.ClientSize = new System.Drawing.Size(1270, 845);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlCategory);

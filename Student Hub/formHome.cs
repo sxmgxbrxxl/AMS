@@ -38,7 +38,7 @@ namespace Student_Hub
 
             lblStudentNumberPlaceholder.Text = studentNumber;
 
-            string constring = "server=localhost;uid=root;password=1234567890;database=student_hub";
+            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
             MySqlConnection conn = new MySqlConnection(constring);
 
             try

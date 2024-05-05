@@ -13,262 +13,101 @@ namespace Student_Hub
 {
     public partial class formGrades : Form
     {
-        private int labelCounter = 1;
-        public static string txtGrade1 {  get; set; }
-        public static string txtGrade2 { get; set; }
-        public static string txtGrade3 { get; set; }
-        public static string txtGrade4 { get; set; }
-        public static string txtGrade5 { get; set; }
-        public static string txtGrade6 { get; set; }
-        public static string txtGrade7 { get; set; }
-        public static string txtGrade8 { get; set; }
-        public static string txtGrade9 { get; set; }
-
-     
-
+        string[] term = { "Prelim", "Midterm", "Finals" };
+        string[] course = {"Introduction to Computing", "Computer Programming 1 (Fundamentals of Programming)", "Understanding the Self",
+                            "Readings in Philippine History", "Mathematics in the Modern World", "Purposive Communication", "Environmental Science",
+                            "Civic Welfare Training Service 1", "Reserve Officers Training Corps 1", "Self-Testing Activities"};
         public formGrades()
         {
             InitializeComponent();
-            formCalculator frmCalc = new formCalculator();
-            txtcrsGrade1.Text = formCalculator.Grade;
+            cboTerm.Items.AddRange(term);
         }
 
-        private void btncalc1_Click(object sender, EventArgs e)
+        private void btnCalc_Click(object sender, EventArgs e)
         {
             formCalculator frmCalc1 = new formCalculator();
-            this.Hide();
             frmCalc1.Show();
-            
-
-
         }
-
-        private void btncalc2_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
-            formCalculator frmCalc2 = new formCalculator();
-            this.Hide();
-            frmCalc2.Show();
-        }
+            Guna.UI2.WinForms.Guna2Button btnDelete = (Guna.UI2.WinForms.Guna2Button)sender;
+            int counter = int.Parse(btnDelete.Name.Replace("btnDelete", ""));
 
-        private void btncalc3_Click(object sender, EventArgs e)
-        {
-            formCalculator frmCalc3 = new formCalculator();
-            this.Hide();
-            frmCalc3.Show();
-        }
-
-        private void btncalc4_Click(object sender, EventArgs e)
-        {
-            formCalculator frmCalc4 = new formCalculator();
-            this.Hide();
-            frmCalc4.Show();
-        }
-
-        private void btncalc5_Click(object sender, EventArgs e)
-        {
-            formCalculator frmCalc5 = new formCalculator();
-            this.Hide();
-            frmCalc5.Show();
-        }
-
-        private void btncalc6_Click(object sender, EventArgs e)
-        {
-            formCalculator frmCalc6 = new formCalculator();
-            this.Hide();
-            frmCalc6.Show();
-        }
-
-        private void btncalc7_Click(object sender, EventArgs e)
-        {
-            formCalculator frmCalc7 = new formCalculator();
-            this.Hide();
-            frmCalc7.Show();
-        }
-
-        private void btncalc8_Click(object sender, EventArgs e)
-        {
-            formCalculator frmCalc8 = new formCalculator();
-            this.Hide();
-            frmCalc8.Show();
-        }
-
-        private void btncalc9_Click(object sender, EventArgs e)
-        {
-            formCalculator frmCalc9 = new formCalculator();
-            this.Hide();
-            frmCalc9.Show();
-        }
-
-        private void btnMinus1_Click(object sender, EventArgs e)
-        {
-            if (btnMinus1.Enabled)
+            Control[] controlsToDelete = pnlCourse.Controls.Find("cboCourse" + counter, true);
+            foreach (Control control in controlsToDelete)
             {
-                txtcrsName1.Visible = false;
-                txtcrsGrade1.Visible = false;
-                btnMinus1.Visible = false;  
+                pnlCourse.Controls.Remove(control);
+                control.Dispose();
+            }
+
+            controlsToDelete = pnlCourse.Controls.Find("txtGrade" + counter, true);
+            foreach (Control control in controlsToDelete)
+            {
+                pnlCourse.Controls.Remove(control);
+                control.Dispose(); 
+            }
+
+            controlsToDelete = pnlCourse.Controls.Find("btnDelete" + counter, true);
+            foreach (Control control in controlsToDelete)
+            {
+                pnlCourse.Controls.Remove(control);
+                control.Dispose();
+            }
+
+            controlsToDelete = pnlCourse.Controls.Find("btnCalc" + counter, true);
+            foreach (Control control in controlsToDelete)
+            {
+                pnlCourse.Controls.Remove(control);
+                control.Dispose(); 
             }
         }
 
-        private void btnMinus2_Click(object sender, EventArgs e)
-        {
+        private int courseCounter = 1;
 
-            if (btnMinus2.Enabled)
-            {
-                txtcrsName2.Visible = false;
-                txtcrsGrade2.Visible = false;
-                btnMinus2.Visible = false;  
-            }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddCourse();
         }
 
-        private void btnMinus3_Click(object sender, EventArgs e)
+        private void AddCourse()
         {
-            if (btnMinus3.Enabled)
-            {
-                txtcrsName3.Visible = false;
-                txtcrsGrade3.Visible = false;
-                btnMinus3.Visible = false;  
-            }
-        }
+            Guna.UI2.WinForms.Guna2ComboBox cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
+            cboCourse.ItemHeight = 34;
+            cboCourse.Dock = DockStyle.Top;
+            cboCourse.Name = "cboCourse" + courseCounter;
+            cboCourse.BorderRadius = 17;
+            cboCourse.Font = new Font("Century Gothic", 10, FontStyle.Regular);
+            cboCourse.Size = new Size(350, 40);
+            cboCourse.Items.AddRange(course);
+            pnlCourseContainer.Controls.Add(cboCourse);
 
-        private void btnMinus4_Click(object sender, EventArgs e)
-        {
-            if (btnMinus4.Enabled)
-            {
-                txtcrsName4.Visible = false;
-                txtcrsGrade4.Visible = false;
-                btnMinus4.Visible = false;  
-            }
-        }
+            Guna.UI2.WinForms.Guna2TextBox txtGrade = new Guna.UI2.WinForms.Guna2TextBox();
+            txtGrade.Dock = DockStyle.Top;
+            txtGrade.Name = "txtGrade" + courseCounter;
+            txtGrade.BorderRadius = 17;
+            txtGrade.Font = new Font("Century Gothic", 10, FontStyle.Regular);
+            txtGrade.Size = new Size(187, 40);
+            pnlGradeContainer.Controls.Add(txtGrade);
 
-        private void btnMinus5_Click(object sender, EventArgs e)
-        {
-            if (btnMinus5.Enabled)
-            {
-                txtcrsName5.Visible = false;
-                txtcrsGrade5.Visible = false;
-                btnMinus5.Visible = false;
-            }
-        }
+            Guna.UI2.WinForms.Guna2Button btnDelete = new Guna.UI2.WinForms.Guna2Button();
+            btnDelete.Dock = DockStyle.Top;
+            btnDelete.Name = "btnDelete" + courseCounter;
+            btnDelete.FillColor = Color.Transparent;
+            btnDelete.Size = new Size(38, 40);
+            btnDelete.Image = Properties.Resources.Square_Minus;
+            btnDelete.Click += DeleteButton_Click;
+            pnlDeleteContainer.Controls.Add(btnDelete);
 
-        private void btnMinus6_Click(object sender, EventArgs e)
-        {
-            if (btnMinus6.Enabled)
-            {
-                txtcrsName6.Visible = false;
-                txtcrsGrade6.Visible = false;
-                btnMinus6.Visible = false;
-            }
-        }
+            Guna.UI2.WinForms.Guna2Button btnCalc = new Guna.UI2.WinForms.Guna2Button();
+            btnCalc.Dock = DockStyle.Top;
+            btnCalc.Name = "btnCalc" + courseCounter;
+            btnCalc.FillColor = Color.Transparent;
+            btnCalc.Size = new Size(38, 40);
+            btnCalc.Image = Properties.Resources.calculator;
+            btnCalc.Click += btnCalc_Click;
+            pnlCalculatorContainer.Controls.Add(btnCalc);
 
-        private void btnMinus7_Click(object sender, EventArgs e)
-        {
-            if (btnMinus7.Enabled)
-            {
-                txtcrsName7.Visible = false;
-                txtcrsGrade7.Visible = false;
-                btnMinus7.Visible = false;
-            }
-        }
-
-        private void btnMinus8_Click(object sender, EventArgs e)
-        {
-            if (btnMinus8.Enabled)
-            {
-                txtcrsName8.Visible = false;
-                txtcrsGrade8.Visible = false;
-                btnMinus8.Visible = false;
-            }
-        }
-
-        private void btnMinus9_Click(object sender, EventArgs e)
-        {
-            if (btnMinus9.Enabled)
-            {
-                txtcrsName9.Visible = false;
-                txtcrsGrade9.Visible = false;
-                btnMinus9.Visible = false;
-            }
-        }
-
-        private void btnSaveChanges_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkPrelim_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void formGrades_Load(object sender, EventArgs e)
-        {
-            if (chkPrelim.Checked)
-            {
-                if (btnTotal.Enabled)
-                {
-                    txtPrelimGrade.Text = (" " + txtTotalGrade.Text);
-                }
-            }
-            else if (chkMidterm.Checked)
-            {
-                if (btnTotal.Enabled)
-                {
-                    txtMidtermGrade.Text = (" " + txtTotalGrade.Text);
-                }
-            }
-            else if (chkFinals.Checked)
-            {
-                if (btnTotal.Enabled)
-                {
-                    txtFinalGrade.Text = (" " + txtTotalGrade.Text);
-                }
-            }
-
-        }
-
-        private void txtcrsGrade1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtcrsGrade9_TextChanged(object sender, EventArgs e)
-        {
-
+            courseCounter++;
         }
     }
 }

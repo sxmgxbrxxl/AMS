@@ -19,8 +19,6 @@ namespace Student_Hub
         public frmMain()
         {
             InitializeComponent();
-            string constring = "server=localhost;uid=root;password=1234567890;database=student_hub";
-            conn = new MySqlConnection(constring);
         }
 
         private void lnkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -37,6 +35,8 @@ namespace Student_Hub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
+            conn = new MySqlConnection(constring);
 
             try
             {
@@ -68,14 +68,11 @@ namespace Student_Hub
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error:" + ex.Message);
             }
             finally
             {
-                if (conn.State == ConnectionState.Open)
-                {
                     conn.Close();
-                }
             }
         }
 

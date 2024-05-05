@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlSignUp = new Guna.UI2.WinForms.Guna2Panel();
             this.chkShowPass2 = new System.Windows.Forms.CheckBox();
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,39 +51,39 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2Panel1.SuspendLayout();
+            this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // pnlSignUp
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel1.BorderRadius = 20;
-            this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.chkShowPass2);
-            this.guna2Panel1.Controls.Add(this.lblStudentNumber);
-            this.guna2Panel1.Controls.Add(this.txtStudentNumber);
-            this.guna2Panel1.Controls.Add(this.txtLastName);
-            this.guna2Panel1.Controls.Add(this.lnkLogin);
-            this.guna2Panel1.Controls.Add(this.lblQuestion);
-            this.guna2Panel1.Controls.Add(this.btnCreate);
-            this.guna2Panel1.Controls.Add(this.txtPassword);
-            this.guna2Panel1.Controls.Add(this.lblPassword);
-            this.guna2Panel1.Controls.Add(this.lblAge);
-            this.guna2Panel1.Controls.Add(this.txtAge);
-            this.guna2Panel1.Controls.Add(this.lblEmail);
-            this.guna2Panel1.Controls.Add(this.txtEmail);
-            this.guna2Panel1.Controls.Add(this.lblLastName);
-            this.guna2Panel1.Controls.Add(this.txtFirstName);
-            this.guna2Panel1.Controls.Add(this.lblFirstName);
-            this.guna2Panel1.Controls.Add(this.lblSubHead);
-            this.guna2Panel1.Controls.Add(this.lblSignUp);
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(260, 70);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(490, 470);
-            this.guna2Panel1.TabIndex = 0;
+            this.pnlSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.pnlSignUp.BorderColor = System.Drawing.Color.Black;
+            this.pnlSignUp.BorderRadius = 20;
+            this.pnlSignUp.BorderThickness = 2;
+            this.pnlSignUp.Controls.Add(this.chkShowPass2);
+            this.pnlSignUp.Controls.Add(this.lblStudentNumber);
+            this.pnlSignUp.Controls.Add(this.txtStudentNumber);
+            this.pnlSignUp.Controls.Add(this.txtLastName);
+            this.pnlSignUp.Controls.Add(this.lnkLogin);
+            this.pnlSignUp.Controls.Add(this.lblQuestion);
+            this.pnlSignUp.Controls.Add(this.btnCreate);
+            this.pnlSignUp.Controls.Add(this.txtPassword);
+            this.pnlSignUp.Controls.Add(this.lblPassword);
+            this.pnlSignUp.Controls.Add(this.lblAge);
+            this.pnlSignUp.Controls.Add(this.txtAge);
+            this.pnlSignUp.Controls.Add(this.lblEmail);
+            this.pnlSignUp.Controls.Add(this.txtEmail);
+            this.pnlSignUp.Controls.Add(this.lblLastName);
+            this.pnlSignUp.Controls.Add(this.txtFirstName);
+            this.pnlSignUp.Controls.Add(this.lblFirstName);
+            this.pnlSignUp.Controls.Add(this.lblSubHead);
+            this.pnlSignUp.Controls.Add(this.lblSignUp);
+            this.pnlSignUp.FillColor = System.Drawing.Color.White;
+            this.pnlSignUp.Location = new System.Drawing.Point(260, 70);
+            this.pnlSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlSignUp.Name = "pnlSignUp";
+            this.pnlSignUp.Size = new System.Drawing.Size(490, 470);
+            this.pnlSignUp.TabIndex = 0;
             // 
             // chkShowPass2
             // 
@@ -415,11 +415,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Student_Hub.Properties.Resources.Background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.Controls.Add(this.ctrMinimize);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.pnlSignUp);
             this.Controls.Add(this.ctrMaximize);
             this.Controls.Add(this.ctrClose);
             this.DoubleBuffered = true;
@@ -429,16 +429,15 @@
             this.Name = "frmSignUp";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmSignUp_Load);
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.pnlSignUp.ResumeLayout(false);
+            this.pnlSignUp.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel pnlSignUp;
         private System.Windows.Forms.Label lblSignUp;
         private System.Windows.Forms.Label lblSubHead;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstName;

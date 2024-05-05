@@ -12,13 +12,8 @@ namespace Student_Hub
 {
     public partial class formCalculator : Form
     {
-        double firstvalue = 0;
-        double secondvalue = 0;
-        string operationPerformed = "";
-        bool isOperationPerformed = false;
         public static string Grade {  get; set; }
        
-
         public formCalculator()
         {
             InitializeComponent();
@@ -27,32 +22,11 @@ namespace Student_Hub
 
         private void btnNumber_Click(object sender, EventArgs e)
         {
-            if ((txtResult.Text == "0") || (isOperationPerformed))
+            if (txtResult.Text == "0")
                 txtResult.Clear();
 
-            isOperationPerformed = false;
             Button button = (Button)sender;
-
-            if (button.Text == ".")
-            {
-                if (!txtResult.Text.Contains("."))
-                    txtResult.Text = txtResult.Text + button.Text;
-            }
-            else
-            {
-                txtResult.Text = txtResult.Text + button.Text;
-            }
-
-        }
-
-        private void btnOperator_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            operationPerformed = button.Text;
-            firstvalue = double.Parse(txtResult.Text);
-            lblPreview.Text = firstvalue + " " + operationPerformed;
-            isOperationPerformed = true;
-
+            txtResult.Text = txtResult.Text + button.Text;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -69,65 +43,64 @@ namespace Student_Hub
             }
         }
 
-        private void btnEquals_Click(object sender, EventArgs e)
-        {
-            Button button = (Button)sender;
-            secondvalue = double.Parse(txtResult.Text);
-
-            switch (operationPerformed)
-            {
-                case "+":
-                    txtResult.Text = (firstvalue + secondvalue).ToString();
-                    break;
-                case "−":
-                    txtResult.Text = (firstvalue - secondvalue).ToString();
-                    break;
-                case "×":
-                    txtResult.Text = (firstvalue * secondvalue).ToString();
-                    break;
-                case "÷":
-                    if (secondvalue != 0)
-                        txtResult.Text = (firstvalue / secondvalue).ToString();
-                    else
-                    {
-                        MessageBox.Show("Cannot divide by zero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    break;
-                default:
-                    break;
-            }
-            lblPreview.Text = firstvalue + " " + operationPerformed + " " + secondvalue + " =";
-        }
-
         private void btnSaveRecit_Click(object sender, EventArgs e)
         {
+            txtRecitation.Text = txtResult.Text;
+        }
 
-            if (btnSaveRecit.Enabled)
-            {
-                txtRecitation.Text = (" " + txtResult.Text);
-            }
+        private void btnOverRecit_Click(object sender, EventArgs e)
+        {
+            txtOverRecit.Text = txtResult.Text;
+        }
+
+        private void btnPercentageRecit_Click(object sender, EventArgs e)
+        {
+            txtPercentRecit.Text = txtResult.Text + "%";
         }
 
         private void btnSaveTasks_Click(object sender, EventArgs e)
         {
-            if (btnSaveTask.Enabled)
-            {
-                txtTask.Text = (" " + txtResult.Text);
-            }
+            txtTask.Text = (" " + txtResult.Text);
+        }
+
+        private void btnOverTask_Click(object sender, EventArgs e)
+        {
+            txtOverTask.Text = txtResult.Text;
+        }
+
+        private void btnPercentageTask_Click(object sender, EventArgs e)
+        {
+            txtPercentTask.Text = txtResult.Text + "%";
         }
 
         private void btnSaveQuiz_Click(object sender, EventArgs e)
         {
-            if (btnSaveQuiz.Enabled)
-            {
-                txtQuizes.Text = (" " + txtResult.Text);
-            }
+            txtQuizes.Text = txtResult.Text;
         }
 
-        private void formCalculator_Load(object sender, EventArgs e)
+        private void btnOverQuiz_Click(object sender, EventArgs e)
         {
-          
+            txtOverQuiz.Text = txtResult.Text;
+        }
+
+        private void btnPercentageQuiz_Click(object sender, EventArgs e)
+        {
+            txtPercentQuiz.Text = txtResult.Text + "%";
+        }
+
+        private void btnSaveExam_Click(object sender, EventArgs e)
+        {
+            txtExam.Text = txtResult.Text;
+        }
+
+        private void btnOverExam_Click(object sender, EventArgs e)
+        {
+            txtOverExam.Text = txtResult.Text;
+        }
+
+        private void btnPercentageExam_Click(object sender, EventArgs e)
+        {
+            txtPercentExam.Text = txtResult.Text + "%";
         }
 
         private void btnEqlRecit_Click(object sender, EventArgs e)
@@ -221,6 +194,11 @@ namespace Student_Hub
             {
                
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

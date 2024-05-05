@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace Student_Hub
         public frmSignUp()
         {
             InitializeComponent();
-            string constring = "server=localhost;uid=root;password=1234567890;database=student_hub";
+            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
             conn = new MySqlConnection(constring);
         }
 
@@ -35,7 +36,7 @@ namespace Student_Hub
             Application.ExitThread();
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void addDetails()
         {
             try
             {
@@ -69,6 +70,40 @@ namespace Student_Hub
             }
         }
 
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please fill all the required fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            if (txtFirstName.Text == "")
+            {
+                txtFirstName.BorderColor = Color.Red;
+            }
+            if (txtLastName.Text == "")
+            {
+                txtLastName.BorderColor = Color.Red;
+            }
+            if (txtAge.Text == "")
+            {
+                txtAge.BorderColor = Color.Red;
+            }
+            if (txtStudentNumber.Text == "")
+            {
+                txtStudentNumber.BorderColor = Color.Red;
+            }
+            if (txtEmail.Text == "")
+            {
+                txtEmail.BorderColor = Color.Red;
+            }
+            if (txtPassword.Text == "")
+            {
+                txtPassword.BorderColor = Color.Red;
+            }
+            else
+            {
+                addDetails();
+            }
+        }
+
         private void chkShowPass2_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass2.Checked)
@@ -79,11 +114,6 @@ namespace Student_Hub
             {
                 txtPassword.PasswordChar = '*';
             }
-        }
-
-        private void frmSignUp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

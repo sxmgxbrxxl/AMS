@@ -472,7 +472,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 788);
+            this.ClientSize = new System.Drawing.Size(1270, 845);
             this.Controls.Add(this.pnlProfile);
             this.Controls.Add(this.lblTrueNavigation);
             this.Controls.Add(this.lblProfile);
