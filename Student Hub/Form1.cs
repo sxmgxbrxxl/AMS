@@ -28,6 +28,13 @@ namespace Student_Hub
             this.Hide();
         }
 
+        private void lnkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmForgot form4 = new frmForgot();
+            form4.Show();
+            this.Hide();
+        }
+
         private void ctrClose_Click(object sender, EventArgs e)
         {
             Application.ExitThread();

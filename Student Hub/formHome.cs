@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,7 +19,6 @@ namespace Student_Hub
         public formHome()
         {
             InitializeComponent();
-            FetchStudentName();
         }
 
         private void FetchStudentName()
@@ -77,7 +77,9 @@ namespace Student_Hub
 
         private void formHome_Load(object sender, EventArgs e)
         {
-
+            FetchStudentName();
+            lblDate.Text = DateTime.Now.ToString("MMMM d, yyyy");
+            lblTime.Text = DateTime.Now.ToString("h:m tt");
         }
     }
 }

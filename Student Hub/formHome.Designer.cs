@@ -28,6 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.Charts.WinForms.ChartFont chartFont9 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont10 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont11 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.ChartFont chartFont12 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid4 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick4 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont13 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid5 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.Tick tick5 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont14 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Grid grid6 = new Guna.Charts.WinForms.Grid();
+            Guna.Charts.WinForms.PointLabel pointLabel2 = new Guna.Charts.WinForms.PointLabel();
+            Guna.Charts.WinForms.ChartFont chartFont15 = new Guna.Charts.WinForms.ChartFont();
+            Guna.Charts.WinForms.Tick tick6 = new Guna.Charts.WinForms.Tick();
+            Guna.Charts.WinForms.ChartFont chartFont16 = new Guna.Charts.WinForms.ChartFont();
             this.lblGreetings = new System.Windows.Forms.Label();
             this.lblNavigation = new System.Windows.Forms.Label();
             this.lblNamePlaceholder = new System.Windows.Forms.Label();
@@ -39,10 +54,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.pnlSuggestions = new Guna.UI2.WinForms.Guna2Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.chtPopularity = new Guna.Charts.WinForms.GunaChart();
             this.pnlStats = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.lblStudentNumberPlaceholder = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
             this.pnlWelcome.SuspendLayout();
             this.pnlProgress.SuspendLayout();
             this.pnlNews.SuspendLayout();
@@ -119,7 +135,8 @@
             this.pnlProgress.BackColor = System.Drawing.Color.Transparent;
             this.pnlProgress.BorderColor = System.Drawing.Color.Black;
             this.pnlProgress.BorderRadius = 10;
-            this.pnlProgress.Controls.Add(this.label5);
+            this.pnlProgress.Controls.Add(this.lblTime);
+            this.pnlProgress.Controls.Add(this.lblDate);
             this.pnlProgress.FillColor = System.Drawing.Color.White;
             this.pnlProgress.Location = new System.Drawing.Point(30, 460);
             this.pnlProgress.Margin = new System.Windows.Forms.Padding(0);
@@ -135,7 +152,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 27);
+            this.label5.Location = new System.Drawing.Point(240, 29);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 53);
@@ -192,7 +209,7 @@
             this.pnlSuggestions.BackColor = System.Drawing.Color.Transparent;
             this.pnlSuggestions.BorderColor = System.Drawing.Color.Black;
             this.pnlSuggestions.BorderRadius = 10;
-            this.pnlSuggestions.Controls.Add(this.label4);
+            this.pnlSuggestions.Controls.Add(this.chtPopularity);
             this.pnlSuggestions.FillColor = System.Drawing.Color.White;
             this.pnlSuggestions.Location = new System.Drawing.Point(640, 180);
             this.pnlSuggestions.Margin = new System.Windows.Forms.Padding(0);
@@ -203,24 +220,48 @@
             this.pnlSuggestions.Size = new System.Drawing.Size(600, 370);
             this.pnlSuggestions.TabIndex = 17;
             // 
-            // label4
+            // chtPopularity
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 28);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(167, 53);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "CHART";
+            chartFont9.FontName = "Arial";
+            this.chtPopularity.Legend.LabelFont = chartFont9;
+            this.chtPopularity.Location = new System.Drawing.Point(15, 15);
+            this.chtPopularity.Name = "chtPopularity";
+            this.chtPopularity.Size = new System.Drawing.Size(570, 340);
+            this.chtPopularity.TabIndex = 25;
+            chartFont10.FontName = "Century Gothic";
+            chartFont10.Size = 12;
+            chartFont10.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.chtPopularity.Title.Font = chartFont10;
+            this.chtPopularity.Title.ForeColor = System.Drawing.Color.Black;
+            this.chtPopularity.Title.Text = "App Popularity Among Courses";
+            chartFont11.FontName = "Arial";
+            this.chtPopularity.Tooltips.BodyFont = chartFont11;
+            chartFont12.FontName = "Arial";
+            chartFont12.Size = 9;
+            chartFont12.Style = Guna.Charts.WinForms.ChartFontStyle.Bold;
+            this.chtPopularity.Tooltips.TitleFont = chartFont12;
+            this.chtPopularity.XAxes.GridLines = grid4;
+            chartFont13.FontName = "Arial";
+            tick4.Font = chartFont13;
+            this.chtPopularity.XAxes.Ticks = tick4;
+            this.chtPopularity.YAxes.GridLines = grid5;
+            chartFont14.FontName = "Arial";
+            tick5.Font = chartFont14;
+            this.chtPopularity.YAxes.Ticks = tick5;
+            this.chtPopularity.ZAxes.GridLines = grid6;
+            chartFont15.FontName = "Arial";
+            pointLabel2.Font = chartFont15;
+            this.chtPopularity.ZAxes.PointLabels = pointLabel2;
+            chartFont16.FontName = "Arial";
+            tick6.Font = chartFont16;
+            this.chtPopularity.ZAxes.Ticks = tick6;
             // 
             // pnlStats
             // 
             this.pnlStats.BackColor = System.Drawing.Color.Transparent;
             this.pnlStats.BorderColor = System.Drawing.Color.Black;
             this.pnlStats.BorderRadius = 10;
-            this.pnlStats.Controls.Add(this.label3);
+            this.pnlStats.Controls.Add(this.label5);
             this.pnlStats.FillColor = System.Drawing.Color.White;
             this.pnlStats.Location = new System.Drawing.Point(640, 580);
             this.pnlStats.Margin = new System.Windows.Forms.Padding(0);
@@ -231,17 +272,17 @@
             this.pnlStats.Size = new System.Drawing.Size(600, 230);
             this.pnlStats.TabIndex = 19;
             // 
-            // label3
+            // lblDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 23);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(238, 53);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "DATE TIME";
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(23, 271);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(107, 44);
+            this.lblDate.TabIndex = 23;
+            this.lblDate.Text = "DATE";
             // 
             // lblStudentNumberPlaceholder
             // 
@@ -255,6 +296,18 @@
             this.lblStudentNumberPlaceholder.Size = new System.Drawing.Size(72, 19);
             this.lblStudentNumberPlaceholder.TabIndex = 21;
             this.lblStudentNumberPlaceholder.Text = "0000000";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.BackColor = System.Drawing.Color.Transparent;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(22, 79);
+            this.lblTime.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(118, 53);
+            this.lblTime.TabIndex = 24;
+            this.lblTime.Text = "TIME";
             // 
             // formHome
             // 
@@ -287,7 +340,6 @@
             this.pnlNews.ResumeLayout(false);
             this.pnlNews.PerformLayout();
             this.pnlSuggestions.ResumeLayout(false);
-            this.pnlSuggestions.PerformLayout();
             this.pnlStats.ResumeLayout(false);
             this.pnlStats.PerformLayout();
             this.ResumeLayout(false);
@@ -310,7 +362,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDate;
+        private Guna.Charts.WinForms.GunaChart chtPopularity;
+        private System.Windows.Forms.Label lblTime;
     }
 }

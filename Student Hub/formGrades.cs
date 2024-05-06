@@ -78,6 +78,8 @@ namespace Student_Hub
             cboCourse.BorderRadius = 17;
             cboCourse.Font = new Font("Century Gothic", 10, FontStyle.Regular);
             cboCourse.Size = new Size(350, 40);
+
+            Array.Sort(course);
             cboCourse.Items.AddRange(course);
             pnlCourseContainer.Controls.Add(cboCourse);
 

@@ -17,7 +17,6 @@ namespace Student_Hub
         public formCalculator()
         {
             InitializeComponent();
-
         }
 
         private void btnNumber_Click(object sender, EventArgs e)
