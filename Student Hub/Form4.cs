@@ -12,6 +12,7 @@ using System.Windows.Forms;
 
 namespace Student_Hub
 {
+    using MySql.Data.MySqlClient;
     using System;
     using System.Net;
     using System.Net.Mail;
@@ -21,6 +22,7 @@ namespace Student_Hub
     {
         public static string to { get; set; }
         private string randomCode;
+        DBConnection connect = new DBConnection();
 
         public frmForgot()
         {
@@ -45,6 +47,7 @@ namespace Student_Hub
             fromEmail = "academicmastery00@gmail.com";
             pass = "nbce leas ziut krux";
 
+
             string to = txtEmail.Text;
 
             messageBody = $"Your Reset Code is {randomCode}";
@@ -68,7 +71,8 @@ namespace Student_Hub
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
-        }
+        
+    }
 
         private void btnVerify_Click(object sender, EventArgs e)
         {
@@ -88,6 +92,11 @@ namespace Student_Hub
         private void ctrClose_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
+        }
+
+        private void frmForgot_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

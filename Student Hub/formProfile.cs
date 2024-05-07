@@ -13,6 +13,8 @@ namespace Student_Hub
 {
     public partial class formProfile : Form
     {
+
+        DBConnection connect = new DBConnection();
         public formProfile()
         {
             InitializeComponent();
@@ -21,15 +23,14 @@ namespace Student_Hub
 
         private void LoadDetails()
         {
-            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
-            MySqlConnection conn = new MySqlConnection(constring);
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             try
             {
-                conn.Open();
-
-                string query = "SELECT clm_stdFname, clm_stdLname, clm_stdAge, clm_stdEmail, clm_stdCourse , clm_stdGender FROM stdhub_table WHERE clm_stdNumber = @clm_stdNumber";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                connect.OpenCon();
+                string query = "SELECT clm_stdFName, clm_LName, clm_stdAGE, clm_stdEMAIL, clm_stdProgram , clm_stdGender FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
 
                 if (!string.IsNullOrEmpty(frmMain.StudentNumber))
                 {
@@ -48,11 +49,11 @@ namespace Student_Hub
 
                 if (reader.Read()) // Check if a record was found
                 {
-                    string studentFName = reader["clm_stdFname"].ToString();
-                    string studentLName = reader["clm_stdLname"].ToString();
-                    string studentAge = reader["clm_stdAge"].ToString();
-                    string studentEmail = reader["clm_stdEmail"].ToString();
-                    string studentCourse = reader["clm_stdCourse"].ToString();
+                    string studentFName = reader["clm_stdFName"].ToString();
+                    string studentLName = reader["clm_LName"].ToString();
+                    string studentAge = reader["clm_stdAGE"].ToString();
+                    string studentEmail = reader["clm_stdEMAIL"].ToString();
+                    string studentCourse = reader["clm_stdProgram"].ToString();
                     string studentGender = reader["clm_stdGender"].ToString();
 
                     lblNamePlaceholder.Text = studentFName; // Display the name in the label
@@ -68,7 +69,6 @@ namespace Student_Hub
                 {
                     MessageBox.Show("Student not found.");
                 }
-
             }
             catch (MySqlException ex)
             {
@@ -76,11 +76,10 @@ namespace Student_Hub
             }
             finally
             {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
+                connect.CloseCon();
             }
+
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -93,17 +92,13 @@ namespace Student_Hub
                 DisableTextBox();
                 
                 string StudentNumber = frmMain.StudentNumber;
-
-                string constring = "server=localhost;uid=root;password=1234;database=student_hub";
-                MySqlConnection conn = new MySqlConnection(constring);
-
                 try
                 {
-                    conn.Open();
-                    string query = "UPDATE student_hub.stdhub_table " +
-                                   "SET clm_stdCourse = '" + txtCourse.Text + "', clm_stdGender = '" + txtGender.Text + "'" +
+                    connect.OpenCon();
+                    string query = "UPDATE db_acadmastery.tbl_stdinfo " +
+                                   "SET clm_stdProgram = '" + txtCourse.Text + "', clm_stdGender = '" + txtGender.Text + "'" +
                                    "WHERE clm_stdNumber = @clm_stdNumber";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                     if (!string.IsNullOrEmpty(frmMain.StudentNumber))
                     {
                         cmd.Parameters.AddWithValue("@clm_stdNumber", frmMain.StudentNumber);
@@ -112,7 +107,7 @@ namespace Student_Hub
                     {
                         cmd.Parameters.AddWithValue("@clm_stdNumber", frmSignUp.StudentNumber);
                     }
-                    cmd.Parameters.AddWithValue("clm_stdCourse", txtCourse.Text);
+                    cmd.Parameters.AddWithValue("clm_stdProgram", txtCourse.Text);
                     cmd.Parameters.AddWithValue("clm_stdGender", txtGender.Text);
                     cmd.ExecuteNonQuery();
                 }
@@ -122,9 +117,9 @@ namespace Student_Hub
                 }
                 finally
                 {
-                    if (conn.State == ConnectionState.Open)
-                        conn.Close();
+                    connect.CloseCon();
                 }
+ 
             }
             else
             {

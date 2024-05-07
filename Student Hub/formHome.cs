@@ -15,7 +15,7 @@ namespace Student_Hub
 {
     public partial class formHome : Form
     { 
-
+        DBConnection connect =new DBConnection();
         public formHome()
         {
             InitializeComponent();
@@ -38,26 +38,26 @@ namespace Student_Hub
 
             lblStudentNumberPlaceholder.Text = studentNumber;
 
-            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
-            MySqlConnection conn = new MySqlConnection(constring);
+            DataTable table = new DataTable();
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
 
             try
             {
-                conn.Open();
+                connect.OpenCon();
 
-                string query = "SELECT clm_stdFname FROM stdhub_table WHERE clm_stdNumber = @clm_stdNumber";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                string query = "SELECT clm_stdFName FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
 
 
                 if (studentNumber != null)
                 {
-                    cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
+                    cmd.Parameters.AddWithValue("@clm_stdNumber", MySqlDbType.VarChar).Value=studentNumber;
 
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read()) // Check if a record was found
                     {
-                        string studentFName = reader["clm_stdFname"].ToString();
+                        string studentFName = reader["clm_stdFName"].ToString();
                         lblNamePlaceholder.Text = studentFName; // Display the name in the label
                     }
                 }
@@ -68,18 +68,17 @@ namespace Student_Hub
             }
             finally
             {
-                if (conn.State == ConnectionState.Open)
-                {
-                    conn.Close();
-                }
+                    connect.CloseCon();
+                
             }
         }
 
         private void formHome_Load(object sender, EventArgs e)
         {
             FetchStudentName();
+            
             lblDate.Text = DateTime.Now.ToString("MMMM d, yyyy");
-            lblTime.Text = DateTime.Now.ToString("h:m tt");
+            lblTime.Text = DateTime.Now.ToString("h:mm tt");
         }
     }
 }

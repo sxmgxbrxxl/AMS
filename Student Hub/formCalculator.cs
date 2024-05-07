@@ -44,7 +44,8 @@ namespace Student_Hub
 
         private void btnSaveRecit_Click(object sender, EventArgs e)
         {
-            txtRecitation.Text = txtResult.Text;
+                txtRecitation.Text = txtResult.Text;
+
         }
 
         private void btnOverRecit_Click(object sender, EventArgs e)
@@ -104,8 +105,7 @@ namespace Student_Hub
 
         private void btnEqlRecit_Click(object sender, EventArgs e)
         {
-
-            double percentRecit = Convert.ToDouble(txtPercentRecit.Text);
+            double percentRecit = 20;
             double pRresult = percentRecit / 100;
 
 
@@ -138,6 +138,7 @@ namespace Student_Hub
 
         private void btnEqlQuiz_Click(object sender, EventArgs e)
         {
+            
             double percentQuiz = Convert.ToDouble(txtPercentQuiz.Text);
             double pQresult = percentQuiz / 100;
 
@@ -149,6 +150,7 @@ namespace Student_Hub
             double qresult = quizresult * pQresult;
 
             txtTotalQuiz.Text = Convert.ToString(qresult);
+
 
         }
 
@@ -198,6 +200,11 @@ namespace Student_Hub
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void formCalculator_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

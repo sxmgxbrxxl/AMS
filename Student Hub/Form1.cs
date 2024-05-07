@@ -14,7 +14,7 @@ namespace Student_Hub
     public partial class frmMain : Form
     {
         public static string StudentNumber { get; set; }
-        private MySqlConnection conn;
+        DBConnection connect  = new DBConnection();
 
         public frmMain()
         {
@@ -42,17 +42,14 @@ namespace Student_Hub
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string constring = "server=localhost;uid=root;password=1234;database=student_hub";
-            conn = new MySqlConnection(constring);
-
             try
             {
-                conn.Open();
+                connect.OpenCon();
 
-                string query = "SELECT COUNT(*) FROM student_hub.stdhub_table WHERE clm_stdNumber = @clm_stdNumber AND clm_stdPass = @clm_stdPass";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
+                string query = "SELECT COUNT(*) FROM db_acadmastery.tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber AND clm_stdPASS = @clm_stdPASS";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                 cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
-                cmd.Parameters.AddWithValue("@clm_stdPass", txtPassword.Text); // Assuming password is stored in txtPassword TextBox
+                cmd.Parameters.AddWithValue("@clm_stdPASS", txtPassword.Text); // Assuming password is stored in txtPassword TextBox
 
                 int count = Convert.ToInt32(cmd.ExecuteScalar());
 
@@ -79,8 +76,9 @@ namespace Student_Hub
             }
             finally
             {
-                    conn.Close();
+                connect.CloseCon();
             }
+
         }
 
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)

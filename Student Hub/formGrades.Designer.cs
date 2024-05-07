@@ -37,11 +37,12 @@
             this.lblCourseName = new System.Windows.Forms.Label();
             this.lblCourseGrade = new System.Windows.Forms.Label();
             this.pnlCourse = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlCourseContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlGradeContainer = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlDeleteContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlCalculatorContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlDeleteContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlGradeContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlCourseContainer = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlCategory.SuspendLayout();
             this.pnlCourse.SuspendLayout();
             this.SuspendLayout();
@@ -178,6 +179,34 @@
             this.pnlCourse.Size = new System.Drawing.Size(802, 712);
             this.pnlCourse.TabIndex = 47;
             // 
+            // pnlCalculatorContainer
+            // 
+            this.pnlCalculatorContainer.Location = new System.Drawing.Point(719, 93);
+            this.pnlCalculatorContainer.Name = "pnlCalculatorContainer";
+            this.pnlCalculatorContainer.Size = new System.Drawing.Size(47, 577);
+            this.pnlCalculatorContainer.TabIndex = 11;
+            // 
+            // pnlDeleteContainer
+            // 
+            this.pnlDeleteContainer.Location = new System.Drawing.Point(672, 93);
+            this.pnlDeleteContainer.Name = "pnlDeleteContainer";
+            this.pnlDeleteContainer.Size = new System.Drawing.Size(47, 577);
+            this.pnlDeleteContainer.TabIndex = 10;
+            // 
+            // pnlGradeContainer
+            // 
+            this.pnlGradeContainer.Location = new System.Drawing.Point(485, 93);
+            this.pnlGradeContainer.Name = "pnlGradeContainer";
+            this.pnlGradeContainer.Size = new System.Drawing.Size(187, 577);
+            this.pnlGradeContainer.TabIndex = 9;
+            // 
+            // pnlCourseContainer
+            // 
+            this.pnlCourseContainer.Location = new System.Drawing.Point(55, 93);
+            this.pnlCourseContainer.Name = "pnlCourseContainer";
+            this.pnlCourseContainer.Size = new System.Drawing.Size(352, 577);
+            this.pnlCourseContainer.TabIndex = 8;
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
@@ -203,33 +232,15 @@
             this.btnAdd.TextOffset = new System.Drawing.Point(15, 0);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // pnlCourseContainer
+            // button1
             // 
-            this.pnlCourseContainer.Location = new System.Drawing.Point(55, 93);
-            this.pnlCourseContainer.Name = "pnlCourseContainer";
-            this.pnlCourseContainer.Size = new System.Drawing.Size(352, 577);
-            this.pnlCourseContainer.TabIndex = 8;
-            // 
-            // pnlGradeContainer
-            // 
-            this.pnlGradeContainer.Location = new System.Drawing.Point(485, 93);
-            this.pnlGradeContainer.Name = "pnlGradeContainer";
-            this.pnlGradeContainer.Size = new System.Drawing.Size(187, 577);
-            this.pnlGradeContainer.TabIndex = 9;
-            // 
-            // pnlDeleteContainer
-            // 
-            this.pnlDeleteContainer.Location = new System.Drawing.Point(672, 93);
-            this.pnlDeleteContainer.Name = "pnlDeleteContainer";
-            this.pnlDeleteContainer.Size = new System.Drawing.Size(47, 577);
-            this.pnlDeleteContainer.TabIndex = 10;
-            // 
-            // pnlCalculatorContainer
-            // 
-            this.pnlCalculatorContainer.Location = new System.Drawing.Point(719, 93);
-            this.pnlCalculatorContainer.Name = "pnlCalculatorContainer";
-            this.pnlCalculatorContainer.Size = new System.Drawing.Size(47, 577);
-            this.pnlCalculatorContainer.TabIndex = 11;
+            this.button1.Location = new System.Drawing.Point(237, 336);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 69;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // formGrades
             // 
@@ -237,7 +248,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 845);
+            this.ClientSize = new System.Drawing.Size(1270, 788);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pnlCourse);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pnlCategory);
@@ -274,5 +286,6 @@
         private Guna.UI2.WinForms.Guna2Panel pnlCalculatorContainer;
         private Guna.UI2.WinForms.Guna2Panel pnlDeleteContainer;
         private Guna.UI2.WinForms.Guna2Panel pnlGradeContainer;
+        private System.Windows.Forms.Button button1;
     }
 }

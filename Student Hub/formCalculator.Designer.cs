@@ -76,11 +76,8 @@
             this.pnlCalculator = new Guna.UI2.WinForms.Guna2Panel();
             this.lblGrades = new System.Windows.Forms.Label();
             this.btnOverRecit = new System.Windows.Forms.Button();
-            this.btnPercentageRecit = new System.Windows.Forms.Button();
             this.btnOverTask = new System.Windows.Forms.Button();
-            this.btnPercentageTask = new System.Windows.Forms.Button();
             this.btnOverQuiz = new System.Windows.Forms.Button();
-            this.btnPercentageQuiz = new System.Windows.Forms.Button();
             this.lblRecitation = new System.Windows.Forms.Label();
             this.btnSaveExam = new System.Windows.Forms.Button();
             this.btnOverExam = new System.Windows.Forms.Button();
@@ -89,6 +86,9 @@
             this.lblQuiz = new System.Windows.Forms.Label();
             this.lblExam = new System.Windows.Forms.Label();
             this.formCalculatorTransition = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.btnPercentageQuiz = new System.Windows.Forms.Button();
+            this.btnPercentageTask = new System.Windows.Forms.Button();
+            this.btnPercentageRecit = new System.Windows.Forms.Button();
             this.pnlScreen.SuspendLayout();
             this.pnlCalculator.SuspendLayout();
             this.SuspendLayout();
@@ -965,19 +965,6 @@
             this.btnOverRecit.UseVisualStyleBackColor = false;
             this.btnOverRecit.Click += new System.EventHandler(this.btnOverRecit_Click);
             // 
-            // btnPercentageRecit
-            // 
-            this.btnPercentageRecit.BackColor = System.Drawing.Color.Tan;
-            this.btnPercentageRecit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPercentageRecit.Location = new System.Drawing.Point(323, 202);
-            this.btnPercentageRecit.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercentageRecit.Name = "btnPercentageRecit";
-            this.btnPercentageRecit.Size = new System.Drawing.Size(135, 49);
-            this.btnPercentageRecit.TabIndex = 59;
-            this.btnPercentageRecit.Text = "Percentage Recitation";
-            this.btnPercentageRecit.UseVisualStyleBackColor = false;
-            this.btnPercentageRecit.Click += new System.EventHandler(this.btnPercentageRecit_Click);
-            // 
             // btnOverTask
             // 
             this.btnOverTask.BackColor = System.Drawing.Color.Tan;
@@ -991,19 +978,6 @@
             this.btnOverTask.UseVisualStyleBackColor = false;
             this.btnOverTask.Click += new System.EventHandler(this.btnOverTask_Click);
             // 
-            // btnPercentageTask
-            // 
-            this.btnPercentageTask.BackColor = System.Drawing.Color.Tan;
-            this.btnPercentageTask.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPercentageTask.Location = new System.Drawing.Point(323, 330);
-            this.btnPercentageTask.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercentageTask.Name = "btnPercentageTask";
-            this.btnPercentageTask.Size = new System.Drawing.Size(135, 49);
-            this.btnPercentageTask.TabIndex = 61;
-            this.btnPercentageTask.Text = "Percentage Task";
-            this.btnPercentageTask.UseVisualStyleBackColor = false;
-            this.btnPercentageTask.Click += new System.EventHandler(this.btnPercentageTask_Click);
-            // 
             // btnOverQuiz
             // 
             this.btnOverQuiz.BackColor = System.Drawing.Color.Tan;
@@ -1016,19 +990,6 @@
             this.btnOverQuiz.Text = "Over Quiz";
             this.btnOverQuiz.UseVisualStyleBackColor = false;
             this.btnOverQuiz.Click += new System.EventHandler(this.btnOverQuiz_Click);
-            // 
-            // btnPercentageQuiz
-            // 
-            this.btnPercentageQuiz.BackColor = System.Drawing.Color.Tan;
-            this.btnPercentageQuiz.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPercentageQuiz.Location = new System.Drawing.Point(323, 463);
-            this.btnPercentageQuiz.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercentageQuiz.Name = "btnPercentageQuiz";
-            this.btnPercentageQuiz.Size = new System.Drawing.Size(135, 49);
-            this.btnPercentageQuiz.TabIndex = 63;
-            this.btnPercentageQuiz.Text = "Percentage Quiz";
-            this.btnPercentageQuiz.UseVisualStyleBackColor = false;
-            this.btnPercentageQuiz.Click += new System.EventHandler(this.btnPercentageQuiz_Click);
             // 
             // lblRecitation
             // 
@@ -1124,6 +1085,45 @@
             this.formCalculatorTransition.ContainerControl = this;
             this.formCalculatorTransition.DockIndicatorTransparencyValue = 0.6D;
             this.formCalculatorTransition.TransparentWhileDrag = true;
+            // 
+            // btnPercentageQuiz
+            // 
+            this.btnPercentageQuiz.BackColor = System.Drawing.Color.Tan;
+            this.btnPercentageQuiz.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPercentageQuiz.Location = new System.Drawing.Point(323, 463);
+            this.btnPercentageQuiz.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPercentageQuiz.Name = "btnPercentageQuiz";
+            this.btnPercentageQuiz.Size = new System.Drawing.Size(135, 49);
+            this.btnPercentageQuiz.TabIndex = 63;
+            this.btnPercentageQuiz.Text = "Percentage Quiz";
+            this.btnPercentageQuiz.UseVisualStyleBackColor = false;
+            this.btnPercentageQuiz.Click += new System.EventHandler(this.btnPercentageQuiz_Click);
+            // 
+            // btnPercentageTask
+            // 
+            this.btnPercentageTask.BackColor = System.Drawing.Color.Tan;
+            this.btnPercentageTask.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPercentageTask.Location = new System.Drawing.Point(323, 330);
+            this.btnPercentageTask.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPercentageTask.Name = "btnPercentageTask";
+            this.btnPercentageTask.Size = new System.Drawing.Size(135, 49);
+            this.btnPercentageTask.TabIndex = 61;
+            this.btnPercentageTask.Text = "Percentage Task";
+            this.btnPercentageTask.UseVisualStyleBackColor = false;
+            this.btnPercentageTask.Click += new System.EventHandler(this.btnPercentageTask_Click);
+            // 
+            // btnPercentageRecit
+            // 
+            this.btnPercentageRecit.BackColor = System.Drawing.Color.Tan;
+            this.btnPercentageRecit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPercentageRecit.Location = new System.Drawing.Point(323, 202);
+            this.btnPercentageRecit.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPercentageRecit.Name = "btnPercentageRecit";
+            this.btnPercentageRecit.Size = new System.Drawing.Size(135, 49);
+            this.btnPercentageRecit.TabIndex = 59;
+            this.btnPercentageRecit.Text = "Percentage Recitation";
+            this.btnPercentageRecit.UseVisualStyleBackColor = false;
+            this.btnPercentageRecit.Click += new System.EventHandler(this.btnPercentageRecit_Click);
             // 
             // formCalculator
             // 
@@ -1236,11 +1236,8 @@
         private Guna.UI2.WinForms.Guna2Panel pnlCalculator;
         private System.Windows.Forms.Label lblGrades;
         private System.Windows.Forms.Button btnOverRecit;
-        private System.Windows.Forms.Button btnPercentageRecit;
         private System.Windows.Forms.Button btnOverTask;
-        private System.Windows.Forms.Button btnPercentageTask;
         private System.Windows.Forms.Button btnOverQuiz;
-        private System.Windows.Forms.Button btnPercentageQuiz;
         private System.Windows.Forms.Label lblRecitation;
         private System.Windows.Forms.Button btnSaveExam;
         private System.Windows.Forms.Button btnOverExam;
@@ -1249,5 +1246,8 @@
         private System.Windows.Forms.Label lblQuiz;
         private System.Windows.Forms.Label lblExam;
         private Guna.UI2.WinForms.Guna2BorderlessForm formCalculatorTransition;
+        private System.Windows.Forms.Button btnPercentageQuiz;
+        private System.Windows.Forms.Button btnPercentageTask;
+        private System.Windows.Forms.Button btnPercentageRecit;
     }
 }

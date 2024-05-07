@@ -111,5 +111,15 @@ namespace Student_Hub
 
             courseCounter++;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(button1.Enabled)
+            {
+                formCalculator frmCalc = new formCalculator();
+                this.Hide();
+                frmCalc.Show();
+            }
+        }
     }
 }

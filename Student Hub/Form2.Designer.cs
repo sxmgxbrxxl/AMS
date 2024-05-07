@@ -338,6 +338,7 @@
             this.txtFirstName.SelectedText = "";
             this.txtFirstName.Size = new System.Drawing.Size(200, 40);
             this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // lblFirstName
             // 
@@ -429,6 +430,7 @@
             this.Name = "frmSignUp";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmSignUp_Load);
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
             this.ResumeLayout(false);
