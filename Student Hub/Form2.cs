@@ -49,13 +49,13 @@ namespace Student_Hub
                     return;
                 }
 
-                string query = "INSERT INTO db_acadmastery.tbl_stdinfo(clm_stdNumber, clm_stdFName, clm_LName, clm_stdAGE, clm_stdEMAIL, clm_stdPASS) " +
-                                "VALUES (@clm_stdNumber, @clm_stdFName, @clm_LName, @clm_stdAGE, @clm_stdEMAIL, @clm_stdPASS)";
+                string query = "INSERT INTO db_acadmastery.tbl_stdinfo(clm_stdNumber, clm_stdFName, clm_stdLName, clm_stdAGE, clm_stdEMAIL, clm_stdPASS) " +
+                                "VALUES (@clm_stdNumber, @clm_stdFName, @clm_stdLName, @clm_stdAGE, @clm_stdEMAIL, @clm_stdPASS)";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
 
                 cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
                 cmd.Parameters.AddWithValue("@clm_stdFName", txtFirstName.Text);
-                cmd.Parameters.AddWithValue("@clm_LName", txtLastName.Text);
+                cmd.Parameters.AddWithValue("@clm_stdLName", txtLastName.Text);
                 cmd.Parameters.AddWithValue("@clm_stdAGE", txtAge.Text);
                 cmd.Parameters.AddWithValue("@clm_stdEMAIL", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@clm_stdPASS", txtPassword.Text);
@@ -85,26 +85,32 @@ namespace Student_Hub
             if (txtFirstName.Text == "")
             {
                 txtFirstName.BorderColor = Color.Red;
+                txtFirstName.PlaceholderText = "*";
             }
             if (txtLastName.Text == "")
             {
                 txtLastName.BorderColor = Color.Red;
+                txtLastName.PlaceholderText = "*";
             }
             if (txtAge.Text == "")
             {
                 txtAge.BorderColor = Color.Red;
+                txtAge.PlaceholderText = "*";
             }
             if (txtStudentNumber.Text == "")
             {
                 txtStudentNumber.BorderColor = Color.Red;
+                txtStudentNumber.PlaceholderText = "*";
             }
             if (txtEmail.Text == "")
             {
                 txtEmail.BorderColor = Color.Red;
+                txtEmail.PlaceholderText = "*";
             }
             if (txtPassword.Text == "")
             {
                 txtPassword.BorderColor = Color.Red;
+                txtPassword.PlaceholderText = "*";
             }
             else
             {

@@ -1,24 +1,24 @@
 ﻿using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Asn1.X509.SigI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Student_Hub
 {
-    public partial class formHome : Form
-    { 
-        DBConnection connect =new DBConnection();
-        public formHome()
+    public partial class UCHome : UserControl
+    {
+        DBConnection connect = new DBConnection();
+
+        public UCHome()
         {
             InitializeComponent();
+            FetchStudentName();
         }
 
         private void FetchStudentName()
@@ -51,7 +51,7 @@ namespace Student_Hub
 
                 if (studentNumber != null)
                 {
-                    cmd.Parameters.AddWithValue("@clm_stdNumber", MySqlDbType.VarChar).Value=studentNumber;
+                    cmd.Parameters.AddWithValue("@clm_stdNumber", MySqlDbType.VarChar).Value = studentNumber;
 
                     MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -68,17 +68,17 @@ namespace Student_Hub
             }
             finally
             {
-                    connect.CloseCon();
-                
+                connect.CloseCon();
+
             }
         }
 
-        private void formHome_Load(object sender, EventArgs e)
+        private void UCHome_Load(object sender, EventArgs e)
         {
             FetchStudentName();
-            
+
             lblDate.Text = DateTime.Now.ToString("MMMM d, yyyy");
-            lblTime.Text = DateTime.Now.ToString("h:mm tt");
+            lblTime.Text = DateTime.Now.ToString("HH:mm");
         }
     }
 }

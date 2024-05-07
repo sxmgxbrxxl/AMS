@@ -45,6 +45,7 @@
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.form3Transition = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.form3Drag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.pnlContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.flwMenu.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
@@ -73,7 +74,7 @@
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(225, 195);
+            this.pnlLogo.Size = new System.Drawing.Size(225, 218);
             this.pnlLogo.TabIndex = 9;
             // 
             // picLogo
@@ -81,7 +82,7 @@
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picLogo.Image = global::Student_Hub.Properties.Resources.Academic_Mastery;
-            this.picLogo.Location = new System.Drawing.Point(15, 24);
+            this.picLogo.Location = new System.Drawing.Point(18, 50);
             this.picLogo.Margin = new System.Windows.Forms.Padding(0);
             this.picLogo.Name = "picLogo";
             this.picLogo.Size = new System.Drawing.Size(191, 154);
@@ -106,7 +107,7 @@
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnHome.Location = new System.Drawing.Point(0, 195);
+            this.btnHome.Location = new System.Drawing.Point(0, 218);
             this.btnHome.Margin = new System.Windows.Forms.Padding(0);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -124,7 +125,7 @@
             this.flwStudent.Controls.Add(this.btnStudent);
             this.flwStudent.Controls.Add(this.btnProfile);
             this.flwStudent.Controls.Add(this.btnGrades);
-            this.flwStudent.Location = new System.Drawing.Point(0, 260);
+            this.flwStudent.Location = new System.Drawing.Point(0, 283);
             this.flwStudent.Margin = new System.Windows.Forms.Padding(0);
             this.flwStudent.Name = "flwStudent";
             this.flwStudent.Size = new System.Drawing.Size(225, 65);
@@ -234,7 +235,7 @@
             this.btnRecords.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRecords.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnRecords.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnRecords.Location = new System.Drawing.Point(0, 325);
+            this.btnRecords.Location = new System.Drawing.Point(0, 348);
             this.btnRecords.Margin = new System.Windows.Forms.Padding(0);
             this.btnRecords.Name = "btnRecords";
             this.btnRecords.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -263,7 +264,7 @@
             this.btnAbout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAbout.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnAbout.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAbout.Location = new System.Drawing.Point(0, 390);
+            this.btnAbout.Location = new System.Drawing.Point(0, 413);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -292,7 +293,7 @@
             this.btnLogOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogOut.ImageOffset = new System.Drawing.Point(35, 0);
             this.btnLogOut.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 455);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 478);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(0);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -333,6 +334,15 @@
             this.form3Drag.TargetControl = this.pnlHeader;
             this.form3Drag.UseTransparentDrag = true;
             // 
+            // pnlContainer
+            // 
+            this.pnlContainer.BackColor = System.Drawing.Color.White;
+            this.pnlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContainer.Location = new System.Drawing.Point(225, 50);
+            this.pnlContainer.Name = "pnlContainer";
+            this.pnlContainer.Size = new System.Drawing.Size(1275, 850);
+            this.pnlContainer.TabIndex = 11;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,12 +350,12 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.flwMenu);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -374,5 +384,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
         private Guna.UI2.WinForms.Guna2BorderlessForm form3Transition;
         private Guna.UI2.WinForms.Guna2DragControl form3Drag;
+        private Guna.UI2.WinForms.Guna2Panel pnlContainer;
     }
 }

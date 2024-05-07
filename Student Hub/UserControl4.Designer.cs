@@ -1,13 +1,13 @@
 ﻿namespace Student_Hub
 {
-    partial class formRecords
+    partial class UCRecords
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,22 +20,22 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNavigation = new System.Windows.Forms.Label();
-            this.lblTrueNavigation = new System.Windows.Forms.Label();
-            this.lblRecords = new System.Windows.Forms.Label();
             this.pnlCategory = new Guna.UI2.WinForms.Guna2Panel();
             this.cboSemester = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblSemester = new System.Windows.Forms.Label();
             this.lblYear = new System.Windows.Forms.Label();
             this.cboYear = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblRecords = new System.Windows.Forms.Label();
+            this.lblTrueNavigation = new System.Windows.Forms.Label();
+            this.lblNavigation = new System.Windows.Forms.Label();
             this.pnlRecords = new Guna.UI2.WinForms.Guna2Panel();
             this.lblFinal = new System.Windows.Forms.Label();
             this.lblMidterm = new System.Windows.Forms.Label();
@@ -44,44 +44,6 @@
             this.pnlCategory.SuspendLayout();
             this.pnlRecords.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblNavigation
-            // 
-            this.lblNavigation.AutoSize = true;
-            this.lblNavigation.BackColor = System.Drawing.Color.Transparent;
-            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavigation.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNavigation.Location = new System.Drawing.Point(30, 20);
-            this.lblNavigation.Margin = new System.Windows.Forms.Padding(0);
-            this.lblNavigation.Name = "lblNavigation";
-            this.lblNavigation.Size = new System.Drawing.Size(79, 23);
-            this.lblNavigation.TabIndex = 5;
-            this.lblNavigation.Text = "Home /";
-            // 
-            // lblTrueNavigation
-            // 
-            this.lblTrueNavigation.AutoSize = true;
-            this.lblTrueNavigation.BackColor = System.Drawing.Color.Transparent;
-            this.lblTrueNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrueNavigation.ForeColor = System.Drawing.Color.Black;
-            this.lblTrueNavigation.Location = new System.Drawing.Point(105, 20);
-            this.lblTrueNavigation.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTrueNavigation.Name = "lblTrueNavigation";
-            this.lblTrueNavigation.Size = new System.Drawing.Size(84, 23);
-            this.lblTrueNavigation.TabIndex = 6;
-            this.lblTrueNavigation.Text = "Records";
-            // 
-            // lblRecords
-            // 
-            this.lblRecords.AutoSize = true;
-            this.lblRecords.BackColor = System.Drawing.Color.Transparent;
-            this.lblRecords.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecords.Location = new System.Drawing.Point(20, 50);
-            this.lblRecords.Margin = new System.Windows.Forms.Padding(0);
-            this.lblRecords.Name = "lblRecords";
-            this.lblRecords.Size = new System.Drawing.Size(213, 56);
-            this.lblRecords.TabIndex = 7;
-            this.lblRecords.Text = "Records";
             // 
             // pnlCategory
             // 
@@ -100,7 +62,7 @@
             this.pnlCategory.ShadowDecoration.Depth = 15;
             this.pnlCategory.ShadowDecoration.Enabled = true;
             this.pnlCategory.Size = new System.Drawing.Size(350, 250);
-            this.pnlCategory.TabIndex = 16;
+            this.pnlCategory.TabIndex = 22;
             // 
             // cboSemester
             // 
@@ -163,6 +125,44 @@
             this.cboYear.Size = new System.Drawing.Size(310, 36);
             this.cboYear.TabIndex = 0;
             // 
+            // lblRecords
+            // 
+            this.lblRecords.AutoSize = true;
+            this.lblRecords.BackColor = System.Drawing.Color.Transparent;
+            this.lblRecords.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecords.Location = new System.Drawing.Point(20, 50);
+            this.lblRecords.Margin = new System.Windows.Forms.Padding(0);
+            this.lblRecords.Name = "lblRecords";
+            this.lblRecords.Size = new System.Drawing.Size(213, 56);
+            this.lblRecords.TabIndex = 21;
+            this.lblRecords.Text = "Records";
+            // 
+            // lblTrueNavigation
+            // 
+            this.lblTrueNavigation.AutoSize = true;
+            this.lblTrueNavigation.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrueNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrueNavigation.ForeColor = System.Drawing.Color.Black;
+            this.lblTrueNavigation.Location = new System.Drawing.Point(105, 20);
+            this.lblTrueNavigation.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTrueNavigation.Name = "lblTrueNavigation";
+            this.lblTrueNavigation.Size = new System.Drawing.Size(84, 23);
+            this.lblTrueNavigation.TabIndex = 20;
+            this.lblTrueNavigation.Text = "Records";
+            // 
+            // lblNavigation
+            // 
+            this.lblNavigation.AutoSize = true;
+            this.lblNavigation.BackColor = System.Drawing.Color.Transparent;
+            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavigation.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNavigation.Location = new System.Drawing.Point(30, 20);
+            this.lblNavigation.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNavigation.Name = "lblNavigation";
+            this.lblNavigation.Size = new System.Drawing.Size(79, 23);
+            this.lblNavigation.TabIndex = 19;
+            this.lblNavigation.Text = "Home /";
+            // 
             // pnlRecords
             // 
             this.pnlRecords.BackColor = System.Drawing.Color.Transparent;
@@ -179,7 +179,7 @@
             this.pnlRecords.ShadowDecoration.Depth = 15;
             this.pnlRecords.ShadowDecoration.Enabled = true;
             this.pnlRecords.Size = new System.Drawing.Size(840, 614);
-            this.pnlRecords.TabIndex = 17;
+            this.pnlRecords.TabIndex = 23;
             // 
             // lblFinal
             // 
@@ -235,27 +235,22 @@
             this.btnPrint.Margin = new System.Windows.Forms.Padding(0);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(150, 50);
-            this.btnPrint.TabIndex = 18;
+            this.btnPrint.TabIndex = 24;
             this.btnPrint.Text = "Print";
             // 
-            // formRecords
+            // UCRecords
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 845);
-            this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.pnlRecords);
             this.Controls.Add(this.pnlCategory);
             this.Controls.Add(this.lblRecords);
             this.Controls.Add(this.lblTrueNavigation);
             this.Controls.Add(this.lblNavigation);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "formRecords";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formRecords";
-            this.Load += new System.EventHandler(this.formRecords_Load);
+            this.Controls.Add(this.pnlRecords);
+            this.Controls.Add(this.btnPrint);
+            this.Name = "UCRecords";
+            this.Size = new System.Drawing.Size(1275, 850);
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlRecords.ResumeLayout(false);
@@ -266,18 +261,19 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblNavigation;
-        private System.Windows.Forms.Label lblTrueNavigation;
-        private System.Windows.Forms.Label lblRecords;
+
         private Guna.UI2.WinForms.Guna2Panel pnlCategory;
-        private Guna.UI2.WinForms.Guna2ComboBox cboYear;
         private Guna.UI2.WinForms.Guna2ComboBox cboSemester;
         private System.Windows.Forms.Label lblSemester;
         private System.Windows.Forms.Label lblYear;
+        private Guna.UI2.WinForms.Guna2ComboBox cboYear;
+        private System.Windows.Forms.Label lblRecords;
+        private System.Windows.Forms.Label lblTrueNavigation;
+        private System.Windows.Forms.Label lblNavigation;
         private Guna.UI2.WinForms.Guna2Panel pnlRecords;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
         private System.Windows.Forms.Label lblFinal;
         private System.Windows.Forms.Label lblMidterm;
         private System.Windows.Forms.Label lblPrelim;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
     }
 }

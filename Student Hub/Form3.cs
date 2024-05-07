@@ -13,59 +13,55 @@ namespace Student_Hub
 {
     public partial class frmDashboard : Form
     {
-        formHome home;
-        formProfile profile;
-        formGrades grades;
-        formCalculator calculator;
-        formAbout about;
-        formRecords records;
 
         public frmDashboard()
         {
             InitializeComponent();
             ShowHome();
         }
+
+        private void AddUserControl (UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
         
         public void ShowHome()
         {
-            home = new formHome();
-            home.MdiParent = this;
-            home.Show();
+            UCHome home = new UCHome();
+            AddUserControl(home);
             btnHome.Checked = true;
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            home = new formHome();
-            home.MdiParent = this;
-            home.Show();
+            UCHome home = new UCHome();
+            AddUserControl(home);
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            profile = new formProfile();
-            profile.MdiParent = this;
-            profile.Show();
+            UCProfile profile = new UCProfile();
+            AddUserControl(profile);
         }
 
         private void btnGrades_Click(object sender, EventArgs e)
         {
-            grades = new formGrades();
-            grades.MdiParent = this;
-            grades.Show();
+            UCGrades grades = new UCGrades();
+            AddUserControl(grades);
         }
 
         private void btnRecords_Click(object sender, EventArgs e)
         {
-            records = new formRecords();
-            records.MdiParent = this;
-            records.Show();
+            UCRecords records = new UCRecords();
+            AddUserControl(records);
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            about = new formAbout();
-            about.MdiParent = this;
-            about.Show();
+            UCAbout about = new UCAbout();
+            AddUserControl(about);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
@@ -108,20 +104,6 @@ namespace Student_Hub
             btnLogOut.Checked = false;
             btnProfile.Checked = false;
             btnGrades.Checked = false;
-        }
-
-        private void btnCalculator_Click(object sender, EventArgs e)
-        {
-            if (calculator == null)
-            {
-                calculator = new formCalculator();
-                calculator.MdiParent = this;
-                calculator.Show();
-            }
-            else
-            {
-                calculator.Activate();
-            }
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)

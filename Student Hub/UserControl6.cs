@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Student_Hub
 {
-    public partial class formCalculator : Form
+    public partial class UCCalculator : UserControl
     {
-        public static string Grade {  get; set; }
-       
-        public formCalculator()
+        public static string Grade { get; set; }
+
+        public UCCalculator()
         {
             InitializeComponent();
         }
@@ -45,6 +45,7 @@ namespace Student_Hub
         private void btnSaveRecit_Click(object sender, EventArgs e)
         {
             txtRecitation.Text = txtResult.Text;
+
         }
 
         private void btnOverRecit_Click(object sender, EventArgs e)
@@ -54,12 +55,12 @@ namespace Student_Hub
 
         private void btnPercentageRecit_Click(object sender, EventArgs e)
         {
-            txtPercentRecit.Text = txtResult.Text;
+            txtPercentRecit.Text = txtResult.Text + "%";
         }
 
-        private void btnSaveTasks_Click(object sender, EventArgs e)
+        private void btnSaveTask_Click(object sender, EventArgs e)
         {
-            txtTask.Text = (txtResult.Text);
+            txtTask.Text = (" " + txtResult.Text);
         }
 
         private void btnOverTask_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace Student_Hub
 
         private void btnPercentageTask_Click(object sender, EventArgs e)
         {
-            txtPercentTask.Text = txtResult.Text;
+            txtPercentTask.Text = txtResult.Text + "%";
         }
 
         private void btnSaveQuiz_Click(object sender, EventArgs e)
@@ -84,7 +85,7 @@ namespace Student_Hub
 
         private void btnPercentageQuiz_Click(object sender, EventArgs e)
         {
-            txtPercentQuiz.Text = txtResult.Text;
+            txtPercentQuiz.Text = txtResult.Text + "%";
         }
 
         private void btnSaveExam_Click(object sender, EventArgs e)
@@ -99,7 +100,7 @@ namespace Student_Hub
 
         private void btnPercentageExam_Click(object sender, EventArgs e)
         {
-            txtPercentExam.Text = txtResult.Text;
+            txtPercentExam.Text = txtResult.Text + "%";
         }
 
         private void btnEqlRecit_Click(object sender, EventArgs e)
@@ -137,7 +138,7 @@ namespace Student_Hub
 
         private void btnEqlQuiz_Click(object sender, EventArgs e)
         {
-            
+
             double percentQuiz = Convert.ToDouble(txtPercentQuiz.Text);
             double pQresult = percentQuiz / 100;
 
@@ -153,7 +154,7 @@ namespace Student_Hub
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnEqlExam_Click(object sender, EventArgs e)
         {
             double percentExam = Convert.ToDouble(txtPercentExam.Text);
             double pEresult = percentExam / 100;
@@ -188,20 +189,7 @@ namespace Student_Hub
             Grade = txtGrade.Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (button1.Enabled)
-            {
-               
-            }
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void formCalculator_Load(object sender, EventArgs e)
         {
 
         }

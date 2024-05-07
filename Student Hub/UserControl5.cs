@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student_Hub
 {
-    public partial class formAbout : Form
+    public partial class UCAbout : UserControl
     {
-        public formAbout()
+        public UCAbout()
         {
             InitializeComponent();
         }

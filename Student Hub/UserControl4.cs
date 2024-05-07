@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student_Hub
 {
-    public partial class formRecords : Form
+    public partial class UCRecords : UserControl
     {
-        public formRecords()
+        public UCRecords()
         {
             InitializeComponent();
             Category();
@@ -20,16 +20,11 @@ namespace Student_Hub
 
         private void Category()
         {
-            string[] year = { "1st", "2nd", "3rd", "4th"};
+            string[] year = { "1st", "2nd", "3rd", "4th" };
             string[] sem = { "1st Sem", "2nd Sem" };
 
             cboYear.Items.AddRange(year);
             cboSemester.Items.AddRange(sem);
-        }
-
-        private void formRecords_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

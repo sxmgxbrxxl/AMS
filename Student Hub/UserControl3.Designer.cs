@@ -1,13 +1,13 @@
 ﻿namespace Student_Hub
 {
-    partial class formGrades
+    partial class UCGrades
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,70 +20,31 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNavigation = new System.Windows.Forms.Label();
-            this.lblTrueNavigation = new System.Windows.Forms.Label();
-            this.lblGrades = new System.Windows.Forms.Label();
             this.pnlCategory = new Guna.UI2.WinForms.Guna2Panel();
             this.cboTerm = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblTerm = new System.Windows.Forms.Label();
-            this.lblCourseName = new System.Windows.Forms.Label();
+            this.lblGrades = new System.Windows.Forms.Label();
+            this.lblTrueNavigation = new System.Windows.Forms.Label();
+            this.lblNavigation = new System.Windows.Forms.Label();
             this.lblCourseGrade = new System.Windows.Forms.Label();
+            this.lblCourseName = new System.Windows.Forms.Label();
             this.pnlCourse = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlCalculatorContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlDeleteContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlGradeContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlCourseContainer = new Guna.UI2.WinForms.Guna2Panel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlCategory.SuspendLayout();
             this.pnlCourse.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblNavigation
-            // 
-            this.lblNavigation.AutoSize = true;
-            this.lblNavigation.BackColor = System.Drawing.Color.Transparent;
-            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNavigation.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNavigation.Location = new System.Drawing.Point(30, 20);
-            this.lblNavigation.Margin = new System.Windows.Forms.Padding(0);
-            this.lblNavigation.Name = "lblNavigation";
-            this.lblNavigation.Size = new System.Drawing.Size(167, 23);
-            this.lblNavigation.TabIndex = 43;
-            this.lblNavigation.Text = "Home / Student /";
-            // 
-            // lblTrueNavigation
-            // 
-            this.lblTrueNavigation.AutoSize = true;
-            this.lblTrueNavigation.BackColor = System.Drawing.Color.Transparent;
-            this.lblTrueNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrueNavigation.ForeColor = System.Drawing.Color.Black;
-            this.lblTrueNavigation.Location = new System.Drawing.Point(190, 20);
-            this.lblTrueNavigation.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTrueNavigation.Name = "lblTrueNavigation";
-            this.lblTrueNavigation.Size = new System.Drawing.Size(78, 23);
-            this.lblTrueNavigation.TabIndex = 44;
-            this.lblTrueNavigation.Text = "Grades";
-            // 
-            // lblGrades
-            // 
-            this.lblGrades.AutoSize = true;
-            this.lblGrades.BackColor = System.Drawing.Color.Transparent;
-            this.lblGrades.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrades.Location = new System.Drawing.Point(20, 50);
-            this.lblGrades.Margin = new System.Windows.Forms.Padding(0);
-            this.lblGrades.Name = "lblGrades";
-            this.lblGrades.Size = new System.Drawing.Size(195, 56);
-            this.lblGrades.TabIndex = 45;
-            this.lblGrades.Text = "Grades";
             // 
             // pnlCategory
             // 
@@ -100,7 +61,7 @@
             this.pnlCategory.ShadowDecoration.Depth = 15;
             this.pnlCategory.ShadowDecoration.Enabled = true;
             this.pnlCategory.Size = new System.Drawing.Size(350, 133);
-            this.pnlCategory.TabIndex = 46;
+            this.pnlCategory.TabIndex = 72;
             // 
             // cboTerm
             // 
@@ -134,17 +95,43 @@
             this.lblTerm.TabIndex = 3;
             this.lblTerm.Text = "TERM";
             // 
-            // lblCourseName
+            // lblGrades
             // 
-            this.lblCourseName.AutoSize = true;
-            this.lblCourseName.BackColor = System.Drawing.Color.Transparent;
-            this.lblCourseName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseName.Location = new System.Drawing.Point(50, 50);
-            this.lblCourseName.Margin = new System.Windows.Forms.Padding(0);
-            this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(181, 28);
-            this.lblCourseName.TabIndex = 6;
-            this.lblCourseName.Text = "COURSE NAME";
+            this.lblGrades.AutoSize = true;
+            this.lblGrades.BackColor = System.Drawing.Color.Transparent;
+            this.lblGrades.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrades.Location = new System.Drawing.Point(20, 50);
+            this.lblGrades.Margin = new System.Windows.Forms.Padding(0);
+            this.lblGrades.Name = "lblGrades";
+            this.lblGrades.Size = new System.Drawing.Size(195, 56);
+            this.lblGrades.TabIndex = 71;
+            this.lblGrades.Text = "Grades";
+            // 
+            // lblTrueNavigation
+            // 
+            this.lblTrueNavigation.AutoSize = true;
+            this.lblTrueNavigation.BackColor = System.Drawing.Color.Transparent;
+            this.lblTrueNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrueNavigation.ForeColor = System.Drawing.Color.Black;
+            this.lblTrueNavigation.Location = new System.Drawing.Point(190, 20);
+            this.lblTrueNavigation.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTrueNavigation.Name = "lblTrueNavigation";
+            this.lblTrueNavigation.Size = new System.Drawing.Size(78, 23);
+            this.lblTrueNavigation.TabIndex = 70;
+            this.lblTrueNavigation.Text = "Grades";
+            // 
+            // lblNavigation
+            // 
+            this.lblNavigation.AutoSize = true;
+            this.lblNavigation.BackColor = System.Drawing.Color.Transparent;
+            this.lblNavigation.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNavigation.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNavigation.Location = new System.Drawing.Point(30, 20);
+            this.lblNavigation.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNavigation.Name = "lblNavigation";
+            this.lblNavigation.Size = new System.Drawing.Size(167, 23);
+            this.lblNavigation.TabIndex = 69;
+            this.lblNavigation.Text = "Home / Student /";
             // 
             // lblCourseGrade
             // 
@@ -157,6 +144,18 @@
             this.lblCourseGrade.Size = new System.Drawing.Size(192, 28);
             this.lblCourseGrade.TabIndex = 7;
             this.lblCourseGrade.Text = "COURSE GRADE";
+            // 
+            // lblCourseName
+            // 
+            this.lblCourseName.AutoSize = true;
+            this.lblCourseName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCourseName.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseName.Location = new System.Drawing.Point(50, 50);
+            this.lblCourseName.Margin = new System.Windows.Forms.Padding(0);
+            this.lblCourseName.Name = "lblCourseName";
+            this.lblCourseName.Size = new System.Drawing.Size(181, 28);
+            this.lblCourseName.TabIndex = 6;
+            this.lblCourseName.Text = "COURSE NAME";
             // 
             // pnlCourse
             // 
@@ -177,7 +176,7 @@
             this.pnlCourse.ShadowDecoration.Depth = 15;
             this.pnlCourse.ShadowDecoration.Enabled = true;
             this.pnlCourse.Size = new System.Drawing.Size(802, 712);
-            this.pnlCourse.TabIndex = 47;
+            this.pnlCourse.TabIndex = 73;
             // 
             // pnlCalculatorContainer
             // 
@@ -227,41 +226,24 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.PressedColor = System.Drawing.Color.Transparent;
             this.btnAdd.Size = new System.Drawing.Size(118, 40);
-            this.btnAdd.TabIndex = 68;
+            this.btnAdd.TabIndex = 74;
             this.btnAdd.Text = "Add Course";
             this.btnAdd.TextOffset = new System.Drawing.Point(15, 0);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(237, 336);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // formGrades
+            // UCGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.ClientSize = new System.Drawing.Size(1270, 788);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pnlCourse);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pnlCategory);
             this.Controls.Add(this.lblGrades);
             this.Controls.Add(this.lblTrueNavigation);
             this.Controls.Add(this.lblNavigation);
-            this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "formGrades";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formGrades";
+            this.Controls.Add(this.pnlCourse);
+            this.Controls.Add(this.btnAdd);
+            this.Name = "UCGrades";
+            this.Size = new System.Drawing.Size(1275, 850);
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlCourse.ResumeLayout(false);
@@ -272,20 +254,20 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblNavigation;
-        private System.Windows.Forms.Label lblTrueNavigation;
-        private System.Windows.Forms.Label lblGrades;
+
         private Guna.UI2.WinForms.Guna2Panel pnlCategory;
-        private System.Windows.Forms.Label lblTerm;
-        private System.Windows.Forms.Label lblCourseName;
-        private System.Windows.Forms.Label lblCourseGrade;
-        private Guna.UI2.WinForms.Guna2Panel pnlCourse;
         private Guna.UI2.WinForms.Guna2ComboBox cboTerm;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Guna.UI2.WinForms.Guna2Panel pnlCourseContainer;
+        private System.Windows.Forms.Label lblTerm;
+        private System.Windows.Forms.Label lblGrades;
+        private System.Windows.Forms.Label lblTrueNavigation;
+        private System.Windows.Forms.Label lblNavigation;
+        private System.Windows.Forms.Label lblCourseGrade;
+        private System.Windows.Forms.Label lblCourseName;
+        private Guna.UI2.WinForms.Guna2Panel pnlCourse;
         private Guna.UI2.WinForms.Guna2Panel pnlCalculatorContainer;
         private Guna.UI2.WinForms.Guna2Panel pnlDeleteContainer;
         private Guna.UI2.WinForms.Guna2Panel pnlGradeContainer;
-        private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2Panel pnlCourseContainer;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }

@@ -22,6 +22,7 @@ namespace Student_Hub
     {
         public static string to { get; set; }
         private string randomCode;
+
         DBConnection connect = new DBConnection();
 
         public frmForgot()
@@ -29,14 +30,7 @@ namespace Student_Hub
             InitializeComponent();
         }
 
-        private void lnkLogIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmMain form1 = new frmMain();
-            form1.Show();
-            this.Hide();
-        }
-
-        private void lnkSendCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void CreateMail()
         {
             string fromName, fromEmail, pass, messageBody;
             Random rand = new Random();
@@ -71,8 +65,48 @@ namespace Student_Hub
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
-        
-    }
+        }
+
+        private void lnkLogIn_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmMain form1 = new frmMain();
+            form1.Show();
+            this.Hide();
+        }
+
+        private void lnkSendCode_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                connect.OpenCon();
+
+                string query = "SELECT clm_stdEMAIL FROM db_acadmastery.tbl_stdinfo WHERE clm_stdEMAIL = @clm_stdEMAIL";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdEMAIL", txtEmail.Text);
+
+                // Execute the query and retrieve the result
+                object result = cmd.ExecuteScalar();
+
+                if (result == null)
+                {
+                    MessageBox.Show($"This email ({txtEmail.Text}) is not linked to any users", "Note!", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    CreateMail();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Make sure to close the connection
+                connect.CloseCon();
+            }
+        }
 
         private void btnVerify_Click(object sender, EventArgs e)
         {

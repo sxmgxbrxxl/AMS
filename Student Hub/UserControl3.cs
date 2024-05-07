@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using Guna.UI2.WinForms;
+
 namespace Student_Hub
 {
-    public partial class formGrades : Form
+    public partial class UCGrades : UserControl
     {
+
         string[] term = { "Prelim", "Midterm", "Finals" };
         string[] course = {"Introduction to Computing", "Computer Programming 1 (Fundamentals of Programming)", "Understanding the Self",
                             "Readings in Philippine History", "Mathematics in the Modern World", "Purposive Communication", "Environmental Science",
                             "Civic Welfare Training Service 1", "Reserve Officers Training Corps 1", "Self-Testing Activities"};
-        public formGrades()
+
+        public UCGrades()
         {
             InitializeComponent();
             cboTerm.Items.AddRange(term);
@@ -25,9 +27,10 @@ namespace Student_Hub
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            formCalculator frmCalc1 = new formCalculator();
-            frmCalc1.Show();
+            formCalculator calculator = new formCalculator();
+            calculator.Show();
         }
+
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             Guna.UI2.WinForms.Guna2Button btnDelete = (Guna.UI2.WinForms.Guna2Button)sender;
@@ -44,7 +47,7 @@ namespace Student_Hub
             foreach (Control control in controlsToDelete)
             {
                 pnlCourse.Controls.Remove(control);
-                control.Dispose(); 
+                control.Dispose();
             }
 
             controlsToDelete = pnlCourse.Controls.Find("btnDelete" + counter, true);
@@ -58,15 +61,22 @@ namespace Student_Hub
             foreach (Control control in controlsToDelete)
             {
                 pnlCourse.Controls.Remove(control);
-                control.Dispose(); 
+                control.Dispose();
             }
         }
 
-        private int courseCounter = 1;
+        private int courseCounter = 0;
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddCourse();
+            if (courseCounter >= 14)
+            {
+                MessageBox.Show("Max Limit Reached");
+            }
+            else
+            {
+                AddCourse();
+            }
         }
 
         private void AddCourse()
@@ -110,16 +120,6 @@ namespace Student_Hub
             pnlCalculatorContainer.Controls.Add(btnCalc);
 
             courseCounter++;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(button1.Enabled)
-            {
-                formCalculator frmCalc = new formCalculator();
-                this.Hide();
-                frmCalc.Show();
-            }
         }
     }
 }

@@ -92,6 +92,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -137,44 +138,50 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
-    <Compile Include="formAbout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formAbout.Designer.cs">
-      <DependentUpon>formAbout.cs</DependentUpon>
-    </Compile>
     <Compile Include="formCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formCalculator.Designer.cs">
       <DependentUpon>formCalculator.cs</DependentUpon>
     </Compile>
-    <Compile Include="formHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formHome.Designer.cs">
-      <DependentUpon>formHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formGrades.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formGrades.Designer.cs">
-      <DependentUpon>formGrades.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formProfile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formProfile.Designer.cs">
-      <DependentUpon>formProfile.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formRecords.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formRecords.Designer.cs">
-      <DependentUpon>formRecords.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl3.Designer.cs">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl4.Designer.cs">
+      <DependentUpon>UserControl4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl5.Designer.cs">
+      <DependentUpon>UserControl5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl6.Designer.cs">
+      <DependentUpon>UserControl6.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,28 +197,31 @@
     <EmbeddedResource Include="Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formAbout.resx">
-      <DependentUpon>formAbout.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formCalculator.resx">
       <DependentUpon>formCalculator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formHome.resx">
-      <DependentUpon>formHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formGrades.resx">
-      <DependentUpon>formGrades.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formProfile.resx">
-      <DependentUpon>formProfile.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formRecords.resx">
-      <DependentUpon>formRecords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl3.resx">
+      <DependentUpon>UserControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl4.resx">
+      <DependentUpon>UserControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl5.resx">
+      <DependentUpon>UserControl5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl6.resx">
+      <DependentUpon>UserControl6.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
