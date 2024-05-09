@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.pnlSignUp = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblPAsterisk = new System.Windows.Forms.Label();
+            this.lblEAsterisk = new System.Windows.Forms.Label();
+            this.lblSNAsterisk = new System.Windows.Forms.Label();
+            this.lblAAsterisk = new System.Windows.Forms.Label();
+            this.lblFNAsterisk = new System.Windows.Forms.Label();
+            this.lblLNAsterisk = new System.Windows.Forms.Label();
             this.chkShowPass2 = new System.Windows.Forms.CheckBox();
             this.lblStudentNumber = new System.Windows.Forms.Label();
             this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,6 +57,10 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtConfirmPASSWORD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.lblCPAsterisk = new System.Windows.Forms.Label();
             this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +70,16 @@
             this.pnlSignUp.BorderColor = System.Drawing.Color.Black;
             this.pnlSignUp.BorderRadius = 20;
             this.pnlSignUp.BorderThickness = 2;
+            this.pnlSignUp.Controls.Add(this.lblCPAsterisk);
+            this.pnlSignUp.Controls.Add(this.label1);
+            this.pnlSignUp.Controls.Add(this.txtConfirmPASSWORD);
+            this.pnlSignUp.Controls.Add(this.lblConfirmPassword);
+            this.pnlSignUp.Controls.Add(this.lblPAsterisk);
+            this.pnlSignUp.Controls.Add(this.lblEAsterisk);
+            this.pnlSignUp.Controls.Add(this.lblSNAsterisk);
+            this.pnlSignUp.Controls.Add(this.lblAAsterisk);
+            this.pnlSignUp.Controls.Add(this.lblFNAsterisk);
+            this.pnlSignUp.Controls.Add(this.lblLNAsterisk);
             this.pnlSignUp.Controls.Add(this.chkShowPass2);
             this.pnlSignUp.Controls.Add(this.lblStudentNumber);
             this.pnlSignUp.Controls.Add(this.txtStudentNumber);
@@ -79,17 +99,77 @@
             this.pnlSignUp.Controls.Add(this.lblSubHead);
             this.pnlSignUp.Controls.Add(this.lblSignUp);
             this.pnlSignUp.FillColor = System.Drawing.Color.White;
-            this.pnlSignUp.Location = new System.Drawing.Point(260, 70);
+            this.pnlSignUp.Location = new System.Drawing.Point(254, 33);
             this.pnlSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.pnlSignUp.Name = "pnlSignUp";
-            this.pnlSignUp.Size = new System.Drawing.Size(490, 470);
+            this.pnlSignUp.Size = new System.Drawing.Size(490, 531);
             this.pnlSignUp.TabIndex = 0;
+            // 
+            // lblPAsterisk
+            // 
+            this.lblPAsterisk.AutoSize = true;
+            this.lblPAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPAsterisk.Location = new System.Drawing.Point(121, 300);
+            this.lblPAsterisk.Margin = new System.Windows.Forms.Padding(0);
+            this.lblPAsterisk.Name = "lblPAsterisk";
+            this.lblPAsterisk.Size = new System.Drawing.Size(0, 16);
+            this.lblPAsterisk.TabIndex = 21;
+            // 
+            // lblEAsterisk
+            // 
+            this.lblEAsterisk.AutoSize = true;
+            this.lblEAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEAsterisk.Location = new System.Drawing.Point(88, 235);
+            this.lblEAsterisk.Margin = new System.Windows.Forms.Padding(0);
+            this.lblEAsterisk.Name = "lblEAsterisk";
+            this.lblEAsterisk.Size = new System.Drawing.Size(0, 16);
+            this.lblEAsterisk.TabIndex = 20;
+            // 
+            // lblSNAsterisk
+            // 
+            this.lblSNAsterisk.AutoSize = true;
+            this.lblSNAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSNAsterisk.Location = new System.Drawing.Point(395, 170);
+            this.lblSNAsterisk.Margin = new System.Windows.Forms.Padding(0);
+            this.lblSNAsterisk.Name = "lblSNAsterisk";
+            this.lblSNAsterisk.Size = new System.Drawing.Size(0, 16);
+            this.lblSNAsterisk.TabIndex = 19;
+            // 
+            // lblAAsterisk
+            // 
+            this.lblAAsterisk.AutoSize = true;
+            this.lblAAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAAsterisk.Location = new System.Drawing.Point(70, 170);
+            this.lblAAsterisk.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAAsterisk.Name = "lblAAsterisk";
+            this.lblAAsterisk.Size = new System.Drawing.Size(0, 16);
+            this.lblAAsterisk.TabIndex = 18;
+            // 
+            // lblFNAsterisk
+            // 
+            this.lblFNAsterisk.AutoSize = true;
+            this.lblFNAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFNAsterisk.Location = new System.Drawing.Point(130, 105);
+            this.lblFNAsterisk.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFNAsterisk.Name = "lblFNAsterisk";
+            this.lblFNAsterisk.Size = new System.Drawing.Size(0, 16);
+            this.lblFNAsterisk.TabIndex = 17;
+            // 
+            // lblLNAsterisk
+            // 
+            this.lblLNAsterisk.AutoSize = true;
+            this.lblLNAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLNAsterisk.Location = new System.Drawing.Point(344, 105);
+            this.lblLNAsterisk.Margin = new System.Windows.Forms.Padding(0);
+            this.lblLNAsterisk.Name = "lblLNAsterisk";
+            this.lblLNAsterisk.Size = new System.Drawing.Size(0, 16);
+            this.lblLNAsterisk.TabIndex = 16;
             // 
             // chkShowPass2
             // 
             this.chkShowPass2.AutoSize = true;
             this.chkShowPass2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowPass2.Location = new System.Drawing.Point(30, 370);
+            this.chkShowPass2.Location = new System.Drawing.Point(30, 433);
             this.chkShowPass2.Margin = new System.Windows.Forms.Padding(0);
             this.chkShowPass2.Name = "chkShowPass2";
             this.chkShowPass2.Size = new System.Drawing.Size(127, 21);
@@ -132,6 +212,7 @@
             this.txtStudentNumber.SelectedText = "";
             this.txtStudentNumber.Size = new System.Drawing.Size(200, 40);
             this.txtStudentNumber.TabIndex = 3;
+            this.txtStudentNumber.TextChanged += new System.EventHandler(this.txtStudentNumber_TextChanged);
             // 
             // txtLastName
             // 
@@ -156,12 +237,13 @@
             this.txtLastName.SelectedText = "";
             this.txtLastName.Size = new System.Drawing.Size(200, 40);
             this.txtLastName.TabIndex = 1;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
             // lnkLogin
             // 
             this.lnkLogin.AutoSize = true;
             this.lnkLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkLogin.Location = new System.Drawing.Point(210, 430);
+            this.lnkLogin.Location = new System.Drawing.Point(210, 493);
             this.lnkLogin.Margin = new System.Windows.Forms.Padding(0);
             this.lnkLogin.Name = "lnkLogin";
             this.lnkLogin.Size = new System.Drawing.Size(47, 17);
@@ -174,7 +256,7 @@
             // 
             this.lblQuestion.AutoSize = true;
             this.lblQuestion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuestion.Location = new System.Drawing.Point(30, 430);
+            this.lblQuestion.Location = new System.Drawing.Point(30, 493);
             this.lblQuestion.Margin = new System.Windows.Forms.Padding(0);
             this.lblQuestion.Name = "lblQuestion";
             this.lblQuestion.Size = new System.Drawing.Size(181, 17);
@@ -192,7 +274,7 @@
             this.btnCreate.FillColor = System.Drawing.Color.Tan;
             this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(270, 390);
+            this.btnCreate.Location = new System.Drawing.Point(270, 453);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(0);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(180, 40);
@@ -222,6 +304,7 @@
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(420, 40);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // lblPassword
             // 
@@ -268,6 +351,7 @@
             this.txtAge.SelectedText = "";
             this.txtAge.Size = new System.Drawing.Size(200, 40);
             this.txtAge.TabIndex = 2;
+            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
             // 
             // lblEmail
             // 
@@ -303,6 +387,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(420, 40);
             this.txtEmail.TabIndex = 4;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblLastName
             // 
@@ -412,6 +497,59 @@
             this.ctrClose.TabIndex = 16;
             this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(124, 362);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 24;
+            // 
+            // txtConfirmPASSWORD
+            // 
+            this.txtConfirmPASSWORD.BorderRadius = 10;
+            this.txtConfirmPASSWORD.BorderThickness = 2;
+            this.txtConfirmPASSWORD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPASSWORD.DefaultText = "";
+            this.txtConfirmPASSWORD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmPASSWORD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmPASSWORD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPASSWORD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPASSWORD.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtConfirmPASSWORD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPASSWORD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPASSWORD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPASSWORD.Location = new System.Drawing.Point(33, 382);
+            this.txtConfirmPASSWORD.Margin = new System.Windows.Forms.Padding(0);
+            this.txtConfirmPASSWORD.Name = "txtConfirmPASSWORD";
+            this.txtConfirmPASSWORD.PasswordChar = '*';
+            this.txtConfirmPASSWORD.PlaceholderText = "";
+            this.txtConfirmPASSWORD.SelectedText = "";
+            this.txtConfirmPASSWORD.Size = new System.Drawing.Size(420, 40);
+            this.txtConfirmPASSWORD.TabIndex = 23;
+            this.txtConfirmPASSWORD.TextChanged += new System.EventHandler(this.txtConfirmPASSWORD_TextChanged);
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(33, 362);
+            this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(0);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(163, 16);
+            this.lblConfirmPassword.TabIndex = 22;
+            this.lblConfirmPassword.Text = "CONFIRM PASSWORD:";
+            // 
+            // lblCPAsterisk
+            // 
+            this.lblCPAsterisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPAsterisk.Location = new System.Drawing.Point(192, 362);
+            this.lblCPAsterisk.Name = "lblCPAsterisk";
+            this.lblCPAsterisk.Size = new System.Drawing.Size(19, 14);
+            this.lblCPAsterisk.TabIndex = 25;
+            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,5 +599,15 @@
         private Guna.UI2.WinForms.Guna2ControlBox ctrMinimize;
         private Guna.UI2.WinForms.Guna2ControlBox ctrMaximize;
         private Guna.UI2.WinForms.Guna2ControlBox ctrClose;
+        private System.Windows.Forms.Label lblLNAsterisk;
+        private System.Windows.Forms.Label lblPAsterisk;
+        private System.Windows.Forms.Label lblEAsterisk;
+        private System.Windows.Forms.Label lblSNAsterisk;
+        private System.Windows.Forms.Label lblAAsterisk;
+        private System.Windows.Forms.Label lblFNAsterisk;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txtConfirmPASSWORD;
+        private System.Windows.Forms.Label lblConfirmPassword;
+        private System.Windows.Forms.Label lblCPAsterisk;
     }
 }

@@ -30,6 +30,11 @@ namespace Student_Hub
 
         private void lnkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtStudentNumber.Text))
+            {
+                txtStudentNumber.BorderColor = Color.Red;
+                MessageBox.Show("Please Specify your Student Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             frmForgot form4 = new frmForgot();
             form4.Show();
             this.Hide();
@@ -46,7 +51,7 @@ namespace Student_Hub
             {
                 connect.OpenCon();
 
-                string query = "SELECT COUNT(*) FROM db_acadmastery.tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber AND clm_stdPASS = @clm_stdPASS";
+                string query = "SELECT COUNT(*) FROM db_acad.tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber AND clm_stdPASS = @clm_stdPASS";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                 cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
                 cmd.Parameters.AddWithValue("@clm_stdPASS", txtPassword.Text); // Assuming password is stored in txtPassword TextBox

@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -49,7 +50,7 @@ namespace Student_Hub
                     return;
                 }
 
-                string query = "INSERT INTO db_acadmastery.tbl_stdinfo(clm_stdNumber, clm_stdFName, clm_stdLName, clm_stdAGE, clm_stdEMAIL, clm_stdPASS) " +
+                string query = "INSERT INTO db_acad.tbl_stdinfo(clm_stdNumber, clm_stdFName, clm_stdLName, clm_stdAGE, clm_stdEMAIL, clm_stdPASS) " +
                                 "VALUES (@clm_stdNumber, @clm_stdFName, @clm_stdLName, @clm_stdAGE, @clm_stdEMAIL, @clm_stdPASS)";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
 
@@ -81,36 +82,61 @@ namespace Student_Hub
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-
-            if (txtFirstName.Text == "")
+            if (txtFirstName.Text == "" || txtFirstName.TextLength <= 2)
             {
+                MessageBox.Show("Please enter a proper First Name with at least 3 letters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtFirstName.BorderColor = Color.Red;
-                txtFirstName.PlaceholderText = "*";
+                lblFNAsterisk.Text =  "*";
+                lblFNAsterisk.ForeColor = Color.Red;
+                return;
             }
-            if (txtLastName.Text == "")
+            if (txtLastName.Text == "" || txtLastName.TextLength <= 1)
             {
+                MessageBox.Show("Please enter a proper Last Name with at least 2 letters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtLastName.BorderColor = Color.Red;
-                txtLastName.PlaceholderText = "*";
+                lblLNAsterisk.Text = "*";
+                lblLNAsterisk.ForeColor = Color.Red;
+                return;
             }
-            if (txtAge.Text == "")
+            // Validate Age
+            if (string.IsNullOrWhiteSpace(txtAge.Text) || !int.TryParse(txtAge.Text, out int age) || age <= 0 || age > 120)
             {
+                MessageBox.Show("Please enter a valid age!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAge.BorderColor = Color.Red;
-                txtAge.PlaceholderText = "*";
+                lblAAsterisk.Text = "*";
+                lblAAsterisk.ForeColor = Color.Red;
+                return;
             }
-            if (txtStudentNumber.Text == "")
+
+            if (txtStudentNumber.Text == "" || txtStudentNumber.TextLength <= 6)
             {
+                MessageBox.Show("Please enter a student number with at least 7 numbers and above!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtStudentNumber.BorderColor = Color.Red;
-                txtStudentNumber.PlaceholderText = "*";
+                lblSNAsterisk.Text = "*";
+                lblSNAsterisk.ForeColor = Color.Red;
+                return;
             }
             if (txtEmail.Text == "")
             {
                 txtEmail.BorderColor = Color.Red;
-                txtEmail.PlaceholderText = "*";
+                lblEAsterisk.Text = "*";
+                lblEAsterisk.ForeColor = Color.Red;
             }
-            if (txtPassword.Text == "")
+            if (string.IsNullOrWhiteSpace(txtPassword.Text) || txtPassword.TextLength < 8 || !ContainsLettersCharactersNumbers(txtPassword.Text))
             {
+                MessageBox.Show("Please enter a password with at least 8 characters, including letters, characters, and numbers!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.BorderColor = Color.Red;
-                txtPassword.PlaceholderText = "*";
+                lblPAsterisk.Text = "*";
+                lblPAsterisk.ForeColor = Color.Red;
+                return;
+            }
+            if(txtConfirmPASSWORD.Text != txtPassword.Text)
+            {
+                MessageBox.Show("Incorrect Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtConfirmPASSWORD.BorderColor = Color.Red;
+                lblCPAsterisk.Text = "*";
+                lblCPAsterisk.ForeColor = Color.Red;
+                return;
             }
             else
             {
@@ -118,16 +144,25 @@ namespace Student_Hub
             }
         }
 
+        // Method to check if the password contains a combination of letters, characters, and numbers
+        private bool ContainsLettersCharactersNumbers(string password)
+        {
+            // Regular expression to match at least one letter, one character, and one number
+            string pattern = @"^(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])(?=.*\d).+$";
+            return Regex.IsMatch(password, pattern);
+        }
 
         private void chkShowPass2_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass2.Checked)
             {
                 txtPassword.PasswordChar = '\0';
+                txtConfirmPASSWORD.PasswordChar = '\0';
             }
             else
             {
                 txtPassword.PasswordChar = '*';
+                txtConfirmPASSWORD.PasswordChar = '*';
             }
         }
 
@@ -138,7 +173,37 @@ namespace Student_Hub
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
+            txtFirstName.BorderColor = Color.FromArgb(213, 218, 223);
+        }
 
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+            txtLastName.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void txtAge_TextChanged(object sender, EventArgs e)
+        {
+            txtAge.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void txtStudentNumber_TextChanged(object sender, EventArgs e)
+        {
+            txtStudentNumber.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            txtEmail.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.BorderColor = Color.FromArgb(213, 218, 223);
+        }
+
+        private void txtConfirmPASSWORD_TextChanged(object sender, EventArgs e)
+        {
+            txtConfirmPASSWORD.BorderColor = Color.FromArgb(213, 218, 223);
         }
     }
 }

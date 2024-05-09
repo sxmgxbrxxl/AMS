@@ -80,7 +80,7 @@ namespace Student_Hub
             {
                 connect.OpenCon();
 
-                string query = "SELECT clm_stdEMAIL FROM db_acadmastery.tbl_stdinfo WHERE clm_stdEMAIL = @clm_stdEMAIL";
+                string query = "SELECT clm_stdEMAIL FROM db_acad.tbl_stdinfo WHERE clm_stdEMAIL = @clm_stdEMAIL";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                 cmd.Parameters.AddWithValue("@clm_stdEMAIL", txtEmail.Text);
 

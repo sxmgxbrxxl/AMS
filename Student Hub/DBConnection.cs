@@ -10,7 +10,7 @@ namespace Student_Hub
     internal class DBConnection
     {
         //to connect database
-        private MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=db_acadmastery");
+        private MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=db_acad");
         
         //to return function
         public MySqlConnection GetConnection()
