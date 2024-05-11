@@ -22,6 +22,7 @@ namespace Student_Hub
     {
         public static string to { get; set; }
         private string randomCode;
+        private string randomName;
 
         DBConnection connect = new DBConnection();
 
@@ -41,10 +42,13 @@ namespace Student_Hub
             fromEmail = "academicmastery00@gmail.com";
             pass = "nbce leas ziut krux";
 
-
+            GetName();
             string to = txtEmail.Text;
 
-            messageBody = $"Your Reset Code is {randomCode}";
+            messageBody = $"Hi {randomName},\r\nYour Academic Mastery Password Reset Code is: " +
+              $"{randomCode}\r\n\r\nTo protect your Academic Mastery Account from unauthorized use, do not share this code to anyone.\r\n\r\n" +
+              $"Academic Mastery\r\nSanta Cruz, Laguna, Philippines\r\n";
+
             message.To.Add(to);
             message.From = new MailAddress(fromEmail, fromName);
             message.Body = messageBody;
@@ -59,7 +63,7 @@ namespace Student_Hub
             try
             {
                 smtp.Send(message);
-                MessageBox.Show("Code Successfully Sent");
+                MessageBox.Show("Code Successfully Sent", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -121,6 +125,34 @@ namespace Student_Hub
             {
                 MessageBox.Show("Wrong Code");
             }
+        }
+
+        private void GetName()
+        {
+            try
+            {
+                connect.OpenCon();
+
+                string query = "SELECT clm_stdFName FROM db_acad.tbl_stdinfo WHERE clm_stdEMAIL = @clm_stdEMAIL";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdEMAIL", txtEmail.Text);
+
+                // Execute the query and retrieve the result
+                object result = cmd.ExecuteScalar();
+                // Cast the result to string since you're retrieving the first name
+                randomName = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Make sure to close the connection
+                connect.CloseCon();
+            }
+
         }
 
         private void ctrClose_Click(object sender, EventArgs e)

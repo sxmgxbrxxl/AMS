@@ -22,7 +22,6 @@ namespace Student_Hub
         public frmSignUp()
         {
             InitializeComponent();
-           
         }
 
         private void lnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -63,7 +62,7 @@ namespace Student_Hub
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("User created successfully!", "Success");
+                MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 StudentNumber = txtStudentNumber.Text;
                 frmDashboard form3 = new frmDashboard();
@@ -90,7 +89,7 @@ namespace Student_Hub
                 lblFNAsterisk.ForeColor = Color.Red;
                 return;
             }
-            if (txtLastName.Text == "" || txtLastName.TextLength <= 1)
+            else if (txtLastName.Text == "" || txtLastName.TextLength <= 1)
             {
                 MessageBox.Show("Please enter a proper Last Name with at least 2 letters!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtLastName.BorderColor = Color.Red;
@@ -99,7 +98,7 @@ namespace Student_Hub
                 return;
             }
             // Validate Age
-            if (string.IsNullOrWhiteSpace(txtAge.Text) || !int.TryParse(txtAge.Text, out int age) || age <= 0 || age > 120)
+            else if (string.IsNullOrWhiteSpace(txtAge.Text) || !int.TryParse(txtAge.Text, out int age) || age <= 0 || age > 120)
             {
                 MessageBox.Show("Please enter a valid age!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAge.BorderColor = Color.Red;
@@ -108,7 +107,7 @@ namespace Student_Hub
                 return;
             }
 
-            if (txtStudentNumber.Text == "" || txtStudentNumber.TextLength <= 6)
+            else if (txtStudentNumber.Text == "" || txtStudentNumber.TextLength <= 6)
             {
                 MessageBox.Show("Please enter a student number with at least 7 numbers and above!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtStudentNumber.BorderColor = Color.Red;
@@ -116,13 +115,14 @@ namespace Student_Hub
                 lblSNAsterisk.ForeColor = Color.Red;
                 return;
             }
-            if (txtEmail.Text == "")
+            else if (txtEmail.Text == "" || !IsValidEmail(txtEmail.Text))
             {
+                MessageBox.Show("Please enter a valid Email!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.BorderColor = Color.Red;
                 lblEAsterisk.Text = "*";
                 lblEAsterisk.ForeColor = Color.Red;
             }
-            if (string.IsNullOrWhiteSpace(txtPassword.Text) || txtPassword.TextLength < 8 || !ContainsLettersCharactersNumbers(txtPassword.Text))
+            else if (string.IsNullOrWhiteSpace(txtPassword.Text) || txtPassword.TextLength < 8 || !ContainsLettersCharactersNumbers(txtPassword.Text))
             {
                 MessageBox.Show("Please enter a password with at least 8 characters, including letters, characters, and numbers!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPassword.BorderColor = Color.Red;
@@ -130,9 +130,9 @@ namespace Student_Hub
                 lblPAsterisk.ForeColor = Color.Red;
                 return;
             }
-            if(txtConfirmPASSWORD.Text != txtPassword.Text)
+            else if (txtConfirmPASSWORD.Text != txtPassword.Text)
             {
-                MessageBox.Show("Incorrect Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Password doesn't match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtConfirmPASSWORD.BorderColor = Color.Red;
                 lblCPAsterisk.Text = "*";
                 lblCPAsterisk.ForeColor = Color.Red;
@@ -152,6 +152,13 @@ namespace Student_Hub
             return Regex.IsMatch(password, pattern);
         }
 
+        private bool IsValidEmail(string email)
+        {
+            // Regular expression for validating email addresses
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            return Regex.IsMatch(email, pattern);
+        }
+
         private void chkShowPass2_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass2.Checked)
@@ -164,11 +171,6 @@ namespace Student_Hub
                 txtPassword.PasswordChar = '*';
                 txtConfirmPASSWORD.PasswordChar = '*';
             }
-        }
-
-        private void frmSignUp_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)

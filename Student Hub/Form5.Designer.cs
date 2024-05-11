@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReset));
             this.pnlWelcome = new Guna.UI2.WinForms.Guna2Panel();
             this.chkShowPass = new System.Windows.Forms.CheckBox();
             this.btnChange = new Guna.UI2.WinForms.Guna2Button();
@@ -252,9 +253,9 @@
             this.Controls.Add(this.ctrClose);
             this.Controls.Add(this.pnlWelcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReset";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form5";
             this.Load += new System.EventHandler(this.frmReset_Load);
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();

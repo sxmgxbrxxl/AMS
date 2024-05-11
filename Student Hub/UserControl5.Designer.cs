@@ -53,9 +53,9 @@
             this.lblAddressA = new System.Windows.Forms.Label();
             this.lblNavigation = new System.Windows.Forms.Label();
             this.pnlAbout = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblAbout = new System.Windows.Forms.Label();
-            this.lblEssay = new System.Windows.Forms.Label();
             this.picLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.lblEssay = new System.Windows.Forms.Label();
+            this.lblAbout = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picSapitanan)).BeginInit();
             this.pnlSapitanan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAdvento)).BeginInit();
@@ -376,16 +376,21 @@
             this.pnlAbout.Size = new System.Drawing.Size(452, 680);
             this.pnlAbout.TabIndex = 22;
             // 
-            // lblAbout
+            // picLogo
             // 
-            this.lblAbout.AutoSize = true;
-            this.lblAbout.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAbout.Location = new System.Drawing.Point(30, 380);
-            this.lblAbout.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAbout.Name = "lblAbout";
-            this.lblAbout.Size = new System.Drawing.Size(272, 23);
-            this.lblAbout.TabIndex = 1;
-            this.lblAbout.Text = "ABOUT ACADEMIC MASTERY:\r\n";
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.FillColor = System.Drawing.Color.Transparent;
+            this.picLogo.Image = global::Student_Hub.Properties.Resources.New_Logo;
+            this.picLogo.ImageRotate = 0F;
+            this.picLogo.Location = new System.Drawing.Point(80, 45);
+            this.picLogo.Margin = new System.Windows.Forms.Padding(0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.ShadowDecoration.Enabled = true;
+            this.picLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picLogo.Size = new System.Drawing.Size(294, 291);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
             // 
             // lblEssay
             // 
@@ -398,22 +403,16 @@
             this.lblEssay.TabIndex = 2;
             this.lblEssay.Text = resources.GetString("lblEssay.Text");
             // 
-            // picLogo
+            // lblAbout
             // 
-            this.picLogo.BackColor = System.Drawing.Color.Transparent;
-            this.picLogo.FillColor = System.Drawing.Color.Transparent;
-            this.picLogo.Image = global::Student_Hub.Properties.Resources.Academic_Mastery;
-            this.picLogo.ImageRotate = 0F;
-            this.picLogo.Location = new System.Drawing.Point(80, 45);
-            this.picLogo.Margin = new System.Windows.Forms.Padding(0);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.ShadowDecoration.Enabled = true;
-            this.picLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picLogo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(3);
-            this.picLogo.Size = new System.Drawing.Size(294, 291);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLogo.TabIndex = 3;
-            this.picLogo.TabStop = false;
+            this.lblAbout.AutoSize = true;
+            this.lblAbout.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAbout.Location = new System.Drawing.Point(30, 380);
+            this.lblAbout.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAbout.Name = "lblAbout";
+            this.lblAbout.Size = new System.Drawing.Size(272, 23);
+            this.lblAbout.TabIndex = 1;
+            this.lblAbout.Text = "ABOUT ACADEMIC MASTERY:\r\n";
             // 
             // UCAbout
             // 

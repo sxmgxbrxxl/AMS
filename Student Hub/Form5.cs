@@ -47,6 +47,7 @@ namespace Student_Hub
             string pattern = @"^(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])(?=.*\d).+$";
             return Regex.IsMatch(password, pattern);
         }
+
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass.Checked)
@@ -60,6 +61,7 @@ namespace Student_Hub
                 txtVerifyPassword.PasswordChar = '*';
             }
         }
+
         private void addDeets()
         {
             string email = frmForgot.to;
@@ -89,8 +91,6 @@ namespace Student_Hub
             {
                 connect.CloseCon();
             }
-
-
         }
 
         private void ctrClose_Click(object sender, EventArgs e)

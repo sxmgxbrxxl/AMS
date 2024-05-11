@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlWelcome = new Guna.UI2.WinForms.Guna2Panel();
+            this.lnkForgot = new System.Windows.Forms.LinkLabel();
             this.chkShowPass = new System.Windows.Forms.CheckBox();
             this.lnkSignUp = new System.Windows.Forms.LinkLabel();
             this.lblQuestion = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.lnkForgot = new System.Windows.Forms.LinkLabel();
             this.pnlWelcome.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,21 @@
             this.pnlWelcome.Name = "pnlWelcome";
             this.pnlWelcome.Size = new System.Drawing.Size(490, 470);
             this.pnlWelcome.TabIndex = 2;
+            // 
+            // lnkForgot
+            // 
+            this.lnkForgot.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lnkForgot.AutoSize = true;
+            this.lnkForgot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lnkForgot.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkForgot.Location = new System.Drawing.Point(325, 301);
+            this.lnkForgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lnkForgot.Name = "lnkForgot";
+            this.lnkForgot.Size = new System.Drawing.Size(115, 17);
+            this.lnkForgot.TabIndex = 5;
+            this.lnkForgot.TabStop = true;
+            this.lnkForgot.Text = "Forgot Password";
+            this.lnkForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkForgot_LinkClicked);
             // 
             // chkShowPass
             // 
@@ -275,21 +290,6 @@
             this.ctrClose.Size = new System.Drawing.Size(41, 37);
             this.ctrClose.TabIndex = 7;
             this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
-            // 
-            // lnkForgot
-            // 
-            this.lnkForgot.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lnkForgot.AutoSize = true;
-            this.lnkForgot.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkForgot.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkForgot.Location = new System.Drawing.Point(325, 301);
-            this.lnkForgot.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lnkForgot.Name = "lnkForgot";
-            this.lnkForgot.Size = new System.Drawing.Size(115, 17);
-            this.lnkForgot.TabIndex = 5;
-            this.lnkForgot.TabStop = true;
-            this.lnkForgot.Text = "Forgot Password";
-            this.lnkForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkForgot_LinkClicked);
             // 
             // frmMain
             // 

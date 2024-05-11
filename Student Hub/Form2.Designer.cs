@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.pnlSignUp = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblCPAsterisk = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtConfirmPASSWORD = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.lblPAsterisk = new System.Windows.Forms.Label();
             this.lblEAsterisk = new System.Windows.Forms.Label();
             this.lblSNAsterisk = new System.Windows.Forms.Label();
@@ -57,10 +61,6 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtConfirmPASSWORD = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblConfirmPassword = new System.Windows.Forms.Label();
-            this.lblCPAsterisk = new System.Windows.Forms.Label();
             this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +104,59 @@
             this.pnlSignUp.Name = "pnlSignUp";
             this.pnlSignUp.Size = new System.Drawing.Size(490, 531);
             this.pnlSignUp.TabIndex = 0;
+            // 
+            // lblCPAsterisk
+            // 
+            this.lblCPAsterisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPAsterisk.Location = new System.Drawing.Point(192, 362);
+            this.lblCPAsterisk.Name = "lblCPAsterisk";
+            this.lblCPAsterisk.Size = new System.Drawing.Size(19, 14);
+            this.lblCPAsterisk.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(124, 362);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 24;
+            // 
+            // txtConfirmPASSWORD
+            // 
+            this.txtConfirmPASSWORD.BorderRadius = 10;
+            this.txtConfirmPASSWORD.BorderThickness = 2;
+            this.txtConfirmPASSWORD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPASSWORD.DefaultText = "";
+            this.txtConfirmPASSWORD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtConfirmPASSWORD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtConfirmPASSWORD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPASSWORD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtConfirmPASSWORD.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtConfirmPASSWORD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPASSWORD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPASSWORD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPASSWORD.Location = new System.Drawing.Point(30, 385);
+            this.txtConfirmPASSWORD.Margin = new System.Windows.Forms.Padding(0);
+            this.txtConfirmPASSWORD.Name = "txtConfirmPASSWORD";
+            this.txtConfirmPASSWORD.PasswordChar = '*';
+            this.txtConfirmPASSWORD.PlaceholderText = "";
+            this.txtConfirmPASSWORD.SelectedText = "";
+            this.txtConfirmPASSWORD.Size = new System.Drawing.Size(420, 40);
+            this.txtConfirmPASSWORD.TabIndex = 23;
+            this.txtConfirmPASSWORD.TextChanged += new System.EventHandler(this.txtConfirmPASSWORD_TextChanged);
+            // 
+            // lblConfirmPassword
+            // 
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(30, 365);
+            this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(0);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(163, 16);
+            this.lblConfirmPassword.TabIndex = 22;
+            this.lblConfirmPassword.Text = "CONFIRM PASSWORD:";
             // 
             // lblPAsterisk
             // 
@@ -274,7 +327,7 @@
             this.btnCreate.FillColor = System.Drawing.Color.Tan;
             this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(270, 453);
+            this.btnCreate.Location = new System.Drawing.Point(270, 450);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(0);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(180, 40);
@@ -497,59 +550,6 @@
             this.ctrClose.TabIndex = 16;
             this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 362);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 16);
-            this.label1.TabIndex = 24;
-            // 
-            // txtConfirmPASSWORD
-            // 
-            this.txtConfirmPASSWORD.BorderRadius = 10;
-            this.txtConfirmPASSWORD.BorderThickness = 2;
-            this.txtConfirmPASSWORD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmPASSWORD.DefaultText = "";
-            this.txtConfirmPASSWORD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtConfirmPASSWORD.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtConfirmPASSWORD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPASSWORD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtConfirmPASSWORD.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtConfirmPASSWORD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPASSWORD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPASSWORD.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPASSWORD.Location = new System.Drawing.Point(33, 382);
-            this.txtConfirmPASSWORD.Margin = new System.Windows.Forms.Padding(0);
-            this.txtConfirmPASSWORD.Name = "txtConfirmPASSWORD";
-            this.txtConfirmPASSWORD.PasswordChar = '*';
-            this.txtConfirmPASSWORD.PlaceholderText = "";
-            this.txtConfirmPASSWORD.SelectedText = "";
-            this.txtConfirmPASSWORD.Size = new System.Drawing.Size(420, 40);
-            this.txtConfirmPASSWORD.TabIndex = 23;
-            this.txtConfirmPASSWORD.TextChanged += new System.EventHandler(this.txtConfirmPASSWORD_TextChanged);
-            // 
-            // lblConfirmPassword
-            // 
-            this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(33, 362);
-            this.lblConfirmPassword.Margin = new System.Windows.Forms.Padding(0);
-            this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(163, 16);
-            this.lblConfirmPassword.TabIndex = 22;
-            this.lblConfirmPassword.Text = "CONFIRM PASSWORD:";
-            // 
-            // lblCPAsterisk
-            // 
-            this.lblCPAsterisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPAsterisk.Location = new System.Drawing.Point(192, 362);
-            this.lblCPAsterisk.Name = "lblCPAsterisk";
-            this.lblCPAsterisk.Size = new System.Drawing.Size(19, 14);
-            this.lblCPAsterisk.TabIndex = 25;
-            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,7 +568,6 @@
             this.Name = "frmSignUp";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmSignUp_Load);
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
             this.ResumeLayout(false);

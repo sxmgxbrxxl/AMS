@@ -37,10 +37,12 @@
             this.lblTrueNavigation = new System.Windows.Forms.Label();
             this.lblNavigation = new System.Windows.Forms.Label();
             this.pnlRecords = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblCourseName = new System.Windows.Forms.Label();
             this.lblFinal = new System.Windows.Forms.Label();
             this.lblMidterm = new System.Windows.Forms.Label();
             this.lblPrelim = new System.Windows.Forms.Label();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnView = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCategory.SuspendLayout();
             this.pnlRecords.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +52,7 @@
             this.pnlCategory.BackColor = System.Drawing.Color.Transparent;
             this.pnlCategory.BorderColor = System.Drawing.Color.Black;
             this.pnlCategory.BorderRadius = 10;
+            this.pnlCategory.Controls.Add(this.btnView);
             this.pnlCategory.Controls.Add(this.cboSemester);
             this.pnlCategory.Controls.Add(this.lblSemester);
             this.pnlCategory.Controls.Add(this.lblYear);
@@ -61,11 +64,12 @@
             this.pnlCategory.ShadowDecoration.BorderRadius = 15;
             this.pnlCategory.ShadowDecoration.Depth = 15;
             this.pnlCategory.ShadowDecoration.Enabled = true;
-            this.pnlCategory.Size = new System.Drawing.Size(350, 250);
+            this.pnlCategory.Size = new System.Drawing.Size(350, 299);
             this.pnlCategory.TabIndex = 22;
             // 
             // cboSemester
             // 
+            this.cboSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cboSemester.BackColor = System.Drawing.Color.Transparent;
             this.cboSemester.BorderRadius = 17;
             this.cboSemester.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
@@ -75,7 +79,7 @@
             this.cboSemester.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboSemester.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboSemester.ItemHeight = 30;
-            this.cboSemester.Location = new System.Drawing.Point(20, 140);
+            this.cboSemester.Location = new System.Drawing.Point(20, 150);
             this.cboSemester.Margin = new System.Windows.Forms.Padding(0);
             this.cboSemester.MaxDropDownItems = 4;
             this.cboSemester.Name = "cboSemester";
@@ -84,10 +88,11 @@
             // 
             // lblSemester
             // 
+            this.lblSemester.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSemester.AutoSize = true;
             this.lblSemester.BackColor = System.Drawing.Color.Transparent;
             this.lblSemester.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemester.Location = new System.Drawing.Point(20, 110);
+            this.lblSemester.Location = new System.Drawing.Point(20, 120);
             this.lblSemester.Margin = new System.Windows.Forms.Padding(0);
             this.lblSemester.Name = "lblSemester";
             this.lblSemester.Size = new System.Drawing.Size(100, 22);
@@ -96,10 +101,11 @@
             // 
             // lblYear
             // 
+            this.lblYear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblYear.AutoSize = true;
             this.lblYear.BackColor = System.Drawing.Color.Transparent;
             this.lblYear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.Location = new System.Drawing.Point(20, 30);
+            this.lblYear.Location = new System.Drawing.Point(20, 40);
             this.lblYear.Margin = new System.Windows.Forms.Padding(0);
             this.lblYear.Name = "lblYear";
             this.lblYear.Size = new System.Drawing.Size(63, 22);
@@ -118,7 +124,7 @@
             this.cboYear.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboYear.ItemHeight = 30;
-            this.cboYear.Location = new System.Drawing.Point(20, 60);
+            this.cboYear.Location = new System.Drawing.Point(20, 70);
             this.cboYear.Margin = new System.Windows.Forms.Padding(0);
             this.cboYear.MaxDropDownItems = 6;
             this.cboYear.Name = "cboYear";
@@ -168,6 +174,7 @@
             this.pnlRecords.BackColor = System.Drawing.Color.Transparent;
             this.pnlRecords.BorderColor = System.Drawing.Color.Black;
             this.pnlRecords.BorderRadius = 10;
+            this.pnlRecords.Controls.Add(this.lblCourseName);
             this.pnlRecords.Controls.Add(this.lblFinal);
             this.pnlRecords.Controls.Add(this.lblMidterm);
             this.pnlRecords.Controls.Add(this.lblPrelim);
@@ -181,12 +188,24 @@
             this.pnlRecords.Size = new System.Drawing.Size(840, 614);
             this.pnlRecords.TabIndex = 23;
             // 
+            // lblCourseName
+            // 
+            this.lblCourseName.AutoSize = true;
+            this.lblCourseName.BackColor = System.Drawing.Color.Transparent;
+            this.lblCourseName.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseName.Location = new System.Drawing.Point(49, 50);
+            this.lblCourseName.Margin = new System.Windows.Forms.Padding(0);
+            this.lblCourseName.Name = "lblCourseName";
+            this.lblCourseName.Size = new System.Drawing.Size(206, 32);
+            this.lblCourseName.TabIndex = 7;
+            this.lblCourseName.Text = "COURSE NAME";
+            // 
             // lblFinal
             // 
             this.lblFinal.AutoSize = true;
             this.lblFinal.BackColor = System.Drawing.Color.Transparent;
             this.lblFinal.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinal.Location = new System.Drawing.Point(650, 50);
+            this.lblFinal.Location = new System.Drawing.Point(684, 50);
             this.lblFinal.Margin = new System.Windows.Forms.Padding(0);
             this.lblFinal.Name = "lblFinal";
             this.lblFinal.Size = new System.Drawing.Size(87, 32);
@@ -198,7 +217,7 @@
             this.lblMidterm.AutoSize = true;
             this.lblMidterm.BackColor = System.Drawing.Color.Transparent;
             this.lblMidterm.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMidterm.Location = new System.Drawing.Point(340, 50);
+            this.lblMidterm.Location = new System.Drawing.Point(490, 50);
             this.lblMidterm.Margin = new System.Windows.Forms.Padding(0);
             this.lblMidterm.Name = "lblMidterm";
             this.lblMidterm.Size = new System.Drawing.Size(130, 32);
@@ -210,7 +229,7 @@
             this.lblPrelim.AutoSize = true;
             this.lblPrelim.BackColor = System.Drawing.Color.Transparent;
             this.lblPrelim.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrelim.Location = new System.Drawing.Point(50, 50);
+            this.lblPrelim.Location = new System.Drawing.Point(318, 50);
             this.lblPrelim.Margin = new System.Windows.Forms.Padding(0);
             this.lblPrelim.Name = "lblPrelim";
             this.lblPrelim.Size = new System.Drawing.Size(103, 32);
@@ -237,6 +256,27 @@
             this.btnPrint.Size = new System.Drawing.Size(150, 50);
             this.btnPrint.TabIndex = 24;
             this.btnPrint.Text = "Print";
+            // 
+            // btnView
+            // 
+            this.btnView.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnView.BackColor = System.Drawing.Color.Transparent;
+            this.btnView.BorderRadius = 25;
+            this.btnView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnView.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnView.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnView.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnView.FillColor = System.Drawing.Color.Tan;
+            this.btnView.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnView.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.Color.White;
+            this.btnView.Location = new System.Drawing.Point(100, 213);
+            this.btnView.Margin = new System.Windows.Forms.Padding(0);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(150, 50);
+            this.btnView.TabIndex = 25;
+            this.btnView.Text = "View";
             // 
             // UCRecords
             // 
@@ -275,5 +315,7 @@
         private System.Windows.Forms.Label lblMidterm;
         private System.Windows.Forms.Label lblPrelim;
         private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private System.Windows.Forms.Label lblCourseName;
+        private Guna.UI2.WinForms.Guna2Button btnView;
     }
 }

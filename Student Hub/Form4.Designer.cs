@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForgot));
             this.pnlWelcome = new Guna.UI2.WinForms.Guna2Panel();
             this.lnkSendCode = new System.Windows.Forms.LinkLabel();
             this.lnkLogIn = new System.Windows.Forms.LinkLabel();
@@ -285,9 +286,9 @@
             this.Controls.Add(this.pnlWelcome);
             this.Controls.Add(this.ctrClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmForgot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form4";
             this.Load += new System.EventHandler(this.frmForgot_Load);
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();

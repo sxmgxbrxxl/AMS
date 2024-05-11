@@ -13,20 +13,31 @@ namespace Student_Hub
 {
     public partial class UCProfile : UserControl
     {
+        public static string Program { get; set; }
         DBConnection connect = new DBConnection();
+
+        string[] program = { "BSIT-BA", "BSIT-SD", "BSCS-DS", "BEEd", "BSA", "BSAIS", "BSME"};
+        string[] gender = { "Male", "Female" };
 
         public UCProfile()
         {
             InitializeComponent();
+            LoadComboBox();
             LoadDetails();
             DisableAdded();
         }
 
+        private void LoadComboBox()
+        {
+            Array.Sort(program);
+            cboProgram.Items.Clear();
+            cboGender.Items.Clear();
+            cboProgram.Items.AddRange(program);
+            cboGender.Items.AddRange(gender);
+        }
+
         private void LoadDetails()
         {
-            DataTable table = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-
             try
             {
                 connect.OpenCon();
@@ -55,17 +66,19 @@ namespace Student_Hub
                     string studentNumber = reader["clm_stdNumber"].ToString();
                     string studentAge = reader["clm_stdAGE"].ToString();
                     string studentEmail = reader["clm_stdEMAIL"].ToString();
-                    string studentCourse = reader["clm_stdProgram"].ToString();
+                    string studentProgram = reader["clm_stdProgram"].ToString();
                     string studentGender = reader["clm_stdGender"].ToString();
 
                     lblNamePlaceholder.Text = studentFName; // Display the name in the label
-                    lblCoursePlaceholder.Text = studentCourse;
+                    lblCoursePlaceholder.Text = studentProgram;
                     txtFullName.Text = studentFName + " " + studentLName;
                     txtAge.Text = studentAge;
-                    txtStudentID.Text = studentNumber;
+                    txtStudentNumber.Text = studentNumber;
                     txtEmail.Text = studentEmail;
-                    txtCourse.Text = studentCourse;
-                    txtGender.Text = studentGender;
+                    cboProgram.Text = studentProgram;
+                    cboGender.Text = studentGender;
+
+                    Program = cboProgram.Text;
                 }
                 else
                 {
@@ -86,15 +99,13 @@ namespace Student_Hub
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtCourse.Text == "")
+            if (cboProgram.Text == "")
             {
-                txtCourse.BorderColor = Color.Red;
-                txtCourse.PlaceholderText = "*";
+                cboProgram.BorderColor = Color.Red;
             }
-            else if (txtGender.Text == "")
+            else if (cboGender.Text == "")
             {
-                txtGender.BorderColor = Color.Red;
-                txtGender.PlaceholderText = "*";
+                cboGender.BorderColor = Color.Red;
             }
             else
             {
@@ -102,19 +113,19 @@ namespace Student_Hub
 
                 if (result == DialogResult.Yes)
                 {
-                    lblCoursePlaceholder.Text = txtCourse.Text;
+                    lblCoursePlaceholder.Text = cboProgram.Text;
                     DisableTextBox();
 
                     try
                     {
                         connect.OpenCon();
-                        string query = "UPDATE db_acadmastery.tbl_stdinfo " +
-                                       "SET clm_stdProgram = '" + txtCourse.Text + "', clm_stdGender = '" + txtGender.Text + "'" +
+                        string query = "UPDATE db_acad.tbl_stdinfo " +
+                                       "SET clm_stdProgram = '" + cboProgram.Text + "', clm_stdGender = '" + cboGender.Text + "'" +
                                        "WHERE clm_stdNumber = @clm_stdNumber";
                         MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
-                        cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentID.Text);
-                        cmd.Parameters.AddWithValue("clm_stdProgram", txtCourse.Text);
-                        cmd.Parameters.AddWithValue("clm_stdGender", txtGender.Text);
+                        cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
+                        cmd.Parameters.AddWithValue("clm_stdProgram", cboProgram.Text);
+                        cmd.Parameters.AddWithValue("clm_stdGender", cboGender.Text);
                         cmd.ExecuteNonQuery();
                     }
                     catch (Exception ex)
@@ -135,18 +146,18 @@ namespace Student_Hub
 
         private void DisableAdded()
         {
-            if (!string.IsNullOrEmpty(txtCourse.Text) && !string.IsNullOrEmpty(txtGender.Text))
+            if (!string.IsNullOrEmpty(cboProgram.Text) && !string.IsNullOrEmpty(cboGender.Text))
             {
-                txtCourse.Enabled = false;
-                txtGender.Enabled = false;
+                cboProgram.Enabled = false;
+                cboGender.Enabled = false;
                 btnSave.Enabled = false;
             }
         }
 
         private void DisableTextBox()
         {
-            txtGender.Enabled = false;
-            txtCourse.Enabled = false;
+            cboGender.Enabled = false;
+            cboProgram.Enabled = false;
             btnSave.Enabled = false;
         }
     }   

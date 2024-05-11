@@ -81,7 +81,7 @@
             // 
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
             this.picLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picLogo.Image = global::Student_Hub.Properties.Resources.Academic_Mastery;
+            this.picLogo.Image = global::Student_Hub.Properties.Resources.New_Logo;
             this.picLogo.Location = new System.Drawing.Point(18, 50);
             this.picLogo.Margin = new System.Windows.Forms.Padding(0);
             this.picLogo.Name = "picLogo";

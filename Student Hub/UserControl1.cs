@@ -72,13 +72,5 @@ namespace Student_Hub
 
             }
         }
-
-        private void UCHome_Load(object sender, EventArgs e)
-        {
-            FetchStudentName();
-
-            lblDate.Text = DateTime.Now.ToString("MMMM d, yyyy");
-            lblTime.Text = DateTime.Now.ToString("HH:mm");
-        }
     }
 }

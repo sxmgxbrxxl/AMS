@@ -30,11 +30,6 @@ namespace Student_Hub
 
         private void lnkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtStudentNumber.Text))
-            {
-                txtStudentNumber.BorderColor = Color.Red;
-                MessageBox.Show("Please Specify your Student Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             frmForgot form4 = new frmForgot();
             form4.Show();
             this.Hide();
@@ -73,7 +68,7 @@ namespace Student_Hub
                                     "Please check your credentials.", "Error!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
             catch (Exception ex)
             {

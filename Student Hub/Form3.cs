@@ -19,6 +19,10 @@ namespace Student_Hub
             InitializeComponent();
             ShowHome();
         }
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void AddUserControl (UserControl userControl)
         {
@@ -66,9 +70,14 @@ namespace Student_Hub
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            frmMain form1 = new frmMain();
-            form1.Show();
-            this.Close();
+            DialogResult result = MessageBox.Show("Are you sure?", "Verification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                frmMain form1 = new frmMain();
+                form1.Show();
+                this.Close();
+            }
         }
 
         bool menuExpand = false;
@@ -104,11 +113,6 @@ namespace Student_Hub
             btnLogOut.Checked = false;
             btnProfile.Checked = false;
             btnGrades.Checked = false;
-        }
-
-        private void frmDashboard_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
