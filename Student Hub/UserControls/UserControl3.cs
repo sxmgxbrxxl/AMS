@@ -104,6 +104,12 @@ namespace Student_Hub
                 cboCourse.Items.AddRange(CSCourse4S);
             }
         }
+
+        private void btnCalculator_Click(object sender, EventArgs e)
+        {
+            formCalculator calculator = new formCalculator();
+            calculator.Show();
+        }
     }
 }
 

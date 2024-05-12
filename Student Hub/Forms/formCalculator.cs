@@ -102,8 +102,9 @@ namespace Student_Hub
             txtPercentExam.Text = txtResult.Text;
         }
 
-        private void btnEqlRecit_Click(object sender, EventArgs e)
+        private void btnCompute_Click(object sender, EventArgs e)
         {
+            //Recitation
             double percentRecit = 20;
             double pRresult = percentRecit / 100;
 
@@ -117,10 +118,7 @@ namespace Student_Hub
 
             txtTotalRecit.Text = Convert.ToString(rresult);
 
-        }
-
-        private void btnEqlTask_Click(object sender, EventArgs e)
-        {
+            //Performance Task
             double percentTask = Convert.ToDouble(txtPercentTask.Text);
             double pTresult = percentTask / 100;
 
@@ -133,11 +131,7 @@ namespace Student_Hub
 
             txtTotalTask.Text = Convert.ToString(tresult);
 
-        }
-
-        private void btnEqlQuiz_Click(object sender, EventArgs e)
-        {
-            
+            //Quiz
             double percentQuiz = Convert.ToDouble(txtPercentQuiz.Text);
             double pQresult = percentQuiz / 100;
 
@@ -150,11 +144,7 @@ namespace Student_Hub
 
             txtTotalQuiz.Text = Convert.ToString(qresult);
 
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
+            //Exam
             double percentExam = Convert.ToDouble(txtPercentExam.Text);
             double pEresult = percentExam / 100;
 
@@ -169,10 +159,7 @@ namespace Student_Hub
 
             txtTotalExam.Text = finalscore;
 
-        }
-
-        private void btnCompute_Click(object sender, EventArgs e)
-        {
+            //Total All
             double totalrecit = Convert.ToDouble(txtTotalRecit.Text);
             double totaltask = Convert.ToDouble(txtTotalTask.Text);
             double totalquiz = Convert.ToDouble(txtTotalQuiz.Text);

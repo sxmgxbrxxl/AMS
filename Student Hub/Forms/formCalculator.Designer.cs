@@ -34,15 +34,12 @@
             this.txtRecitation = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPercentRecit = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPecentageRecit = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnEqlRecit = new System.Windows.Forms.Button();
             this.txtTotalRecit = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalTask = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnEqlTask = new System.Windows.Forms.Button();
             this.txtPercentTask = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTask = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSaveTask = new System.Windows.Forms.Button();
             this.txtTotalQuiz = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnEqlQuiz = new System.Windows.Forms.Button();
             this.txtPercentQuiz = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtQuizes = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSaveQuiz = new System.Windows.Forms.Button();
@@ -51,7 +48,6 @@
             this.txtOverTask = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtOverQuiz = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalExam = new Guna.UI2.WinForms.Guna2TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.txtOverExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPercentExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExam = new Guna.UI2.WinForms.Guna2TextBox();
@@ -176,19 +172,6 @@
             this.lblPecentageRecit.Text = "Percentage";
             this.lblPecentageRecit.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnEqlRecit
-            // 
-            this.btnEqlRecit.BackColor = System.Drawing.Color.Peru;
-            this.btnEqlRecit.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqlRecit.Location = new System.Drawing.Point(908, 99);
-            this.btnEqlRecit.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEqlRecit.Name = "btnEqlRecit";
-            this.btnEqlRecit.Size = new System.Drawing.Size(46, 49);
-            this.btnEqlRecit.TabIndex = 29;
-            this.btnEqlRecit.Text = "=";
-            this.btnEqlRecit.UseVisualStyleBackColor = false;
-            this.btnEqlRecit.Click += new System.EventHandler(this.btnEqlRecit_Click);
-            // 
             // txtTotalRecit
             // 
             this.txtTotalRecit.AcceptsReturn = true;
@@ -244,19 +227,6 @@
             this.txtTotalTask.Size = new System.Drawing.Size(80, 60);
             this.txtTotalTask.TabIndex = 36;
             this.txtTotalTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnEqlTask
-            // 
-            this.btnEqlTask.BackColor = System.Drawing.Color.Peru;
-            this.btnEqlTask.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqlTask.Location = new System.Drawing.Point(908, 212);
-            this.btnEqlTask.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEqlTask.Name = "btnEqlTask";
-            this.btnEqlTask.Size = new System.Drawing.Size(46, 49);
-            this.btnEqlTask.TabIndex = 35;
-            this.btnEqlTask.Text = "=";
-            this.btnEqlTask.UseVisualStyleBackColor = false;
-            this.btnEqlTask.Click += new System.EventHandler(this.btnEqlTask_Click);
             // 
             // txtPercentTask
             // 
@@ -354,19 +324,6 @@
             this.txtTotalQuiz.TabIndex = 42;
             this.txtTotalQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnEqlQuiz
-            // 
-            this.btnEqlQuiz.BackColor = System.Drawing.Color.Peru;
-            this.btnEqlQuiz.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqlQuiz.Location = new System.Drawing.Point(908, 328);
-            this.btnEqlQuiz.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEqlQuiz.Name = "btnEqlQuiz";
-            this.btnEqlQuiz.Size = new System.Drawing.Size(46, 49);
-            this.btnEqlQuiz.TabIndex = 41;
-            this.btnEqlQuiz.Text = "=";
-            this.btnEqlQuiz.UseVisualStyleBackColor = false;
-            this.btnEqlQuiz.Click += new System.EventHandler(this.btnEqlQuiz_Click);
-            // 
             // txtPercentQuiz
             // 
             this.txtPercentQuiz.AcceptsReturn = true;
@@ -448,7 +405,7 @@
             this.btnCompute.FillColor = System.Drawing.Color.Tan;
             this.btnCompute.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompute.ForeColor = System.Drawing.Color.White;
-            this.btnCompute.Location = new System.Drawing.Point(634, 508);
+            this.btnCompute.Location = new System.Drawing.Point(826, 524);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Size = new System.Drawing.Size(150, 37);
@@ -565,19 +522,6 @@
             this.txtTotalExam.TabIndex = 46;
             this.txtTotalExam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Peru;
-            this.button2.Font = new System.Drawing.Font("Book Antiqua", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(908, 433);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 49);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "=";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // txtOverExam
             // 
             this.txtOverExam.AcceptsReturn = true;
@@ -676,7 +620,7 @@
             this.txtGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGrade.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrade.Location = new System.Drawing.Point(638, 563);
+            this.txtGrade.Location = new System.Drawing.Point(652, 563);
             this.txtGrade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.PasswordChar = '\0';
@@ -691,7 +635,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Tan;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(795, 577);
+            this.button1.Location = new System.Drawing.Point(807, 577);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 38);
@@ -1154,23 +1098,19 @@
             this.Controls.Add(this.txtPercentExam);
             this.Controls.Add(this.txtExam);
             this.Controls.Add(this.txtTotalExam);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.txtOverQuiz);
             this.Controls.Add(this.txtOverTask);
             this.Controls.Add(this.txtOverRecit);
             this.Controls.Add(this.btnCompute);
             this.Controls.Add(this.txtTotalQuiz);
-            this.Controls.Add(this.btnEqlQuiz);
             this.Controls.Add(this.txtPercentQuiz);
             this.Controls.Add(this.txtQuizes);
             this.Controls.Add(this.btnSaveQuiz);
             this.Controls.Add(this.txtTotalTask);
-            this.Controls.Add(this.btnEqlTask);
             this.Controls.Add(this.txtPercentTask);
             this.Controls.Add(this.txtTask);
             this.Controls.Add(this.btnSaveTask);
             this.Controls.Add(this.txtTotalRecit);
-            this.Controls.Add(this.btnEqlRecit);
             this.Controls.Add(this.lblPecentageRecit);
             this.Controls.Add(this.txtPercentRecit);
             this.Controls.Add(this.button1);
@@ -1195,15 +1135,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtRecitation;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentRecit;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPecentageRecit;
-        private System.Windows.Forms.Button btnEqlRecit;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalRecit;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalTask;
-        private System.Windows.Forms.Button btnEqlTask;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentTask;
         private Guna.UI2.WinForms.Guna2TextBox txtTask;
         private System.Windows.Forms.Button btnSaveTask;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalQuiz;
-        private System.Windows.Forms.Button btnEqlQuiz;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentQuiz;
         private Guna.UI2.WinForms.Guna2TextBox txtQuizes;
         private System.Windows.Forms.Button btnSaveQuiz;
@@ -1212,7 +1149,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOverTask;
         private Guna.UI2.WinForms.Guna2TextBox txtOverQuiz;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalExam;
-        private System.Windows.Forms.Button button2;
         private Guna.UI2.WinForms.Guna2TextBox txtOverExam;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentExam;
         private Guna.UI2.WinForms.Guna2TextBox txtExam;

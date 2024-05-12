@@ -41,15 +41,18 @@
             this.lblCourseGrade = new System.Windows.Forms.Label();
             this.lblCourseName = new System.Windows.Forms.Label();
             this.pnlCourse = new Guna.UI2.WinForms.Guna2Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvGrades = new System.Windows.Forms.DataGridView();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.pnlEntries = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCalculator = new Guna.UI2.WinForms.Guna2Button();
             this.txtGrade = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCategory.SuspendLayout();
             this.pnlCourse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
             this.pnlEntries.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -240,7 +243,7 @@
             this.pnlCourse.BackColor = System.Drawing.Color.Transparent;
             this.pnlCourse.BorderColor = System.Drawing.Color.Black;
             this.pnlCourse.BorderRadius = 10;
-            this.pnlCourse.Controls.Add(this.dataGridView1);
+            this.pnlCourse.Controls.Add(this.dgvGrades);
             this.pnlCourse.FillColor = System.Drawing.Color.White;
             this.pnlCourse.Location = new System.Drawing.Point(420, 300);
             this.pnlCourse.Margin = new System.Windows.Forms.Padding(0);
@@ -251,13 +254,21 @@
             this.pnlCourse.Size = new System.Drawing.Size(802, 491);
             this.pnlCourse.TabIndex = 73;
             // 
-            // dataGridView1
+            // dgvGrades
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 430);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvGrades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvGrades.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvGrades.BackgroundColor = System.Drawing.Color.White;
+            this.dgvGrades.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvGrades.Location = new System.Drawing.Point(30, 35);
+            this.dgvGrades.Name = "dgvGrades";
+            this.dgvGrades.Size = new System.Drawing.Size(745, 430);
+            this.dgvGrades.TabIndex = 0;
             // 
             // btnAdd
             // 
@@ -326,6 +337,7 @@
             this.btnCalculator.Size = new System.Drawing.Size(38, 40);
             this.btnCalculator.TabIndex = 75;
             this.btnCalculator.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnCalculator.Click += new System.EventHandler(this.btnCalculator_Click);
             // 
             // txtGrade
             // 
@@ -367,6 +379,28 @@
             this.cboCourse.Size = new System.Drawing.Size(310, 36);
             this.cboCourse.TabIndex = 4;
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Term";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Course Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Grade";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // UCGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,7 +417,7 @@
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlCourse.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).EndInit();
             this.pnlEntries.ResumeLayout(false);
             this.pnlEntries.PerformLayout();
             this.ResumeLayout(false);
@@ -407,10 +441,13 @@
         private Guna.UI2.WinForms.Guna2TextBox txtGrade;
         private Guna.UI2.WinForms.Guna2ComboBox cboCourse;
         private Guna.UI2.WinForms.Guna2Button btnCalculator;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGrades;
         private Guna.UI2.WinForms.Guna2ComboBox cboYear;
         private System.Windows.Forms.Label lblYear;
         private Guna.UI2.WinForms.Guna2ComboBox cboSem;
         private System.Windows.Forms.Label lblSemester;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }
