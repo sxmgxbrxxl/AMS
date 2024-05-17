@@ -414,6 +414,7 @@
             this.cboProgram.Name = "cboProgram";
             this.cboProgram.Size = new System.Drawing.Size(350, 40);
             this.cboProgram.TabIndex = 17;
+            this.cboProgram.SelectedIndexChanged += new System.EventHandler(this.cboProgram_SelectedIndexChanged);
             // 
             // lblName
             // 

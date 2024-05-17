@@ -160,6 +160,11 @@ namespace Student_Hub
             cboProgram.Enabled = false;
             btnSave.Enabled = false;
         }
+
+        private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }   
         
 }

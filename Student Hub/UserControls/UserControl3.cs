@@ -33,12 +33,26 @@ namespace Student_Hub
                                 "PC 3220 Operating Systems", "TC 3202 Machine Learning" };
         string[] CSCourse4F = { "PC 4121 Human Computer Interaction", "PC 4122 CS Thesis 1", "TC 4103 Natural Language Processing" };
         string[] CSCourse4S = { "CS 4223 CS Thesis 2", "CS 4224 Practicum (300 hours)" };
+        public void SetGrade(string grade)
+        {
+            txtGrade.Text = grade;
+        }
 
+        private void btnCalculator_Click(object sender, EventArgs e)
+        {
+            formCalculator calculator = new formCalculator();
+            if (calculator.ShowDialog() == DialogResult.OK)
+            {
+                SetGrade(calculator.Grade);
+            }
+        }
+        // string gradeview;
         public UCGrades()
         {
             InitializeComponent();
             AddingChoices();
-
+            //txtGrade.Text = formCalculator.FGrade;
+            //gradeview = formCalculator.FGrade;
             cboYear.SelectedIndexChanged += cboYear_SelectedIndexChanged;
             cboSem.SelectedIndexChanged += cboSem_SelectedIndexChanged;
         }
@@ -105,10 +119,20 @@ namespace Student_Hub
             }
         }
 
-        private void btnCalculator_Click(object sender, EventArgs e)
+
+        private void UCGrades_Load(object sender, EventArgs e)
         {
-            formCalculator calculator = new formCalculator();
-            calculator.Show();
+
+        }
+
+        private void txtGrade_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnshow_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(" " + gradeview);
         }
     }
 }

@@ -12,8 +12,17 @@ namespace Student_Hub
 {
     public partial class formCalculator : Form
     {
-        public static string Grade {  get; set; }
-       
+        //public static string FGrade {  get; set; }
+
+        // Other code...
+
+
+        public string Grade
+        {
+            get { return txtGrade.Text; }
+            set { txtGrade.Text = value; }
+        }
+  
         public formCalculator()
         {
             InitializeComponent();
@@ -172,23 +181,34 @@ namespace Student_Hub
 
 
             txtGrade.Text = finalresult;
-            Grade = txtGrade.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (button1.Enabled)
-            {
-               
-            }
+          
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            /**try
+            {
+                UCGrades frmGrade = new UCGrades();
+                frmGrade.txtGrade.Text = txtGrade.Text;
+                this.Hide();
+                frmGrade.Show();
+            }catch (Exception ex) {
+                MessageBox.Show(" " + ex.Message);
+            }**/
+            this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
         private void formCalculator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGrade_TextChanged(object sender, EventArgs e)
         {
 
         }

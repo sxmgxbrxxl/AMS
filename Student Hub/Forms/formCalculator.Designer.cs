@@ -622,6 +622,7 @@
             this.txtGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGrade.Location = new System.Drawing.Point(652, 563);
             this.txtGrade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtGrade.Modified = true;
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.PasswordChar = '\0';
             this.txtGrade.PlaceholderText = "";
@@ -630,6 +631,7 @@
             this.txtGrade.Size = new System.Drawing.Size(122, 83);
             this.txtGrade.TabIndex = 47;
             this.txtGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGrade.TextChanged += new System.EventHandler(this.txtGrade_TextChanged);
             // 
             // button1
             // 
@@ -661,7 +663,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(33, 33);
             this.btnClose.TabIndex = 55;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.DoubleClick += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlScreen
             // 
@@ -1152,7 +1154,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtOverExam;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentExam;
         private Guna.UI2.WinForms.Guna2TextBox txtExam;
-        private Guna.UI2.WinForms.Guna2TextBox txtGrade;
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Panel pnlScreen;
@@ -1186,5 +1187,6 @@
         private System.Windows.Forms.Button btnPercentageQuiz;
         private System.Windows.Forms.Button btnPercentageTask;
         private System.Windows.Forms.Button btnPercentageRecit;
+        internal Guna.UI2.WinForms.Guna2TextBox txtGrade;
     }
 }
