@@ -19,6 +19,7 @@ namespace Student_Hub
 
         double firstvalue = 0;
         double secondvalue = 0;
+        double resultValue = 0;
         string operationPerformed = "";
         bool isOperationPerformed = false;
 
@@ -56,7 +57,7 @@ namespace Student_Hub
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtResult.Text = "0";
-            lblPreview.Text = "";
+            txtPreview.Text = "";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -77,11 +78,6 @@ namespace Student_Hub
             txtOverRecit.Text = txtResult.Text;
         }
 
-        private void btnPercentageRecit_Click(object sender, EventArgs e)
-        {
-            txtPercentRecit.Text = txtResult.Text;
-        }
-
         private void btnSaveExam_Click(object sender, EventArgs e)
         {
             txtExam.Text = txtResult.Text;
@@ -92,20 +88,15 @@ namespace Student_Hub
             txtOverExam.Text = txtResult.Text;
         }
 
-        private void btnPercentageExam_Click(object sender, EventArgs e)
-        {
-            txtPercentExam.Text = txtResult.Text;
-        }
         private void btnOperator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             operationPerformed = button.Text;
             firstvalue = double.Parse(txtResult.Text);
-            lblPreview.Text = firstvalue + " " + operationPerformed;
+            txtPreview.Text = firstvalue + " " + operationPerformed;
+            txtResult.Clear();
             isOperationPerformed = true;
-
         }
-
 
         private void btnCompute_Click(object sender, EventArgs e)
         {
@@ -122,7 +113,6 @@ namespace Student_Hub
             double rresult = recitresult * pRresult;
 
             txtTotalRecit.Text = Convert.ToString(rresult);
-
 
             //Exam
             double percentExam = Convert.ToDouble(txtPercentExam.Text);
@@ -152,11 +142,6 @@ namespace Student_Hub
             txtGrade.Text = finalresult;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-          
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             /**try
@@ -170,11 +155,6 @@ namespace Student_Hub
             }**/
             this.DialogResult = DialogResult.OK;
             this.Close();
-        }
-
-        private void formCalculator_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void txtGrade_TextChanged(object sender, EventArgs e)
@@ -193,6 +173,7 @@ namespace Student_Hub
             this.Hide();
             frmcalcu.Show();
         }
+
         private void btnEquals_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -221,8 +202,7 @@ namespace Student_Hub
                 default:
                     break;
             }
-            lblPreview.Text = firstvalue + " " + operationPerformed + " " + secondvalue + " =";
+            txtPreview.Text = firstvalue + " " + operationPerformed + " " + secondvalue + " =";
         }
-
     }
 }

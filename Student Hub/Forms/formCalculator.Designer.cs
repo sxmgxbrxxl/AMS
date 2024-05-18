@@ -61,7 +61,7 @@
             this.btnDivide = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEqual = new System.Windows.Forms.Button();
+            this.btnEquals = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.lblGrades = new System.Windows.Forms.Label();
             this.btnOverRecit = new System.Windows.Forms.Button();
@@ -77,6 +77,7 @@
             this.fINALSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblInstructions = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtPreview = new System.Windows.Forms.TextBox();
             this.pnlScreen.SuspendLayout();
             this.pnlCalculator.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -391,6 +392,7 @@
             this.pnlScreen.BorderColor = System.Drawing.Color.White;
             this.pnlScreen.BorderRadius = 20;
             this.pnlScreen.BorderThickness = 10;
+            this.pnlScreen.Controls.Add(this.txtPreview);
             this.pnlScreen.Controls.Add(this.lblPreview);
             this.pnlScreen.Controls.Add(this.txtResult);
             this.pnlScreen.FillColor = System.Drawing.Color.Gainsboro;
@@ -590,7 +592,7 @@
             this.pnlCalculator.Controls.Add(this.btnDivide);
             this.pnlCalculator.Controls.Add(this.btnMinus);
             this.pnlCalculator.Controls.Add(this.btnAdd);
-            this.pnlCalculator.Controls.Add(this.btnEqual);
+            this.pnlCalculator.Controls.Add(this.btnEquals);
             this.pnlCalculator.Controls.Add(this.btnMultiply);
             this.pnlCalculator.Controls.Add(this.pnlScreen);
             this.pnlCalculator.Controls.Add(this.btnNine);
@@ -615,62 +617,67 @@
             // 
             this.btnDivide.BackColor = System.Drawing.Color.Tan;
             this.btnDivide.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivide.Image = global::Student_Hub.Properties.Resources.division2;
             this.btnDivide.Location = new System.Drawing.Point(230, 413);
             this.btnDivide.Margin = new System.Windows.Forms.Padding(0);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(68, 65);
             this.btnDivide.TabIndex = 19;
+            this.btnDivide.Text = "÷";
             this.btnDivide.UseVisualStyleBackColor = false;
+            this.btnDivide.Click += new System.EventHandler(this.btnOperator_Click);
             // 
             // btnMinus
             // 
             this.btnMinus.BackColor = System.Drawing.Color.Tan;
             this.btnMinus.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinus.Image = global::Student_Hub.Properties.Resources.Square_Minus;
             this.btnMinus.Location = new System.Drawing.Point(230, 272);
             this.btnMinus.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(68, 65);
             this.btnMinus.TabIndex = 18;
+            this.btnMinus.Text = "−";
             this.btnMinus.UseVisualStyleBackColor = false;
+            this.btnMinus.Click += new System.EventHandler(this.btnOperator_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Tan;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Image = global::Student_Hub.Properties.Resources.Square_Plus;
             this.btnAdd.Location = new System.Drawing.Point(230, 201);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(68, 65);
             this.btnAdd.TabIndex = 17;
-            this.btnAdd.Tag = "+";
+            this.btnAdd.Tag = "";
+            this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnOperator_Click);
             // 
-            // btnEqual
+            // btnEquals
             // 
-            this.btnEqual.BackColor = System.Drawing.Color.Tan;
-            this.btnEqual.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEqual.Image = global::Student_Hub.Properties.Resources.equal_sign2;
-            this.btnEqual.Location = new System.Drawing.Point(230, 126);
-            this.btnEqual.Margin = new System.Windows.Forms.Padding(0);
-            this.btnEqual.Name = "btnEqual";
-            this.btnEqual.Size = new System.Drawing.Size(68, 65);
-            this.btnEqual.TabIndex = 16;
-            this.btnEqual.UseVisualStyleBackColor = false;
+            this.btnEquals.BackColor = System.Drawing.Color.Tan;
+            this.btnEquals.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEquals.Location = new System.Drawing.Point(230, 126);
+            this.btnEquals.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEquals.Name = "btnEquals";
+            this.btnEquals.Size = new System.Drawing.Size(68, 65);
+            this.btnEquals.TabIndex = 16;
+            this.btnEquals.Text = "=";
+            this.btnEquals.UseVisualStyleBackColor = false;
+            this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
             // 
             // btnMultiply
             // 
             this.btnMultiply.BackColor = System.Drawing.Color.Tan;
             this.btnMultiply.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiply.Image = global::Student_Hub.Properties.Resources.multiplication_sign2;
             this.btnMultiply.Location = new System.Drawing.Point(230, 343);
             this.btnMultiply.Margin = new System.Windows.Forms.Padding(0);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(68, 65);
             this.btnMultiply.TabIndex = 15;
+            this.btnMultiply.Text = "×";
             this.btnMultiply.UseVisualStyleBackColor = false;
+            this.btnMultiply.Click += new System.EventHandler(this.btnOperator_Click);
             // 
             // lblGrades
             // 
@@ -783,7 +790,7 @@
             // 
             this.pRELIMToolStripMenuItem.BackColor = System.Drawing.Color.Tan;
             this.pRELIMToolStripMenuItem.Name = "pRELIMToolStripMenuItem";
-            this.pRELIMToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.pRELIMToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
             this.pRELIMToolStripMenuItem.Text = "PRELIM";
             this.pRELIMToolStripMenuItem.Click += new System.EventHandler(this.pRELIMToolStripMenuItem_Click);
             // 
@@ -791,14 +798,14 @@
             // 
             this.midtermToolStripMenuItem.BackColor = System.Drawing.Color.Tan;
             this.midtermToolStripMenuItem.Name = "midtermToolStripMenuItem";
-            this.midtermToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.midtermToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
             this.midtermToolStripMenuItem.Text = "MIDTERM";
             // 
             // fINALSToolStripMenuItem
             // 
             this.fINALSToolStripMenuItem.BackColor = System.Drawing.Color.Tan;
             this.fINALSToolStripMenuItem.Name = "fINALSToolStripMenuItem";
-            this.fINALSToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.fINALSToolStripMenuItem.Size = new System.Drawing.Size(161, 28);
             this.fINALSToolStripMenuItem.Text = "FINALS";
             // 
             // guna2HtmlLabel1
@@ -828,6 +835,21 @@
             this.lblInstructions.Text = "Add all of your scores \r\non your activities (tasks, quizes, recitation).\r\nPut the" +
     " total or overall points of all the activities given by your teacher\r\nex: 90/100" +
     ", put the 100 on the second box";
+            // 
+            // txtPreview
+            // 
+            this.txtPreview.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPreview.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreview.Location = new System.Drawing.Point(22, 18);
+            this.txtPreview.Margin = new System.Windows.Forms.Padding(0);
+            this.txtPreview.Multiline = true;
+            this.txtPreview.Name = "txtPreview";
+            this.txtPreview.Size = new System.Drawing.Size(239, 19);
+            this.txtPreview.TabIndex = 1;
+            this.txtPreview.TabStop = false;
+            this.txtPreview.Text = "Preview";
+            this.txtPreview.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // formCalculator
             // 
@@ -922,7 +944,8 @@
         private System.Windows.Forms.Button btnDivide;
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEqual;
+        private System.Windows.Forms.Button btnEquals;
         private System.Windows.Forms.Button btnMultiply;
+        private System.Windows.Forms.TextBox txtPreview;
     }
 }
