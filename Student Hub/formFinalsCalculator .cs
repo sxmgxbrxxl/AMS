@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Student_Hub
 {
-    public partial class formPrelimCalculator : Form
+    public partial class formFinalsCalculator : Form
     {
         //public static string FGrade {  get; set; }
 
@@ -29,7 +29,7 @@ namespace Student_Hub
             set { txtGrade.Text = value; }
         }
   
-        public formPrelimCalculator()
+        public formFinalsCalculator()
         {
             InitializeComponent();
         }
@@ -85,7 +85,6 @@ namespace Student_Hub
 
         private void btnOverExam_Click(object sender, EventArgs e)
         {
-            txtOverExam.Text = txtResult.Text;
         }
 
         private void btnOperator_Click(object sender, EventArgs e)
@@ -101,7 +100,7 @@ namespace Student_Hub
         private void btnCompute_Click(object sender, EventArgs e)
         {
             //Recitation
-            double percentRecit = 60;
+            double percentRecit = 70;
             double pRresult = percentRecit / 100;
 
 
@@ -115,15 +114,12 @@ namespace Student_Hub
             txtTotalRecit.Text = Convert.ToString(rresult);
 
             //Exam
-            double percentExam = 40;
+            double percentExam = 30;
             double pEresult = percentExam / 100;
 
             double exam = Convert.ToDouble(txtExam.Text);
-            double overExam = Convert.ToDouble(txtOverExam.Text);
-
-            double examresult = (exam / overExam) * 50 + 50;
-
-            double eresult = examresult * pEresult;
+           
+            double eresult = exam * pEresult;
             double eresult2 = eresult;
             string finalscore = eresult2.ToString("0.00");
 
@@ -136,25 +132,19 @@ namespace Student_Hub
             double grade = totalrecit  + totalexam;
 
             double grade2 = grade;
-            string finalresult = grade2.ToString("0.00");
-
-
-            txtGrade.Text = finalresult;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            /**try
+            double finalresult; //= grade2.ToString("0.00");
+            double fractioned = grade2 - Math.Floor(grade2);
+            if(fractioned >= 0.5)
             {
-                UCGrades frmGrade = new UCGrades();
-                frmGrade.txtGrade.Text = txtGrade.Text;
-                this.Hide();
-                frmGrade.Show();
-            }catch (Exception ex) {
-                MessageBox.Show(" " + ex.Message);
-            }**/
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+                finalresult = Math.Ceiling(grade2);
+                txtGrade.Text = Convert.ToString(finalresult);
+            } else if(fractioned <= 0.4)
+            {
+                finalresult = Math.Floor(grade2);
+                txtGrade.Text = Convert.ToString(finalresult);
+            }
+
+            
         }
 
         private void txtGrade_TextChanged(object sender, EventArgs e)
@@ -167,7 +157,13 @@ namespace Student_Hub
 
         }
 
-       
+        private void pRELIMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formPrelimCalculator frmcalcu = new formPrelimCalculator();
+            this.Hide();
+            frmcalcu.Show();
+        }
+
         private void btnEquals_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -199,27 +195,18 @@ namespace Student_Hub
             txtPreview.Text = firstvalue + " " + operationPerformed + " " + secondvalue + " =";
         }
 
-        private void midtermToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCloseMid_Click(object sender, EventArgs e)
         {
-            formMidtermCalculator frmMidtCalc = new formMidtermCalculator();
-            this.Hide();
-            frmMidtCalc.Show();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void fINALSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formFinalsCalculator fcalc = new formFinalsCalculator();
+            formMidtermCalculator frmmcalc = new formMidtermCalculator();
             this.Hide();
-            fcalc.Show();
+            frmmcalc.Show();
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void btnCloser_Click(object sender, EventArgs e)
-        {
-        }
     }
 }

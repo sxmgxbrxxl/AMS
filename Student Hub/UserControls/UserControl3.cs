@@ -40,10 +40,18 @@ namespace Student_Hub
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
-            formCalculator calculator = new formCalculator();
+            formPrelimCalculator calculator = new formPrelimCalculator();
+            formMidtermCalculator mcalcu = new formMidtermCalculator(); 
+            formFinalsCalculator fcalc = new formFinalsCalculator();
             if (calculator.ShowDialog() == DialogResult.OK)
             {
                 SetGrade(calculator.Grade);
+            }else if (mcalcu.ShowDialog() == DialogResult.OK)
+            {
+                SetGrade(mcalcu.Grade);
+            }else if(fcalc.ShowDialog() == DialogResult.OK)
+            {
+                SetGrade(fcalc.Grade);  
             }
         }
         // string gradeview;

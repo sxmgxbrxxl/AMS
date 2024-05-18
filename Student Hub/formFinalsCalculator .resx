@@ -625,6 +625,12 @@
         wQQAAAAgIpgAAAAAjPI0/P8BtB5KY3dwHwsAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="lblInstructions.Text" xml:space="preserve">
+    <value>Add all of your scores 
+on your activities (tasks, quizes, recitation) Including your exam score.
+Put the total or overall points of all the activities, including the total points of your exam, given by your teacher
+ex: 90/100, put the 100 on the second box</value>
+  </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>202, 17</value>
   </metadata>
