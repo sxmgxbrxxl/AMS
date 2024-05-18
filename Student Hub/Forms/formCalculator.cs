@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,10 @@ namespace Student_Hub
 
         // Other code...
 
+        double firstvalue = 0;
+        double secondvalue = 0;
+        string operationPerformed = "";
+        bool isOperationPerformed = false;
 
         public string Grade
         {
@@ -33,8 +38,19 @@ namespace Student_Hub
             if (txtResult.Text == "0")
                 txtResult.Clear();
 
+            isOperationPerformed = false;
             Button button = (Button)sender;
-            txtResult.Text = txtResult.Text + button.Text;
+
+            if (button.Text == ".")
+            {
+                if (!txtResult.Text.Contains("."))
+                    txtResult.Text = txtResult.Text + button.Text;
+            }
+            else
+            {
+                txtResult.Text = txtResult.Text + button.Text;
+            }
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -66,36 +82,6 @@ namespace Student_Hub
             txtPercentRecit.Text = txtResult.Text;
         }
 
-        private void btnSaveTasks_Click(object sender, EventArgs e)
-        {
-            txtTask.Text = (txtResult.Text);
-        }
-
-        private void btnOverTask_Click(object sender, EventArgs e)
-        {
-            txtOverTask.Text = txtResult.Text;
-        }
-
-        private void btnPercentageTask_Click(object sender, EventArgs e)
-        {
-            txtPercentTask.Text = txtResult.Text;
-        }
-
-        private void btnSaveQuiz_Click(object sender, EventArgs e)
-        {
-            txtQuizes.Text = txtResult.Text;
-        }
-
-        private void btnOverQuiz_Click(object sender, EventArgs e)
-        {
-            txtOverQuiz.Text = txtResult.Text;
-        }
-
-        private void btnPercentageQuiz_Click(object sender, EventArgs e)
-        {
-            txtPercentQuiz.Text = txtResult.Text;
-        }
-
         private void btnSaveExam_Click(object sender, EventArgs e)
         {
             txtExam.Text = txtResult.Text;
@@ -110,6 +96,16 @@ namespace Student_Hub
         {
             txtPercentExam.Text = txtResult.Text;
         }
+        private void btnOperator_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            operationPerformed = button.Text;
+            firstvalue = double.Parse(txtResult.Text);
+            lblPreview.Text = firstvalue + " " + operationPerformed;
+            isOperationPerformed = true;
+
+        }
+
 
         private void btnCompute_Click(object sender, EventArgs e)
         {
@@ -127,31 +123,6 @@ namespace Student_Hub
 
             txtTotalRecit.Text = Convert.ToString(rresult);
 
-            //Performance Task
-            double percentTask = Convert.ToDouble(txtPercentTask.Text);
-            double pTresult = percentTask / 100;
-
-            double task = Convert.ToDouble(txtTask.Text);
-            double overTask = Convert.ToDouble(txtOverTask.Text);
-
-            double taskresult = (task / overTask) * 50 + 50;
-
-            double tresult = taskresult * pTresult;
-
-            txtTotalTask.Text = Convert.ToString(tresult);
-
-            //Quiz
-            double percentQuiz = Convert.ToDouble(txtPercentQuiz.Text);
-            double pQresult = percentQuiz / 100;
-
-            double quiz = Convert.ToDouble(txtQuizes.Text);
-            double overQuiz = Convert.ToDouble(txtOverQuiz.Text);
-
-            double quizresult = (quiz / overQuiz) * 50 + 50;
-
-            double qresult = quizresult * pQresult;
-
-            txtTotalQuiz.Text = Convert.ToString(qresult);
 
             //Exam
             double percentExam = Convert.ToDouble(txtPercentExam.Text);
@@ -170,11 +141,9 @@ namespace Student_Hub
 
             //Total All
             double totalrecit = Convert.ToDouble(txtTotalRecit.Text);
-            double totaltask = Convert.ToDouble(txtTotalTask.Text);
-            double totalquiz = Convert.ToDouble(txtTotalQuiz.Text);
             double totalexam = Convert.ToDouble(txtTotalExam.Text);
 
-            double grade = totalrecit + totaltask + totalquiz + totalexam;
+            double grade = totalrecit  + totalexam;
 
             double grade2 = grade;
             string finalresult = grade2.ToString("0.00");
@@ -212,5 +181,48 @@ namespace Student_Hub
         {
 
         }
+
+        private void termsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pRELIMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formCalculator frmcalcu = new formCalculator();
+            this.Hide();
+            frmcalcu.Show();
+        }
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            secondvalue = double.Parse(txtResult.Text);
+
+            switch (operationPerformed)
+            {
+                case "+":
+                    txtResult.Text = (firstvalue + secondvalue).ToString();
+                    break;
+                case "−":
+                    txtResult.Text = (firstvalue - secondvalue).ToString();
+                    break;
+                case "×":
+                    txtResult.Text = (firstvalue * secondvalue).ToString();
+                    break;
+                case "÷":
+                    if (secondvalue != 0)
+                        txtResult.Text = (firstvalue / secondvalue).ToString();
+                    else
+                    {
+                        MessageBox.Show("Cannot divide by zero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            lblPreview.Text = firstvalue + " " + operationPerformed + " " + secondvalue + " =";
+        }
+
     }
 }

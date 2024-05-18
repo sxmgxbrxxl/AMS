@@ -33,26 +33,14 @@
             this.btnSaveRecit = new System.Windows.Forms.Button();
             this.txtRecitation = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPercentRecit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPecentageRecit = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTotalRecit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTotalTask = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPercentTask = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTask = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSaveTask = new System.Windows.Forms.Button();
-            this.txtTotalQuiz = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPercentQuiz = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtQuizes = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnSaveQuiz = new System.Windows.Forms.Button();
             this.btnCompute = new Guna.UI2.WinForms.Guna2Button();
             this.txtOverRecit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtOverTask = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtOverQuiz = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTotalExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtOverExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPercentExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGrade = new Guna.UI2.WinForms.Guna2TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.pnlScreen = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPreview = new System.Windows.Forms.Label();
@@ -70,35 +58,40 @@
             this.btnOne = new System.Windows.Forms.Button();
             this.btnNine = new System.Windows.Forms.Button();
             this.pnlCalculator = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnDivide = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEqual = new System.Windows.Forms.Button();
+            this.btnMultiply = new System.Windows.Forms.Button();
             this.lblGrades = new System.Windows.Forms.Label();
             this.btnOverRecit = new System.Windows.Forms.Button();
-            this.btnOverTask = new System.Windows.Forms.Button();
-            this.btnOverQuiz = new System.Windows.Forms.Button();
             this.lblRecitation = new System.Windows.Forms.Label();
             this.btnSaveExam = new System.Windows.Forms.Button();
             this.btnOverExam = new System.Windows.Forms.Button();
-            this.btnPercentageExam = new System.Windows.Forms.Button();
-            this.lblTask = new System.Windows.Forms.Label();
-            this.lblQuiz = new System.Windows.Forms.Label();
             this.lblExam = new System.Windows.Forms.Label();
             this.formCalculatorTransition = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.btnPercentageQuiz = new System.Windows.Forms.Button();
-            this.btnPercentageTask = new System.Windows.Forms.Button();
-            this.btnPercentageRecit = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MenuStripTerms = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRELIMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.midtermToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fINALSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblInstructions = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlScreen.SuspendLayout();
             this.pnlCalculator.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSaveRecit
             // 
             this.btnSaveRecit.BackColor = System.Drawing.Color.Tan;
             this.btnSaveRecit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveRecit.Location = new System.Drawing.Point(323, 137);
+            this.btnSaveRecit.Location = new System.Drawing.Point(380, 284);
             this.btnSaveRecit.Margin = new System.Windows.Forms.Padding(0);
             this.btnSaveRecit.Name = "btnSaveRecit";
-            this.btnSaveRecit.Size = new System.Drawing.Size(135, 31);
+            this.btnSaveRecit.Size = new System.Drawing.Size(112, 31);
             this.btnSaveRecit.TabIndex = 16;
-            this.btnSaveRecit.Text = "Save Recitation";
+            this.btnSaveRecit.Text = "Save Score";
             this.btnSaveRecit.UseVisualStyleBackColor = false;
             this.btnSaveRecit.Click += new System.EventHandler(this.btnSaveRecit_Click);
             // 
@@ -119,7 +112,7 @@
             this.txtRecitation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRecitation.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecitation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRecitation.Location = new System.Drawing.Point(636, 93);
+            this.txtRecitation.Location = new System.Drawing.Point(636, 191);
             this.txtRecitation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRecitation.Name = "txtRecitation";
             this.txtRecitation.PasswordChar = '\0';
@@ -138,7 +131,7 @@
             this.txtPercentRecit.BorderRadius = 10;
             this.txtPercentRecit.BorderThickness = 2;
             this.txtPercentRecit.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPercentRecit.DefaultText = "";
+            this.txtPercentRecit.DefaultText = "60%";
             this.txtPercentRecit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPercentRecit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPercentRecit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -147,7 +140,7 @@
             this.txtPercentRecit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPercentRecit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPercentRecit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentRecit.Location = new System.Drawing.Point(826, 93);
+            this.txtPercentRecit.Location = new System.Drawing.Point(849, 191);
             this.txtPercentRecit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentRecit.Name = "txtPercentRecit";
             this.txtPercentRecit.PasswordChar = '\0';
@@ -156,21 +149,6 @@
             this.txtPercentRecit.Size = new System.Drawing.Size(60, 60);
             this.txtPercentRecit.TabIndex = 27;
             this.txtPercentRecit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lblPecentageRecit
-            // 
-            this.lblPecentageRecit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPecentageRecit.BackColor = System.Drawing.Color.Transparent;
-            this.lblPecentageRecit.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPecentageRecit.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.lblPecentageRecit.Location = new System.Drawing.Point(816, 60);
-            this.lblPecentageRecit.Name = "lblPecentageRecit";
-            this.lblPecentageRecit.Size = new System.Drawing.Size(87, 21);
-            this.lblPecentageRecit.TabIndex = 28;
-            this.lblPecentageRecit.Text = "Percentage";
-            this.lblPecentageRecit.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTotalRecit
             // 
@@ -189,7 +167,7 @@
             this.txtTotalRecit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalRecit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalRecit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalRecit.Location = new System.Drawing.Point(959, 93);
+            this.txtTotalRecit.Location = new System.Drawing.Point(959, 191);
             this.txtTotalRecit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTotalRecit.Name = "txtTotalRecit";
             this.txtTotalRecit.PasswordChar = '\0';
@@ -199,198 +177,6 @@
             this.txtTotalRecit.Size = new System.Drawing.Size(80, 60);
             this.txtTotalRecit.TabIndex = 30;
             this.txtTotalRecit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTotalTask
-            // 
-            this.txtTotalTask.AcceptsReturn = true;
-            this.txtTotalTask.AcceptsTab = true;
-            this.txtTotalTask.BackColor = System.Drawing.Color.Transparent;
-            this.txtTotalTask.BorderRadius = 10;
-            this.txtTotalTask.BorderThickness = 2;
-            this.txtTotalTask.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTotalTask.DefaultText = "";
-            this.txtTotalTask.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTotalTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTotalTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalTask.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalTask.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTotalTask.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalTask.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalTask.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalTask.Location = new System.Drawing.Point(959, 212);
-            this.txtTotalTask.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtTotalTask.Name = "txtTotalTask";
-            this.txtTotalTask.PasswordChar = '\0';
-            this.txtTotalTask.PlaceholderText = "";
-            this.txtTotalTask.ReadOnly = true;
-            this.txtTotalTask.SelectedText = "";
-            this.txtTotalTask.Size = new System.Drawing.Size(80, 60);
-            this.txtTotalTask.TabIndex = 36;
-            this.txtTotalTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtPercentTask
-            // 
-            this.txtPercentTask.AcceptsReturn = true;
-            this.txtPercentTask.AcceptsTab = true;
-            this.txtPercentTask.BackColor = System.Drawing.Color.Transparent;
-            this.txtPercentTask.BorderRadius = 10;
-            this.txtPercentTask.BorderThickness = 2;
-            this.txtPercentTask.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPercentTask.DefaultText = "";
-            this.txtPercentTask.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPercentTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPercentTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPercentTask.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPercentTask.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPercentTask.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentTask.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentTask.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentTask.Location = new System.Drawing.Point(826, 212);
-            this.txtPercentTask.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPercentTask.Name = "txtPercentTask";
-            this.txtPercentTask.PasswordChar = '\0';
-            this.txtPercentTask.PlaceholderText = "";
-            this.txtPercentTask.SelectedText = "";
-            this.txtPercentTask.Size = new System.Drawing.Size(60, 60);
-            this.txtPercentTask.TabIndex = 33;
-            this.txtPercentTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTask
-            // 
-            this.txtTask.AcceptsReturn = true;
-            this.txtTask.AcceptsTab = true;
-            this.txtTask.BackColor = System.Drawing.Color.Transparent;
-            this.txtTask.BorderRadius = 10;
-            this.txtTask.BorderThickness = 2;
-            this.txtTask.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTask.DefaultText = "";
-            this.txtTask.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTask.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTask.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTask.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTask.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTask.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTask.Location = new System.Drawing.Point(636, 212);
-            this.txtTask.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTask.Name = "txtTask";
-            this.txtTask.PasswordChar = '\0';
-            this.txtTask.PlaceholderText = "";
-            this.txtTask.ReadOnly = true;
-            this.txtTask.SelectedText = "";
-            this.txtTask.Size = new System.Drawing.Size(60, 60);
-            this.txtTask.TabIndex = 32;
-            this.txtTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnSaveTask
-            // 
-            this.btnSaveTask.BackColor = System.Drawing.Color.Tan;
-            this.btnSaveTask.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveTask.Location = new System.Drawing.Point(323, 264);
-            this.btnSaveTask.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSaveTask.Name = "btnSaveTask";
-            this.btnSaveTask.Size = new System.Drawing.Size(135, 33);
-            this.btnSaveTask.TabIndex = 31;
-            this.btnSaveTask.Text = "Save Task";
-            this.btnSaveTask.UseVisualStyleBackColor = false;
-            this.btnSaveTask.Click += new System.EventHandler(this.btnSaveTasks_Click);
-            // 
-            // txtTotalQuiz
-            // 
-            this.txtTotalQuiz.AcceptsReturn = true;
-            this.txtTotalQuiz.AcceptsTab = true;
-            this.txtTotalQuiz.BackColor = System.Drawing.Color.Transparent;
-            this.txtTotalQuiz.BorderRadius = 10;
-            this.txtTotalQuiz.BorderThickness = 2;
-            this.txtTotalQuiz.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTotalQuiz.DefaultText = "";
-            this.txtTotalQuiz.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTotalQuiz.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTotalQuiz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalQuiz.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTotalQuiz.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTotalQuiz.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalQuiz.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalQuiz.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalQuiz.Location = new System.Drawing.Point(959, 328);
-            this.txtTotalQuiz.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtTotalQuiz.Name = "txtTotalQuiz";
-            this.txtTotalQuiz.PasswordChar = '\0';
-            this.txtTotalQuiz.PlaceholderText = "";
-            this.txtTotalQuiz.ReadOnly = true;
-            this.txtTotalQuiz.SelectedText = "";
-            this.txtTotalQuiz.Size = new System.Drawing.Size(80, 60);
-            this.txtTotalQuiz.TabIndex = 42;
-            this.txtTotalQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtPercentQuiz
-            // 
-            this.txtPercentQuiz.AcceptsReturn = true;
-            this.txtPercentQuiz.AcceptsTab = true;
-            this.txtPercentQuiz.BackColor = System.Drawing.Color.Transparent;
-            this.txtPercentQuiz.BorderRadius = 10;
-            this.txtPercentQuiz.BorderThickness = 2;
-            this.txtPercentQuiz.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPercentQuiz.DefaultText = "";
-            this.txtPercentQuiz.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPercentQuiz.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPercentQuiz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPercentQuiz.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPercentQuiz.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPercentQuiz.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentQuiz.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentQuiz.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentQuiz.Location = new System.Drawing.Point(826, 328);
-            this.txtPercentQuiz.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPercentQuiz.Name = "txtPercentQuiz";
-            this.txtPercentQuiz.PasswordChar = '\0';
-            this.txtPercentQuiz.PlaceholderText = "";
-            this.txtPercentQuiz.SelectedText = "";
-            this.txtPercentQuiz.Size = new System.Drawing.Size(60, 60);
-            this.txtPercentQuiz.TabIndex = 39;
-            this.txtPercentQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtQuizes
-            // 
-            this.txtQuizes.AcceptsReturn = true;
-            this.txtQuizes.AcceptsTab = true;
-            this.txtQuizes.BackColor = System.Drawing.Color.Transparent;
-            this.txtQuizes.BorderRadius = 10;
-            this.txtQuizes.BorderThickness = 2;
-            this.txtQuizes.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuizes.DefaultText = "";
-            this.txtQuizes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtQuizes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtQuizes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuizes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtQuizes.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtQuizes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuizes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuizes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuizes.Location = new System.Drawing.Point(636, 328);
-            this.txtQuizes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtQuizes.Name = "txtQuizes";
-            this.txtQuizes.PasswordChar = '\0';
-            this.txtQuizes.PlaceholderText = "";
-            this.txtQuizes.ReadOnly = true;
-            this.txtQuizes.SelectedText = "";
-            this.txtQuizes.Size = new System.Drawing.Size(60, 60);
-            this.txtQuizes.TabIndex = 38;
-            this.txtQuizes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnSaveQuiz
-            // 
-            this.btnSaveQuiz.BackColor = System.Drawing.Color.Tan;
-            this.btnSaveQuiz.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveQuiz.Location = new System.Drawing.Point(323, 392);
-            this.btnSaveQuiz.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSaveQuiz.Name = "btnSaveQuiz";
-            this.btnSaveQuiz.Size = new System.Drawing.Size(135, 33);
-            this.btnSaveQuiz.TabIndex = 37;
-            this.btnSaveQuiz.Text = "Save Quiz";
-            this.btnSaveQuiz.UseVisualStyleBackColor = false;
-            this.btnSaveQuiz.Click += new System.EventHandler(this.btnSaveQuiz_Click);
             // 
             // btnCompute
             // 
@@ -405,7 +191,7 @@
             this.btnCompute.FillColor = System.Drawing.Color.Tan;
             this.btnCompute.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompute.ForeColor = System.Drawing.Color.White;
-            this.btnCompute.Location = new System.Drawing.Point(826, 524);
+            this.btnCompute.Location = new System.Drawing.Point(759, 529);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Size = new System.Drawing.Size(150, 37);
@@ -430,7 +216,7 @@
             this.txtOverRecit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOverRecit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOverRecit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOverRecit.Location = new System.Drawing.Point(714, 93);
+            this.txtOverRecit.Location = new System.Drawing.Point(738, 191);
             this.txtOverRecit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOverRecit.Name = "txtOverRecit";
             this.txtOverRecit.PasswordChar = '\0';
@@ -439,60 +225,6 @@
             this.txtOverRecit.Size = new System.Drawing.Size(60, 60);
             this.txtOverRecit.TabIndex = 45;
             this.txtOverRecit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtOverTask
-            // 
-            this.txtOverTask.AcceptsReturn = true;
-            this.txtOverTask.AcceptsTab = true;
-            this.txtOverTask.BackColor = System.Drawing.Color.Transparent;
-            this.txtOverTask.BorderRadius = 10;
-            this.txtOverTask.BorderThickness = 2;
-            this.txtOverTask.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtOverTask.DefaultText = "";
-            this.txtOverTask.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtOverTask.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtOverTask.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOverTask.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOverTask.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtOverTask.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOverTask.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOverTask.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOverTask.Location = new System.Drawing.Point(714, 212);
-            this.txtOverTask.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtOverTask.Name = "txtOverTask";
-            this.txtOverTask.PasswordChar = '\0';
-            this.txtOverTask.PlaceholderText = "";
-            this.txtOverTask.SelectedText = "";
-            this.txtOverTask.Size = new System.Drawing.Size(60, 60);
-            this.txtOverTask.TabIndex = 47;
-            this.txtOverTask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtOverQuiz
-            // 
-            this.txtOverQuiz.AcceptsReturn = true;
-            this.txtOverQuiz.AcceptsTab = true;
-            this.txtOverQuiz.BackColor = System.Drawing.Color.Transparent;
-            this.txtOverQuiz.BorderRadius = 10;
-            this.txtOverQuiz.BorderThickness = 2;
-            this.txtOverQuiz.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtOverQuiz.DefaultText = "";
-            this.txtOverQuiz.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtOverQuiz.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtOverQuiz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOverQuiz.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtOverQuiz.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtOverQuiz.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOverQuiz.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOverQuiz.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOverQuiz.Location = new System.Drawing.Point(714, 328);
-            this.txtOverQuiz.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtOverQuiz.Name = "txtOverQuiz";
-            this.txtOverQuiz.PasswordChar = '\0';
-            this.txtOverQuiz.PlaceholderText = "";
-            this.txtOverQuiz.SelectedText = "";
-            this.txtOverQuiz.Size = new System.Drawing.Size(60, 60);
-            this.txtOverQuiz.TabIndex = 49;
-            this.txtOverQuiz.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTotalExam
             // 
@@ -511,7 +243,7 @@
             this.txtTotalExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalExam.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalExam.Location = new System.Drawing.Point(959, 433);
+            this.txtTotalExam.Location = new System.Drawing.Point(959, 319);
             this.txtTotalExam.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTotalExam.Name = "txtTotalExam";
             this.txtTotalExam.PasswordChar = '\0';
@@ -539,7 +271,7 @@
             this.txtOverExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOverExam.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOverExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOverExam.Location = new System.Drawing.Point(714, 433);
+            this.txtOverExam.Location = new System.Drawing.Point(738, 319);
             this.txtOverExam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOverExam.Name = "txtOverExam";
             this.txtOverExam.PasswordChar = '\0';
@@ -557,7 +289,7 @@
             this.txtPercentExam.BorderRadius = 10;
             this.txtPercentExam.BorderThickness = 2;
             this.txtPercentExam.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPercentExam.DefaultText = "";
+            this.txtPercentExam.DefaultText = "40%";
             this.txtPercentExam.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPercentExam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPercentExam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -566,7 +298,7 @@
             this.txtPercentExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPercentExam.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPercentExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentExam.Location = new System.Drawing.Point(826, 433);
+            this.txtPercentExam.Location = new System.Drawing.Point(849, 319);
             this.txtPercentExam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentExam.Name = "txtPercentExam";
             this.txtPercentExam.PasswordChar = '\0';
@@ -593,7 +325,7 @@
             this.txtExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExam.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExam.Location = new System.Drawing.Point(634, 433);
+            this.txtExam.Location = new System.Drawing.Point(634, 319);
             this.txtExam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExam.Name = "txtExam";
             this.txtExam.PasswordChar = '\0';
@@ -620,9 +352,8 @@
             this.txtGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGrade.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrade.Location = new System.Drawing.Point(652, 563);
+            this.txtGrade.Location = new System.Drawing.Point(917, 524);
             this.txtGrade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtGrade.Modified = true;
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.PasswordChar = '\0';
             this.txtGrade.PlaceholderText = "";
@@ -633,36 +364,25 @@
             this.txtGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGrade.TextChanged += new System.EventHandler(this.txtGrade_TextChanged);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Tan;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(807, 577);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 38);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Save Term Grade";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BorderRadius = 5;
+            this.btnClose.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnClose.BorderRadius = 10;
             this.btnClose.BorderThickness = 2;
             this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnClose.FillColor = System.Drawing.Color.White;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.FillColor = System.Drawing.Color.Tan;
+            this.btnClose.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = global::Student_Hub.Properties.Resources.Back;
-            this.btnClose.Location = new System.Drawing.Point(1009, 38);
+            this.btnClose.Location = new System.Drawing.Point(738, 571);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(33, 33);
+            this.btnClose.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClose.Size = new System.Drawing.Size(171, 44);
             this.btnClose.TabIndex = 55;
+            this.btnClose.Text = "Save Grade";
             this.btnClose.DoubleClick += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlScreen
@@ -677,7 +397,7 @@
             this.pnlScreen.Location = new System.Drawing.Point(19, 20);
             this.pnlScreen.Margin = new System.Windows.Forms.Padding(0);
             this.pnlScreen.Name = "pnlScreen";
-            this.pnlScreen.Size = new System.Drawing.Size(211, 96);
+            this.pnlScreen.Size = new System.Drawing.Size(279, 96);
             this.pnlScreen.TabIndex = 0;
             // 
             // lblPreview
@@ -701,7 +421,7 @@
             this.txtResult.Margin = new System.Windows.Forms.Padding(0);
             this.txtResult.Multiline = true;
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(168, 41);
+            this.txtResult.Size = new System.Drawing.Size(239, 41);
             this.txtResult.TabIndex = 0;
             this.txtResult.TabStop = false;
             this.txtResult.Text = "0";
@@ -867,6 +587,11 @@
             // 
             this.pnlCalculator.BackColor = System.Drawing.Color.Transparent;
             this.pnlCalculator.BorderRadius = 25;
+            this.pnlCalculator.Controls.Add(this.btnDivide);
+            this.pnlCalculator.Controls.Add(this.btnMinus);
+            this.pnlCalculator.Controls.Add(this.btnAdd);
+            this.pnlCalculator.Controls.Add(this.btnEqual);
+            this.pnlCalculator.Controls.Add(this.btnMultiply);
             this.pnlCalculator.Controls.Add(this.pnlScreen);
             this.pnlCalculator.Controls.Add(this.btnNine);
             this.pnlCalculator.Controls.Add(this.btnTwo);
@@ -883,8 +608,69 @@
             this.pnlCalculator.FillColor = System.Drawing.Color.Black;
             this.pnlCalculator.Location = new System.Drawing.Point(53, 138);
             this.pnlCalculator.Name = "pnlCalculator";
-            this.pnlCalculator.Size = new System.Drawing.Size(252, 508);
+            this.pnlCalculator.Size = new System.Drawing.Size(324, 508);
             this.pnlCalculator.TabIndex = 56;
+            // 
+            // btnDivide
+            // 
+            this.btnDivide.BackColor = System.Drawing.Color.Tan;
+            this.btnDivide.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDivide.Image = global::Student_Hub.Properties.Resources.division2;
+            this.btnDivide.Location = new System.Drawing.Point(230, 413);
+            this.btnDivide.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDivide.Name = "btnDivide";
+            this.btnDivide.Size = new System.Drawing.Size(68, 65);
+            this.btnDivide.TabIndex = 19;
+            this.btnDivide.UseVisualStyleBackColor = false;
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.BackColor = System.Drawing.Color.Tan;
+            this.btnMinus.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinus.Image = global::Student_Hub.Properties.Resources.Square_Minus;
+            this.btnMinus.Location = new System.Drawing.Point(230, 272);
+            this.btnMinus.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(68, 65);
+            this.btnMinus.TabIndex = 18;
+            this.btnMinus.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Tan;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Image = global::Student_Hub.Properties.Resources.Square_Plus;
+            this.btnAdd.Location = new System.Drawing.Point(230, 201);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(68, 65);
+            this.btnAdd.TabIndex = 17;
+            this.btnAdd.Tag = "+";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnEqual
+            // 
+            this.btnEqual.BackColor = System.Drawing.Color.Tan;
+            this.btnEqual.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEqual.Image = global::Student_Hub.Properties.Resources.equal_sign2;
+            this.btnEqual.Location = new System.Drawing.Point(230, 126);
+            this.btnEqual.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEqual.Name = "btnEqual";
+            this.btnEqual.Size = new System.Drawing.Size(68, 65);
+            this.btnEqual.TabIndex = 16;
+            this.btnEqual.UseVisualStyleBackColor = false;
+            // 
+            // btnMultiply
+            // 
+            this.btnMultiply.BackColor = System.Drawing.Color.Tan;
+            this.btnMultiply.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMultiply.Image = global::Student_Hub.Properties.Resources.multiplication_sign2;
+            this.btnMultiply.Location = new System.Drawing.Point(230, 343);
+            this.btnMultiply.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(68, 65);
+            this.btnMultiply.TabIndex = 15;
+            this.btnMultiply.UseVisualStyleBackColor = false;
             // 
             // lblGrades
             // 
@@ -902,61 +688,35 @@
             // 
             this.btnOverRecit.BackColor = System.Drawing.Color.Tan;
             this.btnOverRecit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOverRecit.Location = new System.Drawing.Point(323, 168);
+            this.btnOverRecit.Location = new System.Drawing.Point(380, 315);
             this.btnOverRecit.Margin = new System.Windows.Forms.Padding(0);
             this.btnOverRecit.Name = "btnOverRecit";
-            this.btnOverRecit.Size = new System.Drawing.Size(135, 33);
+            this.btnOverRecit.Size = new System.Drawing.Size(112, 47);
             this.btnOverRecit.TabIndex = 58;
-            this.btnOverRecit.Text = "Over Recitation";
+            this.btnOverRecit.Text = "Over All Points";
             this.btnOverRecit.UseVisualStyleBackColor = false;
             this.btnOverRecit.Click += new System.EventHandler(this.btnOverRecit_Click);
-            // 
-            // btnOverTask
-            // 
-            this.btnOverTask.BackColor = System.Drawing.Color.Tan;
-            this.btnOverTask.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOverTask.Location = new System.Drawing.Point(323, 297);
-            this.btnOverTask.Margin = new System.Windows.Forms.Padding(0);
-            this.btnOverTask.Name = "btnOverTask";
-            this.btnOverTask.Size = new System.Drawing.Size(135, 33);
-            this.btnOverTask.TabIndex = 60;
-            this.btnOverTask.Text = "Over Task";
-            this.btnOverTask.UseVisualStyleBackColor = false;
-            this.btnOverTask.Click += new System.EventHandler(this.btnOverTask_Click);
-            // 
-            // btnOverQuiz
-            // 
-            this.btnOverQuiz.BackColor = System.Drawing.Color.Tan;
-            this.btnOverQuiz.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOverQuiz.Location = new System.Drawing.Point(323, 429);
-            this.btnOverQuiz.Margin = new System.Windows.Forms.Padding(0);
-            this.btnOverQuiz.Name = "btnOverQuiz";
-            this.btnOverQuiz.Size = new System.Drawing.Size(135, 33);
-            this.btnOverQuiz.TabIndex = 62;
-            this.btnOverQuiz.Text = "Over Quiz";
-            this.btnOverQuiz.UseVisualStyleBackColor = false;
-            this.btnOverQuiz.Click += new System.EventHandler(this.btnOverQuiz_Click);
             // 
             // lblRecitation
             // 
             this.lblRecitation.AutoSize = true;
             this.lblRecitation.BackColor = System.Drawing.Color.Transparent;
             this.lblRecitation.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecitation.Location = new System.Drawing.Point(631, 53);
+            this.lblRecitation.Location = new System.Drawing.Point(631, 106);
             this.lblRecitation.Margin = new System.Windows.Forms.Padding(0);
             this.lblRecitation.Name = "lblRecitation";
-            this.lblRecitation.Size = new System.Drawing.Size(127, 28);
+            this.lblRecitation.Size = new System.Drawing.Size(183, 28);
             this.lblRecitation.TabIndex = 64;
-            this.lblRecitation.Text = "Recitation";
+            this.lblRecitation.Text = "Class Standing";
             // 
             // btnSaveExam
             // 
             this.btnSaveExam.BackColor = System.Drawing.Color.Tan;
             this.btnSaveExam.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveExam.Location = new System.Drawing.Point(323, 524);
+            this.btnSaveExam.Location = new System.Drawing.Point(380, 410);
             this.btnSaveExam.Margin = new System.Windows.Forms.Padding(0);
             this.btnSaveExam.Name = "btnSaveExam";
-            this.btnSaveExam.Size = new System.Drawing.Size(135, 33);
+            this.btnSaveExam.Size = new System.Drawing.Size(112, 33);
             this.btnSaveExam.TabIndex = 65;
             this.btnSaveExam.Text = "Save Exam";
             this.btnSaveExam.UseVisualStyleBackColor = false;
@@ -966,58 +726,21 @@
             // 
             this.btnOverExam.BackColor = System.Drawing.Color.Tan;
             this.btnOverExam.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOverExam.Location = new System.Drawing.Point(323, 562);
+            this.btnOverExam.Location = new System.Drawing.Point(380, 448);
             this.btnOverExam.Margin = new System.Windows.Forms.Padding(0);
             this.btnOverExam.Name = "btnOverExam";
-            this.btnOverExam.Size = new System.Drawing.Size(135, 33);
+            this.btnOverExam.Size = new System.Drawing.Size(112, 33);
             this.btnOverExam.TabIndex = 66;
             this.btnOverExam.Text = "Over Exam";
             this.btnOverExam.UseVisualStyleBackColor = false;
             this.btnOverExam.Click += new System.EventHandler(this.btnOverExam_Click);
-            // 
-            // btnPercentageExam
-            // 
-            this.btnPercentageExam.BackColor = System.Drawing.Color.Tan;
-            this.btnPercentageExam.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPercentageExam.Location = new System.Drawing.Point(323, 595);
-            this.btnPercentageExam.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercentageExam.Name = "btnPercentageExam";
-            this.btnPercentageExam.Size = new System.Drawing.Size(135, 49);
-            this.btnPercentageExam.TabIndex = 67;
-            this.btnPercentageExam.Text = "Percentage Examination";
-            this.btnPercentageExam.UseVisualStyleBackColor = false;
-            this.btnPercentageExam.Click += new System.EventHandler(this.btnPercentageExam_Click);
-            // 
-            // lblTask
-            // 
-            this.lblTask.AutoSize = true;
-            this.lblTask.BackColor = System.Drawing.Color.Transparent;
-            this.lblTask.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTask.Location = new System.Drawing.Point(631, 177);
-            this.lblTask.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTask.Name = "lblTask";
-            this.lblTask.Size = new System.Drawing.Size(63, 28);
-            this.lblTask.TabIndex = 68;
-            this.lblTask.Text = "Task";
-            // 
-            // lblQuiz
-            // 
-            this.lblQuiz.AutoSize = true;
-            this.lblQuiz.BackColor = System.Drawing.Color.Transparent;
-            this.lblQuiz.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuiz.Location = new System.Drawing.Point(633, 288);
-            this.lblQuiz.Margin = new System.Windows.Forms.Padding(0);
-            this.lblQuiz.Name = "lblQuiz";
-            this.lblQuiz.Size = new System.Drawing.Size(63, 28);
-            this.lblQuiz.TabIndex = 69;
-            this.lblQuiz.Text = "Quiz";
             // 
             // lblExam
             // 
             this.lblExam.AutoSize = true;
             this.lblExam.BackColor = System.Drawing.Color.Transparent;
             this.lblExam.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExam.Location = new System.Drawing.Point(633, 392);
+            this.lblExam.Location = new System.Drawing.Point(631, 264);
             this.lblExam.Margin = new System.Windows.Forms.Padding(0);
             this.lblExam.Name = "lblExam";
             this.lblExam.Size = new System.Drawing.Size(154, 28);
@@ -1032,44 +755,79 @@
             this.formCalculatorTransition.DockIndicatorTransparencyValue = 0.6D;
             this.formCalculatorTransition.TransparentWhileDrag = true;
             // 
-            // btnPercentageQuiz
+            // menuStrip1
             // 
-            this.btnPercentageQuiz.BackColor = System.Drawing.Color.Tan;
-            this.btnPercentageQuiz.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPercentageQuiz.Location = new System.Drawing.Point(323, 463);
-            this.btnPercentageQuiz.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercentageQuiz.Name = "btnPercentageQuiz";
-            this.btnPercentageQuiz.Size = new System.Drawing.Size(135, 49);
-            this.btnPercentageQuiz.TabIndex = 63;
-            this.btnPercentageQuiz.Text = "Percentage Quiz";
-            this.btnPercentageQuiz.UseVisualStyleBackColor = false;
-            this.btnPercentageQuiz.Click += new System.EventHandler(this.btnPercentageQuiz_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuStripTerms});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1100, 31);
+            this.menuStrip1.TabIndex = 71;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnPercentageTask
+            // MenuStripTerms
             // 
-            this.btnPercentageTask.BackColor = System.Drawing.Color.Tan;
-            this.btnPercentageTask.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPercentageTask.Location = new System.Drawing.Point(323, 330);
-            this.btnPercentageTask.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercentageTask.Name = "btnPercentageTask";
-            this.btnPercentageTask.Size = new System.Drawing.Size(135, 49);
-            this.btnPercentageTask.TabIndex = 61;
-            this.btnPercentageTask.Text = "Percentage Task";
-            this.btnPercentageTask.UseVisualStyleBackColor = false;
-            this.btnPercentageTask.Click += new System.EventHandler(this.btnPercentageTask_Click);
+            this.MenuStripTerms.BackColor = System.Drawing.Color.Tan;
+            this.MenuStripTerms.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pRELIMToolStripMenuItem,
+            this.midtermToolStripMenuItem,
+            this.fINALSToolStripMenuItem});
+            this.MenuStripTerms.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuStripTerms.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MenuStripTerms.Name = "MenuStripTerms";
+            this.MenuStripTerms.Size = new System.Drawing.Size(74, 27);
+            this.MenuStripTerms.Text = "Terms";
+            this.MenuStripTerms.Click += new System.EventHandler(this.termsToolStripMenuItem_Click);
             // 
-            // btnPercentageRecit
+            // pRELIMToolStripMenuItem
             // 
-            this.btnPercentageRecit.BackColor = System.Drawing.Color.Tan;
-            this.btnPercentageRecit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPercentageRecit.Location = new System.Drawing.Point(323, 202);
-            this.btnPercentageRecit.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPercentageRecit.Name = "btnPercentageRecit";
-            this.btnPercentageRecit.Size = new System.Drawing.Size(135, 49);
-            this.btnPercentageRecit.TabIndex = 59;
-            this.btnPercentageRecit.Text = "Percentage Recitation";
-            this.btnPercentageRecit.UseVisualStyleBackColor = false;
-            this.btnPercentageRecit.Click += new System.EventHandler(this.btnPercentageRecit_Click);
+            this.pRELIMToolStripMenuItem.BackColor = System.Drawing.Color.Tan;
+            this.pRELIMToolStripMenuItem.Name = "pRELIMToolStripMenuItem";
+            this.pRELIMToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.pRELIMToolStripMenuItem.Text = "PRELIM";
+            this.pRELIMToolStripMenuItem.Click += new System.EventHandler(this.pRELIMToolStripMenuItem_Click);
+            // 
+            // midtermToolStripMenuItem
+            // 
+            this.midtermToolStripMenuItem.BackColor = System.Drawing.Color.Tan;
+            this.midtermToolStripMenuItem.Name = "midtermToolStripMenuItem";
+            this.midtermToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.midtermToolStripMenuItem.Text = "MIDTERM";
+            // 
+            // fINALSToolStripMenuItem
+            // 
+            this.fINALSToolStripMenuItem.BackColor = System.Drawing.Color.Tan;
+            this.fINALSToolStripMenuItem.Name = "fINALSToolStripMenuItem";
+            this.fINALSToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.fINALSToolStripMenuItem.Text = "FINALS";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(727, 147);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
+            this.guna2HtmlLabel1.TabIndex = 73;
+            this.guna2HtmlLabel1.Text = null;
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblInstructions
+            // 
+            this.lblInstructions.AutoSize = false;
+            this.lblInstructions.BackColor = System.Drawing.Color.Transparent;
+            this.lblInstructions.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.Location = new System.Drawing.Point(636, 137);
+            this.lblInstructions.Name = "lblInstructions";
+            this.lblInstructions.Size = new System.Drawing.Size(395, 55);
+            this.lblInstructions.TabIndex = 74;
+            this.lblInstructions.Text = "Add all of your scores \r\non your activities (tasks, quizes, recitation).\r\nPut the" +
+    " total or overall points of all the activities given by your teacher\r\nex: 90/100" +
+    ", put the 100 on the second box";
             // 
             // formCalculator
             // 
@@ -1079,18 +837,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.Controls.Add(this.lblInstructions);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.lblExam);
-            this.Controls.Add(this.lblQuiz);
-            this.Controls.Add(this.lblTask);
-            this.Controls.Add(this.btnPercentageExam);
             this.Controls.Add(this.btnOverExam);
             this.Controls.Add(this.btnSaveExam);
             this.Controls.Add(this.lblRecitation);
-            this.Controls.Add(this.btnPercentageQuiz);
-            this.Controls.Add(this.btnOverQuiz);
-            this.Controls.Add(this.btnPercentageTask);
-            this.Controls.Add(this.btnOverTask);
-            this.Controls.Add(this.btnPercentageRecit);
             this.Controls.Add(this.btnOverRecit);
             this.Controls.Add(this.lblGrades);
             this.Controls.Add(this.pnlCalculator);
@@ -1100,33 +852,25 @@
             this.Controls.Add(this.txtPercentExam);
             this.Controls.Add(this.txtExam);
             this.Controls.Add(this.txtTotalExam);
-            this.Controls.Add(this.txtOverQuiz);
-            this.Controls.Add(this.txtOverTask);
             this.Controls.Add(this.txtOverRecit);
             this.Controls.Add(this.btnCompute);
-            this.Controls.Add(this.txtTotalQuiz);
-            this.Controls.Add(this.txtPercentQuiz);
-            this.Controls.Add(this.txtQuizes);
-            this.Controls.Add(this.btnSaveQuiz);
-            this.Controls.Add(this.txtTotalTask);
-            this.Controls.Add(this.txtPercentTask);
-            this.Controls.Add(this.txtTask);
-            this.Controls.Add(this.btnSaveTask);
             this.Controls.Add(this.txtTotalRecit);
-            this.Controls.Add(this.lblPecentageRecit);
             this.Controls.Add(this.txtPercentRecit);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtRecitation);
             this.Controls.Add(this.btnSaveRecit);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "formCalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlScreen.ResumeLayout(false);
             this.pnlScreen.PerformLayout();
             this.pnlCalculator.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1136,25 +880,13 @@
         private System.Windows.Forms.Button btnSaveRecit;
         private Guna.UI2.WinForms.Guna2TextBox txtRecitation;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentRecit;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblPecentageRecit;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalRecit;
-        private Guna.UI2.WinForms.Guna2TextBox txtTotalTask;
-        private Guna.UI2.WinForms.Guna2TextBox txtPercentTask;
-        private Guna.UI2.WinForms.Guna2TextBox txtTask;
-        private System.Windows.Forms.Button btnSaveTask;
-        private Guna.UI2.WinForms.Guna2TextBox txtTotalQuiz;
-        private Guna.UI2.WinForms.Guna2TextBox txtPercentQuiz;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuizes;
-        private System.Windows.Forms.Button btnSaveQuiz;
         private Guna.UI2.WinForms.Guna2Button btnCompute;
         private Guna.UI2.WinForms.Guna2TextBox txtOverRecit;
-        private Guna.UI2.WinForms.Guna2TextBox txtOverTask;
-        private Guna.UI2.WinForms.Guna2TextBox txtOverQuiz;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalExam;
         private Guna.UI2.WinForms.Guna2TextBox txtOverExam;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentExam;
         private Guna.UI2.WinForms.Guna2TextBox txtExam;
-        private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Guna.UI2.WinForms.Guna2Panel pnlScreen;
         private System.Windows.Forms.Label lblPreview;
@@ -1174,19 +906,23 @@
         private Guna.UI2.WinForms.Guna2Panel pnlCalculator;
         private System.Windows.Forms.Label lblGrades;
         private System.Windows.Forms.Button btnOverRecit;
-        private System.Windows.Forms.Button btnOverTask;
-        private System.Windows.Forms.Button btnOverQuiz;
         private System.Windows.Forms.Label lblRecitation;
         private System.Windows.Forms.Button btnSaveExam;
         private System.Windows.Forms.Button btnOverExam;
-        private System.Windows.Forms.Button btnPercentageExam;
-        private System.Windows.Forms.Label lblTask;
-        private System.Windows.Forms.Label lblQuiz;
         private System.Windows.Forms.Label lblExam;
         private Guna.UI2.WinForms.Guna2BorderlessForm formCalculatorTransition;
-        private System.Windows.Forms.Button btnPercentageQuiz;
-        private System.Windows.Forms.Button btnPercentageTask;
-        private System.Windows.Forms.Button btnPercentageRecit;
         internal Guna.UI2.WinForms.Guna2TextBox txtGrade;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MenuStripTerms;
+        private System.Windows.Forms.ToolStripMenuItem pRELIMToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem midtermToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fINALSToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblInstructions;
+        private System.Windows.Forms.Button btnDivide;
+        private System.Windows.Forms.Button btnMinus;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEqual;
+        private System.Windows.Forms.Button btnMultiply;
     }
 }

@@ -317,5 +317,17 @@
   <ItemGroup>
     <None Include="Resources\New Logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiplication-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiplication-sign2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\division2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equal-sign2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
