@@ -445,6 +445,7 @@
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.PasswordChar = '\0';
             this.txtStudentNumber.PlaceholderText = "";
+            this.txtStudentNumber.ReadOnly = true;
             this.txtStudentNumber.SelectedText = "";
             this.txtStudentNumber.Size = new System.Drawing.Size(187, 36);
             this.txtStudentNumber.TabIndex = 74;
