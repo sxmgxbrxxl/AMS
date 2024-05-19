@@ -108,16 +108,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="formFinalsCalculator .cs">
+    <Compile Include="Forms\formFinalsCalculator .cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formFinalsCalculator .Designer.cs">
+    <Compile Include="Forms\formFinalsCalculator .Designer.cs">
       <DependentUpon>formFinalsCalculator .cs</DependentUpon>
     </Compile>
-    <Compile Include="formMidtermCalculator.cs">
+    <Compile Include="Forms\formMidtermCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMidtermCalculator.Designer.cs">
+    <Compile Include="Forms\formMidtermCalculator.Designer.cs">
       <DependentUpon>formMidtermCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form1.cs">
@@ -150,11 +150,11 @@
     <Compile Include="Forms\Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\formCalculator.cs">
+    <Compile Include="Forms\formPrelimCalculator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\formCalculator.Designer.cs">
-      <DependentUpon>formCalculator.cs</DependentUpon>
+    <Compile Include="Forms\formPrelimCalculator.Designer.cs">
+      <DependentUpon>formPrelimCalculator.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -194,10 +194,10 @@
     <Compile Include="UserControls\UserControl6.Designer.cs">
       <DependentUpon>UserControl6.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="formFinalsCalculator .resx">
+    <EmbeddedResource Include="Forms\formFinalsCalculator .resx">
       <DependentUpon>formFinalsCalculator .cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMidtermCalculator.resx">
+    <EmbeddedResource Include="Forms\formMidtermCalculator.resx">
       <DependentUpon>formMidtermCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
@@ -215,8 +215,8 @@
     <EmbeddedResource Include="Forms\Form5.resx">
       <DependentUpon>Form5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\formCalculator.resx">
-      <DependentUpon>formCalculator.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\formPrelimCalculator.resx">
+      <DependentUpon>formPrelimCalculator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

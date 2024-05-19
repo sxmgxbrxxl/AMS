@@ -28,37 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlWelcome = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNamePlaceholder = new System.Windows.Forms.Label();
             this.lblNavigation = new System.Windows.Forms.Label();
             this.lblGreetings = new System.Windows.Forms.Label();
-            this.pnlNews = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlNote = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlAsk = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.lblNote = new System.Windows.Forms.Label();
-            this.pnlSettings = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlNews = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlDate = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.pnlNumber = new System.Windows.Forms.Panel();
+            this.lblNumber = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNews = new System.Windows.Forms.Label();
             this.pnlStatistics = new Guna.UI2.WinForms.Guna2Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lblStudentNumberPlaceholder = new System.Windows.Forms.Label();
             this.pnlStats = new Guna.UI2.WinForms.Guna2Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pnlAsk = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlWelcome.SuspendLayout();
+            this.pnlNote.SuspendLayout();
+            this.pnlAsk.SuspendLayout();
             this.pnlNews.SuspendLayout();
-            this.pnlSettings.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.pnlDate.SuspendLayout();
+            this.pnlNumber.SuspendLayout();
             this.pnlStatistics.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.pnlStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            this.pnlAsk.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlWelcome
@@ -81,11 +90,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tan;
             this.label2.Location = new System.Drawing.Point(15, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 53);
+            this.label2.Size = new System.Drawing.Size(109, 56);
             this.label2.TabIndex = 22;
             this.label2.Text = "TIPS";
             // 
@@ -125,50 +135,171 @@
             this.lblGreetings.TabIndex = 23;
             this.lblGreetings.Text = "Welcome back,";
             // 
+            // pnlNote
+            // 
+            this.pnlNote.BackColor = System.Drawing.Color.Transparent;
+            this.pnlNote.BorderColor = System.Drawing.Color.Black;
+            this.pnlNote.BorderRadius = 10;
+            this.pnlNote.Controls.Add(this.pnlAsk);
+            this.pnlNote.FillColor = System.Drawing.Color.White;
+            this.pnlNote.Location = new System.Drawing.Point(30, 460);
+            this.pnlNote.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlNote.Name = "pnlNote";
+            this.pnlNote.ShadowDecoration.BorderRadius = 15;
+            this.pnlNote.ShadowDecoration.Depth = 15;
+            this.pnlNote.ShadowDecoration.Enabled = true;
+            this.pnlNote.Size = new System.Drawing.Size(275, 350);
+            this.pnlNote.TabIndex = 26;
+            // 
+            // pnlAsk
+            // 
+            this.pnlAsk.BorderRadius = 30;
+            this.pnlAsk.Controls.Add(this.lblMessage);
+            this.pnlAsk.Controls.Add(this.lblNote);
+            this.pnlAsk.FillColor = System.Drawing.Color.Tan;
+            this.pnlAsk.Location = new System.Drawing.Point(0, -15);
+            this.pnlAsk.Name = "pnlAsk";
+            this.pnlAsk.Size = new System.Drawing.Size(275, 280);
+            this.pnlAsk.TabIndex = 26;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.White;
+            this.lblMessage.Location = new System.Drawing.Point(18, 135);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(0);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(240, 96);
+            this.lblMessage.TabIndex = 26;
+            this.lblMessage.Text = "Please complete \r\nyour information \r\nin Profile Section";
+            // 
+            // lblNote
+            // 
+            this.lblNote.AutoSize = true;
+            this.lblNote.BackColor = System.Drawing.Color.Transparent;
+            this.lblNote.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNote.ForeColor = System.Drawing.Color.White;
+            this.lblNote.Location = new System.Drawing.Point(15, 65);
+            this.lblNote.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNote.Name = "lblNote";
+            this.lblNote.Size = new System.Drawing.Size(145, 56);
+            this.lblNote.TabIndex = 25;
+            this.lblNote.Text = "NOTE";
+            // 
             // pnlNews
             // 
             this.pnlNews.BackColor = System.Drawing.Color.Transparent;
             this.pnlNews.BorderColor = System.Drawing.Color.Black;
             this.pnlNews.BorderRadius = 10;
-            this.pnlNews.Controls.Add(this.pnlAsk);
+            this.pnlNews.Controls.Add(this.guna2Panel1);
             this.pnlNews.FillColor = System.Drawing.Color.White;
-            this.pnlNews.Location = new System.Drawing.Point(30, 460);
+            this.pnlNews.Location = new System.Drawing.Point(335, 460);
             this.pnlNews.Margin = new System.Windows.Forms.Padding(0);
             this.pnlNews.Name = "pnlNews";
             this.pnlNews.ShadowDecoration.BorderRadius = 15;
             this.pnlNews.ShadowDecoration.Depth = 15;
             this.pnlNews.ShadowDecoration.Enabled = true;
             this.pnlNews.Size = new System.Drawing.Size(275, 350);
-            this.pnlNews.TabIndex = 26;
+            this.pnlNews.TabIndex = 28;
             // 
-            // lblNote
+            // guna2Panel1
             // 
-            this.lblNote.AutoSize = true;
-            this.lblNote.BackColor = System.Drawing.Color.Transparent;
-            this.lblNote.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNote.ForeColor = System.Drawing.Color.White;
-            this.lblNote.Location = new System.Drawing.Point(16, 45);
-            this.lblNote.Margin = new System.Windows.Forms.Padding(0);
-            this.lblNote.Name = "lblNote";
-            this.lblNote.Size = new System.Drawing.Size(122, 47);
-            this.lblNote.TabIndex = 25;
-            this.lblNote.Text = "NOTE";
+            this.guna2Panel1.BorderRadius = 30;
+            this.guna2Panel1.Controls.Add(this.pnlDate);
+            this.guna2Panel1.Controls.Add(this.pnlNumber);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.lblNews);
+            this.guna2Panel1.FillColor = System.Drawing.Color.Tan;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 50);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(275, 320);
+            this.guna2Panel1.TabIndex = 27;
             // 
-            // pnlSettings
+            // pnlDate
             // 
-            this.pnlSettings.BackColor = System.Drawing.Color.Transparent;
-            this.pnlSettings.BorderColor = System.Drawing.Color.Black;
-            this.pnlSettings.BorderRadius = 10;
-            this.pnlSettings.Controls.Add(this.guna2Panel1);
-            this.pnlSettings.FillColor = System.Drawing.Color.White;
-            this.pnlSettings.Location = new System.Drawing.Point(335, 460);
-            this.pnlSettings.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlSettings.Name = "pnlSettings";
-            this.pnlSettings.ShadowDecoration.BorderRadius = 15;
-            this.pnlSettings.ShadowDecoration.Depth = 15;
-            this.pnlSettings.ShadowDecoration.Enabled = true;
-            this.pnlSettings.Size = new System.Drawing.Size(275, 350);
-            this.pnlSettings.TabIndex = 28;
+            this.pnlDate.Controls.Add(this.lblDate);
+            this.pnlDate.Location = new System.Drawing.Point(0, 178);
+            this.pnlDate.Name = "pnlDate";
+            this.pnlDate.Size = new System.Drawing.Size(275, 43);
+            this.pnlDate.TabIndex = 30;
+            // 
+            // lblDate
+            // 
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblDate.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.White;
+            this.lblDate.Location = new System.Drawing.Point(0, 0);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(275, 43);
+            this.lblDate.TabIndex = 28;
+            this.lblDate.Text = "Month, Year";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlNumber
+            // 
+            this.pnlNumber.Controls.Add(this.lblNumber);
+            this.pnlNumber.Location = new System.Drawing.Point(0, 70);
+            this.pnlNumber.Name = "pnlNumber";
+            this.pnlNumber.Size = new System.Drawing.Size(275, 77);
+            this.pnlNumber.TabIndex = 29;
+            // 
+            // lblNumber
+            // 
+            this.lblNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblNumber.Font = new System.Drawing.Font("Century Gothic", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumber.ForeColor = System.Drawing.Color.White;
+            this.lblNumber.Location = new System.Drawing.Point(0, 0);
+            this.lblNumber.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNumber.Name = "lblNumber";
+            this.lblNumber.Size = new System.Drawing.Size(275, 77);
+            this.lblNumber.TabIndex = 28;
+            this.lblNumber.Text = "10000";
+            this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(60, 144);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(151, 32);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "users as of";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 32);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "There are ";
+            // 
+            // lblNews
+            // 
+            this.lblNews.AutoSize = true;
+            this.lblNews.BackColor = System.Drawing.Color.Transparent;
+            this.lblNews.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNews.ForeColor = System.Drawing.Color.White;
+            this.lblNews.Location = new System.Drawing.Point(107, 224);
+            this.lblNews.Margin = new System.Windows.Forms.Padding(0);
+            this.lblNews.Name = "lblNews";
+            this.lblNews.Size = new System.Drawing.Size(150, 56);
+            this.lblNews.TabIndex = 25;
+            this.lblNews.Text = "News";
             // 
             // pnlStatistics
             // 
@@ -188,16 +319,16 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(19, 18);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(562, 336);
             this.chart1.TabIndex = 23;
             this.chart1.Text = "chart1";
@@ -233,54 +364,21 @@
             // 
             // chart2
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(19, 20);
             this.chart2.Name = "chart2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 2;
-            this.chart2.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 2;
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(562, 190);
             this.chart2.TabIndex = 23;
             this.chart2.Text = "chart2";
-            // 
-            // pnlAsk
-            // 
-            this.pnlAsk.BorderRadius = 30;
-            this.pnlAsk.Controls.Add(this.lblNote);
-            this.pnlAsk.FillColor = System.Drawing.Color.Tan;
-            this.pnlAsk.Location = new System.Drawing.Point(0, -15);
-            this.pnlAsk.Name = "pnlAsk";
-            this.pnlAsk.Size = new System.Drawing.Size(275, 280);
-            this.pnlAsk.TabIndex = 26;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderRadius = 30;
-            this.guna2Panel1.Controls.Add(this.label1);
-            this.guna2Panel1.FillColor = System.Drawing.Color.Tan;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, -15);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(275, 280);
-            this.guna2Panel1.TabIndex = 27;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 45);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 47);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "NOTE";
             // 
             // UCHome
             // 
@@ -291,8 +389,8 @@
             this.Controls.Add(this.lblNamePlaceholder);
             this.Controls.Add(this.lblNavigation);
             this.Controls.Add(this.lblGreetings);
+            this.Controls.Add(this.pnlNote);
             this.Controls.Add(this.pnlNews);
-            this.Controls.Add(this.pnlSettings);
             this.Controls.Add(this.pnlStatistics);
             this.Controls.Add(this.lblStudentNumberPlaceholder);
             this.Controls.Add(this.pnlStats);
@@ -300,16 +398,18 @@
             this.Size = new System.Drawing.Size(1275, 850);
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
+            this.pnlNote.ResumeLayout(false);
+            this.pnlAsk.ResumeLayout(false);
+            this.pnlAsk.PerformLayout();
             this.pnlNews.ResumeLayout(false);
-            this.pnlSettings.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.pnlDate.ResumeLayout(false);
+            this.pnlNumber.ResumeLayout(false);
             this.pnlStatistics.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.pnlStats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            this.pnlAsk.ResumeLayout(false);
-            this.pnlAsk.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,9 +422,9 @@
         private System.Windows.Forms.Label lblNamePlaceholder;
         private System.Windows.Forms.Label lblNavigation;
         private System.Windows.Forms.Label lblGreetings;
-        private Guna.UI2.WinForms.Guna2Panel pnlNews;
+        private Guna.UI2.WinForms.Guna2Panel pnlNote;
         private System.Windows.Forms.Label lblNote;
-        private Guna.UI2.WinForms.Guna2Panel pnlSettings;
+        private Guna.UI2.WinForms.Guna2Panel pnlNews;
         private Guna.UI2.WinForms.Guna2Panel pnlStatistics;
         private System.Windows.Forms.Label lblStudentNumberPlaceholder;
         private Guna.UI2.WinForms.Guna2Panel pnlStats;
@@ -332,6 +432,13 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private Guna.UI2.WinForms.Guna2Panel pnlAsk;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label lblNews;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlNumber;
+        private System.Windows.Forms.Panel pnlDate;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblNumber;
     }
 }

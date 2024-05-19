@@ -38,7 +38,9 @@ namespace Student_Hub
                                 "PC 3220 Operating Systems", "TC 3202 Machine Learning" };
         string[] CSCourse4F = { "PC 4121 Human Computer Interaction", "PC 4122 CS Thesis 1", "TC 4103 Natural Language Processing" };
         string[] CSCourse4S = { "CS 4223 CS Thesis 2", "CS 4224 Practicum (300 hours)" };
+        
         DBConnection conn = new DBConnection();
+
         public void SetGrade(string grade)
         {
             txtGrade.Text = grade;
@@ -46,18 +48,19 @@ namespace Student_Hub
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
-            formPrelimCalculator calculator = new formPrelimCalculator();
+            formPrelimCalculator pcalcu = new formPrelimCalculator();
             formMidtermCalculator mcalcu = new formMidtermCalculator();
-            formFinalsCalculator fcalc = new formFinalsCalculator();
-            if (calculator.ShowDialog() == DialogResult.OK)
+            formFinalsCalculator fcalcu = new formFinalsCalculator();
+
+            if (pcalcu.ShowDialog() == DialogResult.OK)
             {
-                SetGrade(calculator.Grade);
+                SetGrade(pcalcu.Grade);
             } else if (mcalcu.ShowDialog() == DialogResult.OK)
             {
                 SetGrade(mcalcu.Grade);
-            } else if (fcalc.ShowDialog() == DialogResult.OK)
+            } else if (fcalcu.ShowDialog() == DialogResult.OK)
             {
-                SetGrade(fcalc.Grade);
+                SetGrade(fcalcu.Grade);
             }
         }
         // string gradeview;
@@ -68,7 +71,6 @@ namespace Student_Hub
             AddingChoices();
             cboYear.SelectedIndexChanged += cboYear_SelectedIndexChanged;
             cboSem.SelectedIndexChanged += cboSem_SelectedIndexChanged;
-
         }
 
         private void AddingChoices()
@@ -133,34 +135,24 @@ namespace Student_Hub
             }
         }
 
-
-        private void UCGrades_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtGrade_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnshow_Click(object sender, EventArgs e)
         {
 
         }
+
         private void CustomizedgvGrades()
         {
             dgvGrades.DefaultCellStyle.Font = new Font("Century Gothic", 12); // Font for rows
             dgvGrades.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 14, FontStyle.Bold); // Font for headers
         }
+
         private void dgvGrades_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             CustomizedgvGrades();
-
         }
-        private void btnAdd_Click(object sender, EventArgs e)
-            {
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
             try
             {
                 conn.OpenCon();

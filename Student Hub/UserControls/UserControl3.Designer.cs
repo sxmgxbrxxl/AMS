@@ -42,6 +42,10 @@
             this.lblCourseName = new System.Windows.Forms.Label();
             this.pnlCourse = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvGrades = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.pnlEntries = new Guna.UI2.WinForms.Guna2Panel();
             this.btnCalculator = new Guna.UI2.WinForms.Guna2Button();
@@ -49,10 +53,6 @@
             this.cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnshow = new System.Windows.Forms.Button();
             this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlCategory.SuspendLayout();
             this.pnlCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
@@ -276,6 +276,35 @@
             this.dgvGrades.TabIndex = 0;
             this.dgvGrades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrades_CellContentClick);
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 43;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Term";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Course Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Grade";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Transparent;
@@ -368,7 +397,6 @@
             this.txtGrade.SelectedText = "";
             this.txtGrade.Size = new System.Drawing.Size(187, 36);
             this.txtGrade.TabIndex = 8;
-            this.txtGrade.TextChanged += new System.EventHandler(this.txtGrade_TextChanged);
             // 
             // cboCourse
             // 
@@ -421,35 +449,6 @@
             this.txtStudentNumber.Size = new System.Drawing.Size(187, 36);
             this.txtStudentNumber.TabIndex = 74;
             // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 43;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Term";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Course Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Grade";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
             // UCGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,7 +464,6 @@
             this.Controls.Add(this.pnlCourse);
             this.Name = "UCGrades";
             this.Size = new System.Drawing.Size(1275, 850);
-            this.Load += new System.EventHandler(this.UCGrades_Load);
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlCourse.ResumeLayout(false);
