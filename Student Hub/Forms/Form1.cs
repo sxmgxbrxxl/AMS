@@ -14,6 +14,7 @@ namespace Student_Hub
     public partial class frmMain : Form
     {
         public static string StudentNumber { get; set; }
+
         DBConnection connect  = new DBConnection();
 
         public frmMain()
@@ -46,7 +47,7 @@ namespace Student_Hub
             {
                 connect.OpenCon();
 
-                string query = "SELECT COUNT(*) FROM db_acad.tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber AND clm_stdPASS = @clm_stdPASS";
+                string query = "SELECT COUNT(*) FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber AND clm_stdPASS = @clm_stdPASS";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                 cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
                 cmd.Parameters.AddWithValue("@clm_stdPASS", txtPassword.Text); // Assuming password is stored in txtPassword TextBox
@@ -89,7 +90,31 @@ namespace Student_Hub
                 MySqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    UCGrades.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());    
+                    UCGrades.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseCon();
+            }
+
+            try
+            {
+                connect.OpenCon();
+
+                string query = "SELECT clm_stdFName, clm_stdNumber FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    UCHome.GlobalNamePlaceholder.Text = reader["clm_stdFName"].ToString();
+                    UCHome.GlobalStudNumPlaceholder.Text = reader["clm_stdNumber"].ToString();
                 }
 
             }

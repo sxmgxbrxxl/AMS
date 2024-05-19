@@ -13,15 +13,18 @@ namespace Student_Hub
 {
     public partial class UCHome : UserControl
     {
-        DBConnection connect = new DBConnection();
+        //DBConnection connect = new DBConnection();
+
+        public static Label GlobalNamePlaceholder { get; set; }
+        public static Label GlobalStudNumPlaceholder { get; set; }
 
         public UCHome()
         {
             InitializeComponent();
-            FetchStudentName();
+            //FetchStudentName();
         }
 
-        private void FetchStudentName()
+        /*private void FetchStudentName()
         {
             string studentNumber = null;
 
@@ -40,7 +43,7 @@ namespace Student_Hub
 
             DataTable table = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter();
-
+            
             try
             {
                 connect.OpenCon();
@@ -71,6 +74,12 @@ namespace Student_Hub
                 connect.CloseCon();
 
             }
+        }*/
+
+        private void UCHome_Load(object sender, EventArgs e)
+        {
+            GlobalNamePlaceholder = lblNamePlaceholder;
+            GlobalStudNumPlaceholder = lblStudentNumberPlaceholder;
         }
     }
 }

@@ -396,6 +396,7 @@
             this.Controls.Add(this.pnlStats);
             this.Name = "UCHome";
             this.Size = new System.Drawing.Size(1275, 850);
+            this.Load += new System.EventHandler(this.UCHome_Load);
             this.pnlWelcome.ResumeLayout(false);
             this.pnlWelcome.PerformLayout();
             this.pnlNote.ResumeLayout(false);

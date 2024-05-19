@@ -20,6 +20,7 @@ namespace Student_Hub
     public partial class UCGrades : UserControl
     {
         public static int stdID { get; set; }
+
         string[] year = { "1st", "2nd", "3rd", "4th" };
         string[] sem = { "1st Semester", "2nd Semester" };
         string[] term = { "Prelim", "Midterm", "Finals" };
@@ -136,11 +137,6 @@ namespace Student_Hub
             }
         }
 
-        private void btnshow_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CustomizedgvGrades()
         {
             dgvGrades.DefaultCellStyle.Font = new Font("Century Gothic", 12); // Font for rows
@@ -171,6 +167,8 @@ namespace Student_Hub
                
                 MessageBox.Show("Data Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvGrades.Rows.Add(stdID.ToString(), cboTerm.Text, cboCourse.Text, txtGrade.Text);
+                cboCourse.Items.Clear();
+                txtGrade.Clear();
             }
             catch (Exception ex)
             {

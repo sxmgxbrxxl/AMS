@@ -51,8 +51,6 @@
             this.btnCalculator = new Guna.UI2.WinForms.Guna2Button();
             this.txtGrade = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnshow = new System.Windows.Forms.Button();
-            this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlCategory.SuspendLayout();
             this.pnlCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
@@ -417,46 +415,11 @@
             this.cboCourse.Size = new System.Drawing.Size(310, 36);
             this.cboCourse.TabIndex = 4;
             // 
-            // btnshow
-            // 
-            this.btnshow.Location = new System.Drawing.Point(1147, 804);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(75, 23);
-            this.btnshow.TabIndex = 74;
-            this.btnshow.Text = "SHOW";
-            this.btnshow.UseVisualStyleBackColor = true;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
-            // 
-            // txtStudentNumber
-            // 
-            this.txtStudentNumber.AcceptsReturn = true;
-            this.txtStudentNumber.BorderRadius = 17;
-            this.txtStudentNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtStudentNumber.DefaultText = "";
-            this.txtStudentNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtStudentNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtStudentNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStudentNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtStudentNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentNumber.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtStudentNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentNumber.Location = new System.Drawing.Point(439, 90);
-            this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtStudentNumber.Name = "txtStudentNumber";
-            this.txtStudentNumber.PasswordChar = '\0';
-            this.txtStudentNumber.PlaceholderText = "";
-            this.txtStudentNumber.ReadOnly = true;
-            this.txtStudentNumber.SelectedText = "";
-            this.txtStudentNumber.Size = new System.Drawing.Size(187, 36);
-            this.txtStudentNumber.TabIndex = 74;
-            // 
             // UCGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
-            this.Controls.Add(this.btnshow);
-            this.Controls.Add(this.txtStudentNumber);
             this.Controls.Add(this.pnlEntries);
             this.Controls.Add(this.pnlCategory);
             this.Controls.Add(this.lblGrades);
@@ -496,9 +459,7 @@
         private System.Windows.Forms.Label lblYear;
         private Guna.UI2.WinForms.Guna2ComboBox cboSem;
         private System.Windows.Forms.Label lblSemester;
-        private System.Windows.Forms.Button btnshow;
         internal Guna.UI2.WinForms.Guna2TextBox txtGrade;
-        internal Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
