@@ -164,17 +164,10 @@ namespace Student_Hub
             try
             {
                 conn.OpenCon();
-                string studentNumber = frmSignUp.StudentNumber;
-                string studentNumber2 = frmMain.StudentNumber;
-                int studentID = GetStudentIDByStudentNumber(studentNumber);
-
-
-                string query = "INSERT INTO db_acad.tbl_stdcourses(clm_stdID, clm_Year, clm_Term, clm_semester, clm_courseName, clm_courseGrade) " +
-                                "VALUES (@clm_stdID, @clm_Year, @clm_Term, @clm_semester, @clm_courseName, @clm_courseGrade)";
+                string query = "INSERT INTO db_acad.tbl_stdcourses(clm_Year, clm_Term, clm_semester, clm_courseName, clm_courseGrade) " +
+                                "VALUES (@clm_Year, @clm_Term, @clm_semester, @clm_courseName, @clm_courseGrade)";
                 MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
 
-                cmd.Parameters.AddWithValue("@clm_stdID", studentNumber2);
-                cmd.Parameters.AddWithValue("@clm_stdNumber", studentID);
                 cmd.Parameters.AddWithValue("@clm_Year", cboYear.Text);
                 cmd.Parameters.AddWithValue("@clm_Term", cboTerm.Text);
                 cmd.Parameters.AddWithValue("@clm_semester", cboSem.Text);
@@ -196,33 +189,6 @@ namespace Student_Hub
             }
         }
 
-        private int GetStudentIDByStudentNumber(string studentNumber)
-        {
-            int studentID = 0;
-            try
-            {
-                conn.OpenCon();
-                string query = "SELECT studentID FROM db_acad.tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
-                MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
-                cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    studentID = reader.GetInt32("studentID");
-                }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.CloseCon();
-            }
-            return studentID;
-        }
     }
 }
 
