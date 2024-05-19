@@ -49,6 +49,7 @@
             this.cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnshow = new System.Windows.Forms.Button();
             this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -264,6 +265,7 @@
             this.dgvGrades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.Column1,
             this.Column2,
             this.Column3});
@@ -410,7 +412,7 @@
             this.txtStudentNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStudentNumber.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtStudentNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentNumber.Location = new System.Drawing.Point(1035, 37);
+            this.txtStudentNumber.Location = new System.Drawing.Point(439, 90);
             this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.PasswordChar = '\0';
@@ -418,6 +420,13 @@
             this.txtStudentNumber.SelectedText = "";
             this.txtStudentNumber.Size = new System.Drawing.Size(187, 36);
             this.txtStudentNumber.TabIndex = 74;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 43;
             // 
             // Column1
             // 
@@ -491,6 +500,7 @@
         private System.Windows.Forms.Button btnshow;
         internal Guna.UI2.WinForms.Guna2TextBox txtGrade;
         internal Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

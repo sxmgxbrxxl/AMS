@@ -164,20 +164,21 @@ namespace Student_Hub
             try
             {
                 conn.OpenCon();
-                string query = "INSERT INTO db_acad.tbl_stdcourses(clm_Year, clm_Term, clm_semester, clm_courseName, clm_courseGrade) " +
-                                "VALUES (@clm_Year, @clm_Term, @clm_semester, @clm_courseName, @clm_courseGrade)";
+                string query = "INSERT INTO `tbl_stdcourses`(`clm_stdID`, `clm_Year`, `clm_Term`, `clm_semester`, `clm_courseName`, `clm_courseGrade`) " +
+                    "VALUES (@clm_stdID,@clm_Year,@clm_Terms,@clm_semester,@clm_courseName,@clm_courseGrade)";
                 MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
-
+                int stdID = (int)cmd.LastInsertedId;
+                txtStudentNumber.Text = stdID.ToString();
+                cmd.Parameters.AddWithValue("@clm_stdID", txtStudentNumber.Text);
                 cmd.Parameters.AddWithValue("@clm_Year", cboYear.Text);
                 cmd.Parameters.AddWithValue("@clm_Term", cboTerm.Text);
                 cmd.Parameters.AddWithValue("@clm_semester", cboSem.Text);
                 cmd.Parameters.AddWithValue("@clm_courseName", cboCourse.Text);
                 cmd.Parameters.AddWithValue("@clm_courseGrade", txtGrade.Text);
-
                 cmd.ExecuteNonQuery();
-
+               
                 MessageBox.Show("Data Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                dgvGrades.Rows.Add(txtStudentNumber.Text, cboTerm.Text, cboCourse.Text, txtGrade.Text);
             }
             catch (Exception ex)
             {
