@@ -79,6 +79,29 @@ namespace Student_Hub
                 connect.CloseCon();
             }
 
+            try
+            {
+                connect.OpenCon();
+
+                string query = "SELECT clm_stdID FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    UCGrades.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseCon();
+            }
+
         }
 
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)

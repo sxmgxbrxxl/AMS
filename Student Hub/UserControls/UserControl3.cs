@@ -19,6 +19,7 @@ namespace Student_Hub
 {
     public partial class UCGrades : UserControl
     {
+        public static int stdID { get; set; }
         string[] year = { "1st", "2nd", "3rd", "4th" };
         string[] sem = { "1st Semester", "2nd Semester" };
         string[] term = { "Prelim", "Midterm", "Finals" };
@@ -165,11 +166,10 @@ namespace Student_Hub
             {
                 conn.OpenCon();
                 string query = "INSERT INTO `tbl_stdcourses`(`clm_stdID`, `clm_Year`, `clm_Term`, `clm_semester`, `clm_courseName`, `clm_courseGrade`) " +
-                    "VALUES (@clm_stdID,@clm_Year,@clm_Terms,@clm_semester,@clm_courseName,@clm_courseGrade)";
+                    "VALUES (@clm_stdID,@clm_Year,@clm_Term,@clm_semester,@clm_courseName,@clm_courseGrade)";
                 MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
-                int stdID = (int)cmd.LastInsertedId;
-                txtStudentNumber.Text = stdID.ToString();
-                cmd.Parameters.AddWithValue("@clm_stdID", txtStudentNumber.Text);
+
+                cmd.Parameters.AddWithValue("@clm_stdID", stdID);
                 cmd.Parameters.AddWithValue("@clm_Year", cboYear.Text);
                 cmd.Parameters.AddWithValue("@clm_Term", cboTerm.Text);
                 cmd.Parameters.AddWithValue("@clm_semester", cboSem.Text);
@@ -178,7 +178,7 @@ namespace Student_Hub
                 cmd.ExecuteNonQuery();
                
                 MessageBox.Show("Data Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dgvGrades.Rows.Add(txtStudentNumber.Text, cboTerm.Text, cboCourse.Text, txtGrade.Text);
+                dgvGrades.Rows.Add(stdID.ToString(), cboTerm.Text, cboCourse.Text, txtGrade.Text);
             }
             catch (Exception ex)
             {
@@ -186,6 +186,7 @@ namespace Student_Hub
             }
             finally
             {
+                MessageBox.Show(stdID.ToString());
                 conn.CloseCon();
             }
         }
