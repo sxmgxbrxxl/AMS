@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using Mysqlx.Datatypes;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Student_Hub
 {
@@ -155,83 +157,81 @@ namespace Student_Hub
             CustomizedgvGrades();
 
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
-        {
-            LoadDetails();
-        }
-
-        private void LoadDetails()
-        {
-            try
             {
-                conn.OpenCon();
-
-                
-                string studentNumber = null;
-                if (!string.IsNullOrEmpty(frmMain.StudentNumber))
+                try
                 {
-                    studentNumber = frmMain.StudentNumber;
-                }
-                else if (!string.IsNullOrEmpty(frmSignUp.StudentNumber))
-                {
-                    studentNumber = frmSignUp.StudentNumber;
-                }
-                else
-                {
-                    MessageBox.Show("Student number not provided.");
-                    return;
-                }
+                    conn.OpenCon();
 
-               
-                string query = "SELECT clm_stdID FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
-                MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
-                cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
-
-                object studentID = cmd.ExecuteScalar();
-
-                if (studentID != null) 
-                {
-
-                    foreach (DataGridViewRow row in dgvGrades.Rows)
+                    // Determine which student number to use
+                    string studentNumber = null;
+                    if (!string.IsNullOrEmpty(frmMain.StudentNumber))
                     {
-                        if (row.IsNewRow) continue;
-
-                        string courseName = row.Cells["courseName"].Value.ToString();
-                        string courseGrade = row.Cells["courseGrade"].Value.ToString();
-
-                        // Insert data into tbl_stdcourses
-                        string insertCourseQuery = "INSERT INTO db_acad.tbl_stdcourses (clm_stdID, clm_courseName) VALUES (@clm_stdID, @clm_courseName)";
-                        MySqlCommand insertCourseCmd = new MySqlCommand(insertCourseQuery, conn.GetConnection());
-                        insertCourseCmd.Parameters.AddWithValue("@clm_stdID", studentID);
-                        insertCourseCmd.Parameters.AddWithValue("@clm_courseName", courseName);
-                        insertCourseCmd.ExecuteNonQuery();
-
-                        // Insert data into tbl_grades
-                        string insertGradeQuery = "INSERT INTO db_acad.tbl_grades (clm_courseID, clm_courseGrade) VALUES (@clm_courseID, @clm_courseGrade)";
-                        MySqlCommand insertGradeCmd = new MySqlCommand(insertGradeQuery, conn.GetConnection());
-                        insertGradeCmd.Parameters.AddWithValue("@clm_courseID", courseName); 
-                        insertGradeCmd.Parameters.AddWithValue("@clm_courseGrade", courseGrade);
-                        insertGradeCmd.ExecuteNonQuery();
+                        studentNumber = frmMain.StudentNumber;
+                    }
+                    else if (!string.IsNullOrEmpty(frmSignUp.StudentNumber))
+                    {
+                        studentNumber = frmSignUp.StudentNumber;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Student number not provided.");
+                        return; // Exit the method if no student number is provided
                     }
 
-                    MessageBox.Show("Data inserted successfully.");
+                    // Check if the student exists in the database
+                    string query = "SELECT clm_stdID FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
+                    MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
+                    cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
+
+                    // Execute the query
+                    object studentID = cmd.ExecuteScalar();
+
+                    if (studentID != null) // Check if a record was found
+                    {
+                        // Student found, proceed to insert grades
+                        foreach (DataGridViewRow row in dgvGrades.Rows)
+                        {
+                            if (row.IsNewRow) continue;
+
+                            string courseName = row.Cells["courseName"].Value.ToString();
+                            string courseGrade = row.Cells["courseGrade"].Value.ToString();
+
+                            // Insert data into tbl_stdcourses
+                            string insertCourseQuery = "INSERT INTO tbl_stdcourses (clm_stdID, clm_courseName) VALUES (@clm_stdID, @clm_courseName)";
+                            MySqlCommand insertCourseCmd = new MySqlCommand(insertCourseQuery, conn.GetConnection());
+                            insertCourseCmd.Parameters.AddWithValue("@clm_stdID", studentID);
+                            insertCourseCmd.Parameters.AddWithValue("@clm_courseName", courseName);
+                            insertCourseCmd.ExecuteNonQuery();
+
+                            // Insert data into tbl_grades
+                            string insertGradeQuery = "INSERT INTO tbl_grades (clm_stdID, clm_courseName, clm_courseGrade) VALUES (@clm_stdID, @clm_courseName, @clm_courseGrade)";
+                            MySqlCommand insertGradeCmd = new MySqlCommand(insertGradeQuery, conn.GetConnection());
+                            insertGradeCmd.Parameters.AddWithValue("@clm_stdID", studentID);
+                            insertGradeCmd.Parameters.AddWithValue("@clm_courseName", courseName);
+                            insertGradeCmd.Parameters.AddWithValue("@clm_courseGrade", courseGrade);
+                            insertGradeCmd.ExecuteNonQuery();
+                        }
+
+                        MessageBox.Show("Data inserted successfully.");
+                    }
+                    else
+                    {
+                        // Student not found
+                        MessageBox.Show("Student not found.");
+                    }
                 }
-                else
+                catch (MySqlException ex)
                 {
-                    MessageBox.Show("Student not found.");
+                    MessageBox.Show("Error: " + ex.Message);
                 }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.CloseCon();
+                finally
+                {
+                    conn.CloseCon();
+                }
             }
 
-        }
+
     }
 }
 
