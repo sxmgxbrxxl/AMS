@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using Mysqlx.Crud;
 using Mysqlx.Datatypes;
+using MySqlX.XDevAPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -159,79 +160,69 @@ namespace Student_Hub
         }
         private void btnAdd_Click(object sender, EventArgs e)
             {
-                try
-                {
-                    conn.OpenCon();
 
-                    // Determine which student number to use
-                    string studentNumber = null;
-                    if (!string.IsNullOrEmpty(frmMain.StudentNumber))
-                    {
-                        studentNumber = frmMain.StudentNumber;
-                    }
-                    else if (!string.IsNullOrEmpty(frmSignUp.StudentNumber))
-                    {
-                        studentNumber = frmSignUp.StudentNumber;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Student number not provided.");
-                        return; // Exit the method if no student number is provided
-                    }
+            try
+            {
+                conn.OpenCon();
+                string studentNumber = frmSignUp.StudentNumber;
+                string studentNumber2 = frmMain.StudentNumber;
+                int studentID = GetStudentIDByStudentNumber(studentNumber);
 
-                    // Check if the student exists in the database
-                    string query = "SELECT clm_stdID FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
-                    MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
-                    cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
 
-                    // Execute the query
-                    object studentID = cmd.ExecuteScalar();
+                string query = "INSERT INTO db_acad.tbl_stdcourses(clm_stdID, clm_Year, clm_Term, clm_semester, clm_courseName, clm_courseGrade) " +
+                                "VALUES (@clm_stdID, @clm_Year, @clm_Term, @clm_semester, @clm_courseName, @clm_courseGrade)";
+                MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
 
-                    if (studentID != null) // Check if a record was found
-                    {
-                        // Student found, proceed to insert grades
-                        foreach (DataGridViewRow row in dgvGrades.Rows)
-                        {
-                            if (row.IsNewRow) continue;
+                cmd.Parameters.AddWithValue("@clm_stdID", studentNumber2);
+                cmd.Parameters.AddWithValue("@clm_stdNumber", studentID);
+                cmd.Parameters.AddWithValue("@clm_Year", cboYear.Text);
+                cmd.Parameters.AddWithValue("@clm_Term", cboTerm.Text);
+                cmd.Parameters.AddWithValue("@clm_semester", cboSem.Text);
+                cmd.Parameters.AddWithValue("@clm_courseName", cboCourse.Text);
+                cmd.Parameters.AddWithValue("@clm_courseGrade", txtGrade.Text);
 
-                            string courseName = row.Cells["courseName"].Value.ToString();
-                            string courseGrade = row.Cells["courseGrade"].Value.ToString();
+                cmd.ExecuteNonQuery();
 
-                            // Insert data into tbl_stdcourses
-                            string insertCourseQuery = "INSERT INTO tbl_stdcourses (clm_stdID, clm_courseName) VALUES (@clm_stdID, @clm_courseName)";
-                            MySqlCommand insertCourseCmd = new MySqlCommand(insertCourseQuery, conn.GetConnection());
-                            insertCourseCmd.Parameters.AddWithValue("@clm_stdID", studentID);
-                            insertCourseCmd.Parameters.AddWithValue("@clm_courseName", courseName);
-                            insertCourseCmd.ExecuteNonQuery();
+                MessageBox.Show("Data Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Insert data into tbl_grades
-                            string insertGradeQuery = "INSERT INTO tbl_grades (clm_stdID, clm_courseName, clm_courseGrade) VALUES (@clm_stdID, @clm_courseName, @clm_courseGrade)";
-                            MySqlCommand insertGradeCmd = new MySqlCommand(insertGradeQuery, conn.GetConnection());
-                            insertGradeCmd.Parameters.AddWithValue("@clm_stdID", studentID);
-                            insertGradeCmd.Parameters.AddWithValue("@clm_courseName", courseName);
-                            insertGradeCmd.Parameters.AddWithValue("@clm_courseGrade", courseGrade);
-                            insertGradeCmd.ExecuteNonQuery();
-                        }
-
-                        MessageBox.Show("Data inserted successfully.");
-                    }
-                    else
-                    {
-                        // Student not found
-                        MessageBox.Show("Student not found.");
-                    }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                }
-                finally
-                {
-                    conn.CloseCon();
-                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.CloseCon();
+            }
+        }
 
+        private int GetStudentIDByStudentNumber(string studentNumber)
+        {
+            int studentID = 0;
+            try
+            {
+                conn.OpenCon();
+                string query = "SELECT studentID FROM db_acad.tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
+                MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
 
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    studentID = reader.GetInt32("studentID");
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.CloseCon();
+            }
+            return studentID;
+        }
     }
 }
 

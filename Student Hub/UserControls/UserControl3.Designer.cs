@@ -49,6 +49,8 @@
             this.cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnshow = new System.Windows.Forms.Button();
             this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            this.studentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -264,6 +266,8 @@
             this.dgvGrades.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGrades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGrades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.studentID,
+            this.studentNumber,
             this.Column1,
             this.Column2,
             this.Column3});
@@ -419,6 +423,20 @@
             this.txtStudentNumber.Size = new System.Drawing.Size(187, 36);
             this.txtStudentNumber.TabIndex = 74;
             // 
+            // studentID
+            // 
+            this.studentID.HeaderText = "studentID";
+            this.studentID.Name = "studentID";
+            this.studentID.ReadOnly = true;
+            this.studentID.Width = 78;
+            // 
+            // studentNumber
+            // 
+            this.studentNumber.HeaderText = "studentNumber";
+            this.studentNumber.Name = "studentNumber";
+            this.studentNumber.ReadOnly = true;
+            this.studentNumber.Width = 104;
+            // 
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -491,6 +509,8 @@
         private System.Windows.Forms.Button btnshow;
         internal Guna.UI2.WinForms.Guna2TextBox txtGrade;
         internal Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studentNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
