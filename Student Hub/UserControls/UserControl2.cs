@@ -14,6 +14,7 @@ namespace Student_Hub
     public partial class UCProfile : UserControl
     {
         public static string Program { get; set; }
+
         DBConnection connect = new DBConnection();
 
         string[] program = { "BSIT-BA", "BSIT-SD", "BSCS-DS", "BEEd", "BSA", "BSAIS", "BSME"};

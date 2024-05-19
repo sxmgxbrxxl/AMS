@@ -42,7 +42,6 @@ namespace Student_Hub
         string[] CSCourse4S = { "CS 4223 CS Thesis 2", "CS 4224 Practicum (300 hours)" };
         
         DBConnection conn = new DBConnection();
-
         public void SetGrade(string grade)
         {
             txtGrade.Text = grade;
@@ -50,21 +49,26 @@ namespace Student_Hub
 
         private void btnCalculator_Click(object sender, EventArgs e)
         {
-            formPrelimCalculator pcalcu = new formPrelimCalculator();
-            formMidtermCalculator mcalcu = new formMidtermCalculator();
-            formFinalsCalculator fcalcu = new formFinalsCalculator();
-
-            if (pcalcu.ShowDialog() == DialogResult.OK)
+            if (cboTerm.Text == "Prelim")
             {
+                formPrelimCalculator pcalcu = new formPrelimCalculator();
+                pcalcu.ShowDialog(); // ShowDialog() waits for the form to close before proceeding
                 SetGrade(pcalcu.Grade);
-            } else if (mcalcu.ShowDialog() == DialogResult.OK)
+            }
+            else if (cboTerm.Text == "Midterm")
             {
+                formMidtermCalculator mcalcu = new formMidtermCalculator();
+                mcalcu.ShowDialog(); // ShowDialog() waits for the form to close before proceeding
                 SetGrade(mcalcu.Grade);
-            } else if (fcalcu.ShowDialog() == DialogResult.OK)
+            }
+            else if (cboTerm.Text == "Finals")
             {
+                formFinalsCalculator fcalcu = new formFinalsCalculator();
+                fcalcu.ShowDialog(); // ShowDialog() waits for the form to close before proceeding
                 SetGrade(fcalcu.Grade);
             }
         }
+
         // string gradeview;
         public UCGrades()
         {
@@ -167,7 +171,7 @@ namespace Student_Hub
                
                 MessageBox.Show("Data Inserted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dgvGrades.Rows.Add(stdID.ToString(), cboTerm.Text, cboCourse.Text, txtGrade.Text);
-                cboCourse.Items.Clear();
+                cboCourse.SelectedIndex = -1;
                 txtGrade.Clear();
             }
             catch (Exception ex)

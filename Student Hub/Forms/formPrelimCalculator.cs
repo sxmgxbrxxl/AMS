@@ -142,7 +142,7 @@ namespace Student_Hub
             txtGrade.Text = finalresult;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             /**try
             {
@@ -218,8 +218,9 @@ namespace Student_Hub
 
         }
 
-        private void btnCloser_Click(object sender, EventArgs e)
+        private void btnCLose_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
     }
 }

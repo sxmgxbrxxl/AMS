@@ -40,7 +40,7 @@
             this.txtPercentExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtExam = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGrade = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnCloseMid = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSaveMid = new Guna.UI2.WinForms.Guna2Button();
             this.pnlScreen = new Guna.UI2.WinForms.Guna2Panel();
             this.txtPreview = new System.Windows.Forms.TextBox();
             this.lblPreview = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblInstructions = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCLose = new Guna.UI2.WinForms.Guna2Button();
             this.pnlScreen.SuspendLayout();
             this.pnlCalculator.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -82,12 +83,9 @@
             // 
             // btnSaveRecit
             // 
-            this.btnSaveRecit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveRecit.BackColor = System.Drawing.Color.Tan;
             this.btnSaveRecit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveRecit.Location = new System.Drawing.Point(380, 284);
+            this.btnSaveRecit.Location = new System.Drawing.Point(380, 323);
             this.btnSaveRecit.Margin = new System.Windows.Forms.Padding(0);
             this.btnSaveRecit.Name = "btnSaveRecit";
             this.btnSaveRecit.Size = new System.Drawing.Size(112, 31);
@@ -100,9 +98,6 @@
             // 
             this.txtRecitation.AcceptsReturn = true;
             this.txtRecitation.AcceptsTab = true;
-            this.txtRecitation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRecitation.BackColor = System.Drawing.Color.Transparent;
             this.txtRecitation.BorderRadius = 10;
             this.txtRecitation.BorderThickness = 2;
@@ -116,7 +111,7 @@
             this.txtRecitation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRecitation.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecitation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRecitation.Location = new System.Drawing.Point(636, 213);
+            this.txtRecitation.Location = new System.Drawing.Point(636, 252);
             this.txtRecitation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRecitation.Name = "txtRecitation";
             this.txtRecitation.PasswordChar = '\0';
@@ -131,9 +126,6 @@
             // 
             this.txtPercentRecit.AcceptsReturn = true;
             this.txtPercentRecit.AcceptsTab = true;
-            this.txtPercentRecit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPercentRecit.BackColor = System.Drawing.Color.Transparent;
             this.txtPercentRecit.BorderRadius = 10;
             this.txtPercentRecit.BorderThickness = 2;
@@ -147,7 +139,7 @@
             this.txtPercentRecit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPercentRecit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPercentRecit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentRecit.Location = new System.Drawing.Point(849, 213);
+            this.txtPercentRecit.Location = new System.Drawing.Point(849, 252);
             this.txtPercentRecit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentRecit.Name = "txtPercentRecit";
             this.txtPercentRecit.PasswordChar = '\0';
@@ -161,9 +153,6 @@
             // 
             this.txtTotalRecit.AcceptsReturn = true;
             this.txtTotalRecit.AcceptsTab = true;
-            this.txtTotalRecit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotalRecit.BackColor = System.Drawing.Color.Transparent;
             this.txtTotalRecit.BorderRadius = 10;
             this.txtTotalRecit.BorderThickness = 2;
@@ -177,7 +166,7 @@
             this.txtTotalRecit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalRecit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalRecit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalRecit.Location = new System.Drawing.Point(959, 213);
+            this.txtTotalRecit.Location = new System.Drawing.Point(959, 252);
             this.txtTotalRecit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTotalRecit.Name = "txtTotalRecit";
             this.txtTotalRecit.PasswordChar = '\0';
@@ -190,9 +179,6 @@
             // 
             // btnCompute
             // 
-            this.btnCompute.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCompute.BackColor = System.Drawing.Color.Transparent;
             this.btnCompute.BorderColor = System.Drawing.Color.Transparent;
             this.btnCompute.BorderRadius = 20;
@@ -204,7 +190,7 @@
             this.btnCompute.FillColor = System.Drawing.Color.Tan;
             this.btnCompute.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompute.ForeColor = System.Drawing.Color.White;
-            this.btnCompute.Location = new System.Drawing.Point(759, 529);
+            this.btnCompute.Location = new System.Drawing.Point(759, 568);
             this.btnCompute.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompute.Name = "btnCompute";
             this.btnCompute.Size = new System.Drawing.Size(150, 37);
@@ -216,9 +202,6 @@
             // 
             this.txtOverRecit.AcceptsReturn = true;
             this.txtOverRecit.AcceptsTab = true;
-            this.txtOverRecit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOverRecit.BackColor = System.Drawing.Color.Transparent;
             this.txtOverRecit.BorderRadius = 10;
             this.txtOverRecit.BorderThickness = 2;
@@ -232,7 +215,7 @@
             this.txtOverRecit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtOverRecit.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOverRecit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOverRecit.Location = new System.Drawing.Point(738, 213);
+            this.txtOverRecit.Location = new System.Drawing.Point(738, 252);
             this.txtOverRecit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOverRecit.Name = "txtOverRecit";
             this.txtOverRecit.PasswordChar = '\0';
@@ -246,9 +229,6 @@
             // 
             this.txtTotalExam.AcceptsReturn = true;
             this.txtTotalExam.AcceptsTab = true;
-            this.txtTotalExam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTotalExam.BackColor = System.Drawing.Color.Transparent;
             this.txtTotalExam.BorderRadius = 10;
             this.txtTotalExam.BorderThickness = 2;
@@ -262,7 +242,7 @@
             this.txtTotalExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalExam.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotalExam.Location = new System.Drawing.Point(959, 341);
+            this.txtTotalExam.Location = new System.Drawing.Point(959, 380);
             this.txtTotalExam.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTotalExam.Name = "txtTotalExam";
             this.txtTotalExam.PasswordChar = '\0';
@@ -277,9 +257,6 @@
             // 
             this.txtPercentExam.AcceptsReturn = true;
             this.txtPercentExam.AcceptsTab = true;
-            this.txtPercentExam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPercentExam.BackColor = System.Drawing.Color.Transparent;
             this.txtPercentExam.BorderRadius = 10;
             this.txtPercentExam.BorderThickness = 2;
@@ -293,7 +270,7 @@
             this.txtPercentExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPercentExam.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPercentExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPercentExam.Location = new System.Drawing.Point(849, 341);
+            this.txtPercentExam.Location = new System.Drawing.Point(849, 380);
             this.txtPercentExam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentExam.Name = "txtPercentExam";
             this.txtPercentExam.PasswordChar = '\0';
@@ -307,9 +284,6 @@
             // 
             this.txtExam.AcceptsReturn = true;
             this.txtExam.AcceptsTab = true;
-            this.txtExam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtExam.BackColor = System.Drawing.Color.Transparent;
             this.txtExam.BorderRadius = 10;
             this.txtExam.BorderThickness = 2;
@@ -323,7 +297,7 @@
             this.txtExam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtExam.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExam.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExam.Location = new System.Drawing.Point(738, 341);
+            this.txtExam.Location = new System.Drawing.Point(738, 380);
             this.txtExam.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtExam.Name = "txtExam";
             this.txtExam.PasswordChar = '\0';
@@ -337,9 +311,6 @@
             // 
             this.txtGrade.AcceptsReturn = true;
             this.txtGrade.AcceptsTab = true;
-            this.txtGrade.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGrade.BackColor = System.Drawing.Color.Transparent;
             this.txtGrade.BorderRadius = 10;
             this.txtGrade.BorderThickness = 2;
@@ -353,7 +324,7 @@
             this.txtGrade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGrade.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGrade.Location = new System.Drawing.Point(917, 524);
+            this.txtGrade.Location = new System.Drawing.Point(917, 563);
             this.txtGrade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.PasswordChar = '\0';
@@ -365,29 +336,26 @@
             this.txtGrade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtGrade.TextChanged += new System.EventHandler(this.txtGrade_TextChanged);
             // 
-            // btnCloseMid
+            // btnSaveMid
             // 
-            this.btnCloseMid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseMid.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseMid.BorderColor = System.Drawing.Color.DarkGoldenrod;
-            this.btnCloseMid.BorderRadius = 10;
-            this.btnCloseMid.BorderThickness = 2;
-            this.btnCloseMid.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCloseMid.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCloseMid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCloseMid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCloseMid.FillColor = System.Drawing.Color.Tan;
-            this.btnCloseMid.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseMid.ForeColor = System.Drawing.Color.White;
-            this.btnCloseMid.Location = new System.Drawing.Point(738, 571);
-            this.btnCloseMid.Name = "btnCloseMid";
-            this.btnCloseMid.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCloseMid.Size = new System.Drawing.Size(171, 44);
-            this.btnCloseMid.TabIndex = 55;
-            this.btnCloseMid.Text = "Save Grade";
-            this.btnCloseMid.DoubleClick += new System.EventHandler(this.btnCloseMid_Click);
+            this.btnSaveMid.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveMid.BorderColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnSaveMid.BorderRadius = 10;
+            this.btnSaveMid.BorderThickness = 2;
+            this.btnSaveMid.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveMid.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSaveMid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSaveMid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSaveMid.FillColor = System.Drawing.Color.Tan;
+            this.btnSaveMid.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveMid.ForeColor = System.Drawing.Color.White;
+            this.btnSaveMid.Location = new System.Drawing.Point(738, 610);
+            this.btnSaveMid.Name = "btnSaveMid";
+            this.btnSaveMid.PressedColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSaveMid.Size = new System.Drawing.Size(171, 44);
+            this.btnSaveMid.TabIndex = 55;
+            this.btnSaveMid.Text = "Save Grade";
+            this.btnSaveMid.DoubleClick += new System.EventHandler(this.btnSaveMid_Click);
             // 
             // pnlScreen
             // 
@@ -605,9 +573,6 @@
             // 
             // pnlCalculator
             // 
-            this.pnlCalculator.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlCalculator.BackColor = System.Drawing.Color.Transparent;
             this.pnlCalculator.BorderRadius = 25;
             this.pnlCalculator.Controls.Add(this.btnDivide);
@@ -629,7 +594,7 @@
             this.pnlCalculator.Controls.Add(this.btnClear);
             this.pnlCalculator.Controls.Add(this.btnSeven);
             this.pnlCalculator.FillColor = System.Drawing.Color.Black;
-            this.pnlCalculator.Location = new System.Drawing.Point(53, 138);
+            this.pnlCalculator.Location = new System.Drawing.Point(53, 177);
             this.pnlCalculator.Name = "pnlCalculator";
             this.pnlCalculator.Size = new System.Drawing.Size(324, 508);
             this.pnlCalculator.TabIndex = 56;
@@ -702,13 +667,10 @@
             // 
             // lblGrades
             // 
-            this.lblGrades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblGrades.AutoSize = true;
             this.lblGrades.BackColor = System.Drawing.Color.Transparent;
             this.lblGrades.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGrades.Location = new System.Drawing.Point(43, 54);
+            this.lblGrades.Location = new System.Drawing.Point(43, 93);
             this.lblGrades.Margin = new System.Windows.Forms.Padding(0);
             this.lblGrades.Name = "lblGrades";
             this.lblGrades.Size = new System.Drawing.Size(269, 56);
@@ -717,12 +679,9 @@
             // 
             // btnOverRecit
             // 
-            this.btnOverRecit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOverRecit.BackColor = System.Drawing.Color.Tan;
             this.btnOverRecit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOverRecit.Location = new System.Drawing.Point(380, 315);
+            this.btnOverRecit.Location = new System.Drawing.Point(380, 354);
             this.btnOverRecit.Margin = new System.Windows.Forms.Padding(0);
             this.btnOverRecit.Name = "btnOverRecit";
             this.btnOverRecit.Size = new System.Drawing.Size(112, 47);
@@ -733,13 +692,10 @@
             // 
             // lblClassStanding
             // 
-            this.lblClassStanding.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblClassStanding.AutoSize = true;
             this.lblClassStanding.BackColor = System.Drawing.Color.Transparent;
             this.lblClassStanding.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassStanding.Location = new System.Drawing.Point(631, 106);
+            this.lblClassStanding.Location = new System.Drawing.Point(631, 145);
             this.lblClassStanding.Margin = new System.Windows.Forms.Padding(0);
             this.lblClassStanding.Name = "lblClassStanding";
             this.lblClassStanding.Size = new System.Drawing.Size(294, 28);
@@ -748,13 +704,10 @@
             // 
             // lblExam
             // 
-            this.lblExam.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblExam.AutoSize = true;
             this.lblExam.BackColor = System.Drawing.Color.Transparent;
             this.lblExam.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExam.Location = new System.Drawing.Point(631, 286);
+            this.lblExam.Location = new System.Drawing.Point(631, 325);
             this.lblExam.Margin = new System.Windows.Forms.Padding(0);
             this.lblExam.Name = "lblExam";
             this.lblExam.Size = new System.Drawing.Size(224, 28);
@@ -771,6 +724,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.PapayaWhip;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuStripTerms});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -811,13 +765,10 @@
             // 
             // guna2HtmlLabel1
             // 
-            this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(727, 147);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(727, 186);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 73;
@@ -826,26 +777,44 @@
             // 
             // lblInstructions
             // 
-            this.lblInstructions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblInstructions.AutoSize = false;
             this.lblInstructions.BackColor = System.Drawing.Color.Transparent;
             this.lblInstructions.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInstructions.Location = new System.Drawing.Point(636, 136);
+            this.lblInstructions.Location = new System.Drawing.Point(636, 175);
             this.lblInstructions.Name = "lblInstructions";
             this.lblInstructions.Size = new System.Drawing.Size(412, 70);
             this.lblInstructions.TabIndex = 74;
             this.lblInstructions.Text = resources.GetString("lblInstructions.Text");
+            // 
+            // btnCLose
+            // 
+            this.btnCLose.BackColor = System.Drawing.Color.Transparent;
+            this.btnCLose.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.btnCLose.BorderRadius = 10;
+            this.btnCLose.BorderThickness = 2;
+            this.btnCLose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCLose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCLose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCLose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCLose.FillColor = System.Drawing.Color.White;
+            this.btnCLose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCLose.ForeColor = System.Drawing.Color.White;
+            this.btnCLose.Image = global::Student_Hub.Properties.Resources.Back;
+            this.btnCLose.Location = new System.Drawing.Point(1011, 93);
+            this.btnCLose.Name = "btnCLose";
+            this.btnCLose.Size = new System.Drawing.Size(37, 42);
+            this.btnCLose.TabIndex = 76;
+            this.btnCLose.Click += new System.EventHandler(this.btnCLose_Click);
             // 
             // formMidtermCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Student_Hub.Properties.Resources.New_Calculator_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.ClientSize = new System.Drawing.Size(1100, 740);
+            this.Controls.Add(this.btnCLose);
             this.Controls.Add(this.lblInstructions);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.lblExam);
@@ -853,7 +822,7 @@
             this.Controls.Add(this.btnOverRecit);
             this.Controls.Add(this.lblGrades);
             this.Controls.Add(this.pnlCalculator);
-            this.Controls.Add(this.btnCloseMid);
+            this.Controls.Add(this.btnSaveMid);
             this.Controls.Add(this.txtGrade);
             this.Controls.Add(this.txtPercentExam);
             this.Controls.Add(this.txtExam);
@@ -892,7 +861,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTotalExam;
         private Guna.UI2.WinForms.Guna2TextBox txtPercentExam;
         private Guna.UI2.WinForms.Guna2TextBox txtExam;
-        private Guna.UI2.WinForms.Guna2Button btnCloseMid;
+        private Guna.UI2.WinForms.Guna2Button btnSaveMid;
         private Guna.UI2.WinForms.Guna2Panel pnlScreen;
         private System.Windows.Forms.Label lblPreview;
         private System.Windows.Forms.TextBox txtResult;
@@ -928,5 +897,6 @@
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.TextBox txtPreview;
         private System.Windows.Forms.ToolTip toolTip1;
+        private Guna.UI2.WinForms.Guna2Button btnCLose;
     }
 }

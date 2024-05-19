@@ -195,7 +195,7 @@ namespace Student_Hub
             txtPreview.Text = firstvalue + " " + operationPerformed + " " + secondvalue + " =";
         }
 
-        private void btnCloseMid_Click(object sender, EventArgs e)
+        private void btnSaveMid_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -208,10 +208,9 @@ namespace Student_Hub
             fcalc.Show();
         }
 
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        private void btnCLose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -127,9 +127,6 @@
   <data name="Dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Records" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Records.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Academic Mastery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Academic Mastery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +151,9 @@
   <data name="Trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Grades" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="multiplication-sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\multiplication-sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,6 +171,9 @@
   </data>
   <data name="Student" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Student.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="equal-sign2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\equal-sign2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DropDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DropDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +196,8 @@
   <data name="Sapitanan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sapitanan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Grades" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Grades.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Records" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Records.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Log Out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Log Out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +205,7 @@
   <data name="Square Minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Square Minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="equal-sign2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\equal-sign2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="New Calculator Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New Calculator Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

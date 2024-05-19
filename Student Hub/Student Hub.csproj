@@ -347,5 +347,8 @@
   <ItemGroup>
     <None Include="Resources\equal-sign2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Calculator Background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
