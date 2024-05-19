@@ -207,5 +207,10 @@ namespace Student_Hub
         {
             txtConfirmPASSWORD.BorderColor = Color.FromArgb(213, 218, 223);
         }
+
+        private void frmSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

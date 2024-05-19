@@ -568,6 +568,7 @@
             this.Name = "frmSignUp";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.frmSignUp_Load);
             this.pnlSignUp.ResumeLayout(false);
             this.pnlSignUp.PerformLayout();
             this.ResumeLayout(false);

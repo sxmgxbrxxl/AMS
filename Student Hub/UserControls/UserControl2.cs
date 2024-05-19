@@ -165,6 +165,16 @@ namespace Student_Hub
         {
 
         }
+
+        private void UCProfile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }   
         
 }

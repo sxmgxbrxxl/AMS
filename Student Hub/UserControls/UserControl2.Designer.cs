@@ -247,6 +247,7 @@
             this.txtFullName.SelectedText = "";
             this.txtFullName.Size = new System.Drawing.Size(350, 40);
             this.txtFullName.TabIndex = 9;
+            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // pnlCourse
             // 
@@ -465,6 +466,7 @@
             this.Controls.Add(this.lblNavigation);
             this.Name = "UCProfile";
             this.Size = new System.Drawing.Size(1275, 850);
+            this.Load += new System.EventHandler(this.UCProfile_Load);
             this.pnlName.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
             this.pnlCourse.ResumeLayout(false);

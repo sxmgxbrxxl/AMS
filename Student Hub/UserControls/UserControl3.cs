@@ -1,8 +1,10 @@
-﻿using Mysqlx.Datatypes;
+﻿using MySql.Data.MySqlClient;
+using Mysqlx.Datatypes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
@@ -33,6 +35,7 @@ namespace Student_Hub
                                 "PC 3220 Operating Systems", "TC 3202 Machine Learning" };
         string[] CSCourse4F = { "PC 4121 Human Computer Interaction", "PC 4122 CS Thesis 1", "TC 4103 Natural Language Processing" };
         string[] CSCourse4S = { "CS 4223 CS Thesis 2", "CS 4224 Practicum (300 hours)" };
+        DBConnection conn = new DBConnection();
         public void SetGrade(string grade)
         {
             txtGrade.Text = grade;
@@ -41,28 +44,28 @@ namespace Student_Hub
         private void btnCalculator_Click(object sender, EventArgs e)
         {
             formPrelimCalculator calculator = new formPrelimCalculator();
-            formMidtermCalculator mcalcu = new formMidtermCalculator(); 
+            formMidtermCalculator mcalcu = new formMidtermCalculator();
             formFinalsCalculator fcalc = new formFinalsCalculator();
             if (calculator.ShowDialog() == DialogResult.OK)
             {
                 SetGrade(calculator.Grade);
-            }else if (mcalcu.ShowDialog() == DialogResult.OK)
+            } else if (mcalcu.ShowDialog() == DialogResult.OK)
             {
                 SetGrade(mcalcu.Grade);
-            }else if(fcalc.ShowDialog() == DialogResult.OK)
+            } else if (fcalc.ShowDialog() == DialogResult.OK)
             {
-                SetGrade(fcalc.Grade);  
+                SetGrade(fcalc.Grade);
             }
         }
         // string gradeview;
         public UCGrades()
         {
             InitializeComponent();
+            CustomizedgvGrades();
             AddingChoices();
-            //txtGrade.Text = formCalculator.FGrade;
-            //gradeview = formCalculator.FGrade;
             cboYear.SelectedIndexChanged += cboYear_SelectedIndexChanged;
             cboSem.SelectedIndexChanged += cboSem_SelectedIndexChanged;
+
         }
 
         private void AddingChoices()
@@ -135,13 +138,101 @@ namespace Student_Hub
 
         private void txtGrade_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnshow_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(" " + gradeview);
+
+        }
+        private void CustomizedgvGrades()
+        {
+            dgvGrades.DefaultCellStyle.Font = new Font("Century Gothic", 12); // Font for rows
+            dgvGrades.ColumnHeadersDefaultCellStyle.Font = new Font("Century Gothic", 14, FontStyle.Bold); // Font for headers
+        }
+        private void dgvGrades_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CustomizedgvGrades();
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            LoadDetails();
+        }
+
+        private void LoadDetails()
+        {
+            try
+            {
+                conn.OpenCon();
+
+                
+                string studentNumber = null;
+                if (!string.IsNullOrEmpty(frmMain.StudentNumber))
+                {
+                    studentNumber = frmMain.StudentNumber;
+                }
+                else if (!string.IsNullOrEmpty(frmSignUp.StudentNumber))
+                {
+                    studentNumber = frmSignUp.StudentNumber;
+                }
+                else
+                {
+                    MessageBox.Show("Student number not provided.");
+                    return;
+                }
+
+               
+                string query = "SELECT clm_stdID FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
+                MySqlCommand cmd = new MySqlCommand(query, conn.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdNumber", studentNumber);
+
+                object studentID = cmd.ExecuteScalar();
+
+                if (studentID != null) 
+                {
+
+                    foreach (DataGridViewRow row in dgvGrades.Rows)
+                    {
+                        if (row.IsNewRow) continue;
+
+                        string courseName = row.Cells["courseName"].Value.ToString();
+                        string courseGrade = row.Cells["courseGrade"].Value.ToString();
+
+                        // Insert data into tbl_stdcourses
+                        string insertCourseQuery = "INSERT INTO db_acad.tbl_stdcourses (clm_stdID, clm_courseName) VALUES (@clm_stdID, @clm_courseName)";
+                        MySqlCommand insertCourseCmd = new MySqlCommand(insertCourseQuery, conn.GetConnection());
+                        insertCourseCmd.Parameters.AddWithValue("@clm_stdID", studentID);
+                        insertCourseCmd.Parameters.AddWithValue("@clm_courseName", courseName);
+                        insertCourseCmd.ExecuteNonQuery();
+
+                        // Insert data into tbl_grades
+                        string insertGradeQuery = "INSERT INTO db_acad.tbl_grades (clm_courseID, clm_courseGrade) VALUES (@clm_courseID, @clm_courseGrade)";
+                        MySqlCommand insertGradeCmd = new MySqlCommand(insertGradeQuery, conn.GetConnection());
+                        insertGradeCmd.Parameters.AddWithValue("@clm_courseID", courseName); 
+                        insertGradeCmd.Parameters.AddWithValue("@clm_courseGrade", courseGrade);
+                        insertGradeCmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Data inserted successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Student not found.");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.CloseCon();
+            }
+
         }
     }
 }
+
 

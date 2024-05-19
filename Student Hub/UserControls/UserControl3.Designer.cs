@@ -47,10 +47,11 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.pnlEntries = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnshow = new System.Windows.Forms.Button();
             this.btnCalculator = new Guna.UI2.WinForms.Guna2Button();
             this.txtGrade = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnshow = new System.Windows.Forms.Button();
+            this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlCategory.SuspendLayout();
             this.pnlCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
@@ -266,10 +267,12 @@
             this.Column1,
             this.Column2,
             this.Column3});
+            this.dgvGrades.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvGrades.Location = new System.Drawing.Point(30, 35);
             this.dgvGrades.Name = "dgvGrades";
             this.dgvGrades.Size = new System.Drawing.Size(745, 430);
             this.dgvGrades.TabIndex = 0;
+            this.dgvGrades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrades_CellContentClick);
             // 
             // Column1
             // 
@@ -316,6 +319,7 @@
             this.btnAdd.TabIndex = 74;
             this.btnAdd.Text = "Add Entry";
             this.btnAdd.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnlEntries
             // 
@@ -337,6 +341,16 @@
             this.pnlEntries.ShadowDecoration.Enabled = true;
             this.pnlEntries.Size = new System.Drawing.Size(802, 133);
             this.pnlEntries.TabIndex = 73;
+            // 
+            // btnshow
+            // 
+            this.btnshow.Location = new System.Drawing.Point(1147, 804);
+            this.btnshow.Name = "btnshow";
+            this.btnshow.Size = new System.Drawing.Size(75, 23);
+            this.btnshow.TabIndex = 74;
+            this.btnshow.Text = "SHOW";
+            this.btnshow.UseVisualStyleBackColor = true;
+            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
             // 
             // btnCalculator
             // 
@@ -377,7 +391,6 @@
             this.txtGrade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGrade.Location = new System.Drawing.Point(389, 60);
             this.txtGrade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtGrade.Modified = true;
             this.txtGrade.Name = "txtGrade";
             this.txtGrade.PasswordChar = '\0';
             this.txtGrade.PlaceholderText = "";
@@ -406,15 +419,28 @@
             this.cboCourse.Size = new System.Drawing.Size(310, 36);
             this.cboCourse.TabIndex = 4;
             // 
-            // btnshow
+            // txtStudentNumber
             // 
-            this.btnshow.Location = new System.Drawing.Point(550, 274);
-            this.btnshow.Name = "btnshow";
-            this.btnshow.Size = new System.Drawing.Size(75, 23);
-            this.btnshow.TabIndex = 74;
-            this.btnshow.Text = "SHOW";
-            this.btnshow.UseVisualStyleBackColor = true;
-            this.btnshow.Click += new System.EventHandler(this.btnshow_Click);
+            this.txtStudentNumber.AcceptsReturn = true;
+            this.txtStudentNumber.BorderRadius = 17;
+            this.txtStudentNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStudentNumber.DefaultText = "";
+            this.txtStudentNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtStudentNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtStudentNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStudentNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtStudentNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStudentNumber.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtStudentNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtStudentNumber.Location = new System.Drawing.Point(1035, 37);
+            this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStudentNumber.Name = "txtStudentNumber";
+            this.txtStudentNumber.PasswordChar = '\0';
+            this.txtStudentNumber.PlaceholderText = "";
+            this.txtStudentNumber.ReadOnly = true;
+            this.txtStudentNumber.SelectedText = "";
+            this.txtStudentNumber.Size = new System.Drawing.Size(187, 36);
+            this.txtStudentNumber.TabIndex = 74;
             // 
             // UCGrades
             // 
@@ -422,6 +448,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
             this.Controls.Add(this.btnshow);
+            this.Controls.Add(this.txtStudentNumber);
             this.Controls.Add(this.pnlEntries);
             this.Controls.Add(this.pnlCategory);
             this.Controls.Add(this.lblGrades);
@@ -467,5 +494,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Button btnshow;
         internal Guna.UI2.WinForms.Guna2TextBox txtGrade;
+        internal Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
     }
 }
