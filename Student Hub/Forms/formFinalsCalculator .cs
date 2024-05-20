@@ -70,17 +70,17 @@ namespace Student_Hub
 
         private void btnSaveRecit_Click(object sender, EventArgs e)
         {
-            txtRecitation.Text = txtResult.Text;
+            txtScore.Text = txtResult.Text;
         }
 
         private void btnOverRecit_Click(object sender, EventArgs e)
         {
-            txtOverRecit.Text = txtResult.Text;
+            txtOverScore.Text = txtResult.Text;
         }
 
         private void btnSaveExam_Click(object sender, EventArgs e)
         {
-            txtExam.Text = txtResult.Text;
+            txtPreviousGrade.Text = txtResult.Text;
         }
 
         private void btnOverExam_Click(object sender, EventArgs e)
@@ -104,8 +104,8 @@ namespace Student_Hub
             double pRresult = percentRecit / 100;
 
 
-            double recit = Convert.ToDouble(txtRecitation.Text);
-            double overrecit = Convert.ToDouble(txtOverRecit.Text);
+            double recit = Convert.ToDouble(txtScore.Text);
+            double overrecit = Convert.ToDouble(txtOverScore.Text);
 
             double recitresult = (recit / overrecit) * 50 + 50;
 
@@ -117,7 +117,7 @@ namespace Student_Hub
             double percentExam = 30;
             double pEresult = percentExam / 100;
 
-            double exam = Convert.ToDouble(txtExam.Text);
+            double exam = Convert.ToDouble(txtPreviousGrade.Text);
            
             double eresult = exam * pEresult;
             double eresult2 = eresult;

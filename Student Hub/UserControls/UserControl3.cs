@@ -99,42 +99,42 @@ namespace Student_Hub
         private void AddCourse()
         {
             cboCourse.Items.Clear();
-            if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "1st" && cboSem.Text == "1st Semester")
+            if (cboYear.Text == "1st" && cboSem.Text == "1st Semester")
             {
                 System.Array.Sort(CSCourse1F);
                 cboCourse.Items.AddRange(CSCourse1F);
             }
-            else if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "1st" && cboSem.Text == "2nd Semester")
+            else if (cboYear.Text == "1st" && cboSem.Text == "2nd Semester")
             {
                 System.Array.Sort(CSCourse1S);
                 cboCourse.Items.AddRange(CSCourse1S);
             }
-            else if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "2nd" && cboSem.Text == "1st Semester")
+            else if (cboYear.Text == "2nd" && cboSem.Text == "1st Semester")
             {
                 System.Array.Sort(CSCourse2F);
                 cboCourse.Items.AddRange(CSCourse2F);
             }
-            else if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "2nd" && cboSem.Text == "2nd Semester")
+            else if (cboYear.Text == "2nd" && cboSem.Text == "2nd Semester")
             {
                 System.Array.Sort(CSCourse2S);
                 cboCourse.Items.AddRange(CSCourse2S);
             }
-            else if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "3rd" && cboSem.Text == "1st Semester")
+            else if (cboYear.Text == "3rd" && cboSem.Text == "1st Semester")
             {
                 System.Array.Sort(CSCourse3F);
                 cboCourse.Items.AddRange(CSCourse3F);
             }
-            else if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "3rd" && cboSem.Text == "2nd Semester")
+            else if (cboYear.Text == "3rd" && cboSem.Text == "2nd Semester")
             {
                 System.Array.Sort(CSCourse3S);
                 cboCourse.Items.AddRange(CSCourse3S);
             }
-            else if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "4th" && cboSem.Text == "1st Semester")
+            else if (cboYear.Text == "4th" && cboSem.Text == "1st Semester")
             {
                 System.Array.Sort(CSCourse4F);
                 cboCourse.Items.AddRange(CSCourse4F);
             }
-            else if (UCProfile.Program == "BSCS-DS" && cboYear.Text == "4th" && cboSem.Text == "2nd Semester")
+            else if (cboYear.Text == "4th" && cboSem.Text == "2nd Semester")
             {
                 System.Array.Sort(CSCourse4S);
                 cboCourse.Items.AddRange(CSCourse4S);
@@ -184,7 +184,6 @@ namespace Student_Hub
                 conn.CloseCon();
             }
         }
-
     }
 }
 

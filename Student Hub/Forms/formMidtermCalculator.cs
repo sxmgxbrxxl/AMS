@@ -1,4 +1,5 @@
 ﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,12 @@ namespace Student_Hub
 
         // Other code...
 
+        public static int stdID { get; set; }
+
+        public static string courseName { get; set; }
+
+        DBConnection connect = new DBConnection();
+
         double firstvalue = 0;
         double secondvalue = 0;
         double resultValue = 0;
@@ -33,6 +40,35 @@ namespace Student_Hub
         {
             InitializeComponent();
         }
+
+        /*private void GetPreviousGrade()
+        {
+            try
+            {
+                connect.OpenCon();
+
+                string query = "SELECT clm_courseGrade FROM tbl_stdcourses WHERE clm_Term = 'Prelim' && clm_courseName = @clm_courseName && clm_stdID = @clm_stdID";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdID", stdID);
+                cmd.Parameters.AddWithValue("@clm_courseName", courseName);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read()) // Check if a record was found
+                {
+                    string courseGrade = reader["clm_courseGrade"].ToString();
+                    txtPreviousGrade.Text = courseGrade;
+                }
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("MySql Error: " + ex.Message); // Display the specific MySQL error message
+            }
+            finally
+            {
+                connect.CloseCon();
+            }
+        }*/
 
         private void btnNumber_Click(object sender, EventArgs e)
         {
@@ -68,23 +104,19 @@ namespace Student_Hub
             }
         }
 
-        private void btnSaveRecit_Click(object sender, EventArgs e)
+        private void btnSaveScore_Click(object sender, EventArgs e)
         {
-            txtRecitation.Text = txtResult.Text;
+            txtScore.Text = txtResult.Text;
         }
 
-        private void btnOverRecit_Click(object sender, EventArgs e)
+        private void btnOverScore_Click(object sender, EventArgs e)
         {
-            txtOverRecit.Text = txtResult.Text;
+            txtOverScore.Text = txtResult.Text;
         }
 
         private void btnSaveExam_Click(object sender, EventArgs e)
         {
-            txtExam.Text = txtResult.Text;
-        }
-
-        private void btnOverExam_Click(object sender, EventArgs e)
-        {
+            txtPreviousGrade.Text = txtResult.Text;
         }
 
         private void btnOperator_Click(object sender, EventArgs e)
@@ -104,20 +136,20 @@ namespace Student_Hub
             double pRresult = percentRecit / 100;
 
 
-            double recit = Convert.ToDouble(txtRecitation.Text);
-            double overrecit = Convert.ToDouble(txtOverRecit.Text);
+            double recit = Convert.ToDouble(txtScore.Text);
+            double overrecit = Convert.ToDouble(txtOverScore.Text);
 
             double recitresult = (recit / overrecit) * 50 + 50;
 
             double rresult = recitresult * pRresult;
 
-            txtTotalRecit.Text = Convert.ToString(rresult);
+            txtTotalScore.Text = Convert.ToString(rresult);
 
             //Exam
             double percentExam = 30;
             double pEresult = percentExam / 100;
 
-            double exam = Convert.ToDouble(txtExam.Text);
+            double exam = Convert.ToDouble(txtPreviousGrade.Text);
            
             double eresult = exam * pEresult;
             double eresult2 = eresult;
@@ -126,7 +158,7 @@ namespace Student_Hub
             txtTotalExam.Text = finalscore;
 
             //Total All
-            double totalrecit = Convert.ToDouble(txtTotalRecit.Text);
+            double totalrecit = Convert.ToDouble(txtTotalScore.Text);
             double totalexam = Convert.ToDouble(txtTotalExam.Text);
 
             double grade = totalrecit  + totalexam;

@@ -17,7 +17,7 @@ namespace Student_Hub
 
         DBConnection connect = new DBConnection();
 
-        string[] program = { "BSIT-BA", "BSIT-SD", "BSCS-DS", "BEEd", "BSA", "BSAIS", "BSME"};
+        string[] program = {"BSCS-DS"};
         string[] gender = { "Male", "Female" };
 
         public UCProfile()

@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,9 +58,9 @@ namespace Student_Hub
                 if (count > 0)
                 {
                     // Optionally, navigate to another form after successful login//
-                    frmDashboard form3 = new frmDashboard();
-                    form3.Show();
+                    SplashScreen SS = new SplashScreen();
                     this.Hide();
+                    SS.Show();
 
                     StudentNumber = txtStudentNumber.Text;
                 }
@@ -91,6 +92,7 @@ namespace Student_Hub
                 while (reader.Read())
                 {
                     UCGrades.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());
+                    formMidtermCalculator.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());
                 }
 
             }
@@ -103,7 +105,7 @@ namespace Student_Hub
                 connect.CloseCon();
             }
 
-            try
+            /*try
             {
                 connect.OpenCon();
 
@@ -125,7 +127,7 @@ namespace Student_Hub
             finally
             {
                 connect.CloseCon();
-            }
+            }*/
 
         }
 

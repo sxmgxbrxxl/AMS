@@ -13,7 +13,7 @@ namespace Student_Hub
 {
     public partial class UCHome : UserControl
     {
-        //DBConnection connect = new DBConnection();
+        DBConnection connect = new DBConnection();
 
         public static Label GlobalNamePlaceholder { get; set; }
         public static Label GlobalStudNumPlaceholder { get; set; }
@@ -21,10 +21,10 @@ namespace Student_Hub
         public UCHome()
         {
             InitializeComponent();
-            //FetchStudentName();
+            FetchStudentName();
         }
 
-        /*private void FetchStudentName()
+        private void FetchStudentName()
         {
             string studentNumber = null;
 
@@ -72,14 +72,13 @@ namespace Student_Hub
             finally
             {
                 connect.CloseCon();
-
             }
-        }*/
+        }
 
         private void UCHome_Load(object sender, EventArgs e)
         {
-            GlobalNamePlaceholder = lblNamePlaceholder;
-            GlobalStudNumPlaceholder = lblStudentNumberPlaceholder;
+            //GlobalNamePlaceholder = lblNamePlaceholder;
+            //GlobalStudNumPlaceholder = lblStudentNumberPlaceholder;
         }
     }
 }

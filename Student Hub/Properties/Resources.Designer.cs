@@ -313,6 +313,16 @@ namespace Student_Hub.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SplashScreenBG {
+            get {
+                object obj = ResourceManager.GetObject("SplashScreenBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Square_Minus {
             get {
                 object obj = ResourceManager.GetObject("Square Minus", resourceCulture);
