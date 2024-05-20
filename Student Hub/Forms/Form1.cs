@@ -92,6 +92,8 @@ namespace Student_Hub
                 while (reader.Read())
                 {
                     UCGrades.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());
+                    UCRecords.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());
+                    UCHome.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());
                     formMidtermCalculator.stdID = Convert.ToInt32(reader["clm_stdID"].ToString());
                 }
 
