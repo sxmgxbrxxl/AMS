@@ -180,7 +180,6 @@ namespace Student_Hub
             }
             finally
             {
-                MessageBox.Show(stdID.ToString());
                 conn.CloseCon();
             }
         }

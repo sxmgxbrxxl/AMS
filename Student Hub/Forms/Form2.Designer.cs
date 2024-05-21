@@ -144,7 +144,7 @@
             this.txtConfirmPASSWORD.PlaceholderText = "";
             this.txtConfirmPASSWORD.SelectedText = "";
             this.txtConfirmPASSWORD.Size = new System.Drawing.Size(420, 40);
-            this.txtConfirmPASSWORD.TabIndex = 23;
+            this.txtConfirmPASSWORD.TabIndex = 6;
             this.txtConfirmPASSWORD.TextChanged += new System.EventHandler(this.txtConfirmPASSWORD_TextChanged);
             // 
             // lblConfirmPassword
@@ -226,7 +226,7 @@
             this.chkShowPass2.Margin = new System.Windows.Forms.Padding(0);
             this.chkShowPass2.Name = "chkShowPass2";
             this.chkShowPass2.Size = new System.Drawing.Size(127, 21);
-            this.chkShowPass2.TabIndex = 6;
+            this.chkShowPass2.TabIndex = 7;
             this.chkShowPass2.Text = "Show Password";
             this.chkShowPass2.UseVisualStyleBackColor = true;
             this.chkShowPass2.CheckedChanged += new System.EventHandler(this.chkShowPass2_CheckedChanged);
@@ -300,7 +300,7 @@
             this.lnkLogin.Margin = new System.Windows.Forms.Padding(0);
             this.lnkLogin.Name = "lnkLogin";
             this.lnkLogin.Size = new System.Drawing.Size(47, 17);
-            this.lnkLogin.TabIndex = 8;
+            this.lnkLogin.TabIndex = 9;
             this.lnkLogin.TabStop = true;
             this.lnkLogin.Text = "Log In";
             this.lnkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogin_LinkClicked);
@@ -331,7 +331,7 @@
             this.btnCreate.Margin = new System.Windows.Forms.Padding(0);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(180, 40);
-            this.btnCreate.TabIndex = 7;
+            this.btnCreate.TabIndex = 8;
             this.btnCreate.Text = "Create Account";
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 

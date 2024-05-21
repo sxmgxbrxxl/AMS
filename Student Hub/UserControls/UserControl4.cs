@@ -32,12 +32,12 @@ namespace Student_Hub
             cboYear.Items.AddRange(year);
             cboSemester.Items.AddRange(sem);
             cboTerm.Items.AddRange(term);
-
-            MessageBox.Show("Please fill the required fields before viewing", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information );
         }
 
         private void btnView_Click(object sender, EventArgs e)
-        { 
+        {
+            MessageBox.Show("Record Found!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             try
             {
                 connect.OpenCon();

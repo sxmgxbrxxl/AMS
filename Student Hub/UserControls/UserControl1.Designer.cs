@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.pnlWelcome = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNamePlaceholder = new System.Windows.Forms.Label();
@@ -57,6 +63,7 @@
             this.lblStudentNumberPlaceholder = new System.Windows.Forms.Label();
             this.pnlStats = new Guna.UI2.WinForms.Guna2Panel();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlWelcome.SuspendLayout();
             this.pnlNote.SuspendLayout();
             this.pnlAsk.SuspendLayout();
@@ -68,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.pnlStats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlWelcome
@@ -307,6 +315,7 @@
             this.pnlStatistics.BackColor = System.Drawing.Color.Transparent;
             this.pnlStatistics.BorderColor = System.Drawing.Color.Black;
             this.pnlStatistics.BorderRadius = 10;
+            this.pnlStatistics.Controls.Add(this.chart3);
             this.pnlStatistics.Controls.Add(this.chart1);
             this.pnlStatistics.FillColor = System.Drawing.Color.White;
             this.pnlStatistics.Location = new System.Drawing.Point(640, 180);
@@ -315,24 +324,34 @@
             this.pnlStatistics.ShadowDecoration.BorderRadius = 15;
             this.pnlStatistics.ShadowDecoration.Depth = 15;
             this.pnlStatistics.ShadowDecoration.Enabled = true;
-            this.pnlStatistics.Size = new System.Drawing.Size(600, 370);
+            this.pnlStatistics.Size = new System.Drawing.Size(600, 250);
             this.pnlStatistics.TabIndex = 27;
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(19, 18);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(19, 17);
             this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(562, 336);
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(264, 219);
             this.chart1.TabIndex = 23;
             this.chart1.Text = "chart1";
+            title2.BackColor = System.Drawing.Color.Transparent;
+            title2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.Tan;
+            title2.Name = "Title1";
+            title2.ShadowColor = System.Drawing.Color.Transparent;
+            title2.Text = "User\'s Age Pie";
+            title2.TextStyle = System.Windows.Forms.DataVisualization.Charting.TextStyle.Emboss;
+            this.chart1.Titles.Add(title2);
             // 
             // lblStudentNumberPlaceholder
             // 
@@ -354,32 +373,67 @@
             this.pnlStats.BorderRadius = 10;
             this.pnlStats.Controls.Add(this.chart2);
             this.pnlStats.FillColor = System.Drawing.Color.White;
-            this.pnlStats.Location = new System.Drawing.Point(640, 580);
+            this.pnlStats.Location = new System.Drawing.Point(640, 460);
             this.pnlStats.Margin = new System.Windows.Forms.Padding(0);
             this.pnlStats.Name = "pnlStats";
             this.pnlStats.ShadowDecoration.BorderRadius = 15;
             this.pnlStats.ShadowDecoration.Depth = 15;
             this.pnlStats.ShadowDecoration.Enabled = true;
-            this.pnlStats.Size = new System.Drawing.Size(600, 230);
+            this.pnlStats.Size = new System.Drawing.Size(600, 350);
             this.pnlStats.TabIndex = 29;
             // 
             // chart2
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            legend3.Enabled = false;
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
             this.chart2.Location = new System.Drawing.Point(19, 20);
             this.chart2.Name = "chart2";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.YValuesPerPoint = 2;
-            this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(562, 190);
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.YValuesPerPoint = 2;
+            this.chart2.Series.Add(series3);
+            this.chart2.Size = new System.Drawing.Size(562, 310);
             this.chart2.TabIndex = 23;
             this.chart2.Text = "chart2";
+            title3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.ForeColor = System.Drawing.Color.Tan;
+            title3.Name = "Title1";
+            title3.Text = "Your Grade Range";
+            title3.TextStyle = System.Windows.Forms.DataVisualization.Charting.TextStyle.Emboss;
+            this.chart2.Titles.Add(title3);
+            // 
+            // chart3
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart3.Legends.Add(legend1);
+            this.chart3.Location = new System.Drawing.Point(289, 17);
+            this.chart3.Name = "chart3";
+            this.chart3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Font = new System.Drawing.Font("Century Gothic", 3.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart3.Series.Add(series1);
+            this.chart3.Size = new System.Drawing.Size(292, 219);
+            this.chart3.TabIndex = 24;
+            this.chart3.Text = "chart3";
+            title1.BackColor = System.Drawing.Color.Transparent;
+            title1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.Tan;
+            title1.Name = "Title1";
+            title1.ShadowColor = System.Drawing.Color.Transparent;
+            title1.Text = "User\'s Program";
+            title1.TextStyle = System.Windows.Forms.DataVisualization.Charting.TextStyle.Emboss;
+            this.chart3.Titles.Add(title1);
             // 
             // UCHome
             // 
@@ -411,6 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.pnlStats.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,5 +496,6 @@
         private System.Windows.Forms.Panel pnlDate;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblNumber;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
     }
 }

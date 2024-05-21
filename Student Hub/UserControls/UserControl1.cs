@@ -24,6 +24,7 @@ namespace Student_Hub
             FetchStudentName();
             LoadChart1();
             LoadChart2();
+            LoadChart3();
             LoadNumberOfUsers();
             lblDate.Text = DateTime.Now.ToString("MMM, yyyy");
         }
@@ -108,6 +109,8 @@ namespace Student_Hub
 
                 // Set chart data source
                 chart1.DataSource = dt;
+
+                chart1.Legends[0].Font = new Font("Century Gothic", 10);
             }
             catch (MySqlException ex)
             {
@@ -125,8 +128,8 @@ namespace Student_Hub
             {
                 connect.OpenCon();
 
-                // Define the SQL query to retrieve data
-                string query = "SELECT clm_courseGrade, COUNT(*) AS Count FROM tbl_stdcourses WHERE clm_stdID = @stdID GROUP BY clm_courseGrade";
+                // Define the SQL query to retrieve the highest grade for each course
+                string query = "SELECT clm_courseName, MAX(clm_courseGrade) AS MaxGrade FROM tbl_stdcourses WHERE clm_stdID = @stdID GROUP BY clm_courseName";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                 cmd.Parameters.AddWithValue("@stdID", stdID);
 
@@ -139,16 +142,62 @@ namespace Student_Hub
                 chart2.Series.Clear();
 
                 // Add a new series to the chart
-                Series series = new Series("Grade Count");
-                series.ChartType = SeriesChartType.Column;
+                Series series = new Series("Highest Grade");
+                series.ChartType = SeriesChartType.Bar;
 
                 // Bind data to the series
-                series.XValueMember = "clm_courseGrade";
-                series.YValueMembers = "Count";
+                series.XValueMember = "clm_courseName";
+                series.YValueMembers = "MaxGrade";
                 chart2.Series.Add(series);
 
                 // Set chart data source
                 chart2.DataSource = dt;
+
+                // Set the maximum value for the y-axis
+                chart2.ChartAreas[0].AxisY.Maximum = 100;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("MySql Error: " + ex.Message);
+            }
+            finally
+            {
+                connect.CloseCon();
+            }
+        }
+
+        private void LoadChart3()
+        {
+            try
+            {
+                connect.OpenCon();
+
+                // Define the SQL query to retrieve data
+                string query = "SELECT clm_stdProgram, COUNT(*) AS Count FROM tbl_stdinfo GROUP BY clm_stdProgram";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+
+                // Create a DataTable to hold the results
+                DataTable dt = new DataTable();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dt);
+
+                // Clear existing series in the chart
+                chart3.Series.Clear();
+
+                // Add a new series to the chart
+                Series series = new Series("Program Count");
+                series.ChartType = SeriesChartType.Pie;
+
+                // Bind data to the series
+                series.XValueMember = "clm_stdProgram";
+                series.YValueMembers = "Count";
+                chart3.Series.Add(series);
+
+                // Set chart data source
+                chart3.DataSource = dt;
+
+                // Set legend font
+                chart3.Legends[0].Font = new Font("Century Gothic", 10);
             }
             catch (MySqlException ex)
             {
