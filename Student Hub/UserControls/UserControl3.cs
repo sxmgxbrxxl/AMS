@@ -183,6 +183,11 @@ namespace Student_Hub
                 conn.CloseCon();
             }
         }
+
+        private void UCGrades_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

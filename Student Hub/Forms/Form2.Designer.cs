@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.pnlSignUp = new Guna.UI2.WinForms.Guna2Panel();
+            this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblCPAsterisk = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtConfirmPASSWORD = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,7 +61,7 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblAsteriskGender = new System.Windows.Forms.Label();
             this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +71,8 @@
             this.pnlSignUp.BorderColor = System.Drawing.Color.Black;
             this.pnlSignUp.BorderRadius = 20;
             this.pnlSignUp.BorderThickness = 2;
-            this.pnlSignUp.Controls.Add(this.guna2ComboBox1);
+            this.pnlSignUp.Controls.Add(this.lblAsteriskGender);
+            this.pnlSignUp.Controls.Add(this.cboGender);
             this.pnlSignUp.Controls.Add(this.lblCPAsterisk);
             this.pnlSignUp.Controls.Add(this.label1);
             this.pnlSignUp.Controls.Add(this.txtConfirmPASSWORD);
@@ -104,6 +106,25 @@
             this.pnlSignUp.Name = "pnlSignUp";
             this.pnlSignUp.Size = new System.Drawing.Size(490, 531);
             this.pnlSignUp.TabIndex = 0;
+            // 
+            // cboGender
+            // 
+            this.cboGender.BackColor = System.Drawing.Color.Transparent;
+            this.cboGender.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cboGender.BorderRadius = 10;
+            this.cboGender.BorderThickness = 2;
+            this.cboGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGender.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.cboGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboGender.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboGender.ItemHeight = 34;
+            this.cboGender.Location = new System.Drawing.Point(30, 190);
+            this.cboGender.Name = "cboGender";
+            this.cboGender.Size = new System.Drawing.Size(200, 40);
+            this.cboGender.TabIndex = 19;
             // 
             // lblCPAsterisk
             // 
@@ -525,24 +546,13 @@
             this.ctrClose.TabIndex = 16;
             this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
             // 
-            // guna2ComboBox1
+            // lblAsteriskGender
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.BorderThickness = 2;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 34;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(30, 190);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(200, 40);
-            this.guna2ComboBox1.TabIndex = 19;
+            this.lblAsteriskGender.AutoSize = true;
+            this.lblAsteriskGender.Location = new System.Drawing.Point(101, 170);
+            this.lblAsteriskGender.Name = "lblAsteriskGender";
+            this.lblAsteriskGender.Size = new System.Drawing.Size(0, 13);
+            this.lblAsteriskGender.TabIndex = 26;
             // 
             // frmSignUp
             // 
@@ -602,6 +612,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmPASSWORD;
         private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Label lblCPAsterisk;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cboGender;
+        private System.Windows.Forms.Label lblAsteriskGender;
     }
 }
