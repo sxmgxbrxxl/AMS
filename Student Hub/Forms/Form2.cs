@@ -65,8 +65,8 @@ namespace Student_Hub
                 MessageBox.Show("User created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 StudentNumber = txtStudentNumber.Text;
-                frmDashboard form3 = new frmDashboard();
-                form3.Show();
+                SplashScreen SS = new SplashScreen();
+                SS.Show();
                 this.Hide();
             }
             catch (Exception ex)
