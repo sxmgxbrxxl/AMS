@@ -102,8 +102,8 @@ namespace Student_Hub
             {
                 MessageBox.Show("Please enter a valid age!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAge.BorderColor = Color.Red;
-                lblAAsterisk.Text = "*";
-                lblAAsterisk.ForeColor = Color.Red;
+                lblGAsterisk.Text = "*";
+                lblGAsterisk.ForeColor = Color.Red;
                 return;
             }
 

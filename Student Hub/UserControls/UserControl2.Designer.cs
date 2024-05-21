@@ -34,10 +34,10 @@
             this.picProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblCoursePlaceholder = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.lblGender = new System.Windows.Forms.Label();
+            this.lblBirthday = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAge = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtGender = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlCourse = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlProfile = new Guna.UI2.WinForms.Guna2Panel();
@@ -50,8 +50,8 @@
             this.pnlPersonalInfo = new Guna.UI2.WinForms.Guna2Panel();
             this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboProgram = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
+            this.lblFName = new System.Windows.Forms.Label();
+            this.lblGender = new System.Windows.Forms.Label();
             this.lblNavigation = new System.Windows.Forms.Label();
             this.pnlName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
@@ -128,17 +128,17 @@
             this.btnSave.Text = "Save Changes";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lblGender
+            // lblBirthday
             // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.BackColor = System.Drawing.Color.Transparent;
-            this.lblGender.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(427, 180);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(0);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(92, 22);
-            this.lblGender.TabIndex = 14;
-            this.lblGender.Text = "GENDER:";
+            this.lblBirthday.AutoSize = true;
+            this.lblBirthday.BackColor = System.Drawing.Color.Transparent;
+            this.lblBirthday.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthday.Location = new System.Drawing.Point(427, 180);
+            this.lblBirthday.Margin = new System.Windows.Forms.Padding(0);
+            this.lblBirthday.Name = "lblBirthday";
+            this.lblBirthday.Size = new System.Drawing.Size(104, 22);
+            this.lblBirthday.TabIndex = 14;
+            this.lblBirthday.Text = "BIRTHDAY:";
             // 
             // txtEmail
             // 
@@ -194,32 +194,32 @@
             this.txtStudentNumber.Size = new System.Drawing.Size(350, 40);
             this.txtStudentNumber.TabIndex = 11;
             // 
-            // txtAge
+            // txtGender
             // 
-            this.txtAge.AcceptsTab = true;
-            this.txtAge.BackColor = System.Drawing.Color.Transparent;
-            this.txtAge.BorderRadius = 10;
-            this.txtAge.BorderThickness = 2;
-            this.txtAge.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAge.DefaultText = "";
-            this.txtAge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAge.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAge.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAge.Enabled = false;
-            this.txtAge.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAge.Location = new System.Drawing.Point(427, 130);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(0);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.PasswordChar = '\0';
-            this.txtAge.PlaceholderText = "";
-            this.txtAge.ReadOnly = true;
-            this.txtAge.SelectedText = "";
-            this.txtAge.Size = new System.Drawing.Size(350, 40);
-            this.txtAge.TabIndex = 10;
+            this.txtGender.AcceptsTab = true;
+            this.txtGender.BackColor = System.Drawing.Color.Transparent;
+            this.txtGender.BorderRadius = 10;
+            this.txtGender.BorderThickness = 2;
+            this.txtGender.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtGender.DefaultText = "";
+            this.txtGender.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtGender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtGender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGender.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtGender.Enabled = false;
+            this.txtGender.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtGender.Location = new System.Drawing.Point(427, 130);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(0);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.PasswordChar = '\0';
+            this.txtGender.PlaceholderText = "";
+            this.txtGender.ReadOnly = true;
+            this.txtGender.SelectedText = "";
+            this.txtGender.Size = new System.Drawing.Size(350, 40);
+            this.txtGender.TabIndex = 10;
             // 
             // txtFullName
             // 
@@ -358,17 +358,17 @@
             this.pnlPersonalInfo.Controls.Add(this.cboGender);
             this.pnlPersonalInfo.Controls.Add(this.cboProgram);
             this.pnlPersonalInfo.Controls.Add(this.btnSave);
-            this.pnlPersonalInfo.Controls.Add(this.lblGender);
+            this.pnlPersonalInfo.Controls.Add(this.lblBirthday);
             this.pnlPersonalInfo.Controls.Add(this.txtEmail);
             this.pnlPersonalInfo.Controls.Add(this.txtStudentNumber);
-            this.pnlPersonalInfo.Controls.Add(this.txtAge);
+            this.pnlPersonalInfo.Controls.Add(this.txtGender);
             this.pnlPersonalInfo.Controls.Add(this.txtFullName);
             this.pnlPersonalInfo.Controls.Add(this.lblCourse);
             this.pnlPersonalInfo.Controls.Add(this.lblEmail);
             this.pnlPersonalInfo.Controls.Add(this.lblStudentID);
             this.pnlPersonalInfo.Controls.Add(this.lblTPersonalInfo);
-            this.pnlPersonalInfo.Controls.Add(this.lblName);
-            this.pnlPersonalInfo.Controls.Add(this.lblAge);
+            this.pnlPersonalInfo.Controls.Add(this.lblFName);
+            this.pnlPersonalInfo.Controls.Add(this.lblGender);
             this.pnlPersonalInfo.FillColor = System.Drawing.Color.White;
             this.pnlPersonalInfo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlPersonalInfo.Location = new System.Drawing.Point(415, 130);
@@ -417,29 +417,29 @@
             this.cboProgram.TabIndex = 17;
             this.cboProgram.SelectedIndexChanged += new System.EventHandler(this.cboProgram_SelectedIndexChanged);
             // 
-            // lblName
+            // lblFName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(45, 100);
-            this.lblName.Margin = new System.Windows.Forms.Padding(0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(71, 22);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "NAME:";
+            this.lblFName.AutoSize = true;
+            this.lblFName.BackColor = System.Drawing.Color.Transparent;
+            this.lblFName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFName.Location = new System.Drawing.Point(45, 100);
+            this.lblFName.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFName.Name = "lblFName";
+            this.lblFName.Size = new System.Drawing.Size(119, 22);
+            this.lblFName.TabIndex = 2;
+            this.lblFName.Text = "FIRST NAME:";
             // 
-            // lblAge
+            // lblGender
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.BackColor = System.Drawing.Color.Transparent;
-            this.lblAge.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(427, 100);
-            this.lblAge.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(57, 22);
-            this.lblAge.TabIndex = 3;
-            this.lblAge.Text = "AGE:";
+            this.lblGender.AutoSize = true;
+            this.lblGender.BackColor = System.Drawing.Color.Transparent;
+            this.lblGender.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Location = new System.Drawing.Point(427, 100);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(0);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(92, 22);
+            this.lblGender.TabIndex = 3;
+            this.lblGender.Text = "GENDER:";
             // 
             // lblNavigation
             // 
@@ -485,10 +485,10 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox picProfile;
         private System.Windows.Forms.Label lblCoursePlaceholder;
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private System.Windows.Forms.Label lblGender;
+        private System.Windows.Forms.Label lblBirthday;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
-        private Guna.UI2.WinForms.Guna2TextBox txtAge;
+        private Guna.UI2.WinForms.Guna2TextBox txtGender;
         private Guna.UI2.WinForms.Guna2TextBox txtFullName;
         private Guna.UI2.WinForms.Guna2Panel pnlCourse;
         private Guna.UI2.WinForms.Guna2Panel pnlProfile;
@@ -499,8 +499,8 @@
         private System.Windows.Forms.Label lblStudentID;
         private System.Windows.Forms.Label lblTPersonalInfo;
         private Guna.UI2.WinForms.Guna2Panel pnlPersonalInfo;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.Label lblFName;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblNavigation;
         private Guna.UI2.WinForms.Guna2ComboBox cboGender;
         private Guna.UI2.WinForms.Guna2ComboBox cboProgram;

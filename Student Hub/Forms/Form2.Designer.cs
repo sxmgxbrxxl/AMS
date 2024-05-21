@@ -37,7 +37,7 @@
             this.lblPAsterisk = new System.Windows.Forms.Label();
             this.lblEAsterisk = new System.Windows.Forms.Label();
             this.lblSNAsterisk = new System.Windows.Forms.Label();
-            this.lblAAsterisk = new System.Windows.Forms.Label();
+            this.lblGAsterisk = new System.Windows.Forms.Label();
             this.lblFNAsterisk = new System.Windows.Forms.Label();
             this.lblLNAsterisk = new System.Windows.Forms.Label();
             this.chkShowPass2 = new System.Windows.Forms.CheckBox();
@@ -49,8 +49,7 @@
             this.btnCreate = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.lblAge = new System.Windows.Forms.Label();
-            this.txtAge = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblGender = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
@@ -61,6 +60,7 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,7 @@
             this.pnlSignUp.BorderColor = System.Drawing.Color.Black;
             this.pnlSignUp.BorderRadius = 20;
             this.pnlSignUp.BorderThickness = 2;
+            this.pnlSignUp.Controls.Add(this.guna2ComboBox1);
             this.pnlSignUp.Controls.Add(this.lblCPAsterisk);
             this.pnlSignUp.Controls.Add(this.label1);
             this.pnlSignUp.Controls.Add(this.txtConfirmPASSWORD);
@@ -77,7 +78,7 @@
             this.pnlSignUp.Controls.Add(this.lblPAsterisk);
             this.pnlSignUp.Controls.Add(this.lblEAsterisk);
             this.pnlSignUp.Controls.Add(this.lblSNAsterisk);
-            this.pnlSignUp.Controls.Add(this.lblAAsterisk);
+            this.pnlSignUp.Controls.Add(this.lblGAsterisk);
             this.pnlSignUp.Controls.Add(this.lblFNAsterisk);
             this.pnlSignUp.Controls.Add(this.lblLNAsterisk);
             this.pnlSignUp.Controls.Add(this.chkShowPass2);
@@ -89,8 +90,7 @@
             this.pnlSignUp.Controls.Add(this.btnCreate);
             this.pnlSignUp.Controls.Add(this.txtPassword);
             this.pnlSignUp.Controls.Add(this.lblPassword);
-            this.pnlSignUp.Controls.Add(this.lblAge);
-            this.pnlSignUp.Controls.Add(this.txtAge);
+            this.pnlSignUp.Controls.Add(this.lblGender);
             this.pnlSignUp.Controls.Add(this.lblEmail);
             this.pnlSignUp.Controls.Add(this.txtEmail);
             this.pnlSignUp.Controls.Add(this.lblLastName);
@@ -188,15 +188,15 @@
             this.lblSNAsterisk.Size = new System.Drawing.Size(0, 16);
             this.lblSNAsterisk.TabIndex = 19;
             // 
-            // lblAAsterisk
+            // lblGAsterisk
             // 
-            this.lblAAsterisk.AutoSize = true;
-            this.lblAAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAAsterisk.Location = new System.Drawing.Point(70, 170);
-            this.lblAAsterisk.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAAsterisk.Name = "lblAAsterisk";
-            this.lblAAsterisk.Size = new System.Drawing.Size(0, 16);
-            this.lblAAsterisk.TabIndex = 18;
+            this.lblGAsterisk.AutoSize = true;
+            this.lblGAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGAsterisk.Location = new System.Drawing.Point(100, 170);
+            this.lblGAsterisk.Margin = new System.Windows.Forms.Padding(0);
+            this.lblGAsterisk.Name = "lblGAsterisk";
+            this.lblGAsterisk.Size = new System.Drawing.Size(0, 16);
+            this.lblGAsterisk.TabIndex = 18;
             // 
             // lblFNAsterisk
             // 
@@ -370,41 +370,16 @@
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "PASSWORD:";
             // 
-            // lblAge
+            // lblGender
             // 
-            this.lblAge.AutoSize = true;
-            this.lblAge.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAge.Location = new System.Drawing.Point(30, 170);
-            this.lblAge.Margin = new System.Windows.Forms.Padding(0);
-            this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(40, 16);
-            this.lblAge.TabIndex = 8;
-            this.lblAge.Text = "AGE:";
-            // 
-            // txtAge
-            // 
-            this.txtAge.AcceptsTab = true;
-            this.txtAge.BorderRadius = 10;
-            this.txtAge.BorderThickness = 2;
-            this.txtAge.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAge.DefaultText = "";
-            this.txtAge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAge.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAge.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAge.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAge.Location = new System.Drawing.Point(30, 190);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(0);
-            this.txtAge.Name = "txtAge";
-            this.txtAge.PasswordChar = '\0';
-            this.txtAge.PlaceholderText = "";
-            this.txtAge.SelectedText = "";
-            this.txtAge.Size = new System.Drawing.Size(200, 40);
-            this.txtAge.TabIndex = 2;
-            this.txtAge.TextChanged += new System.EventHandler(this.txtAge_TextChanged);
+            this.lblGender.AutoSize = true;
+            this.lblGender.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.Location = new System.Drawing.Point(30, 170);
+            this.lblGender.Margin = new System.Windows.Forms.Padding(0);
+            this.lblGender.Name = "lblGender";
+            this.lblGender.Size = new System.Drawing.Size(67, 16);
+            this.lblGender.TabIndex = 8;
+            this.lblGender.Text = "GENDER";
             // 
             // lblEmail
             // 
@@ -550,6 +525,25 @@
             this.ctrClose.TabIndex = 16;
             this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
             // 
+            // guna2ComboBox1
+            // 
+            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.guna2ComboBox1.BorderRadius = 10;
+            this.guna2ComboBox1.BorderThickness = 2;
+            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.guna2ComboBox1.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.guna2ComboBox1.ItemHeight = 34;
+            this.guna2ComboBox1.Location = new System.Drawing.Point(30, 190);
+            this.guna2ComboBox1.Name = "guna2ComboBox1";
+            this.guna2ComboBox1.Size = new System.Drawing.Size(200, 40);
+            this.guna2ComboBox1.TabIndex = 19;
+            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -585,8 +579,7 @@
         private System.Windows.Forms.Label lblLastName;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblAge;
-        private Guna.UI2.WinForms.Guna2TextBox txtAge;
+        private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2Button btnCreate;
@@ -603,11 +596,12 @@
         private System.Windows.Forms.Label lblPAsterisk;
         private System.Windows.Forms.Label lblEAsterisk;
         private System.Windows.Forms.Label lblSNAsterisk;
-        private System.Windows.Forms.Label lblAAsterisk;
+        private System.Windows.Forms.Label lblGAsterisk;
         private System.Windows.Forms.Label lblFNAsterisk;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtConfirmPASSWORD;
         private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Label lblCPAsterisk;
+        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
     }
 }

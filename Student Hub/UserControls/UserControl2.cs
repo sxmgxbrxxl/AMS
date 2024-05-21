@@ -73,7 +73,7 @@ namespace Student_Hub
                     lblNamePlaceholder.Text = studentFName; // Display the name in the label
                     lblCoursePlaceholder.Text = studentProgram;
                     txtFullName.Text = studentFName + " " + studentLName;
-                    txtAge.Text = studentAge;
+                    txtGender.Text = studentAge;
                     txtStudentNumber.Text = studentNumber;
                     txtEmail.Text = studentEmail;
                     cboProgram.Text = studentProgram;

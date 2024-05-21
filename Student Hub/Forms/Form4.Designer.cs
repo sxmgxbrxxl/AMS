@@ -77,7 +77,7 @@
             this.lnkSendCode.AutoSize = true;
             this.lnkSendCode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lnkSendCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnkSendCode.Location = new System.Drawing.Point(41, 299);
+            this.lnkSendCode.Location = new System.Drawing.Point(360, 240);
             this.lnkSendCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lnkSendCode.Name = "lnkSendCode";
             this.lnkSendCode.Size = new System.Drawing.Size(80, 17);
@@ -127,7 +127,7 @@
             this.btnVerify.FocusedColor = System.Drawing.Color.Transparent;
             this.btnVerify.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerify.ForeColor = System.Drawing.Color.White;
-            this.btnVerify.Location = new System.Drawing.Point(180, 350);
+            this.btnVerify.Location = new System.Drawing.Point(177, 343);
             this.btnVerify.Margin = new System.Windows.Forms.Padding(0);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Size = new System.Drawing.Size(120, 50);
@@ -141,7 +141,7 @@
             this.lblCode.AutoSize = true;
             this.lblCode.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblCode.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.Location = new System.Drawing.Point(40, 220);
+            this.lblCode.Location = new System.Drawing.Point(40, 238);
             this.lblCode.Margin = new System.Windows.Forms.Padding(0);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(58, 19);
@@ -163,7 +163,7 @@
             this.txtCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCode.Location = new System.Drawing.Point(40, 250);
+            this.txtCode.Location = new System.Drawing.Point(40, 268);
             this.txtCode.Margin = new System.Windows.Forms.Padding(0);
             this.txtCode.Name = "txtCode";
             this.txtCode.PasswordChar = '\0';
