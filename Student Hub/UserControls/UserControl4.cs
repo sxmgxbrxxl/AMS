@@ -42,7 +42,7 @@ namespace Student_Hub
             {
                 connect.OpenCon();
 
-                string query = "SELECT clm_courseName, clm_Year, clm_semester, clm_Term, clm_courseGrade FROM tbl_stdcourses WHERE clm_stdId = @stdID AND clm_Year = @Year AND clm_semester = @Sem AND clm_Term = @Term";
+                string query = "SELECT clm_courseName AS CourseName, clm_Year AS Year, clm_semester AS Semester, clm_Term AS Term, clm_courseGrade AS Grade FROM tbl_stdcourses WHERE clm_stdId = @stdID AND clm_Year = @Year AND clm_semester = @Sem AND clm_Term = @Term";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                 cmd.Parameters.AddWithValue("@stdID", stdID);
                 cmd.Parameters.AddWithValue("@Year", cboYear.Text);

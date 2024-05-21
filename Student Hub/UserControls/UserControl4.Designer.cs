@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.pnlCategory = new Guna.UI2.WinForms.Guna2Panel();
+            this.cboTerm = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblTerm = new System.Windows.Forms.Label();
             this.btnView = new Guna.UI2.WinForms.Guna2Button();
             this.cboSemester = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblSemester = new System.Windows.Forms.Label();
@@ -38,10 +40,8 @@
             this.lblTrueNavigation = new System.Windows.Forms.Label();
             this.lblNavigation = new System.Windows.Forms.Label();
             this.pnlRecords = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.dgvRecords = new System.Windows.Forms.DataGridView();
-            this.lblTerm = new System.Windows.Forms.Label();
-            this.cboTerm = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCategory.SuspendLayout();
             this.pnlRecords.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
@@ -68,6 +68,38 @@
             this.pnlCategory.ShadowDecoration.Enabled = true;
             this.pnlCategory.Size = new System.Drawing.Size(350, 364);
             this.pnlCategory.TabIndex = 22;
+            // 
+            // cboTerm
+            // 
+            this.cboTerm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTerm.BackColor = System.Drawing.Color.Transparent;
+            this.cboTerm.BorderRadius = 17;
+            this.cboTerm.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboTerm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTerm.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTerm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cboTerm.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cboTerm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cboTerm.ItemHeight = 30;
+            this.cboTerm.Location = new System.Drawing.Point(20, 220);
+            this.cboTerm.Margin = new System.Windows.Forms.Padding(0);
+            this.cboTerm.MaxDropDownItems = 4;
+            this.cboTerm.Name = "cboTerm";
+            this.cboTerm.Size = new System.Drawing.Size(310, 36);
+            this.cboTerm.TabIndex = 27;
+            // 
+            // lblTerm
+            // 
+            this.lblTerm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTerm.AutoSize = true;
+            this.lblTerm.BackColor = System.Drawing.Color.Transparent;
+            this.lblTerm.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTerm.Location = new System.Drawing.Point(20, 190);
+            this.lblTerm.Margin = new System.Windows.Forms.Padding(0);
+            this.lblTerm.Name = "lblTerm";
+            this.lblTerm.Size = new System.Drawing.Size(62, 22);
+            this.lblTerm.TabIndex = 26;
+            this.lblTerm.Text = "TERM:";
             // 
             // btnView
             // 
@@ -209,6 +241,16 @@
             this.pnlRecords.Size = new System.Drawing.Size(840, 614);
             this.pnlRecords.TabIndex = 23;
             // 
+            // dgvRecords
+            // 
+            this.dgvRecords.BackgroundColor = System.Drawing.Color.White;
+            this.dgvRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecords.Location = new System.Drawing.Point(35, 40);
+            this.dgvRecords.Name = "dgvRecords";
+            this.dgvRecords.Size = new System.Drawing.Size(768, 530);
+            this.dgvRecords.TabIndex = 0;
+            // 
             // btnPrint
             // 
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -229,48 +271,7 @@
             this.btnPrint.Size = new System.Drawing.Size(150, 50);
             this.btnPrint.TabIndex = 24;
             this.btnPrint.Text = "Print";
-            // 
-            // dgvRecords
-            // 
-            this.dgvRecords.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRecords.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecords.Location = new System.Drawing.Point(35, 40);
-            this.dgvRecords.Name = "dgvRecords";
-            this.dgvRecords.Size = new System.Drawing.Size(768, 530);
-            this.dgvRecords.TabIndex = 0;
-            // 
-            // lblTerm
-            // 
-            this.lblTerm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTerm.AutoSize = true;
-            this.lblTerm.BackColor = System.Drawing.Color.Transparent;
-            this.lblTerm.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTerm.Location = new System.Drawing.Point(20, 190);
-            this.lblTerm.Margin = new System.Windows.Forms.Padding(0);
-            this.lblTerm.Name = "lblTerm";
-            this.lblTerm.Size = new System.Drawing.Size(62, 22);
-            this.lblTerm.TabIndex = 26;
-            this.lblTerm.Text = "TERM:";
-            // 
-            // cboTerm
-            // 
-            this.cboTerm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTerm.BackColor = System.Drawing.Color.Transparent;
-            this.cboTerm.BorderRadius = 17;
-            this.cboTerm.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboTerm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTerm.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTerm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboTerm.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.cboTerm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboTerm.ItemHeight = 30;
-            this.cboTerm.Location = new System.Drawing.Point(20, 220);
-            this.cboTerm.Margin = new System.Windows.Forms.Padding(0);
-            this.cboTerm.MaxDropDownItems = 4;
-            this.cboTerm.Name = "cboTerm";
-            this.cboTerm.Size = new System.Drawing.Size(310, 36);
-            this.cboTerm.TabIndex = 27;
+            this.btnPrint.Visible = false;
             // 
             // UCRecords
             // 

@@ -106,31 +106,6 @@ namespace Student_Hub
             {
                 connect.CloseCon();
             }
-
-            /*try
-            {
-                connect.OpenCon();
-
-                string query = "SELECT clm_stdFName, clm_stdNumber FROM tbl_stdinfo WHERE clm_stdNumber = @clm_stdNumber";
-                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
-                cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    UCHome.GlobalNamePlaceholder.Text = reader["clm_stdFName"].ToString();
-                    UCHome.GlobalStudNumPlaceholder.Text = reader["clm_stdNumber"].ToString();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error:" + ex.Message);
-            }
-            finally
-            {
-                connect.CloseCon();
-            }*/
-
         }
 
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
@@ -143,11 +118,6 @@ namespace Student_Hub
             {
                 txtPassword.PasswordChar = '*';
             }
-        }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

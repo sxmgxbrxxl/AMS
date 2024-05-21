@@ -116,7 +116,6 @@ namespace Student_Hub
                 {
                     lblCoursePlaceholder.Text = cboProgram.Text;
                     DisableTextBox();
-                    LoadDetails();
 
                     try
                     {
