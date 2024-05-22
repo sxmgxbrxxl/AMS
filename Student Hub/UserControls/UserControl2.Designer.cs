@@ -30,15 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCProfile));
             this.pnlName = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblNamePlaceholder = new System.Windows.Forms.Label();
+            this.lblFullNamePlaceholder = new System.Windows.Forms.Label();
             this.picProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblCoursePlaceholder = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.lblBirthday = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtStudentNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGender = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFName = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlCourse = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlProfile = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTrueNavigation = new System.Windows.Forms.Label();
@@ -48,11 +47,14 @@
             this.lblStudentID = new System.Windows.Forms.Label();
             this.lblTPersonalInfo = new System.Windows.Forms.Label();
             this.pnlPersonalInfo = new Guna.UI2.WinForms.Guna2Panel();
-            this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cboProgram = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblFName = new System.Windows.Forms.Label();
             this.lblGender = new System.Windows.Forms.Label();
             this.lblNavigation = new System.Windows.Forms.Label();
+            this.txtLName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblLName = new System.Windows.Forms.Label();
+            this.txtAge = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
             this.pnlName.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.pnlCourse.SuspendLayout();
@@ -62,24 +64,24 @@
             // 
             // pnlName
             // 
-            this.pnlName.Controls.Add(this.lblNamePlaceholder);
+            this.pnlName.Controls.Add(this.lblFullNamePlaceholder);
             this.pnlName.Location = new System.Drawing.Point(0, 140);
             this.pnlName.Margin = new System.Windows.Forms.Padding(2);
             this.pnlName.Name = "pnlName";
             this.pnlName.Size = new System.Drawing.Size(350, 50);
             this.pnlName.TabIndex = 17;
             // 
-            // lblNamePlaceholder
+            // lblFullNamePlaceholder
             // 
-            this.lblNamePlaceholder.BackColor = System.Drawing.Color.Transparent;
-            this.lblNamePlaceholder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblNamePlaceholder.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamePlaceholder.Location = new System.Drawing.Point(0, 0);
-            this.lblNamePlaceholder.Margin = new System.Windows.Forms.Padding(0);
-            this.lblNamePlaceholder.Name = "lblNamePlaceholder";
-            this.lblNamePlaceholder.Size = new System.Drawing.Size(350, 50);
-            this.lblNamePlaceholder.TabIndex = 16;
-            this.lblNamePlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFullNamePlaceholder.BackColor = System.Drawing.Color.Transparent;
+            this.lblFullNamePlaceholder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblFullNamePlaceholder.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullNamePlaceholder.Location = new System.Drawing.Point(0, 0);
+            this.lblFullNamePlaceholder.Margin = new System.Windows.Forms.Padding(0);
+            this.lblFullNamePlaceholder.Name = "lblFullNamePlaceholder";
+            this.lblFullNamePlaceholder.Size = new System.Drawing.Size(350, 50);
+            this.lblFullNamePlaceholder.TabIndex = 16;
+            this.lblFullNamePlaceholder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // picProfile
             // 
@@ -128,18 +130,6 @@
             this.btnSave.Text = "Save Changes";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // lblBirthday
-            // 
-            this.lblBirthday.AutoSize = true;
-            this.lblBirthday.BackColor = System.Drawing.Color.Transparent;
-            this.lblBirthday.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthday.Location = new System.Drawing.Point(427, 180);
-            this.lblBirthday.Margin = new System.Windows.Forms.Padding(0);
-            this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(104, 22);
-            this.lblBirthday.TabIndex = 14;
-            this.lblBirthday.Text = "BIRTHDAY:";
-            // 
             // txtEmail
             // 
             this.txtEmail.AcceptsTab = true;
@@ -157,7 +147,7 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(45, 290);
+            this.txtEmail.Location = new System.Drawing.Point(45, 370);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(0);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -184,7 +174,7 @@
             this.txtStudentNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStudentNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStudentNumber.Location = new System.Drawing.Point(45, 210);
+            this.txtStudentNumber.Location = new System.Drawing.Point(45, 290);
             this.txtStudentNumber.Margin = new System.Windows.Forms.Padding(0);
             this.txtStudentNumber.Name = "txtStudentNumber";
             this.txtStudentNumber.PasswordChar = '\0';
@@ -211,7 +201,7 @@
             this.txtGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGender.Location = new System.Drawing.Point(427, 130);
+            this.txtGender.Location = new System.Drawing.Point(427, 210);
             this.txtGender.Margin = new System.Windows.Forms.Padding(0);
             this.txtGender.Name = "txtGender";
             this.txtGender.PasswordChar = '\0';
@@ -221,33 +211,33 @@
             this.txtGender.Size = new System.Drawing.Size(350, 40);
             this.txtGender.TabIndex = 10;
             // 
-            // txtFullName
+            // txtFName
             // 
-            this.txtFullName.AcceptsTab = true;
-            this.txtFullName.BackColor = System.Drawing.Color.Transparent;
-            this.txtFullName.BorderRadius = 10;
-            this.txtFullName.BorderThickness = 2;
-            this.txtFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtFullName.DefaultText = "";
-            this.txtFullName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtFullName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtFullName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFullName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtFullName.Enabled = false;
-            this.txtFullName.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.txtFullName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFullName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFullName.Location = new System.Drawing.Point(45, 130);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(0);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.PasswordChar = '\0';
-            this.txtFullName.PlaceholderText = "";
-            this.txtFullName.ReadOnly = true;
-            this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(350, 40);
-            this.txtFullName.TabIndex = 9;
-            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
+            this.txtFName.AcceptsTab = true;
+            this.txtFName.BackColor = System.Drawing.Color.Transparent;
+            this.txtFName.BorderRadius = 10;
+            this.txtFName.BorderThickness = 2;
+            this.txtFName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFName.DefaultText = "";
+            this.txtFName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFName.Enabled = false;
+            this.txtFName.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFName.Location = new System.Drawing.Point(45, 130);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.PasswordChar = '\0';
+            this.txtFName.PlaceholderText = "";
+            this.txtFName.ReadOnly = true;
+            this.txtFName.SelectedText = "";
+            this.txtFName.Size = new System.Drawing.Size(350, 40);
+            this.txtFName.TabIndex = 9;
+            this.txtFName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // pnlCourse
             // 
@@ -306,7 +296,7 @@
             this.lblCourse.AutoSize = true;
             this.lblCourse.BackColor = System.Drawing.Color.Transparent;
             this.lblCourse.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourse.Location = new System.Drawing.Point(45, 340);
+            this.lblCourse.Location = new System.Drawing.Point(427, 260);
             this.lblCourse.Margin = new System.Windows.Forms.Padding(0);
             this.lblCourse.Name = "lblCourse";
             this.lblCourse.Size = new System.Drawing.Size(90, 22);
@@ -318,7 +308,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(45, 260);
+            this.lblEmail.Location = new System.Drawing.Point(45, 340);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(71, 22);
@@ -331,7 +321,7 @@
             this.lblStudentID.AutoSize = true;
             this.lblStudentID.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentID.Location = new System.Drawing.Point(45, 180);
+            this.lblStudentID.Location = new System.Drawing.Point(45, 260);
             this.lblStudentID.Margin = new System.Windows.Forms.Padding(0);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(114, 22);
@@ -355,14 +345,16 @@
             this.pnlPersonalInfo.BackColor = System.Drawing.Color.Transparent;
             this.pnlPersonalInfo.BorderColor = System.Drawing.Color.Black;
             this.pnlPersonalInfo.BorderRadius = 10;
-            this.pnlPersonalInfo.Controls.Add(this.cboGender);
+            this.pnlPersonalInfo.Controls.Add(this.txtAge);
+            this.pnlPersonalInfo.Controls.Add(this.lblAge);
+            this.pnlPersonalInfo.Controls.Add(this.lblLName);
+            this.pnlPersonalInfo.Controls.Add(this.txtLName);
             this.pnlPersonalInfo.Controls.Add(this.cboProgram);
             this.pnlPersonalInfo.Controls.Add(this.btnSave);
-            this.pnlPersonalInfo.Controls.Add(this.lblBirthday);
             this.pnlPersonalInfo.Controls.Add(this.txtEmail);
             this.pnlPersonalInfo.Controls.Add(this.txtStudentNumber);
             this.pnlPersonalInfo.Controls.Add(this.txtGender);
-            this.pnlPersonalInfo.Controls.Add(this.txtFullName);
+            this.pnlPersonalInfo.Controls.Add(this.txtFName);
             this.pnlPersonalInfo.Controls.Add(this.lblCourse);
             this.pnlPersonalInfo.Controls.Add(this.lblEmail);
             this.pnlPersonalInfo.Controls.Add(this.lblStudentID);
@@ -380,24 +372,6 @@
             this.pnlPersonalInfo.Size = new System.Drawing.Size(830, 684);
             this.pnlPersonalInfo.TabIndex = 16;
             // 
-            // cboGender
-            // 
-            this.cboGender.BackColor = System.Drawing.Color.Transparent;
-            this.cboGender.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.cboGender.BorderRadius = 10;
-            this.cboGender.BorderThickness = 2;
-            this.cboGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboGender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cboGender.ItemHeight = 34;
-            this.cboGender.Location = new System.Drawing.Point(427, 210);
-            this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(350, 40);
-            this.cboGender.TabIndex = 18;
-            // 
             // cboProgram
             // 
             this.cboProgram.BackColor = System.Drawing.Color.Transparent;
@@ -411,7 +385,7 @@
             this.cboProgram.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProgram.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboProgram.ItemHeight = 34;
-            this.cboProgram.Location = new System.Drawing.Point(45, 370);
+            this.cboProgram.Location = new System.Drawing.Point(427, 290);
             this.cboProgram.Name = "cboProgram";
             this.cboProgram.Size = new System.Drawing.Size(350, 40);
             this.cboProgram.TabIndex = 17;
@@ -434,7 +408,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.BackColor = System.Drawing.Color.Transparent;
             this.lblGender.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGender.Location = new System.Drawing.Point(427, 100);
+            this.lblGender.Location = new System.Drawing.Point(427, 180);
             this.lblGender.Margin = new System.Windows.Forms.Padding(0);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(92, 22);
@@ -453,6 +427,84 @@
             this.lblNavigation.Size = new System.Drawing.Size(167, 23);
             this.lblNavigation.TabIndex = 17;
             this.lblNavigation.Text = "Home / Student /";
+            // 
+            // txtLName
+            // 
+            this.txtLName.AcceptsTab = true;
+            this.txtLName.BackColor = System.Drawing.Color.Transparent;
+            this.txtLName.BorderRadius = 10;
+            this.txtLName.BorderThickness = 2;
+            this.txtLName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLName.DefaultText = "";
+            this.txtLName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLName.Enabled = false;
+            this.txtLName.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLName.Location = new System.Drawing.Point(45, 210);
+            this.txtLName.Margin = new System.Windows.Forms.Padding(0);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.PasswordChar = '\0';
+            this.txtLName.PlaceholderText = "";
+            this.txtLName.ReadOnly = true;
+            this.txtLName.SelectedText = "";
+            this.txtLName.Size = new System.Drawing.Size(350, 40);
+            this.txtLName.TabIndex = 19;
+            // 
+            // lblLName
+            // 
+            this.lblLName.AutoSize = true;
+            this.lblLName.BackColor = System.Drawing.Color.Transparent;
+            this.lblLName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLName.Location = new System.Drawing.Point(45, 180);
+            this.lblLName.Margin = new System.Windows.Forms.Padding(0);
+            this.lblLName.Name = "lblLName";
+            this.lblLName.Size = new System.Drawing.Size(117, 22);
+            this.lblLName.TabIndex = 20;
+            this.lblLName.Text = "LAST NAME:";
+            // 
+            // txtAge
+            // 
+            this.txtAge.AcceptsTab = true;
+            this.txtAge.BackColor = System.Drawing.Color.Transparent;
+            this.txtAge.BorderRadius = 10;
+            this.txtAge.BorderThickness = 2;
+            this.txtAge.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAge.DefaultText = "";
+            this.txtAge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAge.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAge.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAge.Enabled = false;
+            this.txtAge.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAge.Location = new System.Drawing.Point(427, 130);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(0);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.PasswordChar = '\0';
+            this.txtAge.PlaceholderText = "";
+            this.txtAge.ReadOnly = true;
+            this.txtAge.SelectedText = "";
+            this.txtAge.Size = new System.Drawing.Size(350, 40);
+            this.txtAge.TabIndex = 22;
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.BackColor = System.Drawing.Color.Transparent;
+            this.lblAge.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(427, 100);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(57, 22);
+            this.lblAge.TabIndex = 21;
+            this.lblAge.Text = "AGE:";
             // 
             // UCProfile
             // 
@@ -481,15 +533,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel pnlName;
-        private System.Windows.Forms.Label lblNamePlaceholder;
+        private System.Windows.Forms.Label lblFullNamePlaceholder;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picProfile;
         private System.Windows.Forms.Label lblCoursePlaceholder;
         private Guna.UI2.WinForms.Guna2Button btnSave;
-        private System.Windows.Forms.Label lblBirthday;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2TextBox txtStudentNumber;
         private Guna.UI2.WinForms.Guna2TextBox txtGender;
-        private Guna.UI2.WinForms.Guna2TextBox txtFullName;
+        private Guna.UI2.WinForms.Guna2TextBox txtFName;
         private Guna.UI2.WinForms.Guna2Panel pnlCourse;
         private Guna.UI2.WinForms.Guna2Panel pnlProfile;
         private System.Windows.Forms.Label lblTrueNavigation;
@@ -502,7 +553,10 @@
         private System.Windows.Forms.Label lblFName;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.Label lblNavigation;
-        private Guna.UI2.WinForms.Guna2ComboBox cboGender;
         private Guna.UI2.WinForms.Guna2ComboBox cboProgram;
+        private System.Windows.Forms.Label lblLName;
+        private Guna.UI2.WinForms.Guna2TextBox txtLName;
+        private Guna.UI2.WinForms.Guna2TextBox txtAge;
+        private System.Windows.Forms.Label lblAge;
     }
 }

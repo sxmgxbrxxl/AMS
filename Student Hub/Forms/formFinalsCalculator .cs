@@ -1,4 +1,5 @@
 ﻿using Google.Protobuf.WellKnownTypes;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +14,10 @@ namespace Student_Hub
 {
     public partial class formFinalsCalculator : Form
     {
-        //public static string FGrade {  get; set; }
+        public static int stdID {  get; set; }
+        public static string courseName { get; set; }
+
+        DBConnection connect = new DBConnection();
 
         // Other code...
 
@@ -32,6 +36,37 @@ namespace Student_Hub
         public formFinalsCalculator()
         {
             InitializeComponent();
+        }
+
+        private void GetPreviousGrade()
+        {
+            MessageBox.Show("Previous Grade is Set", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            try
+            {
+                connect.OpenCon();
+
+                string query = "SELECT clm_courseGrade FROM tbl_stdcourses WHERE clm_Term = 'Midterm' AND clm_courseName = @clm_courseName AND clm_stdID = @clm_stdID";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+                cmd.Parameters.AddWithValue("@clm_stdID", stdID);
+                cmd.Parameters.AddWithValue("@clm_courseName", courseName);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read()) // Check if a record was found
+                {
+                    string courseGrade = reader["clm_courseGrade"].ToString();
+                    txtPreviousGrade.Text = courseGrade;
+                }
+                reader.Close();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("MySql Error: " + ex.Message); // Display the specific MySQL error message
+            }
+            finally
+            {
+                connect.CloseCon();
+            }
         }
 
         private void btnNumber_Click(object sender, EventArgs e)
@@ -211,6 +246,11 @@ namespace Student_Hub
         private void btnCLose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+            GetPreviousGrade();
         }
     }
 }

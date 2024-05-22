@@ -77,6 +77,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCLose = new Guna.UI2.WinForms.Guna2Button();
             this.lblInstruction = new System.Windows.Forms.Label();
+            this.btnGet = new System.Windows.Forms.Button();
             this.pnlScreen.SuspendLayout();
             this.pnlCalculator.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -819,6 +820,19 @@
             this.lblInstruction.TabIndex = 77;
             this.lblInstruction.Text = "Double Click to Save";
             // 
+            // btnGet
+            // 
+            this.btnGet.BackColor = System.Drawing.Color.Tan;
+            this.btnGet.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGet.Location = new System.Drawing.Point(639, 375);
+            this.btnGet.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGet.Name = "btnGet";
+            this.btnGet.Size = new System.Drawing.Size(85, 49);
+            this.btnGet.TabIndex = 80;
+            this.btnGet.Text = "Previous Grade";
+            this.btnGet.UseVisualStyleBackColor = false;
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
+            // 
             // formFinalsCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -827,6 +841,7 @@
             this.BackgroundImage = global::Student_Hub.Properties.Resources.New_Calculator_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1100, 740);
+            this.Controls.Add(this.btnGet);
             this.Controls.Add(this.lblInstruction);
             this.Controls.Add(this.btnCLose);
             this.Controls.Add(this.lblInstructions);
@@ -913,5 +928,6 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private Guna.UI2.WinForms.Guna2Button btnCLose;
         private System.Windows.Forms.Label lblInstruction;
+        private System.Windows.Forms.Button btnGet;
     }
 }

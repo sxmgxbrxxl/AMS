@@ -18,7 +18,6 @@ namespace Student_Hub
         DBConnection connect = new DBConnection();
 
         string[] program = {"BSCS-DS"};
-        string[] gender = { "Male", "Female" };
 
         public UCProfile()
         {
@@ -32,9 +31,7 @@ namespace Student_Hub
         {
             Array.Sort(program);
             cboProgram.Items.Clear();
-            cboGender.Items.Clear();
             cboProgram.Items.AddRange(program);
-            cboGender.Items.AddRange(gender);
         }
 
         private void LoadDetails()
@@ -70,14 +67,15 @@ namespace Student_Hub
                     string studentProgram = reader["clm_stdProgram"].ToString();
                     string studentGender = reader["clm_stdGender"].ToString();
 
-                    lblNamePlaceholder.Text = studentFName; // Display the name in the label
+                    lblFullNamePlaceholder.Text = studentFName + " " + studentLName; // Display the name in the label
                     lblCoursePlaceholder.Text = studentProgram;
-                    txtFullName.Text = studentFName + " " + studentLName;
-                    txtGender.Text = studentAge;
+                    txtFName.Text = studentFName;
+                    txtLName.Text = studentLName;
+                    txtAge.Text = studentAge;
+                    txtGender.Text = studentGender;
                     txtStudentNumber.Text = studentNumber;
                     txtEmail.Text = studentEmail;
                     cboProgram.Text = studentProgram;
-                    cboGender.Text = studentGender;
 
                     Program = cboProgram.Text;
                 }
@@ -104,10 +102,6 @@ namespace Student_Hub
             {
                 cboProgram.BorderColor = Color.Red;
             }
-            else if (cboGender.Text == "")
-            {
-                cboGender.BorderColor = Color.Red;
-            }
             else
             {
                 DialogResult result = MessageBox.Show("You can't modify this once it is saved, Are you sure?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -121,12 +115,11 @@ namespace Student_Hub
                     {
                         connect.OpenCon();
                         string query = "UPDATE db_acad.tbl_stdinfo " +
-                                       "SET clm_stdProgram = '" + cboProgram.Text + "', clm_stdGender = '" + cboGender.Text + "'" +
+                                       "SET clm_stdProgram = '" + cboProgram.Text + "'" +
                                        "WHERE clm_stdNumber = @clm_stdNumber";
                         MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                         cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
                         cmd.Parameters.AddWithValue("clm_stdProgram", cboProgram.Text);
-                        cmd.Parameters.AddWithValue("clm_stdGender", cboGender.Text);
                         cmd.ExecuteNonQuery();
                     }
                     catch (Exception ex)
@@ -147,17 +140,15 @@ namespace Student_Hub
 
         private void DisableAdded()
         {
-            if (!string.IsNullOrEmpty(cboProgram.Text) && !string.IsNullOrEmpty(cboGender.Text))
+            if (!string.IsNullOrEmpty(cboProgram.Text))
             {
                 cboProgram.Enabled = false;
-                cboGender.Enabled = false;
                 btnSave.Enabled = false;
             }
         }
 
         private void DisableTextBox()
         {
-            cboGender.Enabled = false;
             cboProgram.Enabled = false;
             btnSave.Enabled = false;
         }

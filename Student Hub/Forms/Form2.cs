@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
@@ -18,12 +19,11 @@ namespace Student_Hub
     {
         public static string StudentNumber { get; set; }
         DBConnection connect = new DBConnection();
-        string[] gender = { "Male", "Female" };
 
         public frmSignUp()
         {
             InitializeComponent();
-            cboGender.Items.AddRange(gender);
+            AddGender();
         }
 
         private void lnkLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -36,6 +36,25 @@ namespace Student_Hub
         private void ctrClose_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
+        }
+
+        private void AddGender()
+        {
+            try
+            {
+                connect.OpenCon();
+                string query = "SELECT clm_Gender FROM tbl_gender";
+                MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
+                MySqlDataReader drd = cmd.ExecuteReader();
+                while (drd.Read())
+                {
+                    cboGender.Items.Add(drd["clm_Gender"].ToString());
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error ");
+            }
         }
 
         private void addDetails()
@@ -99,20 +118,20 @@ namespace Student_Hub
                 lblLNAsterisk.ForeColor = Color.Red;
                 return;
             }
-            else if (string.IsNullOrWhiteSpace(txtStudentNumber.Text) || txtStudentNumber.TextLength <= 6 || HasAllSameCharacters(txtStudentNumber.Text))
-            {
-                MessageBox.Show("Please enter a student number with at least 7 digits and ensure it does not contain the same digit repeated!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtStudentNumber.BorderColor = Color.Red;
-                lblSNAsterisk.Text = "*";
-                lblSNAsterisk.ForeColor = Color.Red;
-                return;
-            }
             else if (string.IsNullOrWhiteSpace(cboGender.Text))
             {
                 MessageBox.Show("Please choose your Gender!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cboGender.BorderColor = Color.Red;
                 lblAsteriskGender.Text = "*";
                 lblAsteriskGender.ForeColor = Color.Red;
+                return;
+            }
+            else if (string.IsNullOrWhiteSpace(txtStudentNumber.Text) || txtStudentNumber.TextLength <= 6 || HasAllSameCharacters(txtStudentNumber.Text))
+            {
+                MessageBox.Show("Please enter a student number with at least 7 digits and ensure it does not contain the same digit repeated!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtStudentNumber.BorderColor = Color.Red;
+                lblSNAsterisk.Text = "*";
+                lblSNAsterisk.ForeColor = Color.Red;
                 return;
             }
             else if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text) || IsInvalidGmail(txtEmail.Text))
@@ -215,11 +234,6 @@ namespace Student_Hub
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
             txtLastName.BorderColor = Color.FromArgb(213, 218, 223);
-        }
-
-        private void txtAge_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void txtStudentNumber_TextChanged(object sender, EventArgs e)

@@ -14,10 +14,6 @@ namespace Student_Hub
 {
     public partial class formMidtermCalculator : Form
     {
-        //public static string FGrade {  get; set; }
-
-        // Other code...
-
         public static int stdID { get; set; }
 
         public static string courseName { get; set; }
@@ -41,13 +37,15 @@ namespace Student_Hub
             InitializeComponent();
         }
 
-        /*private void GetPreviousGrade()
+        private void GetPreviousGrade()
         {
+            MessageBox.Show("Previous Grade is Set", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             try
             {
                 connect.OpenCon();
 
-                string query = "SELECT clm_courseGrade FROM tbl_stdcourses WHERE clm_Term = 'Prelim' && clm_courseName = @clm_courseName && clm_stdID = @clm_stdID";
+                string query = "SELECT clm_courseGrade FROM tbl_stdcourses WHERE clm_Term = 'Prelim' AND clm_courseName = @clm_courseName AND clm_stdID = @clm_stdID";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
                 cmd.Parameters.AddWithValue("@clm_stdID", stdID);
                 cmd.Parameters.AddWithValue("@clm_courseName", courseName);
@@ -68,7 +66,7 @@ namespace Student_Hub
             {
                 connect.CloseCon();
             }
-        }*/
+        }
 
         private void btnNumber_Click(object sender, EventArgs e)
         {
@@ -243,6 +241,11 @@ namespace Student_Hub
         private void btnCLose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+            GetPreviousGrade();
         }
     }
 }

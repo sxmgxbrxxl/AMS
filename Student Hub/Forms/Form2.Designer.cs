@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
             this.pnlSignUp = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblAsteriskGender = new System.Windows.Forms.Label();
             this.cboGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblCPAsterisk = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.lblAsteriskGender = new System.Windows.Forms.Label();
             this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +107,15 @@
             this.pnlSignUp.Size = new System.Drawing.Size(490, 531);
             this.pnlSignUp.TabIndex = 0;
             // 
+            // lblAsteriskGender
+            // 
+            this.lblAsteriskGender.AutoSize = true;
+            this.lblAsteriskGender.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriskGender.Location = new System.Drawing.Point(96, 170);
+            this.lblAsteriskGender.Name = "lblAsteriskGender";
+            this.lblAsteriskGender.Size = new System.Drawing.Size(0, 16);
+            this.lblAsteriskGender.TabIndex = 26;
+            // 
             // cboGender
             // 
             this.cboGender.BackColor = System.Drawing.Color.Transparent;
@@ -118,13 +127,13 @@
             this.cboGender.FillColor = System.Drawing.Color.WhiteSmoke;
             this.cboGender.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboGender.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cboGender.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.cboGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cboGender.ItemHeight = 34;
             this.cboGender.Location = new System.Drawing.Point(30, 190);
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(200, 40);
-            this.cboGender.TabIndex = 19;
+            this.cboGender.TabIndex = 2;
             // 
             // lblCPAsterisk
             // 
@@ -212,8 +221,8 @@
             // lblGAsterisk
             // 
             this.lblGAsterisk.AutoSize = true;
-            this.lblGAsterisk.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGAsterisk.Location = new System.Drawing.Point(100, 170);
+            this.lblGAsterisk.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGAsterisk.Location = new System.Drawing.Point(95, 170);
             this.lblGAsterisk.Margin = new System.Windows.Forms.Padding(0);
             this.lblGAsterisk.Name = "lblGAsterisk";
             this.lblGAsterisk.Size = new System.Drawing.Size(0, 16);
@@ -545,14 +554,6 @@
             this.ctrClose.Size = new System.Drawing.Size(41, 37);
             this.ctrClose.TabIndex = 16;
             this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
-            // 
-            // lblAsteriskGender
-            // 
-            this.lblAsteriskGender.AutoSize = true;
-            this.lblAsteriskGender.Location = new System.Drawing.Point(101, 170);
-            this.lblAsteriskGender.Name = "lblAsteriskGender";
-            this.lblAsteriskGender.Size = new System.Drawing.Size(0, 13);
-            this.lblAsteriskGender.TabIndex = 26;
             // 
             // frmSignUp
             // 

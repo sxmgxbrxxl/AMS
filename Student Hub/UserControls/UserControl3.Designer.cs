@@ -51,6 +51,7 @@
             this.btnCalculator = new Guna.UI2.WinForms.Guna2Button();
             this.txtGrade = new Guna.UI2.WinForms.Guna2TextBox();
             this.cboCourse = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.pnlCategory.SuspendLayout();
             this.pnlCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
@@ -252,7 +253,7 @@
             this.pnlCourse.ShadowDecoration.BorderRadius = 15;
             this.pnlCourse.ShadowDecoration.Depth = 15;
             this.pnlCourse.ShadowDecoration.Enabled = true;
-            this.pnlCourse.Size = new System.Drawing.Size(802, 491);
+            this.pnlCourse.Size = new System.Drawing.Size(802, 449);
             this.pnlCourse.TabIndex = 73;
             // 
             // dgvGrades
@@ -270,7 +271,7 @@
             this.dgvGrades.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvGrades.Location = new System.Drawing.Point(30, 35);
             this.dgvGrades.Name = "dgvGrades";
-            this.dgvGrades.Size = new System.Drawing.Size(745, 430);
+            this.dgvGrades.Size = new System.Drawing.Size(745, 383);
             this.dgvGrades.TabIndex = 0;
             this.dgvGrades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrades_CellContentClick);
             // 
@@ -414,12 +415,35 @@
             this.cboCourse.Name = "cboCourse";
             this.cboCourse.Size = new System.Drawing.Size(310, 36);
             this.cboCourse.TabIndex = 4;
+            this.cboCourse.SelectedIndexChanged += new System.EventHandler(this.cboCourse_SelectedIndexChanged);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderRadius = 25;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.Tan;
+            this.btnSave.FocusedColor = System.Drawing.Color.Transparent;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(1072, 775);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(150, 50);
+            this.btnSave.TabIndex = 74;
+            this.btnSave.Text = "Save";
             // 
             // UCGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Student_Hub.Properties.Resources.Dashboard;
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pnlEntries);
             this.Controls.Add(this.pnlCategory);
             this.Controls.Add(this.lblGrades);
@@ -428,7 +452,6 @@
             this.Controls.Add(this.pnlCourse);
             this.Name = "UCGrades";
             this.Size = new System.Drawing.Size(1275, 850);
-            this.Load += new System.EventHandler(this.UCGrades_Load);
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlCourse.ResumeLayout(false);
@@ -465,5 +488,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
     }
 }
