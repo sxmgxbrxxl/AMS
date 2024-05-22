@@ -437,6 +437,7 @@
             this.btnSave.Size = new System.Drawing.Size(150, 50);
             this.btnSave.TabIndex = 74;
             this.btnSave.Text = "Save";
+            this.btnSave.Visible = false;
             // 
             // UCGrades
             // 

@@ -67,6 +67,7 @@
             // 
             // pnlSignUp
             // 
+            this.pnlSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlSignUp.BackColor = System.Drawing.Color.Transparent;
             this.pnlSignUp.BorderColor = System.Drawing.Color.Black;
             this.pnlSignUp.BorderRadius = 20;
