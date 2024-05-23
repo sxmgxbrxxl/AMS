@@ -365,6 +365,11 @@ namespace Student_Hub
                 }
             }
         }
+
+        private void UCGrades_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

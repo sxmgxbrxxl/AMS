@@ -453,6 +453,7 @@
             this.Controls.Add(this.pnlCourse);
             this.Name = "UCGrades";
             this.Size = new System.Drawing.Size(1275, 850);
+            this.Load += new System.EventHandler(this.UCGrades_Load);
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlCourse.ResumeLayout(false);

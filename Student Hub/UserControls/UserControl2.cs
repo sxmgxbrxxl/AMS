@@ -98,6 +98,7 @@ namespace Student_Hub
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            
             if (cboProgram.Text == "")
             {
                 cboProgram.BorderColor = Color.Red;
