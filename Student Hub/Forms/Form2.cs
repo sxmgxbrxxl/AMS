@@ -51,9 +51,13 @@ namespace Student_Hub
                     cboGender.Items.Add(drd["clm_Gender"].ToString());
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Error ");
+                MessageBox.Show("Error:" + ex.Message);
+            }
+            finally
+            {
+                connect.CloseCon();
             }
         }
 
@@ -100,14 +104,15 @@ namespace Student_Hub
                     return;
                 }
 
-                string query = "INSERT INTO tbl_stdinfo(clm_stdNumber, clm_stdFName, clm_stdLName, clm_stdGender, clm_stdEMAIL, clm_stdPASS) " +
-                                "VALUES (@clm_stdNumber, @clm_stdFName, @clm_stdLName, @clm_stdGender, @clm_stdEMAIL, @clm_stdPASS)";
+                string query = "INSERT INTO tbl_stdinfo(clm_stdNumber, clm_stdFName, clm_stdLName, clm_stdGender, clm_stdAGE, clm_stdEMAIL, clm_stdPASS) " +
+                                "VALUES (@clm_stdNumber, @clm_stdFName, @clm_stdLName, @clm_stdGender, @clm_stdAGE, @clm_stdEMAIL, @clm_stdPASS)";
                 MySqlCommand cmd = new MySqlCommand(query, connect.GetConnection());
 
                 cmd.Parameters.AddWithValue("@clm_stdNumber", txtStudentNumber.Text);
                 cmd.Parameters.AddWithValue("@clm_stdFName", txtFirstName.Text);
                 cmd.Parameters.AddWithValue("@clm_stdLName", txtLastName.Text);
                 cmd.Parameters.AddWithValue("@clm_stdGender", cboGender.Text);
+                cmd.Parameters.AddWithValue("@clm_stdAGE", txtAge.Text);
                 cmd.Parameters.AddWithValue("@clm_stdEMAIL", txtEmail.Text);
                 cmd.Parameters.AddWithValue("@clm_stdPASS", txtPassword.Text);
 
@@ -124,7 +129,7 @@ namespace Student_Hub
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: WUIEYIWU" + ex.Message);
             }
             finally
             {
@@ -166,7 +171,7 @@ namespace Student_Hub
                 lblSNAsterisk.ForeColor = Color.Red;
                 return;
             }
-            else if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text) || IsInvalidGmail(txtEmail.Text))
+            else if (string.IsNullOrWhiteSpace(txtEmail.Text) || !IsValidEmail(txtEmail.Text))
             {
                 MessageBox.Show("Please enter a valid Email and ensure Gmail addresses have more than one character before the '@' symbol!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.BorderColor = Color.Red;
@@ -201,7 +206,7 @@ namespace Student_Hub
             return input.Distinct().Count() == 1;
         }
 
-        bool IsInvalidGmail(string email)
+        /*bool IsInvalidGmail(string email)
         {
             var match = Regex.Match(email, @"^([a-zA-Z0-9._-]{8,})@gmail\.com$");
             if (!match.Success)
@@ -213,7 +218,7 @@ namespace Student_Hub
             bool hasNumber = localPart.Any(char.IsDigit);
 
             return !(hasCapital && hasSymbol && hasNumber);
-        }
+        }*/
 
         bool IsValidEmail(string email)
         {

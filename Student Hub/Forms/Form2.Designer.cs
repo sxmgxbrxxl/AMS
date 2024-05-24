@@ -62,6 +62,8 @@
             this.ctrMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.ctrClose = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtAge = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlSignUp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +74,8 @@
             this.pnlSignUp.BorderColor = System.Drawing.Color.Black;
             this.pnlSignUp.BorderRadius = 20;
             this.pnlSignUp.BorderThickness = 2;
+            this.pnlSignUp.Controls.Add(this.txtAge);
+            this.pnlSignUp.Controls.Add(this.lblAge);
             this.pnlSignUp.Controls.Add(this.lblAsteriskGender);
             this.pnlSignUp.Controls.Add(this.cboGender);
             this.pnlSignUp.Controls.Add(this.lblCPAsterisk);
@@ -133,7 +137,7 @@
             this.cboGender.ItemHeight = 34;
             this.cboGender.Location = new System.Drawing.Point(30, 190);
             this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(200, 40);
+            this.cboGender.Size = new System.Drawing.Size(127, 40);
             this.cboGender.TabIndex = 2;
             // 
             // lblCPAsterisk
@@ -556,6 +560,41 @@
             this.ctrClose.TabIndex = 16;
             this.ctrClose.Click += new System.EventHandler(this.ctrClose_Click);
             // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Bookman Old Style", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.Location = new System.Drawing.Point(175, 171);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(40, 16);
+            this.lblAge.TabIndex = 27;
+            this.lblAge.Text = "AGE:";
+            // 
+            // txtAge
+            // 
+            this.txtAge.AcceptsTab = true;
+            this.txtAge.BorderRadius = 10;
+            this.txtAge.BorderThickness = 2;
+            this.txtAge.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAge.DefaultText = "";
+            this.txtAge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtAge.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtAge.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtAge.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAge.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtAge.Location = new System.Drawing.Point(175, 190);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(0);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.PasswordChar = '\0';
+            this.txtAge.PlaceholderText = "";
+            this.txtAge.SelectedText = "";
+            this.txtAge.Size = new System.Drawing.Size(55, 40);
+            this.txtAge.TabIndex = 28;
+            // 
             // frmSignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -616,5 +655,7 @@
         private System.Windows.Forms.Label lblCPAsterisk;
         private Guna.UI2.WinForms.Guna2ComboBox cboGender;
         private System.Windows.Forms.Label lblAsteriskGender;
+        private System.Windows.Forms.Label lblAge;
+        private Guna.UI2.WinForms.Guna2TextBox txtAge;
     }
 }
